@@ -6,10 +6,13 @@
       alt="Riccardo"
       class="absolute inset-0 w-full h-full object-cover opacity-60 will-change-transform"
     />
-    <!-- overlay per miglior contrasto -->
-    <div class="absolute inset-0 bg-black/40"></div>
+  <!-- overlay per miglior contrasto -->
+  <div class="absolute inset-0 bg-black/40"></div>
 
-    <div class="relative z-10 px-6">
+  <!-- subtle animated gradient pattern (very soft) -->
+  <div class="absolute inset-0 animated-gradient-pattern pointer-events-none"></div>
+
+  <div class="relative z-10 px-6">
         <p ref="intro" class="text-cyan-400 text-lg">Ciao, sono</p>
         <h1 ref="name" class="text-4xl md:text-6xl font-extrabold mt-2 leading-tight">Riccardo Cassis</h1>
         <p ref="role" class="text-white text-2xl md:text-3xl mt-3 font-semibold">Io sono un digital e web designer</p>
@@ -27,6 +30,15 @@
         </div>
 
         <socialIcons class="mt-8" />
+    </div>
+
+    <!-- scroll indicator (floating arrow) -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 pointer-events-auto">
+      <button aria-label="Scroll down" class="scroll-arrow inline-flex items-center justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white opacity-90" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
     </div>
   </div>
 </template>
@@ -143,6 +155,49 @@
 }
 .btn-ghost:hover .btn-ghost-text {
   color: #000000;
+}
+
+/* Animated gradient pattern (very subtle) */
+.animated-gradient-pattern {
+  z-index: 12;
+  opacity: 0.18;
+  background: linear-gradient(120deg, rgba(0,191,255,0.06) 0%, rgba(255,255,255,0.02) 50%, rgba(0,0,0,0.02) 100%);
+  background-size: 200% 200%;
+  animation: gradientShift 30s linear infinite;
+  mix-blend-mode: overlay;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Floating scroll arrow */
+.scroll-arrow {
+  width: 44px;
+  height: 44px;
+  border-radius: 9999px;
+  background: rgba(255,255,255,0.04);
+  display: inline-grid;
+  place-items: center;
+  transition: transform 220ms ease, opacity 220ms ease, background 180ms ease;
+  will-change: transform, opacity;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.28);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  cursor: pointer;
+  animation: float 2.4s ease-in-out infinite;
+}
+.scroll-arrow:hover {
+  transform: translateY(-6px) scale(1.03);
+  background: rgba(255,255,255,0.06);
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
 }
 
 </style>
