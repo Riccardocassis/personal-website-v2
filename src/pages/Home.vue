@@ -1,5 +1,5 @@
 <template>
-  <main class="pt-16 h-screen overflow-hidden flex flex-col">
+  <main class="pt-16 min-h-screen flex flex-col">
     <!-- La tua Home attuale con hero -->
     <Hero />
   </main>

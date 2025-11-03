@@ -6,13 +6,17 @@
       alt="Riccardo"
       class="absolute inset-0 w-full h-full object-cover opacity-60 will-change-transform"
     />
-  <!-- overlay per miglior contrasto -->
-  <div class="absolute inset-0 bg-black/40"></div>
+    <!-- overlay direzionale sfumato per profondità -->
+    <div class="absolute inset-0 hero-overlay bg-gradient-to-b from-black/70 to-black/30"></div>
 
-  <!-- subtle animated gradient pattern (very soft) -->
-  <div class="absolute inset-0 animated-gradient-pattern pointer-events-none"></div>
+    <!-- subtle animated gradient pattern (very soft) -->
+    <div class="absolute inset-0 animated-gradient-pattern pointer-events-none"></div>
 
-  <div class="relative z-10 px-6">
+    <div class="relative z-10 px-6">
+      <!-- light spot / soft blue glow behind the main name -->
+      <div class="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
+        <span class="light-spot"></span>
+      </div>
         <p ref="intro" class="text-cyan-400 text-lg">Ciao, sono</p>
         <h1 ref="name" class="text-4xl md:text-6xl font-extrabold mt-2 leading-tight">Riccardo Cassis</h1>
         <p ref="role" class="text-white text-2xl md:text-3xl mt-3 font-semibold">Io sono un digital e web designer</p>
@@ -159,7 +163,7 @@
 
 /* Animated gradient pattern (very subtle) */
 .animated-gradient-pattern {
-  z-index: 12;
+  z-index: 6;
   opacity: 0.18;
   background: linear-gradient(120deg, rgba(0,191,255,0.06) 0%, rgba(255,255,255,0.02) 50%, rgba(0,0,0,0.02) 100%);
   background-size: 200% 200%;
@@ -198,6 +202,23 @@
   0% { transform: translateY(0); }
   50% { transform: translateY(-8px); }
   100% { transform: translateY(0); }
+}
+
+/* hero overlay stacking */
+.hero-overlay {
+  z-index: 4;
+}
+
+/* light spot behind heading */
+.light-spot{
+  width: clamp(160px, 28vw, 520px);
+  height: clamp(160px, 18vw, 420px);
+  display: block;
+  border-radius: 9999px;
+  background: radial-gradient(circle at 40% 35%, rgba(0,191,255,0.22) 0%, rgba(0,191,255,0.12) 18%, rgba(0,191,255,0.06) 35%, transparent 60%);
+  filter: blur(54px);
+  transform: translateY(-8%);
+  opacity: 0.95;
 }
 
 </style>
