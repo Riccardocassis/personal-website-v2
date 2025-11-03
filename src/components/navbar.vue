@@ -119,7 +119,7 @@ onBeforeUnmount(() => {
           </li>
 
         <li>
-          <RouterLink to="/contact" class="text-white transition-colors duration-200 ease-in-out hover:text-[#00BFFF] hover:underline underline-offset-4">
+          <RouterLink to="/contact" class="ml-2 inline-flex items-center px-4 py-2 bg-[#00BFFF] text-white font-semibold rounded-full shadow-md hover:bg-[#00A6E6] transition-colors">
             Contact
           </RouterLink>
         </li>
@@ -194,9 +194,9 @@ onBeforeUnmount(() => {
             About me
           </RouterLink>
 
-          <RouterLink to="/contact" class="block px-2 py-2 rounded text-white transition-colors duration-200 ease-in-out hover:text-[#00BFFF] hover:underline" @click="mobileOpen=false">
-            Contact
-          </RouterLink>
+            <RouterLink to="/contact" class="block px-2 py-2 rounded bg-[#00BFFF] text-white text-center font-semibold hover:bg-[#00A6E6]" @click="mobileOpen=false">
+              Contact
+            </RouterLink>
         </div>
       </div>
     </transition>
