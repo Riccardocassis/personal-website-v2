@@ -18,6 +18,7 @@ const routes = [
   { path: '/projects/web',  name: 'projects-web',      component: WebDesign },
   { path: '/projects/brand',name: 'projects-brand',    component: BrandDesign },
   { path: '/projects/product', name: 'projects-product', component: ProductDesign },
+  { path: '/process',       name: 'process',           component: () => import('../pages/Process.vue') },
 ]
 
 const router = createRouter({
