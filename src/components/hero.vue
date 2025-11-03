@@ -16,32 +16,29 @@
   <div class="absolute inset-0 animated-gradient-pattern pointer-events-none"></div>
 
   <div class="relative z-10 px-6 pt-20 md:pt-24 w-full max-w-7xl mx-auto">
-      <div class="flex flex-col lg:flex-row items-center lg:items-stretch gap-8">
-        <!-- Left: copy and CTAs -->
+      <div class="flex flex-col lg:flex-row items-center lg:items-stretch gap-8 lg:justify-end">
+        <!-- Copy and CTAs moved to the right so the face remains visible -->
         <div class="w-full lg:w-1/2 relative">
-          <!-- light spot / soft blue glow behind the main name (scoped to left column) -->
-          <div class="absolute inset-0 flex items-center justify-start pointer-events-none z-0 pl-6 lg:pl-0">
+          <!-- light spot / soft blue glow behind the main name (scoped to right column) -->
+          <div class="absolute inset-0 flex items-center justify-end pointer-events-none z-0 pr-6 lg:pr-0">
             <span class="light-spot"></span>
           </div>
 
-          <div class="relative z-10 max-w-2xl lg:ml-6">
+          <div class="relative z-10 max-w-2xl lg:mr-6 text-left">
             <p ref="intro" class="text-cyan-400 text-sm md:text-lg font-medium mb-4">Portfolio • Digital & Web Design</p>
             <h1 ref="name" class="text-4xl md:text-6xl font-extrabold leading-tight">Designing thoughtful<br/><span class="text-[#00BFFF]">digital experiences</span></h1>
             <p ref="role" class="text-white text-lg md:text-2xl mt-4 font-semibold">Io sono un digital e web designer</p>
 
             <p ref="desc" class="max-w-xl text-white/80 mt-4 text-base md:text-lg">Progetto interfacce digitali e siti web strategici: branding, UX/UI, e-commerce e landing page ottimizzate per conversione.</p>
 
-            <div ref="ctas" class="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-4">
-              <RouterLink to="/contact" class="btn-primary inline-flex items-center justify-center bg-[#00BFFF] text-black font-semibold px-6 py-3 rounded-full shadow-lg transition-colors duration-200">
-                Contattami
-              </RouterLink>
-
-              <RouterLink to="/projects" class="btn-ghost inline-flex items-center justify-center border border-white/30 text-white px-5 py-3 rounded-full transition-colors duration-200 overflow-hidden">
-                <span class="btn-ghost-text">Vedi i progetti</span>
-              </RouterLink>
+            <div ref="ctas" class="mt-8">
+              <div class="flex flex-col items-start">
+                <RouterLink to="/contact" class="btn-primary inline-flex items-center justify-center bg-[#00BFFF] text-black font-semibold px-6 py-3 rounded-full shadow-lg transition-colors duration-200">
+                  Contattami
+                </RouterLink>
+                <socialIcons class="mt-4" />
+              </div>
             </div>
-
-            <socialIcons class="mt-8" />
 
             <!-- Stats row similar to reference -->
             <div class="mt-10 grid grid-cols-3 gap-6 max-w-md">
@@ -61,17 +58,7 @@
           </div>
         </div>
 
-        <!-- Right: big square image with logo overlay -->
-        <div class="w-full lg:w-1/2 flex items-center justify-center">
-          <div class="logo-square group relative w-64 h-64 md:w-96 md:h-96 rounded-2xl overflow-hidden border border-white/10 bg-white/3 flex items-center justify-center transition-transform duration-200">
-            <!-- only logo centered -->
-            <div class="relative z-10 flex items-center justify-center">
-              <img src="../assets/logo-rc.png" alt="Logo RC" class="logo-image w-28 h-28 md:w-40 md:h-40 opacity-90" />
-            </div>
-            <!-- subtle dark overlay for depth -->
-            <div class="absolute inset-0 bg-black/10 pointer-events-none"></div>
-          </div>
-        </div>
+        <!-- (square removed) the content is aligned right so the background face is visible -->
       </div>
     </div>
 
