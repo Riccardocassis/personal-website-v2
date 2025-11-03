@@ -84,11 +84,11 @@
   <!-- Services section: two dark cards with pill CTAs (matches attachment aesthetic) -->
   <section ref="postSection" class="service-section w-full">
     <div class="max-w-7xl mx-auto px-6 py-20">
-      <h2 class="text-4xl font-bold text-white mb-4 text-center">Scegli come possiamo lavorare insieme</h2>
-      <p class="text-lg text-gray-400 mb-12 text-center max-w-2xl mx-auto">Che tu voglia costruire un nuovo brand digitale o migliorare la tua presenza online, posso aiutarti a ogni livello del processo.</p>
+  <h2 ref="postTitle" class="text-4xl font-bold text-white mb-4 text-center">Scegli come possiamo lavorare insieme</h2>
+  <p ref="postSubtitle" class="text-lg text-gray-400 mb-12 text-center max-w-2xl mx-auto">Che tu voglia costruire un nuovo brand digitale o migliorare la tua presenza online, posso aiutarti a ogni livello del processo.</p>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <article class="service-card rounded-2xl p-8 shadow-lg transition-all duration-300 hover:shadow-2xl border border-white/6">
+  <article ref="cardLeft" class="service-card rounded-2xl p-8 shadow-lg transition-all duration-500 ease-out hover:shadow-2xl border border-white/6">
           <div class="p-6 bg-gradient-to-br from-black/60 to-black/40 rounded-xl">
             <h3 class="text-2xl font-semibold text-white mb-2">Brand & Web Design</h3>
             <p class="text-white/60 mb-4 italic">Crea o rinnova la tua identità digitale</p>
@@ -106,7 +106,7 @@
           </div>
         </article>
 
-        <article class="service-card rounded-2xl p-8 shadow-lg transition-all duration-300 hover:shadow-2xl border border-white/6">
+  <article ref="cardRight" class="service-card rounded-2xl p-8 shadow-lg transition-all duration-500 ease-out hover:shadow-2xl border border-white/6">
           <div class="p-6 bg-gradient-to-br from-black/60 to-black/40 rounded-xl">
             <h3 class="text-2xl font-semibold text-white mb-2">Consulenza & Strategia Digitale</h3>
             <p class="text-white/60 mb-4 italic">Definisci la direzione giusta per il tuo brand</p>
@@ -146,6 +146,10 @@
   const bgImage = ref(null)
   const heroRef = ref(null)
   const postSection = ref(null)
+  const postTitle = ref(null)
+  const postSubtitle = ref(null)
+  const cardLeft = ref(null)
+  const cardRight = ref(null)
 
   gsap.registerPlugin(ScrollTrigger)
 
@@ -173,36 +177,44 @@
       })
     }
 
-    // services section reveal (fade + slide) + staggered cards
+    // services section reveal (fade + slide) with sequence delays
     try {
       if (postSection.value) {
-        gsap.from(postSection.value, {
-          y: 24,
-          opacity: 0,
-          duration: 0.8,
-          ease: 'power3.out',
-          scrollTrigger: {
-            trigger: postSection.value,
-            start: 'top 85%',
-            toggleActions: 'play none none reverse',
-          },
-        })
-
-        const cards = postSection.value.querySelectorAll('.service-card')
-        if (cards && cards.length) {
-          gsap.from(cards, {
-            y: 28,
-            opacity: 0,
-            duration: 0.8,
-            ease: 'power3.out',
-            stagger: 0.14,
+          const tl2 = gsap.timeline({
             scrollTrigger: {
               trigger: postSection.value,
-              start: 'top 82%',
+              start: 'top 85%',
               toggleActions: 'play none none reverse',
             },
           })
-        }
+          // Faster sequence: small offsets (120ms) between elements for a tighter reveal
+          tl2.from(postTitle.value, { y: 30, opacity: 0, duration: 0.6, ease: 'power3.out' }, 0)
+            .from(postSubtitle.value, { y: 30, opacity: 0, duration: 0.6, ease: 'power3.out' }, 0.12)
+            .from(cardLeft.value, { y: 24, opacity: 0, duration: 0.6, ease: 'power3.out' }, 0.24)
+            .from(cardRight.value, { y: 24, opacity: 0, duration: 0.6, ease: 'power3.out' }, 0.36)
+
+        // small parallax movement for cards (optional subtle)
+        gsap.to(cardLeft.value, {
+          y: -3,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: postSection.value,
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: 0.6,
+          },
+        })
+
+        gsap.to(cardRight.value, {
+          y: 3,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: postSection.value,
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: 0.6,
+          },
+        })
       }
     } catch (e) {
       // ignore animation errors
@@ -460,10 +472,48 @@
   background: linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(0,0,0,0.35) 100%);
   border-radius: 16px;
   border: 1px solid rgba(255,255,255,0.04);
+  position: relative;
 }
 .service-card h3 { color: #ffffff; }
 .service-card p, .service-card li { color: rgba(255,255,255,0.82); }
 .service-card .p-6 { padding: 1.5rem; }
 
+/* card hover interaction: modern Awwwards-like microinteraction */
+.service-card{
+  transition: transform 400ms cubic-bezier(.22,.77,.12,1), box-shadow 400ms cubic-bezier(.22,.77,.12,1), filter 400ms;
+  will-change: transform, box-shadow, filter;
+}
+.service-card:hover{
+  /* avoid overriding transform inline set by GSAP; animate inner panel instead */
+  box-shadow: 0 28px 60px rgba(2,6,23,0.65), 0 12px 40px rgba(0,191,255,0.06);
+  filter: drop-shadow(0 10px 30px rgba(0,191,255,0.06));
+}
+.service-card .p-6{
+  position: relative;
+  z-index: 2;
+  transition: transform 420ms cubic-bezier(.22,.77,.12,1);
+  transform-origin: center center;
+}
+.service-card:hover .p-6 {
+  transform: scale(1.06);
+}
+.service-card:focus-visible{
+  box-shadow: 0 30px 60px rgba(2,6,23,0.6), 0 0 0 6px rgba(0,191,255,0.08);
+}
+
+/* blue glow layer */
+.service-card::before{
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  box-shadow: 0 0 0 0 rgba(0,191,255,0); /* start invisible */
+  transition: box-shadow 400ms cubic-bezier(.22,.77,.12,1), opacity 400ms;
+  pointer-events: none;
+  z-index: 1;
+}
+.service-card:hover::before{
+  box-shadow: 0 0 40px 6px rgba(0,191,255,0.06), 0 0 120px 24px rgba(0,191,255,0.03);
+}
 
 </style>
