@@ -9,31 +9,70 @@
     <!-- overlay direzionale sfumato per profondità -->
   <div class="absolute inset-0 hero-overlay bg-gradient-to-b from-black/50 to-black/30"></div>
 
-    <!-- subtle animated gradient pattern (very soft) -->
-    <div class="absolute inset-0 animated-gradient-pattern pointer-events-none"></div>
+  <!-- dynamic linear gradient (fluid blue/azure theme) -->
+  <div class="absolute inset-0 dynamic-linear-gradient pointer-events-none" aria-hidden="true"></div>
 
-    <div class="relative z-10 px-6">
-      <!-- light spot / soft blue glow behind the main name -->
-      <div class="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
-        <span class="light-spot"></span>
-      </div>
-        <p ref="intro" class="text-cyan-400 text-lg">Ciao, sono</p>
-        <h1 ref="name" class="text-4xl md:text-6xl font-extrabold mt-2 leading-tight">Riccardo Cassis</h1>
-        <p ref="role" class="text-white text-2xl md:text-3xl mt-3 font-semibold">Io sono un digital e web designer</p>
+  <!-- subtle animated gradient pattern (very soft) -->
+  <div class="absolute inset-0 animated-gradient-pattern pointer-events-none"></div>
 
-        <p ref="desc" class="max-w-2xl mx-auto text-white/80 mt-4 text-base md:text-lg">Progetto interfacce digitali e siti web strategici: branding, UX/UI, e-commerce e landing page ottimizzate per conversione.</p>
+  <div class="relative z-10 px-6 pt-20 md:pt-24 w-full max-w-7xl mx-auto">
+      <div class="flex flex-col lg:flex-row items-center lg:items-stretch gap-8">
+        <!-- Left: copy and CTAs -->
+        <div class="w-full lg:w-1/2 relative">
+          <!-- light spot / soft blue glow behind the main name (scoped to left column) -->
+          <div class="absolute inset-0 flex items-center justify-start pointer-events-none z-0 pl-6 lg:pl-0">
+            <span class="light-spot"></span>
+          </div>
 
-        <div ref="ctas" class="mt-8 flex flex-col sm:flex-row items-center gap-4 justify-center">
-          <RouterLink to="/contact" class="btn-primary inline-flex items-center justify-center bg-[#00BFFF] text-black font-semibold px-6 py-3 rounded-full shadow-lg transition-colors duration-200">
-            Contattami
-          </RouterLink>
+          <div class="relative z-10 max-w-2xl lg:ml-6">
+            <p ref="intro" class="text-cyan-400 text-sm md:text-lg font-medium mb-4">Portfolio • Digital & Web Design</p>
+            <h1 ref="name" class="text-4xl md:text-6xl font-extrabold leading-tight">Designing thoughtful<br/><span class="text-[#00BFFF]">digital experiences</span></h1>
+            <p ref="role" class="text-white text-lg md:text-2xl mt-4 font-semibold">Io sono un digital e web designer</p>
 
-          <RouterLink to="/projects" class="btn-ghost inline-flex items-center justify-center border border-white/30 text-white px-5 py-3 rounded-full transition-colors duration-200 overflow-hidden">
-            <span class="btn-ghost-text">Vedi i progetti</span>
-          </RouterLink>
+            <p ref="desc" class="max-w-xl text-white/80 mt-4 text-base md:text-lg">Progetto interfacce digitali e siti web strategici: branding, UX/UI, e-commerce e landing page ottimizzate per conversione.</p>
+
+            <div ref="ctas" class="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+              <RouterLink to="/contact" class="btn-primary inline-flex items-center justify-center bg-[#00BFFF] text-black font-semibold px-6 py-3 rounded-full shadow-lg transition-colors duration-200">
+                Contattami
+              </RouterLink>
+
+              <RouterLink to="/projects" class="btn-ghost inline-flex items-center justify-center border border-white/30 text-white px-5 py-3 rounded-full transition-colors duration-200 overflow-hidden">
+                <span class="btn-ghost-text">Vedi i progetti</span>
+              </RouterLink>
+            </div>
+
+            <socialIcons class="mt-8" />
+
+            <!-- Stats row similar to reference -->
+            <div class="mt-10 grid grid-cols-3 gap-6 max-w-md">
+              <div class="flex flex-col">
+                <span class="text-2xl font-bold text-white">25+</span>
+                <span class="text-sm text-white/70">Projects</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="text-2xl font-bold text-white">15+</span>
+                <span class="text-sm text-white/70">Clients</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="text-2xl font-bold text-white">6 mo</span>
+                <span class="text-sm text-white/70">Avg Delivery</span>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <socialIcons class="mt-8" />
+        <!-- Right: big square image with logo overlay -->
+        <div class="w-full lg:w-1/2 flex items-center justify-center">
+          <div class="logo-square group relative w-64 h-64 md:w-96 md:h-96 rounded-2xl overflow-hidden border border-white/10 bg-white/3 flex items-center justify-center transition-transform duration-200">
+            <!-- only logo centered -->
+            <div class="relative z-10 flex items-center justify-center">
+              <img src="../assets/logo-rc.png" alt="Logo RC" class="logo-image w-28 h-28 md:w-40 md:h-40 opacity-90" />
+            </div>
+            <!-- subtle dark overlay for depth -->
+            <div class="absolute inset-0 bg-black/10 pointer-events-none"></div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- scroll indicator (floating arrow) -->
@@ -171,6 +210,22 @@
   mix-blend-mode: overlay;
 }
 
+/* dynamic linear gradient overlay (fluid, blue/azure theme) */
+.dynamic-linear-gradient{
+  z-index: 5;
+  opacity: 0.22;
+  background: linear-gradient(115deg, rgba(0,191,255,0.12) 0%, rgba(10,132,255,0.10) 30%, rgba(0,116,255,0.06) 55%, rgba(0,0,0,0) 100%);
+  background-size: 400% 400%;
+  animation: dynamicGradient 22s ease-in-out infinite;
+  mix-blend-mode: overlay;
+}
+
+@keyframes dynamicGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 @keyframes gradientShift {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -219,6 +274,23 @@
   filter: blur(54px);
   transform: translateY(-8%);
   opacity: 0.95;
+}
+
+/* logo square hover glow */
+.logo-square{
+  transition: box-shadow 280ms ease, transform 220ms ease;
+}
+.logo-square:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0,191,255,0.14), 0 0 80px rgba(0,191,255,0.12);
+}
+.logo-image{
+  filter: drop-shadow(0 6px 18px rgba(0,0,0,0.35));
+  transition: transform 220ms ease, opacity 220ms ease;
+}
+.logo-square:hover .logo-image{
+  transform: scale(1.03);
+  opacity: 1;
 }
 
 </style>
