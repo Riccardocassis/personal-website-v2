@@ -4,7 +4,6 @@ import { RouterLink } from 'vue-router'
 import logo from '../assets/logo-rc.png'
 
 const openDesktop = ref(false)      // dropdown desktop
-
 // Funzioni per hover dropdown desktop
 function openDropdown() {
   openDesktop.value = true
@@ -29,19 +28,30 @@ function onKeydown(e) {
     openDesktop.value = false
   }
 }
+
+// glass effect: visibile solo quando si scrolla
+const scrolled = ref(false)
+function onScroll() {
+  scrolled.value = window.scrollY > 20
+}
+
 onMounted(() => {
   document.addEventListener('click', onDocClick)
   document.addEventListener('keydown', onKeydown)
+  window.addEventListener('scroll', onScroll, { passive: true })
+  // inizializza stato
+  onScroll()
 })
 onBeforeUnmount(() => {
   document.removeEventListener('click', onDocClick)
   document.removeEventListener('keydown', onKeydown)
+  window.removeEventListener('scroll', onScroll)
 })
 </script>
 
 <template>
   <!-- fissa sopra -->
-  <nav class="fixed top-0 left-0 right-0 bg-transparent backdrop-blur-sm text-white z-50 shadow-sm" style="height:70px;">
+  <nav :class="['fixed top-0 left-0 right-0 z-50 transition-all duration-300', scrolled ? 'bg-black/40 backdrop-blur-md shadow-md border-b border-white/5' : 'bg-transparent']" style="height:70px;">
     <div class="flex items-center justify-between max-w-7xl mx-auto w-full px-0 sm:px-0 md:px-0 h-full">
       <!-- Logo RC desktop: più vicino, centrato, con padding e ombra -->
       <div class="flex items-center h-full">
@@ -54,8 +64,8 @@ onBeforeUnmount(() => {
         </RouterLink>
       </div>
 
-      <!-- Desktop menu -->
-      <ul class="hidden md:flex items-center gap-8 text-lg">
+  <!-- Desktop menu -->
+  <ul class="hidden md:flex items-center gap-8 text-lg">
           <!-- Dropdown desktop -->
           <li class="relative" ref="desktopRef"
         @mouseenter="openDropdown"
@@ -113,13 +123,19 @@ onBeforeUnmount(() => {
           </li>
 
           <li>
-            <RouterLink to="/about" class="text-white transition-colors duration-200 ease-in-out hover:text-[#00BFFF] hover:underline underline-offset-4">
+            <RouterLink to="/about" class="nav-link">
               About me
             </RouterLink>
           </li>
 
+          <li>
+            <RouterLink to="/blog" class="nav-link">
+              Blog
+            </RouterLink>
+          </li>
+
         <li>
-          <RouterLink to="/contact" class="ml-2 inline-flex items-center px-4 py-2 bg-[#00BFFF] text-white font-semibold rounded-full shadow-md hover:bg-[#00A6E6] transition-colors">
+          <RouterLink to="/contact" class="ml-2 inline-flex items-center px-4 py-2 bg-[#00BFFF] text-white font-semibold rounded-full shadow-md hover:bg-[#00A0E0] transition-colors">
             Contact
           </RouterLink>
         </li>
@@ -194,7 +210,11 @@ onBeforeUnmount(() => {
             About me
           </RouterLink>
 
-            <RouterLink to="/contact" class="block px-2 py-2 rounded bg-[#00BFFF] text-white text-center font-semibold hover:bg-[#00A6E6]" @click="mobileOpen=false">
+          <RouterLink to="/blog" class="block px-2 py-2 rounded text-white transition-colors duration-200 ease-in-out hover:text-[#00BFFF] hover:underline" @click="mobileOpen=false">
+            Blog
+          </RouterLink>
+
+            <RouterLink to="/contact" class="block px-2 py-2 rounded bg-[#00BFFF] text-white text-center font-semibold hover:bg-[#00A0E0]" @click="mobileOpen=false">
               Contact
             </RouterLink>
         </div>
@@ -202,3 +222,33 @@ onBeforeUnmount(() => {
     </transition>
   </nav>
 </template>
+
+<style scoped>
+.nav-link{
+  color: #ffffff;
+  position: relative;
+  padding: 0.5rem 1.1rem;
+  font-weight: 600;
+  transition: color 180ms ease;
+}
+.nav-link::after{
+  content: '';
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 6px;
+  height: 2px;
+  background: #00BFFF;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 260ms cubic-bezier(.2,.9,.2,1), opacity 200ms;
+  opacity: 0;
+}
+.nav-link:hover{
+  color: #00BFFF;
+}
+.nav-link:hover::after{
+  transform: scaleX(1);
+  opacity: 1;
+}
+</style>

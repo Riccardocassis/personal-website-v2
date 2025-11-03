@@ -1,5 +1,5 @@
 <template>
-  <div ref="heroRef" class="relative h-screen w-full flex flex-col justify-center items-center text-center text-white">
+  <div ref="heroRef" class="relative h-screen w-full flex items-center justify-end text-right text-white">
     <img
       ref="bgImage"
       src="../assets/hero-riccardo.png"
@@ -15,52 +15,59 @@
   <!-- subtle animated gradient pattern (very soft) -->
   <div class="absolute inset-0 animated-gradient-pattern pointer-events-none"></div>
 
-  <div class="relative z-10 px-6 pt-20 md:pt-24 w-full max-w-7xl mx-auto">
-      <div class="flex flex-col lg:flex-row items-center lg:items-stretch gap-8 lg:justify-end">
-        <!-- Copy and CTAs moved to the right so the face remains visible -->
-        <div class="w-full lg:w-1/2 relative">
-          <!-- light spot / soft blue glow behind the main name (scoped to right column) -->
-          <div class="absolute inset-0 flex items-center justify-end pointer-events-none z-0 pr-6 lg:pr-0">
-            <span class="light-spot"></span>
-          </div>
+  <div class="relative z-10 px-6 pt-20 md:pt-24 w-full max-w-7xl pr-6 md:pr-16">
+    <!-- right-aligned layout -->
+    <div class="flex flex-col items-end justify-center gap-8">
+      <div class="relative w-full max-w-3xl ml-auto">
+        <!-- light spot behind heading aligned to the right -->
+        <div class="absolute inset-0 flex items-center justify-end pointer-events-none z-0 pr-6 md:pr-0">
+          <span class="light-spot"></span>
+        </div>
 
-          <div class="relative z-10 max-w-2xl lg:mr-6 text-left">
-            <p ref="intro" class="text-cyan-400 text-sm md:text-lg font-medium mb-4">Portfolio • Digital & Web Design</p>
-            <h1 ref="name" class="text-4xl md:text-6xl font-extrabold leading-tight">Designing thoughtful<br/><span class="text-[#00BFFF]">digital experiences</span></h1>
-            <p ref="role" class="text-white text-lg md:text-2xl mt-4 font-semibold">Io sono un digital e web designer</p>
+        <div class="relative z-10 max-w-3xl text-right ml-auto">
+          <p ref="intro" class="text-cyan-400 text-sm md:text-lg font-medium mb-4">Portfolio • Digital & Web Design</p>
+          <h1 ref="name" class="text-4xl md:text-6xl font-extrabold leading-tight">Designing <span class="text-[#00BFFF]">human-centered</span><br/>digital experiences</h1>
+          <p ref="role" class="text-white text-lg md:text-2xl mt-4 font-semibold">Aiuto brand e startup a costruire prodotti digitali, siti web e identità visive che uniscono design, strategia e tecnologia.</p>
 
-            <p ref="desc" class="max-w-xl text-white/80 mt-4 text-base md:text-lg">Progetto interfacce digitali e siti web strategici: branding, UX/UI, e-commerce e landing page ottimizzate per conversione.</p>
+          <p ref="desc" class="max-w-xl text-white/80 mt-4 text-base md:text-lg ml-auto">Progetto interfacce e siti ad alta conversione, con attenzione a UX, accessibilità e scalabilità per team e startup.</p>
 
-            <div ref="ctas" class="mt-8">
-              <div class="flex flex-col items-start">
-                <RouterLink to="/contact" class="btn-primary inline-flex items-center justify-center bg-[#00BFFF] text-black font-semibold px-6 py-3 rounded-full shadow-lg transition-colors duration-200">
-                  Contattami
-                </RouterLink>
-                <socialIcons class="mt-4" />
-              </div>
+          <div ref="ctas" class="mt-8 flex flex-col items-end space-y-4 md:flex-row md:space-y-0 md:space-x-4 md:justify-end">
+            <div ref="ctaPrimary" class="inline-flex">
+              <RouterLink to="/contact" class="btn-primary inline-flex items-center justify-center bg-[#00BFFF] text-white font-semibold px-4 py-2 rounded-full shadow-lg transition-transform duration-200">
+                Parliamo del tuo progetto
+              </RouterLink>
             </div>
 
-            <!-- Stats row similar to reference -->
-            <div class="mt-10 grid grid-cols-3 gap-6 max-w-md">
-              <div class="flex flex-col">
-                <span class="text-2xl font-bold text-white">25+</span>
-                <span class="text-sm text-white/70">Projects</span>
-              </div>
-              <div class="flex flex-col">
-                <span class="text-2xl font-bold text-white">15+</span>
-                <span class="text-sm text-white/70">Clients</span>
-              </div>
-              <div class="flex flex-col">
-                <span class="text-2xl font-bold text-white">6 mo</span>
-                <span class="text-sm text-white/70">Avg Delivery</span>
-              </div>
+            <div ref="ctaSecondary" class="inline-flex">
+              <RouterLink to="/projects" class="btn-ghost inline-flex items-center justify-center border border-white/30 text-white px-4 py-2 rounded-full transition-colors duration-200 overflow-hidden">
+                <span class="btn-ghost-text">Esplora i miei lavori</span>
+              </RouterLink>
+            </div>
+          </div>
+
+          <div ref="socialRef" class="social-icons-wrapper mt-6 flex items-end justify-end">
+            <socialIcons />
+          </div>
+
+          <!-- Stats row similar to reference -->
+          <div class="mt-10 grid grid-cols-3 gap-6 max-w-md ml-auto">
+            <div class="flex flex-col">
+              <span class="text-2xl font-bold text-white">25+</span>
+              <span class="text-sm text-white/70">Projects</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-2xl font-bold text-white">15+</span>
+              <span class="text-sm text-white/70">Clients</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-2xl font-bold text-white">6 mo</span>
+              <span class="text-sm text-white/70">Avg Delivery</span>
             </div>
           </div>
         </div>
-
-        <!-- (square removed) the content is aligned right so the background face is visible -->
       </div>
     </div>
+  </div>
 
     <!-- scroll indicator (floating arrow) -->
     <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 pointer-events-auto">
@@ -85,6 +92,9 @@
   const role = ref(null)
   const desc = ref(null)
   const ctas = ref(null)
+  const ctaPrimary = ref(null)
+  const ctaSecondary = ref(null)
+  const socialRef = ref(null)
   const bgImage = ref(null)
   const heroRef = ref(null)
 
@@ -98,7 +108,7 @@
       .from(name.value, { y: 22, opacity: 0 }, '-=0.35')
       .from(role.value, { y: 18, opacity: 0 }, '-=0.32')
       .from(desc.value, { y: 16, opacity: 0 }, '-=0.28')
-      .from(ctas.value, { y: 12, opacity: 0, stagger: 0.12 }, '-=0.22')
+      .from([ctaPrimary.value, ctaSecondary.value, socialRef.value], { y: 12, opacity: 0, stagger: 0.12 }, '-=0.22')
 
     // Parallax: slight vertical movement of background image on scroll
     if (bgImage.value && heroRef.value) {
@@ -156,7 +166,7 @@
   transition: box-shadow 220ms ease, transform 180ms ease, background-color 180ms ease;
 }
 .btn-primary:hover {
-  transform: translateY(-2px) scale(1.02);
+  transform: translateY(-2px) scale(1.03);
   box-shadow: 0 10px 30px rgba(0,191,255,0.16), 0 0 40px rgba(0,191,255,0.18);
 }
 
@@ -185,6 +195,44 @@
 }
 .btn-ghost:hover .btn-ghost-text {
   color: #000000;
+}
+
+/* social icons slight scale on hover */
+.social-icons-wrapper > * {
+  transition: transform 180ms ease, opacity 180ms ease;
+}
+.social-icons-wrapper > *:hover {
+  transform: scale(1.08);
+}
+
+/* ensure ghost button border fill is subtle */
+.btn-ghost{
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.btn-ghost::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0%;
+  background: rgba(0,191,255,0.08);
+  z-index: 0;
+  transition: width 360ms cubic-bezier(.2,.9,.2,1);
+}
+.btn-ghost .btn-ghost-text{
+  position: relative;
+  z-index: 10;
+  transition: color 260ms ease;
+}
+.btn-ghost:hover::before{
+  width: 100%;
+}
+.btn-ghost:hover .btn-ghost-text{
+  color: #ffffff;
 }
 
 /* Animated gradient pattern (very subtle) */
