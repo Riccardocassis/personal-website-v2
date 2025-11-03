@@ -4,10 +4,10 @@
       ref="bgImage"
       src="../assets/hero-riccardo.png"
       alt="Riccardo"
-      class="absolute inset-0 w-full h-full object-cover opacity-60 will-change-transform"
+      class="absolute inset-0 w-full h-full object-cover opacity-80 will-change-transform"
     />
     <!-- overlay direzionale sfumato per profondità -->
-    <div class="absolute inset-0 hero-overlay bg-gradient-to-b from-black/70 to-black/30"></div>
+  <div class="absolute inset-0 hero-overlay bg-gradient-to-b from-black/50 to-black/30"></div>
 
     <!-- subtle animated gradient pattern (very soft) -->
     <div class="absolute inset-0 animated-gradient-pattern pointer-events-none"></div>

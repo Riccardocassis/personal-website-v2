@@ -6,4 +6,9 @@
 	body {
 		@apply bg-black min-h-screen;
 	}
+	/* Smooth scrolling and correct anchor offset for fixed navbar */
+	html {
+		scroll-behavior: smooth;
+		scroll-padding-top: 78px; /* leave room for fixed navbar (height ~70px) */
+	}
 }
