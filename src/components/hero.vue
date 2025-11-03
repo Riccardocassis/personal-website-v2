@@ -81,6 +81,51 @@
       </button>
     </div>
   </div>
+  <!-- Services section: two dark cards with pill CTAs (matches attachment aesthetic) -->
+  <section ref="postSection" class="service-section w-full">
+    <div class="max-w-7xl mx-auto px-6 py-20">
+      <h2 class="text-4xl font-bold text-white mb-4 text-center">Scegli come possiamo lavorare insieme</h2>
+      <p class="text-lg text-gray-400 mb-12 text-center max-w-2xl mx-auto">Che tu voglia costruire un nuovo brand digitale o migliorare la tua presenza online, posso aiutarti a ogni livello del processo.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <article class="service-card rounded-2xl p-8 shadow-lg transition-all duration-300 hover:shadow-2xl border border-white/6">
+          <div class="p-6 bg-gradient-to-br from-black/60 to-black/40 rounded-xl">
+            <h3 class="text-2xl font-semibold text-white mb-2">Brand & Web Design</h3>
+            <p class="text-white/60 mb-4 italic">Crea o rinnova la tua identità digitale</p>
+
+            <ul class="list-disc list-inside space-y-2 text-white/80">
+              <li>Branding e visual identity</li>
+              <li>UX/UI design per siti ed e-commerce</li>
+              <li>Design system e linee guida</li>
+              <li>Wireframe e prototipi</li>
+            </ul>
+
+            <div class="mt-8">
+              <RouterLink to="/process" class="block w-full text-center bg-white text-black rounded-full px-6 py-3 font-semibold transition-transform duration-300 hover:scale-105 hover:shadow-xl">Scopri il processo</RouterLink>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-card rounded-2xl p-8 shadow-lg transition-all duration-300 hover:shadow-2xl border border-white/6">
+          <div class="p-6 bg-gradient-to-br from-black/60 to-black/40 rounded-xl">
+            <h3 class="text-2xl font-semibold text-white mb-2">Consulenza & Strategia Digitale</h3>
+            <p class="text-white/60 mb-4 italic">Definisci la direzione giusta per il tuo brand</p>
+
+            <ul class="list-disc list-inside space-y-2 text-white/80">
+              <li>Analisi UX e ottimizzazione conversioni</li>
+              <li>Audit di siti e piattaforme</li>
+              <li>Strategia di rebranding o restyling</li>
+              <li>Supporto continuo al team</li>
+            </ul>
+
+            <div class="mt-8">
+              <RouterLink to="/contact" class="block w-full text-center border border-white/30 text-white rounded-full px-6 py-3 font-semibold transition-colors duration-300 hover:bg-white hover:text-black">Richiedi una consulenza</RouterLink>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 </template>
 
   <script setup>
@@ -100,6 +145,7 @@
   const socialRef = ref(null)
   const bgImage = ref(null)
   const heroRef = ref(null)
+  const postSection = ref(null)
 
   gsap.registerPlugin(ScrollTrigger)
 
@@ -125,6 +171,41 @@
           scrub: 0.6,
         },
       })
+    }
+
+    // services section reveal (fade + slide) + staggered cards
+    try {
+      if (postSection.value) {
+        gsap.from(postSection.value, {
+          y: 24,
+          opacity: 0,
+          duration: 0.8,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: postSection.value,
+            start: 'top 85%',
+            toggleActions: 'play none none reverse',
+          },
+        })
+
+        const cards = postSection.value.querySelectorAll('.service-card')
+        if (cards && cards.length) {
+          gsap.from(cards, {
+            y: 28,
+            opacity: 0,
+            duration: 0.8,
+            ease: 'power3.out',
+            stagger: 0.14,
+            scrollTrigger: {
+              trigger: postSection.value,
+              start: 'top 82%',
+              toggleActions: 'play none none reverse',
+            },
+          })
+        }
+      }
+    } catch (e) {
+      // ignore animation errors
     }
   })
 
@@ -372,5 +453,17 @@
   transform: scale(1.03);
   opacity: 1;
 }
+
+/* Services section visual tweaks */
+.service-section { z-index: 2; }
+.service-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(0,0,0,0.35) 100%);
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.04);
+}
+.service-card h3 { color: #ffffff; }
+.service-card p, .service-card li { color: rgba(255,255,255,0.82); }
+.service-card .p-6 { padding: 1.5rem; }
+
 
 </style>
