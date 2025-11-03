@@ -6,6 +6,9 @@
       alt="Riccardo"
       class="absolute inset-0 w-full h-full object-cover opacity-80 will-change-transform"
     />
+    <!-- liquid gradient: moving, blurred color blobs behind overlays -->
+  <div class="absolute inset-0 liquid-gradient pointer-events-none" aria-hidden="true"></div>
+
     <!-- overlay direzionale sfumato per profondità -->
   <div class="absolute inset-0 hero-overlay bg-gradient-to-b from-black/50 to-black/30"></div>
 
@@ -253,6 +256,48 @@
   background-size: 400% 400%;
   animation: dynamicGradient 22s ease-in-out infinite;
   mix-blend-mode: overlay;
+}
+
+/* Liquid gradient - dynamic blurred color blobs */
+.liquid-gradient{
+  z-index: 3;
+  opacity: 0.28;
+  background-image: radial-gradient(circle at 10% 20%, rgba(0,191,255,0.18) 0%, rgba(10,132,255,0.12) 12%, transparent 25%),
+                    radial-gradient(circle at 80% 70%, rgba(0,116,255,0.14) 0%, rgba(0,191,255,0.08) 14%, transparent 30%),
+                    radial-gradient(circle at 50% 40%, rgba(0,255,255,0.04) 0%, transparent 40%);
+  background-size: 220% 220%, 180% 180%, 260% 260%;
+  mix-blend-mode: screen;
+  filter: blur(64px) saturate(120%);
+  transform: translateZ(0);
+  animation: liquidShift 20s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes liquidShift {
+  0% {
+    background-position: 0% 0%, 100% 100%, 50% 50%;
+    transform: scale(1) translateY(0);
+  }
+  25% {
+    background-position: 30% 20%, 70% 60%, 40% 30%;
+    transform: scale(1.02) translateY(-2px);
+  }
+  50% {
+    background-position: 60% 40%, 40% 20%, 60% 60%;
+    transform: scale(1.03) translateY(1px);
+  }
+  75% {
+    background-position: 40% 70%, 20% 40%, 30% 80%;
+    transform: scale(1.01) translateY(-1px);
+  }
+  100% {
+    background-position: 0% 0%, 100% 100%, 50% 50%;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .liquid-gradient{ opacity: 0.18; filter: blur(46px); }
 }
 
 @keyframes dynamicGradient {
