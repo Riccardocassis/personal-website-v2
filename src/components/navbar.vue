@@ -41,7 +41,7 @@ onBeforeUnmount(() => {
 
 <template>
   <!-- fissa sopra -->
-  <nav class="fixed top-0 left-0 right-0 bg-cyan-500 text-white z-50" style="height:70px;">
+  <nav class="fixed top-0 left-0 right-0 bg-transparent backdrop-blur-sm text-white z-50 shadow-sm" style="height:70px;">
     <div class="flex items-center justify-between max-w-7xl mx-auto w-full px-0 sm:px-0 md:px-0 h-full">
       <!-- Logo RC desktop: più vicino, centrato, con padding e ombra -->
       <div class="flex items-center h-full">
@@ -57,21 +57,20 @@ onBeforeUnmount(() => {
       <!-- Desktop menu -->
       <ul class="hidden md:flex items-center gap-8 text-lg">
           <!-- Dropdown desktop -->
-      <li class="relative" ref="desktopRef"
+          <li class="relative" ref="desktopRef"
         @mouseenter="openDropdown"
         @mouseleave="closeDropdown"
         style="display:inline-block;">
             <button
               :class="[
-                'flex items-center gap-1 focus:outline-none px-7 py-2 font-semibold text-lg',
+                'flex items-center gap-1 focus:outline-none px-7 py-2 font-semibold text-lg text-white transition-colors duration-200 ease-in-out hover:text-[#00BFFF] hover:underline underline-offset-4',
                 openDesktop
                   ? 'bg-white/20 backdrop-blur-lg border border-white/30 text-white rounded-t-3xl shadow-lg drop-shadow-lg'
-                  : 'hover:underline underline-offset-4 text-white'
+                  : ''
               ]"
               aria-haspopup="menu"
               :aria-expanded="openDesktop"
               tabindex="0"
-              style="transition:background 0.15s, color 0.15s;"
             >
               Projects
               <svg :class="openDesktop ? 'rotate-180' : ''" class="w-4 h-4 transition-transform" viewBox="0 0 20 20" fill="currentColor">
@@ -114,13 +113,13 @@ onBeforeUnmount(() => {
           </li>
 
           <li>
-            <RouterLink to="/about" class="hover:underline underline-offset-4">
+            <RouterLink to="/about" class="text-white transition-colors duration-200 ease-in-out hover:text-[#00BFFF] hover:underline underline-offset-4">
               About me
             </RouterLink>
           </li>
 
         <li>
-          <RouterLink to="/contact" class="hover:underline underline-offset-4">
+          <RouterLink to="/contact" class="text-white transition-colors duration-200 ease-in-out hover:text-[#00BFFF] hover:underline underline-offset-4">
             Contact
           </RouterLink>
         </li>
@@ -128,7 +127,7 @@ onBeforeUnmount(() => {
 
       <!-- Burger (mobile) -->
       <button
-        class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg hover:bg-cyan-400/30 focus:outline-none"
+        class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg hover:bg-cyan-400/30 focus:outline-none text-white"
         @click="mobileOpen = !mobileOpen"
         aria-label="Open menu"
         :aria-expanded="mobileOpen"
@@ -178,24 +177,24 @@ onBeforeUnmount(() => {
               leave-to-class="opacity-0 -translate-y-1"
             >
               <div v-show="mobileProjects" class="mt-1 ml-2 space-y-1">
-                <RouterLink to="/projects/web" class="block px-3 py-2 rounded hover:bg-white/10" @click="mobileOpen=false">
+                <RouterLink to="/projects/web" class="block px-3 py-2 rounded text-white transition-colors duration-200 ease-in-out hover:text-[#00BFFF] hover:underline" @click="mobileOpen=false">
                   Web design
                 </RouterLink>
-                <RouterLink to="/projects/brand" class="block px-3 py-2 rounded hover:bg-white/10" @click="mobileOpen=false">
+                <RouterLink to="/projects/brand" class="block px-3 py-2 rounded text-white transition-colors duration-200 ease-in-out hover:text-[#00BFFF] hover:underline" @click="mobileOpen=false">
                   Brand Design
                 </RouterLink>
-                <RouterLink to="/projects/product" class="block px-3 py-2 rounded hover:bg-white/10" @click="mobileOpen=false">
+                <RouterLink to="/projects/product" class="block px-3 py-2 rounded text-white transition-colors duration-200 ease-in-out hover:text-[#00BFFF] hover:underline" @click="mobileOpen=false">
                   Product Design
                 </RouterLink>
               </div>
             </transition>
           </div>
 
-          <RouterLink to="/about" class="block px-2 py-2 rounded hover:bg-white/10" @click="mobileOpen=false">
+          <RouterLink to="/about" class="block px-2 py-2 rounded text-white transition-colors duration-200 ease-in-out hover:text-[#00BFFF] hover:underline" @click="mobileOpen=false">
             About me
           </RouterLink>
 
-          <RouterLink to="/contact" class="block px-2 py-2 rounded hover:bg-white/10" @click="mobileOpen=false">
+          <RouterLink to="/contact" class="block px-2 py-2 rounded text-white transition-colors duration-200 ease-in-out hover:text-[#00BFFF] hover:underline" @click="mobileOpen=false">
             Contact
           </RouterLink>
         </div>
