@@ -80,7 +80,7 @@
   <h2 ref="postTitle" class="text-4xl font-bold text-white mb-4 text-center">Scopri i servizi</h2>
   <p ref="postSubtitle" class="text-lg text-gray-400 mb-12 text-center max-w-2xl mx-auto">Che tu voglia costruire un nuovo brand digitale o migliorare la tua presenza online, posso aiutarti a ogni livello del processo.</p>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
   <article ref="cardLeft" class="service-card rounded-2xl p-8 shadow-lg transition-all duration-500 ease-out hover:shadow-2xl border border-white/6">
           <div class="p-6 bg-gradient-to-br from-black/60 to-black/40 rounded-xl">
             <h3 class="text-2xl font-semibold text-white mb-2">Brand & Web Design</h3>
@@ -116,6 +116,30 @@
             </div>
           </div>
         </article>
+        
+        <!-- Third card: Social Media Management -->
+        <article ref="cardThird" class="service-card service-social rounded-2xl p-8 shadow-lg transition-all duration-500 ease-out border border-white/6" data-aos="fade-up" aria-labelledby="social-title">
+          <div class="flex flex-col justify-between h-full bg-[#0b0b0b] rounded-xl p-6">
+            <div>
+              <h3 id="social-title" class="text-2xl font-semibold text-white mb-2">Social Media Management</h3>
+              <p class="text-white/60 mb-4 italic">Trasforma la tua presenza online in uno strumento di crescita.</p>
+
+              <p class="text-white/80 mb-4">Come social media manager, gestisco in modo strategico i profili digitali dei brand: dalla pianificazione editoriale alla creazione di contenuti, fino all’interazione con il pubblico. L’obiettivo è costruire una presenza coerente, riconoscibile e capace di generare risultati reali. <strong class="text-[#00BFFF]">Keyword:</strong> gestione profili social, social media manager, creazione contenuti, strategie digitali.</p>
+
+              <ul class="list-disc list-inside space-y-2 text-white/80 mb-6">
+                <li>Creazione di contenuti visivi e copy strategici</li>
+                <li>Pianificazione editoriale mensile</li>
+                <li>Campagne Facebook e Instagram Ads</li>
+                <li>Analisi e monitoraggio delle performance</li>
+                <li>Report e ottimizzazione continua</li>
+              </ul>
+            </div>
+
+            <div class="mt-4">
+              <RouterLink to="/social" class="border border-[#00BFFF] text-[#00BFFF] hover:bg-[#00BFFF] hover:text-black font-semibold rounded-full py-3 px-6 transition-all">Scopri come funziona</RouterLink>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
   </section>
@@ -141,6 +165,7 @@
   const postSubtitle = ref(null)
   const cardLeft = ref(null)
   const cardRight = ref(null)
+  const cardThird = ref(null)
 
   gsap.registerPlugin(ScrollTrigger)
 
@@ -182,6 +207,7 @@
             .from(postSubtitle.value, { y: 30, opacity: 0, duration: 0.6, ease: 'power3.out' }, 0.12)
             .from(cardLeft.value, { y: 24, opacity: 0, duration: 0.6, ease: 'power3.out' }, 0.24)
             .from(cardRight.value, { y: 24, opacity: 0, duration: 0.6, ease: 'power3.out' }, 0.36)
+            .from(cardThird.value, { y: 24, opacity: 0, duration: 0.6, ease: 'power3.out' }, 0.48)
 
         // small parallax movement for cards (optional subtle)
         gsap.to(cardLeft.value, {
@@ -197,6 +223,17 @@
 
         gsap.to(cardRight.value, {
           y: 3,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: postSection.value,
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: 0.6,
+          },
+        })
+
+        gsap.to(cardThird.value, {
+          y: 2,
           ease: 'none',
           scrollTrigger: {
             trigger: postSection.value,
@@ -504,6 +541,18 @@
 }
 .service-card:hover::before{
   box-shadow: 0 0 40px 6px rgba(0,191,255,0.06), 0 0 120px 24px rgba(0,191,255,0.03);
+}
+
+/* specific tweaks for the social card hover: subtle scale and azure tinted shadow */
+.service-card.service-social .p-6{ /* ensure inner panel padding is consistent */
+  padding: 1.5rem;
+}
+.service-card.service-social:hover .p-6{
+  transform: scale(1.02);
+  transition: transform 700ms ease-out;
+}
+.service-card.service-social:hover{
+  box-shadow: 0 18px 50px rgba(0,191,255,0.12), 0 6px 30px rgba(0,191,255,0.06);
 }
 
 </style>

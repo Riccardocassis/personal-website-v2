@@ -52,7 +52,7 @@ onBeforeUnmount(() => {
 <template>
   <!-- fissa sopra -->
   <nav :class="['fixed top-0 left-0 right-0 z-50 transition-all duration-300', scrolled ? 'bg-black/40 backdrop-blur-md shadow-md border-b border-white/5' : 'bg-transparent']" style="height:70px;">
-  <div class="flex items-center justify-between max-w-7xl mx-auto w-full px-6 md:px-16 h-full">
+    <div class="flex items-center justify-between max-w-7xl mx-auto w-full px-6 md:px-16 h-full">
       <!-- Logo RC desktop: più vicino, centrato, con padding e ombra -->
       <div class="flex items-center h-full">
         <RouterLink to="/" class="flex items-center justify-center" style="width:70px;height:70px;padding:7px;">
@@ -64,8 +64,9 @@ onBeforeUnmount(() => {
         </RouterLink>
       </div>
 
-  <!-- Desktop menu -->
-  <ul class="hidden md:flex items-center gap-8 text-lg">
+  <!-- Desktop menu (wrapped to align with hero content width) -->
+  <div class="hidden md:flex items-center h-full w-full max-w-3xl ml-auto">
+    <ul class="flex items-center gap-8 text-lg w-full justify-end">
           <!-- Dropdown desktop -->
           <li class="relative" ref="desktopRef"
         @mouseenter="openDropdown"
@@ -135,11 +136,12 @@ onBeforeUnmount(() => {
           </li>
 
         <li class="flex items-center">
-          <RouterLink to="/contact" class="inline-flex items-center h-full px-4 py-2 bg-[#00BFFF] text-white font-semibold rounded-full shadow-md hover:bg-[#00A0E0] transition-colors">
+          <RouterLink to="/contact" class="inline-flex items-center h-full px-5 md:px-6 py-2 bg-[#00BFFF] text-white font-semibold rounded-full shadow-md hover:bg-[#00A0E0] transition-colors">
             Contattami
           </RouterLink>
         </li>
-      </ul>
+    </ul>
+  </div>
 
       <!-- Burger (mobile) -->
       <button
