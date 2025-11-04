@@ -29,7 +29,8 @@
 
         <div class="relative z-10 max-w-3xl text-right ml-auto">
           <h1 ref="name" class="text-4xl md:text-6xl font-extrabold leading-tight">Ciao <span class="text-[#00BFFF]">sono Riccardo Cassis</span><br/>Digital & Web designer</h1>
-          <p ref="role" class="text-white text-lg md:text-2xl mt-4 font-semibold">Aiuto brand, startup e privati a costruire prodotti digitali, siti web e identità visive che uniscono design, strategia e tecnologia.</p>
+          <p ref="role" class="text-white text-lg md:text-2xl mt-4 font-semibold">Unisco design, strategia e tecnologia per creare esperienze digitali che generano impatto e valore.
+</p>
 
           <p ref="desc" class="max-w-xl text-white/80 mt-4 text-base md:text-lg ml-auto">Creo esperienze digitali intuitive e scalabili, che uniscono design, strategia e psicologia dell’utente.</p>
 
@@ -94,7 +95,7 @@
             </ul>
 
             <div class="mt-8">
-              <RouterLink to="/process" class="service-cta block w-full text-center border border-[#00BFFF] text-[#00BFFF] rounded-full px-6 py-3 font-semibold transition-all duration-300 ease-out hover:bg-[#00BFFF] hover:text-black">Scopri il processo</RouterLink>
+              <RouterLink to="/process" class="service-cta block w-full text-center border border-[#00BFFF] text-[#00BFFF] rounded-full px-6 py-3 font-semibold transition-all duration-300 ease-out hover:bg-[#00BFFF] hover:text-black">Scopri di più</RouterLink>
             </div>
           </div>
         </article>
@@ -112,7 +113,7 @@
             </ul>
 
             <div class="mt-8">
-              <RouterLink to="/contact" class="service-cta block w-full text-center border border-[#00BFFF] text-[#00BFFF] rounded-full px-6 py-3 font-semibold transition-all duration-300 ease-out hover:bg-[#00BFFF] hover:text-black">Richiedi una consulenza</RouterLink>
+              <RouterLink to="/contact" class="service-cta block w-full text-center border border-[#00BFFF] text-[#00BFFF] rounded-full px-6 py-3 font-semibold transition-all duration-300 ease-out hover:bg-[#00BFFF] hover:text-black">Scopri di più</RouterLink>
             </div>
           </div>
         </article>
@@ -136,7 +137,7 @@
             </div>
 
             <div class="mt-4">
-              <RouterLink to="/social" class="service-cta block w-full text-center border border-[#00BFFF] text-[#00BFFF] rounded-full px-6 py-3 font-semibold transition-all duration-300 ease-out hover:bg-[#00BFFF] hover:text-black">Scopri come funziona</RouterLink>
+              <RouterLink to="/social" class="service-cta block w-full text-center border border-[#00BFFF] text-[#00BFFF] rounded-full px-6 py-3 font-semibold transition-all duration-300 ease-out hover:bg-[#00BFFF] hover:text-black">Scopri di più</RouterLink>
             </div>
           </div>
         </article>
@@ -160,7 +161,7 @@
             </div>
 
             <div class="mt-4">
-              <RouterLink to="/seo" class="service-cta block w-full text-center border border-[#00BFFF] text-[#00BFFF] rounded-full px-6 py-3 font-semibold transition-all duration-300 ease-out hover:bg-[#00BFFF] hover:text-black">Scopri la strategia</RouterLink>
+              <RouterLink to="/seo" class="service-cta block w-full text-center border border-[#00BFFF] text-[#00BFFF] rounded-full px-6 py-3 font-semibold transition-all duration-300 ease-out hover:bg-[#00BFFF] hover:text-black">Scopri di più</RouterLink>
             </div>
           </div>
         </article>

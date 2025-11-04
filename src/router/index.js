@@ -18,6 +18,8 @@ const routes = [
   { path: '/projects/web',  name: 'projects-web',      component: WebDesign },
   { path: '/projects/brand',name: 'projects-brand',    component: BrandDesign },
   { path: '/projects/product', name: 'projects-product', component: ProductDesign },
+  { path: '/social',       name: 'social',             component: () => import('../pages/Social.vue') },
+  { path: '/seo',          name: 'seo',                component: () => import('../pages/Seo.vue') },
   { path: '/process',       name: 'process',           component: () => import('../pages/Process.vue') },
 ]
 
