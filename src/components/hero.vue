@@ -28,22 +28,15 @@
         </div>
 
         <div class="relative z-10 max-w-3xl text-right ml-auto">
-          <p ref="intro" class="text-cyan-400 text-sm md:text-lg font-medium mb-4">Portfolio • Digital & Web Design</p>
           <h1 ref="name" class="text-4xl md:text-6xl font-extrabold leading-tight">Designing <span class="text-[#00BFFF]">human-centered</span><br/>digital experiences</h1>
           <p ref="role" class="text-white text-lg md:text-2xl mt-4 font-semibold">Aiuto brand e startup a costruire prodotti digitali, siti web e identità visive che uniscono design, strategia e tecnologia.</p>
 
           <p ref="desc" class="max-w-xl text-white/80 mt-4 text-base md:text-lg ml-auto">Progetto interfacce e siti ad alta conversione, con attenzione a UX, accessibilità e scalabilità per team e startup.</p>
 
-          <div ref="ctas" class="mt-8 flex flex-col items-end space-y-4 md:flex-row md:space-y-0 md:space-x-4 md:justify-end">
+          <div ref="ctas" class="mt-8 flex items-end md:justify-end">
             <div ref="ctaPrimary" class="inline-flex">
-              <RouterLink to="/contact" class="btn-primary inline-flex items-center justify-center bg-[#00BFFF] text-white font-semibold px-4 py-2 rounded-full shadow-lg transition-transform duration-200">
-                Parliamo del tuo progetto
-              </RouterLink>
-            </div>
-
-            <div ref="ctaSecondary" class="inline-flex">
-              <RouterLink to="/projects" class="btn-ghost inline-flex items-center justify-center border border-white/30 text-white px-4 py-2 rounded-full transition-colors duration-200 overflow-hidden">
-                <span class="btn-ghost-text">Esplora i miei lavori</span>
+              <RouterLink to="/contact" class="btn-primary inline-flex items-center justify-center bg-[#00BFFF] text-white font-semibold px-6 md:px-10 py-3 rounded-full shadow-lg transition-transform duration-200 text-lg min-w-[260px] md:min-w-[320px]">
+                Esplora i miei lavori
               </RouterLink>
             </div>
           </div>
@@ -84,7 +77,7 @@
   <!-- Services section: two dark cards with pill CTAs (matches attachment aesthetic) -->
   <section ref="postSection" class="service-section w-full">
     <div class="max-w-7xl mx-auto px-6 py-20">
-  <h2 ref="postTitle" class="text-4xl font-bold text-white mb-4 text-center">Scegli come possiamo lavorare insieme</h2>
+  <h2 ref="postTitle" class="text-4xl font-bold text-white mb-4 text-center">Scopri i servizi</h2>
   <p ref="postSubtitle" class="text-lg text-gray-400 mb-12 text-center max-w-2xl mx-auto">Che tu voglia costruire un nuovo brand digitale o migliorare la tua presenza online, posso aiutarti a ogni livello del processo.</p>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -135,13 +128,11 @@
   import ScrollTrigger from 'gsap/ScrollTrigger'
   import socialIcons from './socialIcons.vue'
 
-  const intro = ref(null)
   const name = ref(null)
   const role = ref(null)
   const desc = ref(null)
   const ctas = ref(null)
   const ctaPrimary = ref(null)
-  const ctaSecondary = ref(null)
   const socialRef = ref(null)
   const bgImage = ref(null)
   const heroRef = ref(null)
@@ -157,11 +148,10 @@
 
   onMounted(() => {
     const tl = gsap.timeline({ defaults: { duration: 0.6, ease: 'power3.out' } })
-    tl.from(intro.value, { y: 20, opacity: 0 })
-      .from(name.value, { y: 22, opacity: 0 }, '-=0.35')
+    tl.from(name.value, { y: 22, opacity: 0 })
       .from(role.value, { y: 18, opacity: 0 }, '-=0.32')
       .from(desc.value, { y: 16, opacity: 0 }, '-=0.28')
-      .from([ctaPrimary.value, ctaSecondary.value, socialRef.value], { y: 12, opacity: 0, stagger: 0.12 }, '-=0.22')
+      .from([ctaPrimary.value, socialRef.value], { y: 12, opacity: 0, stagger: 0.12 }, '-=0.22')
 
     // Parallax: slight vertical movement of background image on scroll
     if (bgImage.value && heroRef.value) {
