@@ -94,7 +94,7 @@
             </ul>
 
             <div class="mt-8">
-              <RouterLink to="/process" class="block w-full text-center bg-white text-black rounded-full px-6 py-3 font-semibold transition-transform duration-300 hover:scale-105 hover:shadow-xl">Scopri il processo</RouterLink>
+              <RouterLink to="/process" class="service-cta block w-full text-center border border-[#00BFFF] text-[#00BFFF] rounded-full px-6 py-3 font-semibold transition-all duration-300 ease-out hover:bg-[#00BFFF] hover:text-black">Scopri il processo</RouterLink>
             </div>
           </div>
         </article>
@@ -112,7 +112,7 @@
             </ul>
 
             <div class="mt-8">
-              <RouterLink to="/contact" class="block w-full text-center border border-white/30 text-white rounded-full px-6 py-3 font-semibold transition-colors duration-300 hover:bg-white hover:text-black">Richiedi una consulenza</RouterLink>
+              <RouterLink to="/contact" class="service-cta block w-full text-center border border-[#00BFFF] text-[#00BFFF] rounded-full px-6 py-3 font-semibold transition-all duration-300 ease-out hover:bg-[#00BFFF] hover:text-black">Richiedi una consulenza</RouterLink>
             </div>
           </div>
         </article>
@@ -136,7 +136,7 @@
             </div>
 
             <div class="mt-4">
-              <RouterLink to="/social" class="border border-[#00BFFF] text-[#00BFFF] hover:bg-[#00BFFF] hover:text-black font-semibold rounded-full py-3 px-6 transition-all">Scopri come funziona</RouterLink>
+              <RouterLink to="/social" class="service-cta block w-full text-center border border-[#00BFFF] text-[#00BFFF] rounded-full px-6 py-3 font-semibold transition-all duration-300 ease-out hover:bg-[#00BFFF] hover:text-black">Scopri come funziona</RouterLink>
             </div>
           </div>
         </article>
@@ -160,7 +160,7 @@
             </div>
 
             <div class="mt-4">
-              <RouterLink to="/seo" class="border border-[#00BFFF] text-[#00BFFF] hover:bg-[#00BFFF] hover:text-black font-semibold rounded-full py-3 px-6 transition-all duration-300 ease-out">Scopri la strategia</RouterLink>
+              <RouterLink to="/seo" class="service-cta block w-full text-center border border-[#00BFFF] text-[#00BFFF] rounded-full px-6 py-3 font-semibold transition-all duration-300 ease-out hover:bg-[#00BFFF] hover:text-black">Scopri la strategia</RouterLink>
             </div>
           </div>
         </article>
@@ -602,6 +602,14 @@
 }
 .service-card.service-seo:hover{
   box-shadow: 0 18px 50px rgba(0,191,255,0.12), 0 6px 30px rgba(0,191,255,0.06);
+}
+
+/* unified CTA style for service cards */
+.service-cta{
+  display: inline-block;
+}
+.service-cta:hover{
+  box-shadow: 0 14px 40px rgba(0,191,255,0.08);
 }
 
 </style>
