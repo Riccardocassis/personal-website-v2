@@ -28,10 +28,10 @@
         </div>
 
         <div class="relative z-10 max-w-3xl text-right ml-auto">
-          <h1 ref="name" class="text-4xl md:text-6xl font-extrabold leading-tight">Designing <span class="text-[#00BFFF]">human-centered</span><br/>digital experiences</h1>
-          <p ref="role" class="text-white text-lg md:text-2xl mt-4 font-semibold">Aiuto brand e startup a costruire prodotti digitali, siti web e identità visive che uniscono design, strategia e tecnologia.</p>
+          <h1 ref="name" class="text-4xl md:text-6xl font-extrabold leading-tight">Ciao <span class="text-[#00BFFF]">sono Riccardo Cassis</span><br/>Digital & Web designer</h1>
+          <p ref="role" class="text-white text-lg md:text-2xl mt-4 font-semibold">Aiuto brand, startup e privati a costruire prodotti digitali, siti web e identità visive che uniscono design, strategia e tecnologia.</p>
 
-          <p ref="desc" class="max-w-xl text-white/80 mt-4 text-base md:text-lg ml-auto">Progetto interfacce e siti ad alta conversione, con attenzione a UX, accessibilità e scalabilità per team e startup.</p>
+          <p ref="desc" class="max-w-xl text-white/80 mt-4 text-base md:text-lg ml-auto">Creo esperienze digitali intuitive e scalabili, che uniscono design, strategia e psicologia dell’utente.</p>
 
           <div ref="ctas" class="mt-8 flex items-end md:justify-end">
             <div ref="ctaPrimary" class="inline-flex">
