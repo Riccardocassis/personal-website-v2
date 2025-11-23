@@ -12,7 +12,7 @@
         <div class="order-1 md:order-2 text-left text-white">
           <div class="space-y-6 md:space-y-8 lg:space-y-10">
             <h1 ref="titleRef" id="hero-title" class="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
-              Riccardo Cassis — UI/UX & Web Designer
+              Riccardo Cassis UI/UX & Web Designer
             </h1>
 
             <p ref="subtitleRef" class="text-lg md:text-xl text-white/90 max-w-2xl">

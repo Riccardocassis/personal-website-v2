@@ -136,7 +136,7 @@ onBeforeUnmount(() => {
           </li>
 
         <li class="flex items-center">
-          <RouterLink to="/contact" class="inline-flex items-center h-full px-5 md:px-6 py-2 bg-[#00BFFF] text-white font-semibold rounded-full shadow-md hover:bg-[#00A0E0] transition-colors">
+          <RouterLink to="/contact" class="inline-block bg-[#00BFFF] text-white px-6 py-2 md:py-3 rounded-lg font-semibold shadow-md hover:bg-[#00A0E0] transition-colors">
             Contattami
           </RouterLink>
         </li>
@@ -216,7 +216,7 @@ onBeforeUnmount(() => {
             Blog
           </RouterLink>
 
-            <RouterLink to="/contact" class="block px-2 py-2 rounded bg-[#00BFFF] text-white text-center font-semibold hover:bg-[#00A0E0]" @click="mobileOpen=false">
+            <RouterLink to="/contact" class="block px-6 py-3 rounded-lg bg-[#00BFFF] text-white text-center font-semibold hover:bg-[#00A0E0]" @click="mobileOpen=false">
               Contattami
             </RouterLink>
         </div>
