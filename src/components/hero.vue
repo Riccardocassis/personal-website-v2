@@ -4,8 +4,8 @@
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <!-- LEFT: subtle image / pattern -->
         <div class="order-2 md:order-1 flex items-center justify-center">
-          <!-- make portrait more visible: increase opacity/contrast, remove blur and add subtle shadow -->
-          <img src="../assets/hero-riccardo.webp" alt="pattern" class="w-full max-w-lg object-cover opacity-70 filter contrast-125 rounded-lg shadow-2xl" />
+          <!-- increase portrait visibility: full opacity, higher contrast/brightness/saturation, slightly larger -->
+          <img src="../assets/hero-riccardo.webp" alt="Portrait of Riccardo Cassis" class="w-full max-w-xl object-cover opacity-100 filter contrast-150 brightness-110 saturate-110 rounded-lg shadow-2xl transform scale-105" />
         </div>
 
         <!-- RIGHT: textual content -->
