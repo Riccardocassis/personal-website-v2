@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { RouterLink } from 'vue-router'
-import logo from '../assets/logo-rc.png'
+import logo from '../assets/logo-rc.webp'
 
 const openDesktop = ref(false)      // dropdown desktop
 // Funzioni per hover dropdown desktop

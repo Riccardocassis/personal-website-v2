@@ -2,7 +2,7 @@
   <div class="loading-bg flex items-center justify-center min-h-screen">
     <div class="loading-content flex flex-col items-center gap-6">
       <div class="logo-wrapper animate-logo">
-        <img src="../assets/logo-rc.png" alt="Logo RC" class="w-24 h-24" />
+        <img src="../assets/logo-rc.webp" alt="Logo RC" class="w-24 h-24" />
       </div>
       <div class="loader-bar">
         <div class="loader-progress"></div>

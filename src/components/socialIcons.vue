@@ -8,7 +8,7 @@
       class="rounded-full p-2 ring-1 ring-white/60 hover:bg-cyan-500 hover:ring-cyan-500 transition duration-300"
       aria-label="Instagram"
     >
-      <img src="../assets/icon-instagram.png" alt="" class="w-6 h-6" />
+      <img src="../assets/icon-instagram.webp" alt="" class="w-6 h-6" />
     </a>
 
     <!-- LinkedIn -->
@@ -19,7 +19,7 @@
       class="rounded-full p-2 ring-1 ring-white/60 hover:bg-cyan-500 hover:ring-cyan-500 transition duration-300"
       aria-label="LinkedIn"
     >
-      <img src="../assets/icon-linkedin.png" alt="" class="w-6 h-6" />
+      <img src="../assets/icon-linkedin.webp" alt="" class="w-6 h-6" />
     </a>
 
     <!-- Behance -->
@@ -30,7 +30,7 @@
       class="rounded-full p-2 ring-1 ring-white/60 hover:bg-cyan-500 hover:ring-cyan-500 transition duration-300"
       aria-label="Behance"
     >
-      <img src="../assets/icon-behance.png" alt="" class="w-6 h-6" />
+      <img src="../assets/icon-behance.webp" alt="" class="w-6 h-6" />
     </a>
 
     <!-- GitHub -->
@@ -41,7 +41,7 @@
       class="rounded-full p-2 ring-1 ring-white/60 hover:bg-cyan-500 hover:ring-cyan-500 transition duration-300"
       aria-label="GitHub"
     >
-      <img src="../assets/icon-github.png" alt="" class="w-6 h-6" />
+      <img src="../assets/icon-github.webp" alt="" class="w-6 h-6" />
     </a>
   </div>
 </template>

@@ -7,16 +7,16 @@
       </div>
       <div class="flex space-x-4 justify-center md:justify-end">
         <a href="https://www.instagram.com/riccardocassis" target="_blank" aria-label="Instagram" class="hover:scale-110 transition">
-          <img src="../assets/icon-instagram.png" alt="Instagram" class="w-7 h-7" />
+          <img src="../assets/icon-instagram.webp" alt="Instagram" class="w-7 h-7" />
         </a>
         <a href="https://www.linkedin.com/in/riccardocassis/" target="_blank" aria-label="LinkedIn" class="hover:scale-110 transition">
-          <img src="../assets/icon-linkedin.png" alt="LinkedIn" class="w-7 h-7" />
+          <img src="../assets/icon-linkedin.webp" alt="LinkedIn" class="w-7 h-7" />
         </a>
         <a href="https://www.behance.net/riccardocassis" target="_blank" aria-label="Behance" class="hover:scale-110 transition">
-          <img src="../assets/icon-behance.png" alt="Behance" class="w-7 h-7" />
+          <img src="../assets/icon-behance.webp" alt="Behance" class="w-7 h-7" />
         </a>
         <a href="https://github.com/riccardocassis" target="_blank" aria-label="GitHub" class="hover:scale-110 transition">
-          <img src="../assets/icon-github.png" alt="GitHub" class="w-7 h-7" />
+          <img src="../assets/icon-github.webp" alt="GitHub" class="w-7 h-7" />
         </a>
       </div>
     </div>

@@ -5,22 +5,22 @@
     <div class="flex flex-col gap-16 items-center">
       <!-- Card Hero backpack -->
       <div class="bg-white/10 backdrop-blur-xl border border-cyan-400 rounded-3xl shadow-2xl flex flex-col items-center py-10 px-6 w-full max-w-3xl transition duration-300 hover:scale-105 hover:shadow-cyan-400/30 animate-fadein">
-        <img src="../assets/zaini.png" alt="Hero backpack" class="w-full h-[340px] rounded-2xl object-cover mb-6 transition duration-300 hover:shadow-lg" />
+        <img src="../assets/zaini.webp" alt="Hero backpack" class="w-full h-[340px] rounded-2xl object-cover mb-6 transition duration-300 hover:shadow-lg" />
         <span class="text-white text-2xl font-bold text-center mt-2">Hero backpack</span>
       </div>
       <!-- Card Vape me -->
       <div class="bg-white/10 backdrop-blur-xl border border-cyan-400 rounded-3xl shadow-2xl flex flex-col items-center py-10 px-6 w-full max-w-3xl transition duration-300 hover:scale-105 hover:shadow-cyan-400/30 animate-fadein">
-        <img src="../assets/svapo.png" alt="Vape me" class="w-full h-[340px] rounded-2xl object-cover mb-6 transition duration-300 hover:shadow-lg" />
+        <img src="../assets/svapo.webp" alt="Vape me" class="w-full h-[340px] rounded-2xl object-cover mb-6 transition duration-300 hover:shadow-lg" />
         <span class="text-white text-2xl font-bold text-center mt-2">Vape me</span>
       </div>
       <!-- Card Finia coffee machine -->
       <div class="bg-white/10 backdrop-blur-xl border border-cyan-400 rounded-3xl shadow-2xl flex flex-col items-center py-10 px-6 w-full max-w-3xl transition duration-300 hover:scale-105 hover:shadow-cyan-400/30 animate-fadein">
-        <img src="../assets/finia.png" alt="Finia coffee machine" class="w-full h-[340px] rounded-2xl object-cover mb-6 transition duration-300 hover:shadow-lg" />
+        <img src="../assets/finia.webp" alt="Finia coffee machine" class="w-full h-[340px] rounded-2xl object-cover mb-6 transition duration-300 hover:shadow-lg" />
         <span class="text-white text-2xl font-bold text-center mt-2">Finia coffee machine</span>
       </div>
       <!-- Card Smart vase -->
       <div class="bg-white/10 backdrop-blur-xl border border-cyan-400 rounded-3xl shadow-2xl flex flex-col items-center py-10 px-6 w-full max-w-3xl transition duration-300 hover:scale-105 hover:shadow-cyan-400/30 animate-fadein">
-        <img src="../assets/vasi.png" alt="Smart vase" class="w-full h-[340px] rounded-2xl object-cover mb-6 transition duration-300 hover:shadow-lg" />
+        <img src="../assets/vasi.webp" alt="Smart vase" class="w-full h-[340px] rounded-2xl object-cover mb-6 transition duration-300 hover:shadow-lg" />
         <span class="text-white text-2xl font-bold text-center mt-2">Smart vase</span>
       </div>
     </div>

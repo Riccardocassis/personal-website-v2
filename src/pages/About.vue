@@ -15,8 +15,8 @@
       </h2>
     </section>
     <!-- Immagini fisse ai lati sopra il footer -->
-  <img src="../assets/ioartista.png" alt="Artista" class="fixed left-0 bottom-20 w-[32vw] min-w-[180px] max-w-none object-contain opacity-80 z-10 pointer-events-none" />
-  <img src="../assets/ionerd.png" alt="Nerd" class="fixed right-0 bottom-20 w-[32vw] min-w-[180px] max-w-none object-contain opacity-80 z-10 pointer-events-none" />
+  <img src="../assets/ioartista.webp" alt="Artista" class="fixed left-0 bottom-20 w-[32vw] min-w-[180px] max-w-none object-contain opacity-80 z-10 pointer-events-none" />
+  <img src="../assets/ionerd.webp" alt="Nerd" class="fixed right-0 bottom-20 w-[32vw] min-w-[180px] max-w-none object-contain opacity-80 z-10 pointer-events-none" />
     <!-- Footer originale statico -->
     <Footer />
   </div>

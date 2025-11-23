@@ -5,17 +5,17 @@
     <div class="flex flex-col gap-16 items-center">
       <!-- Card Rebert streetwear -->
       <div class="bg-white/10 backdrop-blur-xl border border-cyan-400 rounded-3xl shadow-2xl flex flex-col items-center py-10 px-6 w-full max-w-3xl transition duration-300 hover:scale-105 hover:shadow-cyan-400/30 animate-fadein">
-        <img src="../assets/rebert.png" alt="Rebert streetwear" class="w-full h-[340px] rounded-2xl object-cover mb-6 transition duration-300 hover:shadow-lg" />
+        <img src="../assets/rebert.webp" alt="Rebert streetwear" class="w-full h-[340px] rounded-2xl object-cover mb-6 transition duration-300 hover:shadow-lg" />
         <span class="text-white text-2xl font-bold text-center mt-2">Rebert streetwear</span>
       </div>
       <!-- Card Piadina Roberto Concept -->
       <div class="bg-white/10 backdrop-blur-xl border border-cyan-400 rounded-3xl shadow-2xl flex flex-col items-center py-10 px-6 w-full max-w-3xl transition duration-300 hover:scale-105 hover:shadow-cyan-400/30 animate-fadein">
-        <img src="../assets/piadinaroberto.png" alt="Rebranding piadine Roberto Concept" class="w-full h-[340px] rounded-2xl object-cover mb-6 transition duration-300 hover:shadow-lg" />
+        <img src="../assets/piadinaroberto.webp" alt="Rebranding piadine Roberto Concept" class="w-full h-[340px] rounded-2xl object-cover mb-6 transition duration-300 hover:shadow-lg" />
         <span class="text-white text-2xl font-bold text-center mt-2">Rebranding piadine Roberto Concept</span>
       </div>
       <!-- Card Iron Riff -->
       <div class="bg-white/10 backdrop-blur-xl border border-cyan-400 rounded-3xl shadow-2xl flex flex-col items-center py-10 px-6 w-full max-w-3xl transition duration-300 hover:scale-105 hover:shadow-cyan-400/30 animate-fadein">
-  <img src="../assets/ironriff.png" alt="Iron Riff" class="w-full h-[340px] rounded-2xl object-cover mb-6 transition duration-300 hover:shadow-lg" />
+  <img src="../assets/ironriff.webp" alt="Iron Riff" class="w-full h-[340px] rounded-2xl object-cover mb-6 transition duration-300 hover:shadow-lg" />
         <span class="text-white text-2xl font-bold text-center mt-2">Iron Riff</span>
       </div>
     </div>
@@ -34,9 +34,9 @@
 <script setup>
 import Footer from '../components/Footer.vue'
 import { RouterLink } from 'vue-router';
-import rebert from '../assets/rebert.png';
-import piadinaroberto from '../assets/piadinaroberto.png';
-import ironriff from '../assets/ironriff.png';
+import rebert from '../assets/rebert.webp';
+import piadinaroberto from '../assets/piadinaroberto.webp';
+import ironriff from '../assets/ironriff.webp';
 
 const cards = [
   {

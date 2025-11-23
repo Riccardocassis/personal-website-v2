@@ -1,616 +1,86 @@
 <template>
-  <div ref="heroRef" class="relative h-screen w-full flex items-center justify-end text-right text-white">
-    <img
-      ref="bgImage"
-      src="../assets/hero-riccardo.png"
-      alt="Riccardo"
-      class="absolute inset-0 w-full h-full object-cover opacity-80 will-change-transform"
-    />
-    <!-- liquid gradient: moving, blurred color blobs behind overlays -->
-  <div class="absolute inset-0 liquid-gradient pointer-events-none" aria-hidden="true"></div>
-
-    <!-- overlay direzionale sfumato per profondità -->
-  <div class="absolute inset-0 hero-overlay bg-gradient-to-b from-black/50 to-black/30"></div>
-
-  <!-- dynamic linear gradient (fluid blue/azure theme) -->
-  <div class="absolute inset-0 dynamic-linear-gradient pointer-events-none" aria-hidden="true"></div>
-
-  <!-- subtle animated gradient pattern (very soft) -->
-  <div class="absolute inset-0 animated-gradient-pattern pointer-events-none"></div>
-
-  <div class="relative z-10 px-6 pt-20 md:pt-24 w-full max-w-7xl pr-6 md:pr-16">
-    <!-- right-aligned layout -->
-    <div class="flex flex-col items-end justify-center gap-8">
-      <div class="relative w-full max-w-3xl ml-auto">
-        <!-- light spot behind heading aligned to the right -->
-        <div class="absolute inset-0 flex items-center justify-end pointer-events-none z-0 pr-6 md:pr-0">
-          <span class="light-spot"></span>
+  <section aria-labelledby="hero-title" class="w-full bg-black">
+    <div class="max-w-screen-xl mx-auto px-6 py-16 md:py-24">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <!-- LEFT: subtle image / pattern -->
+        <div class="order-2 md:order-1 flex items-center justify-center">
+          <!-- faded, blurred image to keep focus on text -->
+          <img src="../assets/hero-riccardo.webp" alt="pattern" class="w-full max-w-md object-cover opacity-20 filter blur-sm rounded-lg" />
         </div>
 
-        <div class="relative z-10 max-w-3xl text-right ml-auto">
-          <h1 ref="name" class="text-4xl md:text-6xl font-extrabold leading-tight">Ciao <span class="text-[#00BFFF]">sono Riccardo Cassis</span><br/>Digital & Web designer</h1>
-          <p ref="role" class="text-white text-lg md:text-2xl mt-4 font-semibold">Unisco design, strategia e tecnologia per creare esperienze digitali che generano impatto e valore.
-</p>
+        <!-- RIGHT: textual content -->
+        <div class="order-1 md:order-2 text-left text-white">
+          <div class="space-y-6 md:space-y-8 lg:space-y-10">
+            <h1 ref="titleRef" id="hero-title" class="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
+              Riccardo Cassis — UI/UX & Web Designer
+            </h1>
 
-          <p ref="desc" class="max-w-xl text-white/80 mt-4 text-base md:text-lg ml-auto">Creo esperienze digitali intuitive e scalabili, che uniscono design, strategia e psicologia dell’utente.</p>
+            <p ref="subtitleRef" class="text-lg md:text-xl text-white/90 max-w-2xl">
+              Progetto interfacce chiare e flussi ordinati, unendo design e front-end leggero.
+            </p>
 
-          <div ref="ctas" class="mt-8 flex items-end md:justify-end">
-            <div ref="ctaPrimary" class="inline-flex">
-              <RouterLink to="/contact" class="btn-primary inline-flex items-center justify-center bg-[#00BFFF] text-white font-semibold px-6 md:px-10 py-3 rounded-full shadow-lg transition-transform duration-200 text-lg min-w-[260px] md:min-w-[320px]">
-                Esplora i miei lavori
+            <p class="text-sm md:text-base text-white/70 max-w-xl">
+              Creo soluzioni semplici e utili attraverso un approccio pratico e orientato al problema.
+            </p>
+
+            <div class="pt-2">
+              <RouterLink to="/projects" ref="ctaRef" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+                Esplora i miei progetti
               </RouterLink>
             </div>
-          </div>
 
-          <div ref="socialRef" class="social-icons-wrapper mt-6 flex items-end justify-end">
-            <socialIcons />
-          </div>
-
-          <!-- Stats row similar to reference -->
-          <div class="mt-10 grid grid-cols-3 gap-6 max-w-md ml-auto">
-            <div class="flex flex-col">
-              <span class="text-2xl font-bold text-white">25+</span>
-              <span class="text-sm text-white/70">Projects</span>
-            </div>
-            <div class="flex flex-col">
-              <span class="text-2xl font-bold text-white">15+</span>
-              <span class="text-sm text-white/70">Clients</span>
-            </div>
-            <div class="flex flex-col">
-              <span class="text-2xl font-bold text-white">6 mo</span>
-              <span class="text-sm text-white/70">Avg Delivery</span>
+            <div class="mt-4 flex items-center gap-4">
+              <a href="#" aria-label="LinkedIn" title="LinkedIn" class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-white/5 text-white/80 hover:bg-white/10 hover:text-white transition transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0V8zm7.5 0h4.7v2.2h.1c.7-1.3 2.4-2.7 4.9-2.7 5.2 0 6.1 3.4 6.1 7.8V24H18v-7.3c0-1.7 0-3.9-2.4-3.9-2.4 0-2.7 1.8-2.7 3.8V24H7.5V8z"/></svg>
+              </a>
+              <a href="#" aria-label="Behance" title="Behance" class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-white/5 text-white/80 hover:bg-white/10 hover:text-white transition transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 10.5c0-1.93-1.57-3.5-3.5-3.5H11v14h7.5C20.43 21 22 19.43 22 17.5c0-1.55-1.05-2.86-2.5-3.27V14c1.45.41 2.5 1.72 2.5 3.27 0 1.93-1.57 3.5-3.5 3.5H11V7h7.5C20.43 7 22 8.57 22 10.5zM8.5 12c1.38 0 2.5-1.12 2.5-2.5S9.88 7 8.5 7 6 8.12 6 9.5 7.12 12 8.5 12zM8.5 14H6v6h2.5v-6z"/></svg>
+              </a>
+              <a href="#" aria-label="GitHub" title="GitHub" class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-white/5 text-white/80 hover:bg-white/10 hover:text-white transition transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.76.41-1.27.74-1.56-2.56-.29-5.26-1.28-5.26-5.71 0-1.26.45-2.3 1.2-3.11-.12-.29-.52-1.46.11-3.04 0 0 .98-.31 3.2 1.19.93-.26 1.94-.39 2.94-.39 1 0 2.01.13 2.94.39 2.22-1.5 3.2-1.19 3.2-1.19.63 1.58.23 2.75.11 3.04.75.81 1.2 1.85 1.2 3.11 0 4.44-2.71 5.42-5.29 5.7.42.36.79 1.09.79 2.2 0 1.59-.01 2.87-.01 3.26 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12 24 5.65 18.35.5 12 .5z"/></svg>
+              </a>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-
-    <!-- scroll indicator (floating arrow) -->
-    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 pointer-events-auto">
-      <button aria-label="Scroll down" class="scroll-arrow inline-flex items-center justify-center">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white opacity-90" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-        </svg>
-      </button>
-    </div>
-  </div>
-  <!-- Services section: two dark cards with pill CTAs (matches attachment aesthetic) -->
-  <section ref="postSection" class="service-section w-full">
-    <div class="max-w-7xl mx-auto px-6 py-20">
-  <h2 ref="postTitle" class="text-4xl font-bold text-white mb-4 text-center">Scopri i servizi</h2>
-  <p ref="postSubtitle" class="text-lg text-gray-400 mb-12 text-center max-w-2xl mx-auto">Che tu voglia costruire un nuovo brand digitale o migliorare la tua presenza online, posso aiutarti a ogni livello del processo.</p>
-
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-  <article ref="cardLeft" class="service-card rounded-2xl p-8 shadow-lg transition-all duration-500 ease-out hover:shadow-2xl border border-white/6">
-          <div class="p-6 bg-gradient-to-br from-black/60 to-black/40 rounded-xl">
-            <h3 class="text-2xl font-semibold text-white mb-2">Brand & Web Design</h3>
-            <p class="text-white/60 mb-4 italic">Crea o rinnova la tua identità digitale</p>
-
-            <ul class="list-disc list-inside space-y-2 text-white/80">
-              <li>Branding e visual identity</li>
-              <li>UX/UI design per siti ed e-commerce</li>
-              <li>Design system e linee guida</li>
-              <li>Wireframe e prototipi</li>
-            </ul>
-
-            <div class="mt-8">
-              <RouterLink to="/process" class="service-cta block w-full text-center border border-[#00BFFF] text-[#00BFFF] rounded-full px-6 py-3 font-semibold transition-all duration-300 ease-out hover:bg-[#00BFFF] hover:text-black">Scopri di più</RouterLink>
-            </div>
-          </div>
-        </article>
-
-  <article ref="cardRight" class="service-card rounded-2xl p-8 shadow-lg transition-all duration-500 ease-out hover:shadow-2xl border border-white/6">
-          <div class="p-6 bg-gradient-to-br from-black/60 to-black/40 rounded-xl">
-            <h3 class="text-2xl font-semibold text-white mb-2">Consulenza & Strategia Digitale</h3>
-            <p class="text-white/60 mb-4 italic">Definisci la direzione giusta per il tuo brand</p>
-
-            <ul class="list-disc list-inside space-y-2 text-white/80">
-              <li>Analisi UX e ottimizzazione conversioni</li>
-              <li>Audit di siti e piattaforme</li>
-              <li>Strategia di rebranding o restyling</li>
-              <li>Supporto continuo al team</li>
-            </ul>
-
-            <div class="mt-8">
-              <RouterLink to="/contact" class="service-cta block w-full text-center border border-[#00BFFF] text-[#00BFFF] rounded-full px-6 py-3 font-semibold transition-all duration-300 ease-out hover:bg-[#00BFFF] hover:text-black">Scopri di più</RouterLink>
-            </div>
-          </div>
-        </article>
-        
-        <!-- Third card: Social Media Management -->
-        <article ref="cardThird" class="service-card service-social rounded-2xl p-8 shadow-lg transition-all duration-500 ease-out border border-white/6" data-aos="fade-up" aria-labelledby="social-title">
-          <div class="flex flex-col justify-between h-full p-6 bg-gradient-to-br from-black/60 to-black/40 rounded-xl">
-            <div>
-              <h3 id="social-title" class="text-2xl font-semibold text-white mb-2">Social Media Management</h3>
-              <p class="text-white/60 mb-4 italic">Trasforma la tua presenza online in uno strumento di crescita.</p>
-
-              <p class="text-white/80 mb-4">Come social media manager, gestisco in modo strategico i profili digitali dei brand: dalla pianificazione editoriale alla creazione di contenuti, fino all’interazione con il pubblico. L’obiettivo è costruire una presenza coerente, riconoscibile e capace di generare risultati reali. <strong class="text-[#00BFFF]">Keyword:</strong> gestione profili social, social media manager, creazione contenuti, strategie digitali.</p>
-
-              <ul class="list-disc list-inside space-y-2 text-white/80 mb-6">
-                <li>Creazione di contenuti visivi e copy strategici</li>
-                <li>Pianificazione editoriale mensile</li>
-                <li>Campagne Facebook e Instagram Ads</li>
-                <li>Analisi e monitoraggio delle performance</li>
-                <li>Report e ottimizzazione continua</li>
-              </ul>
-            </div>
-
-            <div class="mt-4">
-              <RouterLink to="/social" class="service-cta block w-full text-center border border-[#00BFFF] text-[#00BFFF] rounded-full px-6 py-3 font-semibold transition-all duration-300 ease-out hover:bg-[#00BFFF] hover:text-black">Scopri di più</RouterLink>
-            </div>
-          </div>
-        </article>
-        
-        <!-- Fourth card: SEO & Content Strategy -->
-        <article ref="cardFourth" class="service-card service-seo rounded-2xl p-8 shadow-lg transition-all duration-500 ease-out border border-white/6" data-aos="fade-up" aria-labelledby="seo-title">
-          <div class="flex flex-col justify-between h-full p-6 bg-gradient-to-br from-black/60 to-black/40 rounded-xl">
-            <div>
-              <h3 id="seo-title" class="text-2xl font-semibold text-white mb-2">SEO & Content Strategy</h3>
-              <p class="text-white/60 mb-4 italic">Fatti trovare dalle persone giuste, nel momento giusto.</p>
-
-              <p class="text-white/80 mb-4">Aiuto brand e professionisti a migliorare la propria visibilità online attraverso strategie SEO e contenuti ottimizzati. Ogni progetto nasce da un’analisi dei bisogni del pubblico e si traduce in testi efficaci, posizionamento mirato e crescita organica. <strong class="text-[#00BFFF]">Keyword:</strong> SEO, content strategy, ottimizzazione siti web, copywriting, posizionamento online.</p>
-
-              <ul class="list-disc list-inside space-y-2 text-white/80 mb-6">
-                <li>Analisi keyword e ricerca competitor</li>
-                <li>Ottimizzazione SEO on-page e tecnica</li>
-                <li>Strategia di contenuti per blog e pagine web</li>
-                <li>Copywriting orientato alla conversione</li>
-                <li>Report periodico e miglioramento continuo</li>
-              </ul>
-            </div>
-
-            <div class="mt-4">
-              <RouterLink to="/seo" class="service-cta block w-full text-center border border-[#00BFFF] text-[#00BFFF] rounded-full px-6 py-3 font-semibold transition-all duration-300 ease-out hover:bg-[#00BFFF] hover:text-black">Scopri di più</RouterLink>
-            </div>
-          </div>
-        </article>
       </div>
     </div>
   </section>
 </template>
 
-  <script setup>
-  import { ref, onMounted, onBeforeUnmount } from 'vue'
-  import { RouterLink } from 'vue-router'
-  import gsap from 'gsap'
-  import ScrollTrigger from 'gsap/ScrollTrigger'
-  import socialIcons from './socialIcons.vue'
+<script setup>
+import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { RouterLink } from 'vue-router'
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
 
-  const name = ref(null)
-  const role = ref(null)
-  const desc = ref(null)
-  const ctas = ref(null)
-  const ctaPrimary = ref(null)
-  const socialRef = ref(null)
-  const bgImage = ref(null)
-  const heroRef = ref(null)
-  const postSection = ref(null)
-  const postTitle = ref(null)
-  const postSubtitle = ref(null)
-  const cardLeft = ref(null)
-  const cardRight = ref(null)
-  const cardThird = ref(null)
-  const cardFourth = ref(null)
+gsap.registerPlugin(ScrollTrigger)
 
-  gsap.registerPlugin(ScrollTrigger)
+const titleRef = ref(null)
+const subtitleRef = ref(null)
+const ctaRef = ref(null)
 
-  let parallaxTween = null
+let tl = null
 
-  onMounted(() => {
-    const tl = gsap.timeline({ defaults: { duration: 0.6, ease: 'power3.out' } })
-    tl.from(name.value, { y: 22, opacity: 0 })
-      .from(role.value, { y: 18, opacity: 0 }, '-=0.32')
-      .from(desc.value, { y: 16, opacity: 0 }, '-=0.28')
-      .from([ctaPrimary.value, socialRef.value], { y: 12, opacity: 0, stagger: 0.12 }, '-=0.22')
+onMounted(() => {
+  // timeline for hero elements: fade + translateY
+  tl = gsap.timeline({ defaults: { duration: 0.6, ease: 'power3.out' } })
+  tl.from(titleRef.value, { y: 20, opacity: 0 })
+    .from(subtitleRef.value, { y: 16, opacity: 0 }, '-=0.38')
+    .from(ctaRef.value, { y: 12, opacity: 0 }, '-=0.3')
 
-    // Parallax: slight vertical movement of background image on scroll
-    if (bgImage.value && heroRef.value) {
-      parallaxTween = gsap.to(bgImage.value, {
-        yPercent: -6,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: heroRef.value,
-          start: 'top top',
-          end: 'bottom top',
-          scrub: 0.6,
-        },
-      })
-    }
-
-    // services section reveal (fade + slide) with sequence delays
-    try {
-      if (postSection.value) {
-          const tl2 = gsap.timeline({
-            scrollTrigger: {
-              trigger: postSection.value,
-              start: 'top 85%',
-              toggleActions: 'play none none reverse',
-            },
-          })
-          // Faster sequence: small offsets (120ms) between elements for a tighter reveal
-          tl2.from(postTitle.value, { y: 30, opacity: 0, duration: 0.6, ease: 'power3.out' }, 0)
-            .from(postSubtitle.value, { y: 30, opacity: 0, duration: 0.6, ease: 'power3.out' }, 0.12)
-            .from(cardLeft.value, { y: 24, opacity: 0, duration: 0.6, ease: 'power3.out' }, 0.24)
-            .from(cardRight.value, { y: 24, opacity: 0, duration: 0.6, ease: 'power3.out' }, 0.36)
-            .from(cardThird.value, { y: 24, opacity: 0, duration: 0.6, ease: 'power3.out' }, 0.48)
-            .from(cardFourth.value, { y: 24, opacity: 0, duration: 0.6, ease: 'power3.out' }, 0.6)
-
-        // small parallax movement for cards (optional subtle)
-        gsap.to(cardLeft.value, {
-          y: -3,
-          ease: 'none',
-          scrollTrigger: {
-            trigger: postSection.value,
-            start: 'top bottom',
-            end: 'bottom top',
-            scrub: 0.6,
-          },
-        })
-
-        gsap.to(cardRight.value, {
-          y: 3,
-          ease: 'none',
-          scrollTrigger: {
-            trigger: postSection.value,
-            start: 'top bottom',
-            end: 'bottom top',
-            scrub: 0.6,
-          },
-        })
-
-        gsap.to(cardThird.value, {
-          y: 2,
-          ease: 'none',
-          scrollTrigger: {
-            trigger: postSection.value,
-            start: 'top bottom',
-            end: 'bottom top',
-            scrub: 0.6,
-          },
-        })
-
-        gsap.to(cardFourth.value, {
-          y: -2,
-          ease: 'none',
-          scrollTrigger: {
-            trigger: postSection.value,
-            start: 'top bottom',
-            end: 'bottom top',
-            scrub: 0.6,
-          },
-        })
-      }
-    } catch (e) {
-      // ignore animation errors
-    }
-  })
-
-  onBeforeUnmount(() => {
-    // kill timeline/tweens and ScrollTrigger instances created for this component
-    try {
-      if (parallaxTween && parallaxTween.scrollTrigger) {
-        parallaxTween.scrollTrigger.kill()
-        parallaxTween.kill()
-      }
-      ScrollTrigger.getAll().forEach(t => t.kill())
-    } catch (e) {
-      // ignore cleanup errors
-    }
-  })
-
-  </script>
-
-<style scoped>
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(40px);
+  // stagger navbar items if they exist in DOM with .nav-item
+  const navItems = document.querySelectorAll('.nav-item')
+  if (navItems && navItems.length) {
+    gsap.from(navItems, { y: -8, opacity: 0, stagger: 0.08, duration: 0.45, ease: 'power2.out' })
   }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
+})
+
+onBeforeUnmount(() => {
+  try {
+    if (tl) tl.kill()
+    ScrollTrigger.getAll().forEach(t => t.kill())
+  } catch (e) {
+    // ignore
   }
-}
-.animate-fade-in-up {
-  animation: fadeInUp 1s cubic-bezier(0.23, 1, 0.32, 1) both;
-}
-.delay-200 {
-  animation-delay: 0.2s !important;
-}
-.delay-400 {
-  animation-delay: 0.4s !important;
-}
-
-/* Hero button enhancements */
-.btn-primary {
-  transition: box-shadow 220ms ease, transform 180ms ease, background-color 180ms ease;
-}
-.btn-primary:hover {
-  transform: translateY(-2px) scale(1.03);
-  box-shadow: 0 10px 30px rgba(0,191,255,0.16), 0 0 40px rgba(0,191,255,0.18);
-}
-
-.btn-ghost {
-  position: relative;
-  z-index: 0;
-}
-.btn-ghost::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 0%;
-  background: #00BFFF;
-  z-index: 0;
-  transition: width 360ms cubic-bezier(.2,.9,.2,1);
-}
-.btn-ghost .btn-ghost-text {
-  position: relative;
-  z-index: 10;
-  transition: color 260ms ease;
-}
-.btn-ghost:hover::before {
-  width: 100%;
-}
-.btn-ghost:hover .btn-ghost-text {
-  color: #000000;
-}
-
-/* social icons slight scale on hover */
-.social-icons-wrapper > * {
-  transition: transform 180ms ease, opacity 180ms ease;
-}
-.social-icons-wrapper > *:hover {
-  transform: scale(1.08);
-}
-
-/* ensure ghost button border fill is subtle */
-.btn-ghost{
-  position: relative;
-  z-index: 0;
-  overflow: hidden;
-}
-
-.btn-ghost::before{
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 0%;
-  background: rgba(0,191,255,0.08);
-  z-index: 0;
-  transition: width 360ms cubic-bezier(.2,.9,.2,1);
-}
-.btn-ghost .btn-ghost-text{
-  position: relative;
-  z-index: 10;
-  transition: color 260ms ease;
-}
-.btn-ghost:hover::before{
-  width: 100%;
-}
-.btn-ghost:hover .btn-ghost-text{
-  color: #ffffff;
-}
-
-/* Animated gradient pattern (very subtle) */
-.animated-gradient-pattern {
-  z-index: 6;
-  opacity: 0.18;
-  background: linear-gradient(120deg, rgba(0,191,255,0.06) 0%, rgba(255,255,255,0.02) 50%, rgba(0,0,0,0.02) 100%);
-  background-size: 200% 200%;
-  animation: gradientShift 30s linear infinite;
-  mix-blend-mode: overlay;
-}
-
-/* dynamic linear gradient overlay (fluid, blue/azure theme) */
-.dynamic-linear-gradient{
-  z-index: 5;
-  opacity: 0.22;
-  background: linear-gradient(115deg, rgba(0,191,255,0.12) 0%, rgba(10,132,255,0.10) 30%, rgba(0,116,255,0.06) 55%, rgba(0,0,0,0) 100%);
-  background-size: 400% 400%;
-  animation: dynamicGradient 22s ease-in-out infinite;
-  mix-blend-mode: overlay;
-}
-
-/* Liquid gradient - dynamic blurred color blobs */
-.liquid-gradient{
-  z-index: 3;
-  opacity: 0.28;
-  background-image: radial-gradient(circle at 10% 20%, rgba(0,191,255,0.18) 0%, rgba(10,132,255,0.12) 12%, transparent 25%),
-                    radial-gradient(circle at 80% 70%, rgba(0,116,255,0.14) 0%, rgba(0,191,255,0.08) 14%, transparent 30%),
-                    radial-gradient(circle at 50% 40%, rgba(0,255,255,0.04) 0%, transparent 40%);
-  background-size: 220% 220%, 180% 180%, 260% 260%;
-  mix-blend-mode: screen;
-  filter: blur(64px) saturate(120%);
-  transform: translateZ(0);
-  animation: liquidShift 20s ease-in-out infinite;
-  pointer-events: none;
-}
-
-@keyframes liquidShift {
-  0% {
-    background-position: 0% 0%, 100% 100%, 50% 50%;
-    transform: scale(1) translateY(0);
-  }
-  25% {
-    background-position: 30% 20%, 70% 60%, 40% 30%;
-    transform: scale(1.02) translateY(-2px);
-  }
-  50% {
-    background-position: 60% 40%, 40% 20%, 60% 60%;
-    transform: scale(1.03) translateY(1px);
-  }
-  75% {
-    background-position: 40% 70%, 20% 40%, 30% 80%;
-    transform: scale(1.01) translateY(-1px);
-  }
-  100% {
-    background-position: 0% 0%, 100% 100%, 50% 50%;
-    transform: scale(1) translateY(0);
-  }
-}
-
-@media (max-width: 640px) {
-  .liquid-gradient{ opacity: 0.18; filter: blur(46px); }
-}
-
-@keyframes dynamicGradient {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* Floating scroll arrow */
-.scroll-arrow {
-  width: 44px;
-  height: 44px;
-  border-radius: 9999px;
-  background: rgba(255,255,255,0.04);
-  display: inline-grid;
-  place-items: center;
-  transition: transform 220ms ease, opacity 220ms ease, background 180ms ease;
-  will-change: transform, opacity;
-  box-shadow: 0 6px 18px rgba(2,6,23,0.28);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  cursor: pointer;
-  animation: float 2.4s ease-in-out infinite;
-}
-.scroll-arrow:hover {
-  transform: translateY(-6px) scale(1.03);
-  background: rgba(255,255,255,0.06);
-}
-
-@keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
-  100% { transform: translateY(0); }
-}
-
-/* hero overlay stacking */
-.hero-overlay {
-  z-index: 4;
-}
-
-/* light spot behind heading */
-.light-spot{
-  width: clamp(160px, 28vw, 520px);
-  height: clamp(160px, 18vw, 420px);
-  display: block;
-  border-radius: 9999px;
-  background: radial-gradient(circle at 40% 35%, rgba(0,191,255,0.22) 0%, rgba(0,191,255,0.12) 18%, rgba(0,191,255,0.06) 35%, transparent 60%);
-  filter: blur(54px);
-  transform: translateY(-8%);
-  opacity: 0.95;
-}
-
-/* logo square hover glow */
-.logo-square{
-  transition: box-shadow 280ms ease, transform 220ms ease;
-}
-.logo-square:hover{
-  transform: translateY(-6px);
-  box-shadow: 0 20px 50px rgba(0,191,255,0.14), 0 0 80px rgba(0,191,255,0.12);
-}
-.logo-image{
-  filter: drop-shadow(0 6px 18px rgba(0,0,0,0.35));
-  transition: transform 220ms ease, opacity 220ms ease;
-}
-.logo-square:hover .logo-image{
-  transform: scale(1.03);
-  opacity: 1;
-}
-
-/* Services section visual tweaks */
-.service-section { z-index: 2; }
-.service-card {
-  background: linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(0,0,0,0.35) 100%);
-  border-radius: 16px;
-  border: 1px solid rgba(255,255,255,0.04);
-  position: relative;
-}
-.service-card h3 { color: #ffffff; }
-.service-card p, .service-card li { color: rgba(255,255,255,0.82); }
-.service-card .p-6 { padding: 1.5rem; }
-
-/* card hover interaction: modern Awwwards-like microinteraction */
-.service-card{
-  transition: transform 400ms cubic-bezier(.22,.77,.12,1), box-shadow 400ms cubic-bezier(.22,.77,.12,1), filter 400ms;
-  will-change: transform, box-shadow, filter;
-}
-.service-card:hover{
-  /* avoid overriding transform inline set by GSAP; animate inner panel instead */
-  box-shadow: 0 28px 60px rgba(2,6,23,0.65), 0 12px 40px rgba(0,191,255,0.06);
-  filter: drop-shadow(0 10px 30px rgba(0,191,255,0.06));
-}
-.service-card .p-6{
-  position: relative;
-  z-index: 2;
-  transition: transform 420ms cubic-bezier(.22,.77,.12,1);
-  transform-origin: center center;
-}
-.service-card:hover .p-6 {
-  transform: scale(1.06);
-}
-.service-card:focus-visible{
-  box-shadow: 0 30px 60px rgba(2,6,23,0.6), 0 0 0 6px rgba(0,191,255,0.08);
-}
-
-/* blue glow layer */
-.service-card::before{
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 16px;
-  box-shadow: 0 0 0 0 rgba(0,191,255,0); /* start invisible */
-  transition: box-shadow 400ms cubic-bezier(.22,.77,.12,1), opacity 400ms;
-  pointer-events: none;
-  z-index: 1;
-}
-.service-card:hover::before{
-  box-shadow: 0 0 40px 6px rgba(0,191,255,0.06), 0 0 120px 24px rgba(0,191,255,0.03);
-}
-
-/* specific tweaks for the social card hover: subtle scale and azure tinted shadow */
-.service-card.service-social .p-6{ /* ensure inner panel padding is consistent */
-  padding: 1.5rem;
-}
-.service-card.service-social:hover .p-6{
-  transform: scale(1.02);
-  transition: transform 700ms ease-out;
-}
-.service-card.service-social:hover{
-  box-shadow: 0 18px 50px rgba(0,191,255,0.12), 0 6px 30px rgba(0,191,255,0.06);
-}
-
-/* specific tweaks for the seo card hover: subtle scale and azure tinted shadow */
-.service-card.service-seo .p-6{ /* ensure inner panel padding is consistent */
-  padding: 1.5rem;
-}
-.service-card.service-seo:hover .p-6{
-  transform: scale(1.02);
-  transition: transform 700ms ease-out;
-}
-.service-card.service-seo:hover{
-  box-shadow: 0 18px 50px rgba(0,191,255,0.12), 0 6px 30px rgba(0,191,255,0.06);
-}
-
-/* unified CTA style for service cards */
-.service-cta{
-  display: inline-block;
-}
-.service-cta:hover{
-  box-shadow: 0 14px 40px rgba(0,191,255,0.08);
-}
-
-</style>
+})
+</script>
