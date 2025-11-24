@@ -1,6 +1,5 @@
 <template>
   <section aria-labelledby="hero-title" class="relative w-full bg-black">
-    <!-- Full-bleed radial gradient layer for the hero (soft, behind content) -->
     <div
       ref="gradientRef"
       class="absolute inset-0 pointer-events-none z-0"
@@ -13,11 +12,11 @@
         <!-- IMAGE: mobile on top, desktop on the left -->
         <div class="order-1 md:col-span-6 flex items-center justify-center md:justify-start">
           <div class="relative w-full flex justify-center md:justify-start">
-            <div class="w-full md:w-[75%] lg:w-[65%]">
+            <div class="w-[86%] md:w-[45%]">
               <img
                 src="../assets/hero-riccardo.webp"
                 alt="Portrait of Riccardo Cassis"
-                class="w-full h-auto object-cover rounded-3xl brightness-[1.2] contrast-105 opacity-95 transform scale-105 relative z-30"
+                class="w-full h-auto object-cover rounded-3xl brightness-[1.2] contrast-105 opacity-95 transform scale-105 md:scale-[1.3] relative z-30"
                 style="mask-image: radial-gradient(circle at 68% 50%, rgba(0,0,0,0.95) 45%, rgba(0,0,0,0.6) 65%, transparent 100%); -webkit-mask-image: radial-gradient(circle at 68% 50%, rgba(0,0,0,0.95) 45%, rgba(0,0,0,0.6) 65%, transparent 100%);"
               />
             </div>
@@ -27,16 +26,16 @@
         <!-- TEXT: desktop on the right -->
         <div class="order-2 md:col-span-6 flex items-center">
           <div class="w-full text-white pr-6 md:pr-20 pl-0 md:pl-12 lg:pl-20">
-            <div class="max-w-xl md:max-w-xl lg:max-w-xl">
+            <div class="max-w-xl md:max-w-xl lg:max-w-xl md:text-left text-center">
               <h1 ref="titleRef" id="hero-title" class="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
-                Riccardo Cassis – UI/UX & Web Designer
+                <span class="whitespace-nowrap">Riccardo Cassis</span> – UI/UX &amp; Web Designer
               </h1>
 
-              <p ref="subtitleRef" class="mt-8 text-base md:text-lg text-white/90 max-w-md md:max-w-xl leading-relaxed">
+              <p ref="subtitleRef" class="mt-8 text-base md:text-lg text-white/90 max-w-md md:max-w-xl leading-relaxed mx-auto md:mx-0">
                 Progetto interfacce chiare e flussi ordinati, unendo design e front-end leggero.
               </p>
 
-              <div class="mt-10">
+              <div class="mt-10 flex justify-center md:justify-start">
                 <RouterLink
                   to="/projects"
                   ref="ctaRef"
@@ -48,7 +47,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
