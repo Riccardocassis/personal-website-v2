@@ -7,12 +7,17 @@
         <p ref="subtitleRef" class="mt-4 text-lg md:text-xl text-white/80 max-w-xl mx-auto leading-relaxed">Una selezione curata dei miei lavori. Design, front-end e identità visive.</p>
       </header>
 
+      <!-- Seed card (central starting animation) -->
+      <div ref="seedRef" class="seed-card flex items-center justify-center pointer-events-none z-0">
+        <div class="seed-inner w-72 h-56 rounded-2xl"></div>
+      </div>
+
       <!-- Grid categories -->
       <div ref="cardsRef" class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
 
         <!-- Web Design -->
         <RouterLink to="/projects/web" class="project-card group block rounded-2xl overflow-hidden transform transition will-change-transform bg-gradient-to-br from-slate-900/90 to-blue-900/75 border border-white/8" aria-label="Web Design">
-          <div class="relative z-20 p-8 md:p-10 min-h-[16rem] flex flex-col justify-between rounded-2xl shadow-lg backdrop-blur-sm">
+          <div class="relative z-40 p-8 md:p-10 min-h-[16rem] flex flex-col justify-between rounded-2xl shadow-lg backdrop-blur-sm">
             <div>
               <!-- icon -->
               <div class="w-10 h-10 mb-4 flex items-center justify-center rounded-lg bg-white/6">
@@ -32,7 +37,7 @@
 
         <!-- Brand Design -->
         <RouterLink to="/projects/brand" class="project-card group block rounded-2xl overflow-hidden transform transition will-change-transform bg-gradient-to-br from-slate-900/88 to-violet-900/70 border border-white/8" aria-label="Brand Design">
-          <div class="relative z-20 p-8 md:p-10 min-h-[16rem] flex flex-col justify-between rounded-2xl shadow-lg backdrop-blur-sm">
+          <div class="relative z-40 p-8 md:p-10 min-h-[16rem] flex flex-col justify-between rounded-2xl shadow-lg backdrop-blur-sm">
             <div>
               <div class="w-10 h-10 mb-4 flex items-center justify-center rounded-lg bg-white/6">
                 <!-- paint brush icon -->
@@ -51,7 +56,7 @@
 
         <!-- Product Design -->
         <RouterLink to="/projects/product" class="project-card group block rounded-2xl overflow-hidden transform transition will-change-transform bg-gradient-to-br from-slate-900/88 to-cyan-900/70 border border-white/8" aria-label="Product Design">
-          <div class="relative z-20 p-8 md:p-10 min-h-[16rem] flex flex-col justify-between rounded-2xl shadow-lg backdrop-blur-sm">
+          <div class="relative z-40 p-8 md:p-10 min-h-[16rem] flex flex-col justify-between rounded-2xl shadow-lg backdrop-blur-sm">
             <div>
               <div class="w-10 h-10 mb-4 flex items-center justify-center rounded-lg bg-white/6">
                 <!-- cube icon -->
@@ -74,13 +79,14 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { ref, onMounted, onBeforeUnmount, nextTick } from 'vue'
 import { RouterLink } from 'vue-router'
 import gsap from 'gsap'
 
 const titleRef = ref(null)
 const subtitleRef = ref(null)
 const cardsRef = ref(null)
+const seedRef = ref(null)
 let tl = null
 
 onMounted(() => {
@@ -90,8 +96,32 @@ onMounted(() => {
   tl.from(titleRef.value, { y: 18, opacity: 0 })
     .from(subtitleRef.value, { y: 14, opacity: 0 }, '-=0.42')
 
-  // animate cards only if present; animate vertical translation only (avoid setting inline opacity)
-  if (cards.length) {
+  // Only run the seed -> cards-from-center animation on desktop (>=768px)
+  const isDesktop = window.innerWidth >= 768
+  if (isDesktop && cards.length) {
+    const seed = seedRef.value
+    if (seed) {
+      gsap.set(seed, { autoAlpha: 1, scale: 1 })
+      // faster, cleaner seed animation
+      tl.to(seed, { scale: 1.02, duration: 0.28, ease: 'power2.out' })
+        .to(seed, { scale: 0.5, autoAlpha: 0, duration: 0.32, ease: 'power2.in' }, '>-0.03')
+        .set(seed, { display: 'none' }, '>-0.02')
+    }
+
+    // wait a frame so layout is stable, then position cards at center and animate them into place
+    requestAnimationFrame(async () => {
+      await nextTick()
+      cards.forEach((el) => {
+        const r = el.getBoundingClientRect()
+        const dx = r.left + r.width / 2 - (window.innerWidth / 2)
+        const dy = r.top + r.height / 2 - (window.innerHeight / 2)
+        gsap.set(el, { x: -dx, y: -dy, scale: 0.92 })
+      })
+
+      tl.to(cards, { x: 0, y: 0, scale: 1, stagger: 0.12, duration: 0.7, ease: 'power2.out' }, '-=0.3')
+    })
+  } else if (cards.length) {
+    // fallback: simple translate-in (no central seed)
     tl.from(cards, { y: 18, stagger: 0.12, duration: 0.65 }, '-=0.3')
   } else {
     // fallback: ensure any project-card is visible and has no transform
@@ -119,5 +149,12 @@ onBeforeUnmount(() => {
 @media (max-width: 767px) {
   section { padding-top: 3.5rem; }
   .project-card > div { height: auto; }
+}
+
+/* Seed central card styles */
+.seed-card { pointer-events: none; position: fixed; inset: 0; display: none; align-items: center; justify-content: center; }
+.seed-inner { background: linear-gradient(135deg, rgba(15,23,42,0.85), rgba(15,23,42,0.6)); border: 1px solid rgba(255,255,255,0.04); box-shadow: 0 10px 30px rgba(2,6,23,0.5); backdrop-filter: blur(6px); }
+@media (min-width: 768px) {
+  .seed-card { display: flex; }
 }
 </style>
