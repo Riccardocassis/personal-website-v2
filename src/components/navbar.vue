@@ -53,7 +53,7 @@ onBeforeUnmount(() => {
   <!-- fissa sopra -->
   <nav :class="['fixed top-0 left-0 right-0 z-50 transition-all duration-300', scrolled ? 'bg-black/40 backdrop-blur-md shadow-md border-b border-white/5' : 'bg-transparent']" style="height:70px;">
     <div class="flex items-center justify-between max-w-7xl mx-auto w-full px-6 md:px-16 h-full">
-      <!-- Logo RC desktop: più vicino, centrato, con padding e ombra -->
+      <!-- Logo RC -->
       <div class="flex items-center h-full">
         <RouterLink to="/" class="flex items-center justify-center" style="width:70px;height:70px;padding:7px;">
           <img
@@ -64,20 +64,15 @@ onBeforeUnmount(() => {
         </RouterLink>
       </div>
 
-  <!-- Desktop menu (wrapped to align with hero content width) -->
-  <div class="hidden md:flex items-center h-full w-full max-w-3xl ml-auto">
-    <ul class="flex items-center gap-8 text-lg w-full justify-end">
-          <!-- Dropdown desktop -->
-          <li class="relative" ref="desktopRef"
-        @mouseenter="openDropdown"
-        @mouseleave="closeDropdown"
-        style="display:inline-block;">
+      <!-- Desktop menu -->
+      <div class="hidden md:flex items-center h-full w-full max-w-3xl ml-auto">
+        <ul class="flex items-center gap-8 text-lg w-full justify-end">
+          <!-- Projects (dropdown) -->
+          <li class="relative" ref="desktopRef" @mouseenter="openDropdown" @mouseleave="closeDropdown" style="display:inline-block;">
             <button
               :class="[
-                'flex items-center gap-1 focus:outline-none px-7 py-2 font-semibold text-lg text-white transition-colors duration-200 ease-in-out hover:text-[#00BFFF] hover:underline underline-offset-4',
-                openDesktop
-                  ? 'bg-white/20 backdrop-blur-lg border border-white/30 text-white rounded-t-3xl shadow-lg drop-shadow-lg'
-                  : ''
+                'flex items-center gap-2 focus:outline-none px-4 py-2 font-semibold text-lg text-white transition-colors duration-200 ease-in-out hover:text-white/80',
+                openDesktop ? 'bg-white/10 backdrop-blur-sm rounded-t-3xl' : ''
               ]"
               aria-haspopup="menu"
               :aria-expanded="openDesktop"
@@ -89,67 +84,42 @@ onBeforeUnmount(() => {
               </svg>
             </button>
 
-            <transition
-              enter-active-class="transition duration-150 ease-out"
-              enter-from-class="opacity-0 translate-y-1"
-              enter-to-class="opacity-100 translate-y-0"
-              leave-active-class="transition duration-100 ease-in"
-              leave-from-class="opacity-100 translate-y-0"
-              leave-to-class="opacity-0 translate-y-1"
-            >
+            <transition enter-active-class="transition duration-150 ease-out" enter-from-class="opacity-0 translate-y-1" enter-to-class="opacity-100 translate-y-0" leave-active-class="transition duration-100 ease-in" leave-from-class="opacity-100 translate-y-0" leave-to-class="opacity-0 translate-y-1">
               <div v-show="openDesktop" class="absolute left-0 z-[60]" :style="{top: '100%'}">
-                <ul
-                  class="min-w-[240px] max-w-[260px] bg-white/20 backdrop-blur-lg border border-white/30 text-white rounded-b-2xl shadow-lg drop-shadow-lg overflow-hidden pt-6 pb-8 flex flex-col gap-8"
-                  role="menu"
-                  style="border-top-left-radius:0;border-top-right-radius:0;"
-                >
+                <ul class="min-w-[240px] max-w-[260px] bg-white/10 backdrop-blur-lg border border-white/20 text-white rounded-b-2xl shadow-lg overflow-hidden pt-6 pb-8 flex flex-col gap-4" role="menu" style="border-top-left-radius:0;border-top-right-radius:0;">
                   <li>
-                    <RouterLink to="/projects/web" class="block px-10 py-2 text-xl font-normal hover:bg-white/30 transition-colors" @click="openDesktop=false">
-                      Web design
-                    </RouterLink>
+                    <RouterLink to="/projects/web" class="block px-8 py-2 text-lg hover:bg-white/5 transition-colors" @click="openDesktop=false">Web design</RouterLink>
                   </li>
                   <li>
-                    <RouterLink to="/projects/brand" class="block px-10 py-2 text-xl font-normal hover:bg-white/30 transition-colors" @click="openDesktop=false">
-                      Brand Design
-                    </RouterLink>
+                    <RouterLink to="/projects/brand" class="block px-8 py-2 text-lg hover:bg-white/5 transition-colors" @click="openDesktop=false">Brand Design</RouterLink>
                   </li>
                   <li>
-                    <RouterLink to="/projects/product" class="block px-10 py-2 text-xl font-normal hover:bg-white/30 transition-colors" @click="openDesktop=false">
-                      Product Design
-                    </RouterLink>
+                    <RouterLink to="/projects/product" class="block px-8 py-2 text-lg hover:bg-white/5 transition-colors" @click="openDesktop=false">Product Design</RouterLink>
                   </li>
                 </ul>
               </div>
             </transition>
           </li>
 
+          <!-- Services -->
           <li>
-            <RouterLink to="/about" class="nav-link">
-              About me
-            </RouterLink>
+            <RouterLink to="/services" class="nav-link">Services</RouterLink>
           </li>
 
+          <!-- About -->
           <li>
-            <RouterLink to="/blog" class="nav-link">
-              Blog
-            </RouterLink>
+            <RouterLink to="/about" class="nav-link">About me</RouterLink>
           </li>
 
-        <li class="flex items-center">
-          <RouterLink to="/contact" class="inline-block bg-[#00BFFF] text-white px-6 py-2 md:py-3 rounded-lg font-semibold shadow-md hover:bg-[#00A0E0] transition-colors">
-            Contattami
-          </RouterLink>
-        </li>
-    </ul>
-  </div>
+          <!-- CTA -->
+          <li class="flex items-center">
+            <RouterLink to="/contact" class="inline-block bg-blue-600 text-white text-lg px-4 py-2 rounded-xl font-semibold shadow-md hover:bg-blue-700 transition-colors">Contattami</RouterLink>
+          </li>
+        </ul>
+      </div>
 
       <!-- Burger (mobile) -->
-      <button
-        class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg hover:bg-cyan-400/30 focus:outline-none text-white"
-        @click="mobileOpen = !mobileOpen"
-        aria-label="Open menu"
-        :aria-expanded="mobileOpen"
-      >
+      <button class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg hover:bg-white/10 focus:outline-none text-white" @click="mobileOpen = !mobileOpen" aria-label="Open menu" :aria-expanded="mobileOpen">
         <svg v-if="!mobileOpen" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
@@ -160,65 +130,31 @@ onBeforeUnmount(() => {
     </div>
 
     <!-- Mobile menu panel -->
-    <transition
-      enter-active-class="transition duration-150 ease-out"
-      enter-from-class="opacity-0 -translate-y-2"
-      enter-to-class="opacity-100 translate-y-0"
-      leave-active-class="transition duration-100 ease-in"
-      leave-from-class="opacity-100 translate-y-0"
-      leave-to-class="opacity-0 -translate-y-2"
-    >
-      <div
-        v-show="mobileOpen"
-        class="md:hidden bg-cyan-500/95 backdrop-blur-sm text-white border-t border-white/10"
-      >
+    <transition enter-active-class="transition duration-150 ease-out" enter-from-class="opacity-0 -translate-y-2" enter-to-class="opacity-100 translate-y-0" leave-active-class="transition duration-100 ease-in" leave-from-class="opacity-100 translate-y-0" leave-to-class="opacity-0 -translate-y-2">
+      <div v-show="mobileOpen" class="md:hidden bg-black/80 backdrop-blur-sm text-white border-t border-white/10">
         <div class="px-4 py-3 space-y-2">
 
           <!-- accordion Projects -->
           <div class="rounded">
-            <button
-              class="w-full flex items-center justify-between px-2 py-2 rounded hover:bg-white/10"
-              @click="mobileProjects = !mobileProjects"
-            >
+            <button class="w-full flex items-center justify-between px-2 py-2 rounded hover:bg-white/5" @click="mobileProjects = !mobileProjects">
               <span>Projects</span>
-              <svg :class="mobileProjects ? 'rotate-180' : ''" class="w-4 h-4 transition-transform" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 10.94l3.71-3.71a.75.75 0 1 1 1.06 1.06l-4.24 4.24a.75.75 0 0 1-1.06 0L5.21 8.29a.75.75 0 0 1 .02-1.08z" clip-rule="evenodd"/>
-              </svg>
+              <svg :class="mobileProjects ? 'rotate-180' : ''" class="w-4 h-4 transition-transform" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 10.94l3.71-3.71a.75.75 0 1 1 1.06 1.06l-4.24 4.24a.75.75 0 0 1-1.06 0L5.21 8.29a.75.75 0 0 1 .02-1.08z" clip-rule="evenodd"/></svg>
             </button>
 
-            <transition
-              enter-active-class="transition duration-150 ease-out"
-              enter-from-class="opacity-0 -translate-y-1"
-              enter-to-class="opacity-100 translate-y-0"
-              leave-active-class="transition duration-100 ease-in"
-              leave-from-class="opacity-100 translate-y-0"
-              leave-to-class="opacity-0 -translate-y-1"
-            >
+            <transition enter-active-class="transition duration-150 ease-out" enter-from-class="opacity-0 -translate-y-1" enter-to-class="opacity-100 translate-y-0" leave-active-class="transition duration-100 ease-in" leave-from-class="opacity-100 translate-y-0" leave-to-class="opacity-0 -translate-y-1">
               <div v-show="mobileProjects" class="mt-1 ml-2 space-y-1">
-                <RouterLink to="/projects/web" class="block px-3 py-2 rounded text-white transition-colors duration-200 ease-in-out hover:text-[#00BFFF] hover:underline" @click="mobileOpen=false">
-                  Web design
-                </RouterLink>
-                <RouterLink to="/projects/brand" class="block px-3 py-2 rounded text-white transition-colors duration-200 ease-in-out hover:text-[#00BFFF] hover:underline" @click="mobileOpen=false">
-                  Brand Design
-                </RouterLink>
-                <RouterLink to="/projects/product" class="block px-3 py-2 rounded text-white transition-colors duration-200 ease-in-out hover:text-[#00BFFF] hover:underline" @click="mobileOpen=false">
-                  Product Design
-                </RouterLink>
+                <RouterLink to="/projects/web" class="block px-3 py-2 rounded text-white transition-colors duration-200 ease-in-out hover:text-white/80" @click="mobileOpen=false">Web design</RouterLink>
+                <RouterLink to="/projects/brand" class="block px-3 py-2 rounded text-white transition-colors duration-200 ease-in-out hover:text-white/80" @click="mobileOpen=false">Brand Design</RouterLink>
+                <RouterLink to="/projects/product" class="block px-3 py-2 rounded text-white transition-colors duration-200 ease-in-out hover:text-white/80" @click="mobileOpen=false">Product Design</RouterLink>
               </div>
             </transition>
           </div>
 
-          <RouterLink to="/about" class="block px-2 py-2 rounded text-white transition-colors duration-200 ease-in-out hover:text-[#00BFFF] hover:underline" @click="mobileOpen=false">
-            About me
-          </RouterLink>
+          <RouterLink to="/services" class="block px-2 py-2 rounded text-white transition-colors duration-200 ease-in-out hover:text-white/80" @click="mobileOpen=false">Services</RouterLink>
 
-          <RouterLink to="/blog" class="block px-2 py-2 rounded text-white transition-colors duration-200 ease-in-out hover:text-[#00BFFF] hover:underline" @click="mobileOpen=false">
-            Blog
-          </RouterLink>
+          <RouterLink to="/about" class="block px-2 py-2 rounded text-white transition-colors duration-200 ease-in-out hover:text-white/80" @click="mobileOpen=false">About me</RouterLink>
 
-            <RouterLink to="/contact" class="block px-6 py-3 rounded-lg bg-[#00BFFF] text-white text-center font-semibold hover:bg-[#00A0E0]" @click="mobileOpen=false">
-              Contattami
-            </RouterLink>
+          <RouterLink to="/contact" class="block px-6 py-3 rounded-xl bg-blue-600 text-white text-center font-semibold hover:bg-blue-700" @click="mobileOpen=false">Contattami</RouterLink>
         </div>
       </div>
     </transition>
@@ -228,29 +164,11 @@ onBeforeUnmount(() => {
 <style scoped>
 .nav-link{
   color: #ffffff;
-  position: relative;
-  padding: 0.5rem 1.1rem;
+  padding: 0.5rem 0.9rem;
   font-weight: 600;
   transition: color 180ms ease;
 }
-.nav-link::after{
-  content: '';
-  position: absolute;
-  left: 20px;
-  right: 20px;
-  bottom: 6px;
-  height: 2px;
-  background: #00BFFF;
-  transform: scaleX(0);
-  transform-origin: left center;
-  transition: transform 260ms cubic-bezier(.2,.9,.2,1), opacity 200ms;
-  opacity: 0;
-}
 .nav-link:hover{
-  color: #00BFFF;
-}
-.nav-link:hover::after{
-  transform: scaleX(1);
-  opacity: 1;
+  color: rgba(255,255,255,0.8);
 }
 </style>
