@@ -1,62 +1,123 @@
 <template>
-  <section class="pt-24 pb-20 relative">
-    <div class="max-w-7xl mx-auto px-6">
-      <header class="mb-12 text-center">
-        <h1 class="text-3xl md:text-4xl font-extrabold">Projects</h1>
-        <p class="text-white/80 mt-3 max-w-2xl mx-auto">Scegli una categoria per esplorare i miei lavori. Layout curato, focus su case study e risultati.</p>
+  <section class="pt-36 pb-28 relative">
+    <div class="max-w-5xl mx-auto px-6">
+      <!-- Header -->
+      <header class="text-center mb-14">
+        <h1 ref="titleRef" class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight">Projects</h1>
+        <p ref="subtitleRef" class="mt-4 text-lg md:text-xl text-white/80 max-w-xl mx-auto leading-relaxed">Una selezione curata dei miei lavori. Design, front-end e identità visive.</p>
       </header>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <RouterLink to="/projects/web" class="group block rounded-2xl overflow-hidden bg-gradient-to-br from-slate-800/40 to-blue-900/30 border border-white/5 hover:scale-[1.02] transform transition">
-          <div class="p-8 md:p-10 h-56 flex flex-col justify-between">
+      <!-- Grid categories -->
+      <div ref="cardsRef" class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
+
+        <!-- Web Design -->
+        <RouterLink to="/projects/web" class="project-card group block rounded-2xl overflow-hidden transform transition will-change-transform bg-gradient-to-br from-slate-900/90 to-blue-900/75 border border-white/8" aria-label="Web Design">
+          <div class="relative z-20 p-8 md:p-10 min-h-[16rem] flex flex-col justify-between rounded-2xl shadow-lg backdrop-blur-sm">
             <div>
-              <h3 class="text-xl font-bold">Web Design</h3>
-              <p class="text-white/80 mt-2">Interfacce responsive, animazioni microinteractions e front-end performante.</p>
+              <!-- icon -->
+              <div class="w-10 h-10 mb-4 flex items-center justify-center rounded-lg bg-white/6">
+                <!-- globe icon (minimal) -->
+                <svg class="w-5 h-5 text-cyan-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M12 2a10 10 0 100 20 10 10 0 000-20zM2 12h20M12 2v20M4 6h16M4 18h16"/></svg>
+              </div>
+              <h3 class="text-xl md:text-2xl font-semibold mt-2">Web Design</h3>
+              <p class="text-white/80 mt-3 leading-relaxed">Progetti di interfacce moderne e performanti, pensati per conversione e accessibilità. Focus su UX solida e front-end snello.</p>
             </div>
+
             <div class="flex items-center justify-between">
-              <span class="text-sm text-white/70">View projects</span>
-              <svg class="w-5 h-5 text-white/70 group-hover:text-white transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              <span class="text-sm text-white/70">Scopri i progetti</span>
+              <span class="arrow text-white/60 transition-transform opacity-80">→</span>
             </div>
           </div>
         </RouterLink>
 
-        <RouterLink to="/projects/brand" class="group block rounded-2xl overflow-hidden bg-gradient-to-br from-slate-800/30 to-violet-900/30 border border-white/5 hover:scale-[1.02] transform transition">
-          <div class="p-8 md:p-10 h-56 flex flex-col justify-between">
+        <!-- Brand Design -->
+        <RouterLink to="/projects/brand" class="project-card group block rounded-2xl overflow-hidden transform transition will-change-transform bg-gradient-to-br from-slate-900/88 to-violet-900/70 border border-white/8" aria-label="Brand Design">
+          <div class="relative z-20 p-8 md:p-10 min-h-[16rem] flex flex-col justify-between rounded-2xl shadow-lg backdrop-blur-sm">
             <div>
-              <h3 class="text-xl font-bold">Brand Design</h3>
-              <p class="text-white/80 mt-2">Identità, sistemi visivi e progetti di branding con approccio strategico.</p>
+              <div class="w-10 h-10 mb-4 flex items-center justify-center rounded-lg bg-white/6">
+                <!-- paint brush icon -->
+                <svg class="w-5 h-5 text-violet-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M3 21l4-4 7-7 4-4 3 3-4 4-7 7-4 4H3z"/></svg>
+              </div>
+              <h3 class="text-xl md:text-2xl font-semibold mt-2">Brand Design</h3>
+              <p class="text-white/80 mt-3 leading-relaxed">Sistemi visivi distintivi e identità strategiche che comunicano valore e coerenza lungo tutti i touchpoint del brand.</p>
             </div>
+
             <div class="flex items-center justify-between">
-              <span class="text-sm text-white/70">View projects</span>
-              <svg class="w-5 h-5 text-white/70 group-hover:text-white transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              <span class="text-sm text-white/70">Scopri i progetti</span>
+              <span class="arrow text-white/60 transition-transform opacity-80">→</span>
             </div>
           </div>
         </RouterLink>
 
-        <RouterLink to="/projects/product" class="group block rounded-2xl overflow-hidden bg-gradient-to-br from-slate-800/30 to-cyan-900/30 border border-white/5 hover:scale-[1.02] transform transition">
-          <div class="p-8 md:p-10 h-56 flex flex-col justify-between">
+        <!-- Product Design -->
+        <RouterLink to="/projects/product" class="project-card group block rounded-2xl overflow-hidden transform transition will-change-transform bg-gradient-to-br from-slate-900/88 to-cyan-900/70 border border-white/8" aria-label="Product Design">
+          <div class="relative z-20 p-8 md:p-10 min-h-[16rem] flex flex-col justify-between rounded-2xl shadow-lg backdrop-blur-sm">
             <div>
-              <h3 class="text-xl font-bold">Product Design</h3>
-              <p class="text-white/80 mt-2">Flussi, prototipi e soluzioni UX per prodotti digitali completi.</p>
+              <div class="w-10 h-10 mb-4 flex items-center justify-center rounded-lg bg-white/6">
+                <!-- cube icon -->
+                <svg class="w-5 h-5 text-cyan-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16zM12 2v20"/></svg>
+              </div>
+              <h3 class="text-xl md:text-2xl font-semibold mt-2">Product Design</h3>
+              <p class="text-white/80 mt-3 leading-relaxed">Dall'idea al prototipo: soluzioni UX centrali, validate e scalabili, progettate per impattare il prodotto e il business.</p>
             </div>
+
             <div class="flex items-center justify-between">
-              <span class="text-sm text-white/70">View projects</span>
-              <svg class="w-5 h-5 text-white/70 group-hover:text-white transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              <span class="text-sm text-white/70">Scopri i progetti</span>
+              <span class="arrow text-white/60 transition-transform opacity-80">→</span>
             </div>
           </div>
         </RouterLink>
+
       </div>
     </div>
-
-    
   </section>
 </template>
 
 <script setup>
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { RouterLink } from 'vue-router'
+import gsap from 'gsap'
+
+const titleRef = ref(null)
+const subtitleRef = ref(null)
+const cardsRef = ref(null)
+let tl = null
+
+onMounted(() => {
+  // basic entrance timeline: title then subtitle then cards stagger
+  const cards = cardsRef.value ? Array.from(cardsRef.value.querySelectorAll('.project-card')) : []
+  tl = gsap.timeline({ defaults: { duration: 0.7, ease: 'power2.out' } })
+  tl.from(titleRef.value, { y: 18, opacity: 0 })
+    .from(subtitleRef.value, { y: 14, opacity: 0 }, '-=0.42')
+
+  // animate cards only if present; animate vertical translation only (avoid setting inline opacity)
+  if (cards.length) {
+    tl.from(cards, { y: 18, stagger: 0.12, duration: 0.65 }, '-=0.3')
+  } else {
+    // fallback: ensure any project-card is visible and has no transform
+    const fallback = document.querySelectorAll('.project-card')
+    fallback.forEach(el => { el.style.opacity = '1'; el.style.transform = 'none' })
+  }
+})
+
+onBeforeUnmount(() => {
+  try {
+    if (tl) tl.kill()
+  } catch (e) {}
+})
 </script>
 
 <style scoped>
-/* small visual polish for the landing */
-.group:hover { }
+/* Card hover polish */
+.project-card { transition: transform 260ms cubic-bezier(.2,.9,.2,1), box-shadow 260ms ease, opacity 200ms ease; }
+.project-card:hover { transform: scale(1.02); }
+.project-card .shadow-lg { box-shadow: 0 10px 40px rgba(2,6,23,0.6); }
+.project-card .arrow { display: inline-block; transition: transform 220ms ease, opacity 220ms ease; }
+.project-card:hover .arrow { transform: translateX(6px); opacity: 1; }
+
+/* keep card content readable on small screens */
+@media (max-width: 767px) {
+  section { padding-top: 3.5rem; }
+  .project-card > div { height: auto; }
+}
 </style>
