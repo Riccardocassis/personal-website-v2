@@ -30,10 +30,8 @@
       </RouterLink>
     </div>
   </section>
-  <Footer />
 </template>
 <script setup>
-import Footer from '../components/Footer.vue'
 import { RouterLink } from 'vue-router';
 </script>
 

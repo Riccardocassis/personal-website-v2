@@ -17,13 +17,11 @@
     <!-- Immagini fisse ai lati sopra il footer -->
   <img src="../assets/ioartista.webp" alt="Artista" class="fixed left-0 bottom-20 w-[32vw] min-w-[180px] max-w-none object-contain opacity-80 z-10 pointer-events-none" />
   <img src="../assets/ionerd.webp" alt="Nerd" class="fixed right-0 bottom-20 w-[32vw] min-w-[180px] max-w-none object-contain opacity-80 z-10 pointer-events-none" />
-    <!-- Footer originale statico -->
-    <Footer />
   </div>
 </template>
 <script setup>
 import { ref, onMounted } from 'vue'
-import Footer from '../components/Footer.vue'
+ 
 
 const artistaCount = ref(0)
 const nerdCount = ref(0)

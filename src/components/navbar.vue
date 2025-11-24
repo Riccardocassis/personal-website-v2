@@ -3,29 +3,11 @@ import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { RouterLink } from 'vue-router'
 import logo from '../assets/logo-rc.webp'
 
-const openDesktop = ref(false)      // dropdown desktop
-// Funzioni per hover dropdown desktop
-function openDropdown() {
-  openDesktop.value = true
-}
-function closeDropdown() {
-  openDesktop.value = false
-}
 const mobileOpen = ref(false)       // menu mobile
-const mobileProjects = ref(false)   // accordion Projects nel mobile
-
-// Chiudi dropdown desktop cliccando fuori
-const desktopRef = ref(null)
-function onDocClick(e) {
-  if (openDesktop.value && desktopRef.value && !desktopRef.value.contains(e.target)) {
-    openDesktop.value = false
-  }
-}
 // Chiudi mobile con ESC
 function onKeydown(e) {
   if (e.key === 'Escape') {
     mobileOpen.value = false
-    openDesktop.value = false
   }
 }
 
@@ -36,14 +18,12 @@ function onScroll() {
 }
 
 onMounted(() => {
-  document.addEventListener('click', onDocClick)
   document.addEventListener('keydown', onKeydown)
   window.addEventListener('scroll', onScroll, { passive: true })
   // inizializza stato
   onScroll()
 })
 onBeforeUnmount(() => {
-  document.removeEventListener('click', onDocClick)
   document.removeEventListener('keydown', onKeydown)
   window.removeEventListener('scroll', onScroll)
 })
@@ -67,38 +47,9 @@ onBeforeUnmount(() => {
       <!-- Desktop menu -->
       <div class="hidden md:flex items-center h-full w-full max-w-3xl ml-auto">
         <ul class="flex items-center gap-8 text-lg w-full justify-end">
-          <!-- Projects (dropdown) -->
-          <li class="relative" ref="desktopRef" @mouseenter="openDropdown" @mouseleave="closeDropdown" style="display:inline-block;">
-            <button
-              :class="[
-                'flex items-center gap-2 focus:outline-none px-4 py-2 font-semibold text-lg text-white transition-colors duration-200 ease-in-out hover:text-white/80',
-                openDesktop ? 'bg-white/10 backdrop-blur-sm rounded-t-3xl' : ''
-              ]"
-              aria-haspopup="menu"
-              :aria-expanded="openDesktop"
-              tabindex="0"
-            >
-              Projects
-              <svg :class="openDesktop ? 'rotate-180' : ''" class="w-4 h-4 transition-transform" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 10.94l3.71-3.71a.75.75 0 1 1 1.06 1.06l-4.24 4.24a.75.75 0 0 1-1.06 0L5.21 8.29a.75.75 0 0 1 .02-1.08z" clip-rule="evenodd"/>
-              </svg>
-            </button>
-
-            <transition enter-active-class="transition duration-150 ease-out" enter-from-class="opacity-0 translate-y-1" enter-to-class="opacity-100 translate-y-0" leave-active-class="transition duration-100 ease-in" leave-from-class="opacity-100 translate-y-0" leave-to-class="opacity-0 translate-y-1">
-              <div v-show="openDesktop" class="absolute left-0 z-[60]" :style="{top: '100%'}">
-                <ul class="min-w-[240px] max-w-[260px] bg-white/10 backdrop-blur-lg border border-white/20 text-white rounded-b-2xl shadow-lg overflow-hidden pt-6 pb-8 flex flex-col gap-4" role="menu" style="border-top-left-radius:0;border-top-right-radius:0;">
-                  <li>
-                    <RouterLink to="/projects/web" class="block px-8 py-2 text-lg hover:bg-white/5 transition-colors" @click="openDesktop=false">Web design</RouterLink>
-                  </li>
-                  <li>
-                    <RouterLink to="/projects/brand" class="block px-8 py-2 text-lg hover:bg-white/5 transition-colors" @click="openDesktop=false">Brand Design</RouterLink>
-                  </li>
-                  <li>
-                    <RouterLink to="/projects/product" class="block px-8 py-2 text-lg hover:bg-white/5 transition-colors" @click="openDesktop=false">Product Design</RouterLink>
-                  </li>
-                </ul>
-              </div>
-            </transition>
+          <!-- Projects (link to landing page) -->
+          <li>
+            <RouterLink to="/projects" class="nav-link">Projects</RouterLink>
           </li>
 
           <!-- Services -->
@@ -134,21 +85,7 @@ onBeforeUnmount(() => {
       <div v-show="mobileOpen" class="md:hidden bg-black/80 backdrop-blur-sm text-white border-t border-white/10">
         <div class="px-4 py-3 space-y-2">
 
-          <!-- accordion Projects -->
-          <div class="rounded">
-            <button class="w-full flex items-center justify-between px-2 py-2 rounded hover:bg-white/5" @click="mobileProjects = !mobileProjects">
-              <span>Projects</span>
-              <svg :class="mobileProjects ? 'rotate-180' : ''" class="w-4 h-4 transition-transform" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 10.94l3.71-3.71a.75.75 0 1 1 1.06 1.06l-4.24 4.24a.75.75 0 0 1-1.06 0L5.21 8.29a.75.75 0 0 1 .02-1.08z" clip-rule="evenodd"/></svg>
-            </button>
-
-            <transition enter-active-class="transition duration-150 ease-out" enter-from-class="opacity-0 -translate-y-1" enter-to-class="opacity-100 translate-y-0" leave-active-class="transition duration-100 ease-in" leave-from-class="opacity-100 translate-y-0" leave-to-class="opacity-0 -translate-y-1">
-              <div v-show="mobileProjects" class="mt-1 ml-2 space-y-1">
-                <RouterLink to="/projects/web" class="block px-3 py-2 rounded text-white transition-colors duration-200 ease-in-out hover:text-white/80" @click="mobileOpen=false">Web design</RouterLink>
-                <RouterLink to="/projects/brand" class="block px-3 py-2 rounded text-white transition-colors duration-200 ease-in-out hover:text-white/80" @click="mobileOpen=false">Brand Design</RouterLink>
-                <RouterLink to="/projects/product" class="block px-3 py-2 rounded text-white transition-colors duration-200 ease-in-out hover:text-white/80" @click="mobileOpen=false">Product Design</RouterLink>
-              </div>
-            </transition>
-          </div>
+          <RouterLink to="/projects" class="block px-2 py-2 rounded text-white transition-colors duration-200 ease-in-out hover:text-white/80" @click="mobileOpen=false">Projects</RouterLink>
 
           <RouterLink to="/services" class="block px-2 py-2 rounded text-white transition-colors duration-200 ease-in-out hover:text-white/80" @click="mobileOpen=false">Services</RouterLink>
 
