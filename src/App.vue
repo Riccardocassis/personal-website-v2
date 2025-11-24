@@ -60,7 +60,14 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div class="bg-black text-white min-h-screen">
+  <div class="relative bg-black text-white min-h-screen">
+    <!-- Global radial gradient layer (same as hero) -->
+    <div
+      ref="globalGradient"
+      class="absolute inset-0 pointer-events-none z-0"
+      :style="{ background: 'radial-gradient(circle at 70% 50%, rgba(59,130,246,0.22), rgba(29,78,216,0.16) 28%, rgba(30,58,138,0.10) 60%)' }"
+    ></div>
+
     <Navbar />
     <router-view />
 
