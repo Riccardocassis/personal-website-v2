@@ -27,8 +27,8 @@
         <div class="order-2 md:col-span-6 flex items-center">
           <div class="w-full text-white pr-6 md:pr-20 pl-0 md:pl-12 lg:pl-20">
             <div class="max-w-xl md:max-w-xl lg:max-w-xl md:text-left text-center">
-              <h1 ref="titleRef" id="hero-title" class="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
-                <span class="whitespace-nowrap">Riccardo Cassis</span> – UI/UX &amp; Web Designer
+              <h1 ref="titleRef" id="hero-title" class="text-2xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
+                <span class="whitespace-nowrap">Riccardo Cassis</span> <span class="block md:inline mt-2 md:mt-0">UI/UX &amp; Web Designer</span>
               </h1>
 
               <p ref="subtitleRef" class="mt-8 text-base md:text-lg text-white/90 max-w-md md:max-w-xl leading-relaxed mx-auto md:mx-0">
