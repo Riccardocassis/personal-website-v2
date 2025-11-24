@@ -1,5 +1,5 @@
 <template>
-  <section aria-labelledby="hero-title" class="relative w-full bg-black min-h-screen">
+  <section aria-labelledby="hero-title" class="relative w-full bg-black">
     <!-- Full-bleed radial gradient layer for the hero (soft, behind content) -->
     <div
       ref="gradientRef"
@@ -9,44 +9,40 @@
       }"
     ></div>
 
-    <div class="max-w-screen-xl mx-auto px-6 py-16 md:py-24">
-      <div class="grid md:grid-cols-12 gap-12 items-center min-h-screen">
-        <!-- LEFT: subtle image / pattern -->
-        <div class="order-2 md:order-1 md:col-span-7 flex items-center justify-center">
-          <div class="relative w-full h-[72vh] md:h-[86vh] lg:h-[92vh] overflow-visible">
-            <!-- Large side image: full-bleed within its column, toned down for better cohesion -->
-            <img
-              src="../assets/hero-riccardo.webp"
-              alt="Portrait of Riccardo Cassis"
-              class="absolute left-0 top-0 w-[120%] md:w-[140%] h-full object-cover brightness-[1.06] contrast-110 saturate-95 opacity-70 transform scale-[1.33] -translate-x-[8%] md:-translate-x-[18%] md:translate-y-0 z-20"
-            />
-
-            <!-- Softer overlay to gently blend the image with the blue background -->
-            <div class="absolute inset-0 pointer-events-none z-30" aria-hidden>
-              <!-- Use a softer custom linear gradient to avoid hard rectangular bands -->
-              <div class="absolute inset-0" :style="{ background: 'linear-gradient(90deg, rgba(2,6,23,0.06) 0%, rgba(2,6,23,0.04) 40%, transparent 100%)' }"></div>
+    <div class="max-w-screen-xl mx-auto px-6 py-24">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center min-h-[72vh]">
+        <!-- IMAGE: mobile on top, desktop on the left -->
+        <div class="order-1 md:order-1 md:col-span-6 flex items-center justify-center md:justify-start">
+          <div class="relative w-full flex justify-center md:justify-start">
+            <!-- Image container: constrained width on desktop for a cleaner layout -->
+            <div class="w-[86%] md:w-[45%]">
+              <img
+                src="../assets/hero-riccardo.webp"
+                alt="Portrait of Riccardo Cassis"
+                class="w-full h-auto object-cover rounded-3xl brightness-[1.12] contrast-110 opacity-80 [mask-image:radial-gradient(circle_at_68%_50%,rgba(0,0,0,0.5)_55%,transparent_100%)]"
+              />
             </div>
           </div>
         </div>
 
-        <!-- RIGHT: textual content -->
-        <div class="order-1 md:order-2 md:col-span-5 text-left text-white">
-          <div class="relative z-40 pl-6 md:pl-12 lg:pl-20">
-            <div class="space-y-6 md:space-y-8 lg:space-y-10">
-              <h1 ref="titleRef" id="hero-title" class="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
-                Riccardo Cassis UI/UX & Web Designer
+        <!-- TEXT: desktop on the right -->
+        <div class="order-2 md:order-2 md:col-span-6 flex items-center">
+          <div class="w-full text-white pl-0 md:pl-12 lg:pl-20">
+            <div class="max-w-2xl">
+              <h1 ref="titleRef" id="hero-title" class="text-2xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
+                Riccardo Cassis – UI/UX & Web Designer
               </h1>
 
-              <p ref="subtitleRef" class="text-lg md:text-xl text-white/90 max-w-2xl">
+              <p ref="subtitleRef" class="mt-6 text-base md:text-lg text-white/90 max-w-xl leading-relaxed">
                 Progetto interfacce chiare e flussi ordinati, unendo design e front-end leggero.
               </p>
 
-              <p class="text-sm md:text-base text-white/70 max-w-xl">
-                Creo soluzioni semplici e utili attraverso un approccio pratico e orientato al problema.
-              </p>
-
-              <div class="pt-2">
-                <RouterLink to="/projects" ref="ctaRef" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+              <div class="mt-10">
+                <RouterLink
+                  to="/projects"
+                  ref="ctaRef"
+                  class="inline-block bg-blue-600 text-white text-lg px-6 py-3 rounded-lg hover:bg-blue-700 transition"
+                >
                   Esplora i miei progetti
                 </RouterLink>
               </div>
