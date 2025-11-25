@@ -7,9 +7,9 @@
         <p ref="subtitleRef" class="mt-4 text-lg md:text-xl text-white/80 max-w-xl mx-auto leading-relaxed">Una selezione curata dei miei lavori. Design, front-end e identità visive.</p>
       </header>
 
-      <!-- Seed card (central starting animation) -->
-      <div ref="seedRef" class="seed-card flex items-center justify-center pointer-events-none z-0">
-        <div class="seed-inner w-72 h-56 rounded-2xl"></div>
+      <!-- Master card (single card that expands / splits into 3) -->
+      <div ref="masterRef" class="master-card fixed inset-0 flex items-center justify-center pointer-events-none z-50">
+        <div class="master-inner w-80 h-60 rounded-2xl"></div>
       </div>
 
       <!-- Grid categories -->
@@ -87,6 +87,7 @@ const titleRef = ref(null)
 const subtitleRef = ref(null)
 const cardsRef = ref(null)
 const seedRef = ref(null)
+const masterRef = ref(null)
 let tl = null
 
 onMounted(() => {
@@ -96,29 +97,35 @@ onMounted(() => {
   tl.from(titleRef.value, { y: 18, opacity: 0 })
     .from(subtitleRef.value, { y: 14, opacity: 0 }, '-=0.42')
 
-  // Only run the seed -> cards-from-center animation on desktop (>=768px)
+  // Only run the master -> split animation on desktop (>=768px)
   const isDesktop = window.innerWidth >= 768
   if (isDesktop && cards.length) {
-    const seed = seedRef.value
-    if (seed) {
-      gsap.set(seed, { autoAlpha: 1, scale: 1 })
-      // faster, cleaner seed animation
-      tl.to(seed, { scale: 1.02, duration: 0.28, ease: 'power2.out' })
-        .to(seed, { scale: 0.5, autoAlpha: 0, duration: 0.32, ease: 'power2.in' }, '>-0.03')
-        .set(seed, { display: 'none' }, '>-0.02')
-    }
 
     // wait a frame so layout is stable, then position cards at center and animate them into place
     requestAnimationFrame(async () => {
       await nextTick()
+
+      // prepare cards at center with mask (clip-path) so they look like they're revealed from the master
       cards.forEach((el) => {
         const r = el.getBoundingClientRect()
         const dx = r.left + r.width / 2 - (window.innerWidth / 2)
         const dy = r.top + r.height / 2 - (window.innerHeight / 2)
-        gsap.set(el, { x: -dx, y: -dy, scale: 0.92 })
+        // hide card content while positioned at center to avoid ghosting
+        gsap.set(el, { x: -dx, y: -dy, scale: 0.92, autoAlpha: 0 })
+        // start with clipped content
+        el.style.clipPath = 'inset(35% 35% 35% 35% round 14px)'
       })
 
-      tl.to(cards, { x: 0, y: 0, scale: 1, stagger: 0.12, duration: 0.7, ease: 'power2.out' }, '-=0.3')
+      // reveal cards with clip-path animation and move to place — snappier timings for a fresher feel
+      cards.forEach((el, i) => {
+        tl.to(el, { clipPath: 'inset(0% 0% 0% 0% round 14px)', x: 0, y: 0, scale: 1, autoAlpha: 1, duration: 0.42, ease: 'power4.out' }, i * 0.05 - 0.1)
+      })
+
+      // subtle lift and settling (shorter)
+      tl.to(cards, { y: 0, stagger: 0.05, duration: 0.32, ease: 'power2.out' }, '-=0.28')
+
+      // cleanup clip-paths after animation to avoid inline styles lingering
+      tl.call(() => { cards.forEach(el => { el.style.clipPath = '' }) }, null, '>-0.02')
     })
   } else if (cards.length) {
     // fallback: simple translate-in (no central seed)
@@ -154,6 +161,10 @@ onBeforeUnmount(() => {
 /* Seed central card styles */
 .seed-card { pointer-events: none; position: fixed; inset: 0; display: none; align-items: center; justify-content: center; }
 .seed-inner { background: linear-gradient(135deg, rgba(15,23,42,0.85), rgba(15,23,42,0.6)); border: 1px solid rgba(255,255,255,0.04); box-shadow: 0 10px 30px rgba(2,6,23,0.5); backdrop-filter: blur(6px); }
+
+/* Master single-card (expand/divide) styles */
+.master-card { pointer-events: none; position: fixed; inset: 0; display: none; align-items: center; justify-content: center; }
+.master-inner { background: linear-gradient(135deg, rgba(15,23,42,0.9), rgba(17,24,39,0.7)); border: 1px solid rgba(255,255,255,0.04); box-shadow: 0 18px 50px rgba(2,6,23,0.55); backdrop-filter: blur(8px); }
 @media (min-width: 768px) {
   .seed-card { display: flex; }
 }

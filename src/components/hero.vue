@@ -6,7 +6,7 @@
       :style="{ background: 'radial-gradient(circle at 70% 50%, rgba(59,130,246,0.22), rgba(29,78,216,0.16) 28%, rgba(30,58,138,0.10) 60%)' }"
     ></div>
 
-    <div class="max-w-screen-xl mx-auto px-6 pt-36 pb-20">
+    <div class="max-w-screen-xl mx-auto px-6 pt-36 pb-24">
       <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center min-h-[72vh]">
 
         <!-- IMAGE: mobile on top, desktop on the left -->
@@ -35,15 +35,47 @@
                 Progetto interfacce chiare e flussi ordinati, unendo design e front-end leggero.
               </p>
 
-              <div class="mt-10 flex justify-center md:justify-start">
-                <RouterLink
-                  to="/projects"
-                  ref="ctaRef"
-                  class="inline-block bg-blue-600 text-white text-lg px-6 py-3 rounded-lg hover:bg-blue-700 transition"
+              <!-- Social icons row (small, white/70, gap-6, centered, mt-8) -->
+              <div class="mt-8 flex justify-center md:justify-start gap-6">
+                <a
+                  href="https://example.com/linkedin"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                  class="inline-flex items-center justify-center w-9 h-9 text-white/70 hover:text-white hover:scale-105 transition-all duration-200 ease-out cursor-pointer"
                 >
-                  Esplora i miei progetti
-                </RouterLink>
+                  <!-- LinkedIn (simple glyph) -->
+                  <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8.98h5V24H0V8.98zM8.5 8.98h4.8v2.06h.07c.67-1.27 2.3-2.61 4.74-2.61 5.07 0 6 3.34 6 7.67V24h-5V16.6c0-1.77-.03-4.05-2.47-4.05-2.47 0-2.85 1.93-2.85 3.92V24h-5V8.98z"/>
+                  </svg>
+                </a>
+
+                <a
+                  href="https://example.com/github"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                  class="inline-flex items-center justify-center w-9 h-9 text-white/70 hover:text-white hover:scale-105 transition-all duration-200 ease-out cursor-pointer"
+                >
+                  <!-- GitHub (octocat simplified) -->
+                  <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 .5C5.65.5.75 5.4.75 11.75c0 4.83 3.14 8.92 7.5 10.36.55.1.75-.24.75-.53 0-.26-.01-1-.01-1.93-3.05.66-3.7-1.47-3.7-1.47-.5-1.27-1.22-1.61-1.22-1.61-.99-.68.07-.66.07-.66 1.1.08 1.68 1.13 1.68 1.13.97 1.66 2.55 1.18 3.17.9.1-.71.38-1.18.69-1.45-2.44-.28-5-1.22-5-5.43 0-1.2.43-2.18 1.13-2.95-.11-.28-.49-1.4.11-2.92 0 0 .92-.3 3.02 1.13a10.5 10.5 0 012.75-.37c.93.01 1.86.13 2.74.38 2.09-1.43 3.01-1.13 3.01-1.13.6 1.52.22 2.64.11 2.92.7.77 1.12 1.75 1.12 2.95 0 4.22-2.57 5.15-5.02 5.42.39.34.74 1.01.74 2.04 0 1.47-.01 2.66-.01 3.02 0 .29.2.64.76.53 4.36-1.44 7.5-5.53 7.5-10.36C23.25 5.4 18.35.5 12 .5z"/>
+                  </svg>
+                </a>
+
+                <a
+                  href="https://example.com/behance"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Behance"
+                  class="inline-flex items-center justify-center w-10 h-10 text-white/70 hover:text-white hover:scale-105 transition-all duration-200 ease-out cursor-pointer"
+                >
+                  <!-- Behance image asset (preferred for fidelity) -->
+                  <img src="../assets/icon-behance.webp" alt="Behance" class="w-7 h-7 object-contain" />
+                </a>
               </div>
+              <!-- end social icons -->
+
             </div>
           </div>
         </div>
@@ -62,7 +94,6 @@ gsap.registerPlugin(ScrollTrigger)
 
 const titleRef = ref(null)
 const subtitleRef = ref(null)
-const ctaRef = ref(null)
 const gradientRef = ref(null)
 
 let tl = null
@@ -73,7 +104,6 @@ onMounted(() => {
   tl = gsap.timeline({ defaults: { duration: 0.6, ease: 'power3.out' } })
   tl.from(titleRef.value, { y: 20, opacity: 0 })
     .from(subtitleRef.value, { y: 16, opacity: 0 }, '-=0.38')
-    .from(ctaRef.value, { y: 12, opacity: 0 }, '-=0.3')
 
   // stagger navbar items if they exist in DOM with .nav-item
   const navItems = document.querySelectorAll('.nav-item')
