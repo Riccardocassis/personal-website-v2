@@ -16,7 +16,7 @@
             <div class="parallax-content absolute inset-0">
               <img :src="rebert" alt="p1" class="w-full h-full object-cover aspect-auto transition-all duration-300 group-hover:opacity-0" />
               <img :src="piadina" alt="p1-hover" class="absolute inset-0 w-full h-full object-cover aspect-auto opacity-0 scale-105 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105" />
-              <div class="absolute inset-0 bg-black/40 opacity-0 flex items-center justify-center text-white transition-all duration-300 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
+              <div class="absolute inset-0 bg-black/40 opacity-0 flex items-center justify-center text-white transition-opacity duration-300 group-hover:opacity-100">
                 <span class="text-lg font-medium">Visualizza →</span>
               </div>
             </div>
@@ -28,7 +28,7 @@
             <div class="parallax-content absolute inset-0">
               <img :src="zaini" alt="p4" class="w-full h-full object-cover aspect-auto transition-all duration-300 group-hover:opacity-0" />
               <img :src="museodellacarta" alt="p4-hover" class="absolute inset-0 w-full h-full object-cover aspect-auto opacity-0 scale-105 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105" />
-              <div class="absolute inset-0 bg-black/40 opacity-0 flex items-center justify-center text-white transition-all duration-300 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
+              <div class="absolute inset-0 bg-black/40 opacity-0 flex items-center justify-center text-white transition-opacity duration-300 group-hover:opacity-100">
                 <span class="text-lg font-medium">Visualizza →</span>
               </div>
             </div>
@@ -40,7 +40,7 @@
             <div class="parallax-content absolute inset-0">
               <img :src="appchitarra" alt="p7" class="w-full h-full object-cover aspect-auto transition-all duration-300 group-hover:opacity-0" />
               <img :src="hero" alt="p7-hover" class="absolute inset-0 w-full h-full object-cover aspect-auto opacity-0 scale-105 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105" />
-              <div class="absolute inset-0 bg-black/40 opacity-0 flex items-center justify-center text-white transition-all duration-300 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
+              <div class="absolute inset-0 bg-black/40 opacity-0 flex items-center justify-center text-white transition-opacity duration-300 group-hover:opacity-100">
                 <span class="text-lg font-medium">Visualizza →</span>
               </div>
             </div>
@@ -55,7 +55,7 @@
             <div class="parallax-content absolute inset-0">
               <img :src="piadina" alt="p2" class="w-full h-full object-cover aspect-auto transition-all duration-300 group-hover:opacity-0" />
               <img :src="rebert" alt="p2-hover" class="absolute inset-0 w-full h-full object-cover aspect-auto opacity-0 scale-105 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105" />
-              <div class="absolute inset-0 bg-black/40 opacity-0 flex items-center justify-center text-white transition-all duration-300 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
+              <div class="absolute inset-0 bg-black/40 opacity-0 flex items-center justify-center text-white transition-opacity duration-300 group-hover:opacity-100">
                 <span class="text-lg font-medium">Visualizza →</span>
               </div>
             </div>
@@ -67,7 +67,7 @@
             <div class="parallax-content absolute inset-0">
               <img :src="museodellacarta" alt="p5" class="w-full h-full object-cover aspect-auto transition-all duration-300 group-hover:opacity-0" />
               <img :src="fillbo" alt="p5-hover" class="absolute inset-0 w-full h-full object-cover aspect-auto opacity-0 scale-105 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105" />
-              <div class="absolute inset-0 bg-black/40 opacity-0 flex items-center justify-center text-white transition-all duration-300 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
+              <div class="absolute inset-0 bg-black/40 opacity-0 flex items-center justify-center text-white transition-opacity duration-300 group-hover:opacity-100">
                 <span class="text-lg font-medium">Visualizza →</span>
               </div>
             </div>
@@ -79,7 +79,7 @@
             <div class="parallax-content absolute inset-0">
               <img :src="hero" alt="p8" class="w-full h-full object-cover aspect-auto transition-all duration-300 group-hover:opacity-0" />
               <img :src="vasi" alt="p8-hover" class="absolute inset-0 w-full h-full object-cover aspect-auto opacity-0 scale-105 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105" />
-              <div class="absolute inset-0 bg-black/40 opacity-0 flex items-center justify-center text-white transition-all duration-300 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
+              <div class="absolute inset-0 bg-black/40 opacity-0 flex items-center justify-center text-white transition-opacity duration-300 group-hover:opacity-100">
                 <span class="text-lg font-medium">Visualizza →</span>
               </div>
             </div>
@@ -94,7 +94,7 @@
             <div class="parallax-content absolute inset-0">
               <img :src="ironriff" alt="p3" class="w-full h-full object-cover aspect-auto transition-all duration-300 group-hover:opacity-0" />
               <img :src="zaini" alt="p3-hover" class="absolute inset-0 w-full h-full object-cover aspect-auto opacity-0 scale-105 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105" />
-              <div class="absolute inset-0 bg-black/40 opacity-0 flex items-center justify-center text-white transition-all duration-300 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
+              <div class="absolute inset-0 bg-black/40 opacity-0 flex items-center justify-center text-white transition-opacity duration-300 group-hover:opacity-100">
                 <span class="text-lg font-medium">Visualizza →</span>
               </div>
             </div>
@@ -106,7 +106,7 @@
             <div class="parallax-content absolute inset-0">
               <img :src="fillbo" alt="p6" class="w-full h-full object-cover aspect-auto transition-all duration-300 group-hover:opacity-0" />
               <img :src="appchitarra" alt="p6-hover" class="absolute inset-0 w-full h-full object-cover aspect-auto opacity-0 scale-105 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105" />
-              <div class="absolute inset-0 bg-black/40 opacity-0 flex items-center justify-center text-white transition-all duration-300 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
+              <div class="absolute inset-0 bg-black/40 opacity-0 flex items-center justify-center text-white transition-opacity duration-300 group-hover:opacity-100">
                 <span class="text-lg font-medium">Visualizza →</span>
               </div>
             </div>
@@ -118,7 +118,7 @@
             <div class="parallax-content absolute inset-0">
               <img :src="vasi" alt="p9" class="w-full h-full object-cover aspect-auto transition-all duration-300 group-hover:opacity-0" />
               <img :src="beat" alt="p9-hover" class="absolute inset-0 w-full h-full object-cover aspect-auto opacity-0 scale-105 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105" />
-              <div class="absolute inset-0 bg-black/40 opacity-0 flex items-center justify-center text-white transition-all duration-300 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
+              <div class="absolute inset-0 bg-black/40 opacity-0 flex items-center justify-center text-white transition-opacity duration-300 group-hover:opacity-100">
                 <span class="text-lg font-medium">Visualizza →</span>
               </div>
             </div>
@@ -210,6 +210,6 @@ onBeforeUnmount(() => {
 /* Parallax hooks */
 .parallax-column { will-change: transform; }
 .parallax-card { will-change: transform; }
-.parallax-content { will-change: transform; position: absolute; inset: 0; }
+.parallax-content { will-change: transform; position: absolute; inset: 0; border-radius: inherit; overflow: hidden; }
 .parallax-content img { display: block; width: 100%; height: 100%; object-fit: cover; }
 </style>
