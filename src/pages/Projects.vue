@@ -12,7 +12,7 @@
         <!-- Column 1 -->
         <div class="parallax-column flex flex-col space-y-12">
           <!-- Card 1 -->
-          <RouterLink to="/projects/project-1" class="project-card group relative overflow-hidden rounded-2xl h-[380px] md:h-[420px] parallax-card offset-2">
+          <RouterLink to="/projects/project-1" class="project-card group relative overflow-hidden rounded-2xl parallax-card offset-2">
             <div class="parallax-content absolute inset-0">
               <img :src="rebert" alt="p1" class="w-full h-full object-cover aspect-auto transition-all duration-300 group-hover:opacity-0" />
               <img :src="piadina" alt="p1-hover" class="absolute inset-0 w-full h-full object-cover aspect-auto opacity-0 scale-105 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105" />
@@ -21,10 +21,10 @@
               </div>
             </div>
           </RouterLink>
-          <h3 class="text-lg font-medium mt-3">Titolo Progetto 1</h3>
+          <h3 class="text-lg font-medium mt-3">RE</h3>
 
           <!-- Card 4 -->
-          <RouterLink to="/projects/project-4" class="project-card group relative overflow-hidden rounded-2xl h-[380px] md:h-[420px] parallax-card offset-3">
+          <RouterLink to="/projects/project-4" class="project-card group relative overflow-hidden rounded-2xl parallax-card offset-3">
             <div class="parallax-content absolute inset-0">
               <img :src="zaini" alt="p4" class="w-full h-full object-cover aspect-auto transition-all duration-300 group-hover:opacity-0" />
               <img :src="museodellacarta" alt="p4-hover" class="absolute inset-0 w-full h-full object-cover aspect-auto opacity-0 scale-105 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105" />
@@ -36,7 +36,7 @@
           <h3 class="text-lg font-medium mt-3">Titolo Progetto 4</h3>
 
           <!-- Card 7 -->
-          <RouterLink to="/projects/project-7" class="project-card group relative overflow-hidden rounded-2xl h-[380px] md:h-[420px] parallax-card offset-1">
+          <RouterLink to="/projects/project-7" class="project-card group relative overflow-hidden rounded-2xl parallax-card offset-1">
             <div class="parallax-content absolute inset-0">
               <img :src="appchitarra" alt="p7" class="w-full h-full object-cover aspect-auto transition-all duration-300 group-hover:opacity-0" />
               <img :src="hero" alt="p7-hover" class="absolute inset-0 w-full h-full object-cover aspect-auto opacity-0 scale-105 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105" />
@@ -51,7 +51,7 @@
         <!-- Column 2 -->
         <div class="parallax-column flex flex-col space-y-12">
           <!-- Card 2 -->
-          <RouterLink to="/projects/project-2" class="project-card group relative overflow-hidden rounded-2xl h-[380px] md:h-[420px] parallax-card offset-1">
+          <RouterLink to="/projects/project-2" class="project-card group relative overflow-hidden rounded-2xl parallax-card offset-1">
             <div class="parallax-content absolute inset-0">
               <img :src="piadina" alt="p2" class="w-full h-full object-cover aspect-auto transition-all duration-300 group-hover:opacity-0" />
               <img :src="rebert" alt="p2-hover" class="absolute inset-0 w-full h-full object-cover aspect-auto opacity-0 scale-105 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105" />
@@ -63,7 +63,7 @@
           <h3 class="text-lg font-medium mt-3">Titolo Progetto 2</h3>
 
           <!-- Card 5 -->
-          <RouterLink to="/projects/project-5" class="project-card group relative overflow-hidden rounded-2xl h-[380px] md:h-[420px] parallax-card offset-2">
+          <RouterLink to="/projects/project-5" class="project-card group relative overflow-hidden rounded-2xl parallax-card offset-2">
             <div class="parallax-content absolute inset-0">
               <img :src="museodellacarta" alt="p5" class="w-full h-full object-cover aspect-auto transition-all duration-300 group-hover:opacity-0" />
               <img :src="fillbo" alt="p5-hover" class="absolute inset-0 w-full h-full object-cover aspect-auto opacity-0 scale-105 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105" />
@@ -75,7 +75,7 @@
           <h3 class="text-lg font-medium mt-3">Titolo Progetto 5</h3>
 
           <!-- Card 8 -->
-          <RouterLink to="/projects/project-8" class="project-card group relative overflow-hidden rounded-2xl h-[380px] md:h-[420px] parallax-card offset-3">
+          <RouterLink to="/projects/project-8" class="project-card group relative overflow-hidden rounded-2xl parallax-card">
             <div class="parallax-content absolute inset-0">
               <img :src="hero" alt="p8" class="w-full h-full object-cover aspect-auto transition-all duration-300 group-hover:opacity-0" />
               <img :src="vasi" alt="p8-hover" class="absolute inset-0 w-full h-full object-cover aspect-auto opacity-0 scale-105 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105" />
@@ -90,7 +90,7 @@
         <!-- Column 3 -->
         <div class="parallax-column flex flex-col space-y-12">
           <!-- Card 3 -->
-          <RouterLink to="/projects/project-3" class="project-card group relative overflow-hidden rounded-2xl h-[380px] md:h-[420px] parallax-card offset-3">
+          <RouterLink to="/projects/project-3" class="project-card group relative overflow-hidden rounded-2xl parallax-card offset-3">
             <div class="parallax-content absolute inset-0">
               <img :src="ironriff" alt="p3" class="w-full h-full object-cover aspect-auto transition-all duration-300 group-hover:opacity-0" />
               <img :src="zaini" alt="p3-hover" class="absolute inset-0 w-full h-full object-cover aspect-auto opacity-0 scale-105 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105" />
@@ -102,7 +102,7 @@
           <h3 class="text-lg font-medium mt-3">Titolo Progetto 3</h3>
 
           <!-- Card 6 -->
-          <RouterLink to="/projects/project-6" class="project-card group relative overflow-hidden rounded-2xl h-[380px] md:h-[420px] parallax-card offset-2">
+          <RouterLink to="/projects/project-6" class="project-card group relative overflow-hidden rounded-2xl parallax-card offset-2">
             <div class="parallax-content absolute inset-0">
               <img :src="fillbo" alt="p6" class="w-full h-full object-cover aspect-auto transition-all duration-300 group-hover:opacity-0" />
               <img :src="appchitarra" alt="p6-hover" class="absolute inset-0 w-full h-full object-cover aspect-auto opacity-0 scale-105 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105" />
@@ -114,7 +114,7 @@
           <h3 class="text-lg font-medium mt-3">Titolo Progetto 6</h3>
 
           <!-- Card 9 -->
-          <RouterLink to="/projects/project-9" class="project-card group relative overflow-hidden rounded-2xl h-[380px] md:h-[420px] parallax-card offset-3">
+          <RouterLink to="/projects/project-9" class="project-card group relative overflow-hidden rounded-2xl parallax-card offset-3">
             <div class="parallax-content absolute inset-0">
               <img :src="vasi" alt="p9" class="w-full h-full object-cover aspect-auto transition-all duration-300 group-hover:opacity-0" />
               <img :src="beat" alt="p9-hover" class="absolute inset-0 w-full h-full object-cover aspect-auto opacity-0 scale-105 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105" />
@@ -192,6 +192,13 @@ onBeforeUnmount(() => {
 .project-card {
   display: block;
   width: 100%;
+  height: 420px; /* mobile/tablet fixed height */
+}
+
+@media (min-width: 1024px) {
+  .project-card {
+    height: 520px; /* larger fixed height on desktop */
+  }
 }
 
 /* Card height types */
@@ -201,17 +208,11 @@ onBeforeUnmount(() => {
 .card-wide { height: 380px; }
 
 /* Controlled offsets for editorial rhythm (applied at md and up) */
+/* Remove translate offsets so cards stay perfectly aligned */
 @media (min-width: 768px) {
-  /* Use visual translate on the inner .parallax-content so layout height stays consistent */
-  .project-card.offset-1 .parallax-content { transform: translateY(40px); }
-  .project-card.offset-2 .parallax-content { transform: translateY(60px); }
-  .project-card.offset-3 .parallax-content { transform: translateY(80px); }
-}
-
-/* Fix columns height on desktop so all three columns match visually
-   Calculation: 3 cards * 420px + 2 * 48px (space-y-12 => 3rem = 48px) = 1356px */
-@media (min-width: 1024px) {
-  .parallax-column { min-height: 1356px; }
+  .project-card.offset-1 .parallax-content { transform: none !important; }
+  .project-card.offset-2 .parallax-content { transform: none !important; }
+  .project-card.offset-3 .parallax-content { transform: none !important; }
 }
 
 /* Parallax hooks */
