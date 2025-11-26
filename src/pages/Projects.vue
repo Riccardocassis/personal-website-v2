@@ -26,8 +26,8 @@
           <!-- Card 4 -->
           <RouterLink to="/projects/project-4" class="project-card group relative overflow-hidden rounded-2xl parallax-card offset-3">
             <div class="parallax-content absolute inset-0">
-              <img :src="zaini" alt="p4" class="w-full h-full object-cover aspect-auto transition-all duration-300 group-hover:opacity-0" />
-              <img :src="museodellacarta" alt="p4-hover" class="absolute inset-0 w-full h-full object-cover aspect-auto opacity-0 scale-105 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105" />
+              <img :src="fillboA" alt="fillbo" class="w-full h-full object-cover aspect-auto transition-all duration-300 group-hover:opacity-0" />
+              <img :src="fillboB" alt="fillbo-hover" class="absolute inset-0 w-full h-full object-cover aspect-auto opacity-0 scale-105 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105" />
               <div class="absolute inset-0 bg-black/40 opacity-0 flex items-center justify-center text-white transition-opacity duration-300 group-hover:opacity-100">
                 <span class="text-lg font-medium">Visualizza →</span>
               </div>
@@ -92,14 +92,13 @@
           <!-- Card 3 -->
           <RouterLink to="/projects/project-3" class="project-card group relative overflow-hidden rounded-2xl parallax-card offset-3">
             <div class="parallax-content absolute inset-0">
-              <img :src="ironriff" alt="p3" class="w-full h-full object-cover aspect-auto transition-all duration-300 group-hover:opacity-0" />
-              <img :src="zaini" alt="p3-hover" class="absolute inset-0 w-full h-full object-cover aspect-auto opacity-0 scale-105 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105" />
-              <div class="absolute inset-0 bg-black/40 opacity-0 flex items-center justify-center text-white transition-opacity duration-300 group-hover:opacity-100">
-                <span class="text-lg font-medium">Visualizza →</span>
-              </div>
+                <img :src="opsifyB" alt="opsify" class="w-full h-full object-cover aspect-auto transition-all duration-300" />
+                <div class="absolute inset-0 bg-black/40 opacity-0 flex items-center justify-center text-white transition-opacity duration-300 group-hover:opacity-100">
+                  <span class="text-lg font-medium">Visualizza →</span>
+                </div>
             </div>
           </RouterLink>
-          <h3 class="text-lg font-medium mt-3">Titolo Progetto 3</h3>
+            <h3 class="text-lg font-medium mt-3">Opsify App</h3>
 
           <!-- Card 6 -->
           <RouterLink to="/projects/project-6" class="project-card group relative overflow-hidden rounded-2xl parallax-card offset-2">
@@ -151,6 +150,9 @@ import appchitarra from '../assets/appchitarra.webp'
 import hero from '../assets/hero-riccardo.webp'
 import vasi from '../assets/vasi.webp'
 import beat from '../assets/beat.webp'
+import opsifyB from '../assets/opsify-b.webp'
+import fillboA from '../assets/fillbo-a.webp'
+import fillboB from '../assets/fillbo-b.webp'
 
 const gridRef = ref(null)
 
