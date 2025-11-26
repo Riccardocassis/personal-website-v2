@@ -12,31 +12,37 @@
         <!-- Column 1 -->
         <div class="parallax-column flex flex-col">
           <!-- Card 1 -->
-          <RouterLink to="/projects/project-1 parallax-card offset-2" class="project-card group relative overflow-hidden rounded-2xl h-[380px] md:h-[520px]">
-            <img :src="rebert" alt="p1" class="w-full h-full object-cover aspect-auto transition-all duration-300 group-hover:opacity-0" />
-            <img :src="piadina" alt="p1-hover" class="absolute inset-0 w-full h-full object-cover aspect-auto opacity-0 scale-105 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105" />
-            <div class="absolute inset-0 bg-black/40 opacity-0 flex items-center justify-center text-white transition-all duration-300 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
-              <span class="text-lg font-medium">Visualizza →</span>
+          <RouterLink to="/projects/project-1" class="project-card group relative overflow-hidden rounded-2xl h-[380px] md:h-[520px] parallax-card offset-2">
+            <div class="parallax-content absolute inset-0">
+              <img :src="rebert" alt="p1" class="w-full h-full object-cover aspect-auto transition-all duration-300 group-hover:opacity-0" />
+              <img :src="piadina" alt="p1-hover" class="absolute inset-0 w-full h-full object-cover aspect-auto opacity-0 scale-105 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-black/40 opacity-0 flex items-center justify-center text-white transition-all duration-300 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
+                <span class="text-lg font-medium">Visualizza →</span>
+              </div>
             </div>
           </RouterLink>
           <h3 class="text-lg font-medium mt-3">Titolo Progetto 1</h3>
 
           <!-- Card 4 -->
           <RouterLink to="/projects/project-4" class="project-card group relative overflow-hidden rounded-2xl h-[380px] md:h-[380px] parallax-card offset-3">
-            <img :src="zaini" alt="p4" class="w-full h-full object-cover aspect-auto transition-all duration-300 group-hover:opacity-0" />
-            <img :src="museodellacarta" alt="p4-hover" class="absolute inset-0 w-full h-full object-cover aspect-auto opacity-0 scale-105 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105" />
-            <div class="absolute inset-0 bg-black/40 opacity-0 flex items-center justify-center text-white transition-all duration-300 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
-              <span class="text-lg font-medium">Visualizza →</span>
+            <div class="parallax-content absolute inset-0">
+              <img :src="zaini" alt="p4" class="w-full h-full object-cover aspect-auto transition-all duration-300 group-hover:opacity-0" />
+              <img :src="museodellacarta" alt="p4-hover" class="absolute inset-0 w-full h-full object-cover aspect-auto opacity-0 scale-105 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-black/40 opacity-0 flex items-center justify-center text-white transition-all duration-300 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
+                <span class="text-lg font-medium">Visualizza →</span>
+              </div>
             </div>
           </RouterLink>
           <h3 class="text-lg font-medium mt-3">Titolo Progetto 4</h3>
 
           <!-- Card 7 -->
           <RouterLink to="/projects/project-7" class="project-card group relative overflow-hidden rounded-2xl h-[380px] md:h-[460px] parallax-card offset-1">
-            <img :src="appchitarra" alt="p7" class="w-full h-full object-cover aspect-auto transition-all duration-300 group-hover:opacity-0" />
-            <img :src="hero" alt="p7-hover" class="absolute inset-0 w-full h-full object-cover aspect-auto opacity-0 scale-105 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105" />
-            <div class="absolute inset-0 bg-black/40 opacity-0 flex items-center justify-center text-white transition-all duration-300 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
-              <span class="text-lg font-medium">Visualizza →</span>
+            <div class="parallax-content absolute inset-0">
+              <img :src="appchitarra" alt="p7" class="w-full h-full object-cover aspect-auto transition-all duration-300 group-hover:opacity-0" />
+              <img :src="hero" alt="p7-hover" class="absolute inset-0 w-full h-full object-cover aspect-auto opacity-0 scale-105 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-black/40 opacity-0 flex items-center justify-center text-white transition-all duration-300 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
+                <span class="text-lg font-medium">Visualizza →</span>
+              </div>
             </div>
           </RouterLink>
           <h3 class="text-lg font-medium mt-3">Titolo Progetto 7</h3>
@@ -46,30 +52,36 @@
         <div class="parallax-column flex flex-col">
           <!-- Card 2 -->
           <RouterLink to="/projects/project-2" class="project-card group relative overflow-hidden rounded-2xl h-[380px] md:h-[380px] parallax-card offset-1">
-            <img :src="piadina" alt="p2" class="w-full h-full object-cover aspect-auto transition-all duration-300 group-hover:opacity-0" />
-            <img :src="rebert" alt="p2-hover" class="absolute inset-0 w-full h-full object-cover aspect-auto opacity-0 scale-105 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105" />
-            <div class="absolute inset-0 bg-black/40 opacity-0 flex items-center justify-center text-white transition-all duration-300 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
-              <span class="text-lg font-medium">Visualizza →</span>
+            <div class="parallax-content absolute inset-0">
+              <img :src="piadina" alt="p2" class="w-full h-full object-cover aspect-auto transition-all duration-300 group-hover:opacity-0" />
+              <img :src="rebert" alt="p2-hover" class="absolute inset-0 w-full h-full object-cover aspect-auto opacity-0 scale-105 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-black/40 opacity-0 flex items-center justify-center text-white transition-all duration-300 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
+                <span class="text-lg font-medium">Visualizza →</span>
+              </div>
             </div>
           </RouterLink>
           <h3 class="text-lg font-medium mt-3">Titolo Progetto 2</h3>
 
           <!-- Card 5 -->
           <RouterLink to="/projects/project-5" class="project-card group relative overflow-hidden rounded-2xl h-[380px] md:h-[520px] parallax-card offset-2">
-            <img :src="museodellacarta" alt="p5" class="w-full h-full object-cover aspect-auto transition-all duration-300 group-hover:opacity-0" />
-            <img :src="fillbo" alt="p5-hover" class="absolute inset-0 w-full h-full object-cover aspect-auto opacity-0 scale-105 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105" />
-            <div class="absolute inset-0 bg-black/40 opacity-0 flex items-center justify-center text-white transition-all duration-300 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
-              <span class="text-lg font-medium">Visualizza →</span>
+            <div class="parallax-content absolute inset-0">
+              <img :src="museodellacarta" alt="p5" class="w-full h-full object-cover aspect-auto transition-all duration-300 group-hover:opacity-0" />
+              <img :src="fillbo" alt="p5-hover" class="absolute inset-0 w-full h-full object-cover aspect-auto opacity-0 scale-105 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-black/40 opacity-0 flex items-center justify-center text-white transition-all duration-300 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
+                <span class="text-lg font-medium">Visualizza →</span>
+              </div>
             </div>
           </RouterLink>
           <h3 class="text-lg font-medium mt-3">Titolo Progetto 5</h3>
 
           <!-- Card 8 -->
           <RouterLink to="/projects/project-8" class="project-card group relative overflow-hidden rounded-2xl h-[380px] md:h-[380px] parallax-card offset-3">
-            <img :src="hero" alt="p8" class="w-full h-full object-cover aspect-auto transition-all duration-300 group-hover:opacity-0" />
-            <img :src="vasi" alt="p8-hover" class="absolute inset-0 w-full h-full object-cover aspect-auto opacity-0 scale-105 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105" />
-            <div class="absolute inset-0 bg-black/40 opacity-0 flex items-center justify-center text-white transition-all duration-300 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
-              <span class="text-lg font-medium">Visualizza →</span>
+            <div class="parallax-content absolute inset-0">
+              <img :src="hero" alt="p8" class="w-full h-full object-cover aspect-auto transition-all duration-300 group-hover:opacity-0" />
+              <img :src="vasi" alt="p8-hover" class="absolute inset-0 w-full h-full object-cover aspect-auto opacity-0 scale-105 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-black/40 opacity-0 flex items-center justify-center text-white transition-all duration-300 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
+                <span class="text-lg font-medium">Visualizza →</span>
+              </div>
             </div>
           </RouterLink>
           <h3 class="text-lg font-medium mt-3">Titolo Progetto 8</h3>
@@ -79,30 +91,36 @@
         <div class="parallax-column flex flex-col">
           <!-- Card 3 -->
           <RouterLink to="/projects/project-3" class="project-card group relative overflow-hidden rounded-2xl h-[380px] md:h-[460px] parallax-card offset-3">
-            <img :src="ironriff" alt="p3" class="w-full h-full object-cover aspect-auto transition-all duration-300 group-hover:opacity-0" />
-            <img :src="zaini" alt="p3-hover" class="absolute inset-0 w-full h-full object-cover aspect-auto opacity-0 scale-105 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105" />
-            <div class="absolute inset-0 bg-black/40 opacity-0 flex items-center justify-center text-white transition-all duration-300 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
-              <span class="text-lg font-medium">Visualizza →</span>
+            <div class="parallax-content absolute inset-0">
+              <img :src="ironriff" alt="p3" class="w-full h-full object-cover aspect-auto transition-all duration-300 group-hover:opacity-0" />
+              <img :src="zaini" alt="p3-hover" class="absolute inset-0 w-full h-full object-cover aspect-auto opacity-0 scale-105 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-black/40 opacity-0 flex items-center justify-center text-white transition-all duration-300 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
+                <span class="text-lg font-medium">Visualizza →</span>
+              </div>
             </div>
           </RouterLink>
           <h3 class="text-lg font-medium mt-3">Titolo Progetto 3</h3>
 
           <!-- Card 6 -->
           <RouterLink to="/projects/project-6" class="project-card group relative overflow-hidden rounded-2xl h-[380px] md:h-[460px] parallax-card offset-2">
-            <img :src="fillbo" alt="p6" class="w-full h-full object-cover aspect-auto transition-all duration-300 group-hover:opacity-0" />
-            <img :src="appchitarra" alt="p6-hover" class="absolute inset-0 w-full h-full object-cover aspect-auto opacity-0 scale-105 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105" />
-            <div class="absolute inset-0 bg-black/40 opacity-0 flex items-center justify-center text-white transition-all duration-300 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
-              <span class="text-lg font-medium">Visualizza →</span>
+            <div class="parallax-content absolute inset-0">
+              <img :src="fillbo" alt="p6" class="w-full h-full object-cover aspect-auto transition-all duration-300 group-hover:opacity-0" />
+              <img :src="appchitarra" alt="p6-hover" class="absolute inset-0 w-full h-full object-cover aspect-auto opacity-0 scale-105 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-black/40 opacity-0 flex items-center justify-center text-white transition-all duration-300 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
+                <span class="text-lg font-medium">Visualizza →</span>
+              </div>
             </div>
           </RouterLink>
           <h3 class="text-lg font-medium mt-3">Titolo Progetto 6</h3>
 
           <!-- Card 9 -->
           <RouterLink to="/projects/project-9" class="project-card group relative overflow-hidden rounded-2xl h-[380px] md:h-[460px] parallax-card offset-3">
-            <img :src="vasi" alt="p9" class="w-full h-full object-cover aspect-auto transition-all duration-300 group-hover:opacity-0" />
-            <img :src="beat" alt="p9-hover" class="absolute inset-0 w-full h-full object-cover aspect-auto opacity-0 scale-105 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105" />
-            <div class="absolute inset-0 bg-black/40 opacity-0 flex items-center justify-center text-white transition-all duration-300 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
-              <span class="text-lg font-medium">Visualizza →</span>
+            <div class="parallax-content absolute inset-0">
+              <img :src="vasi" alt="p9" class="w-full h-full object-cover aspect-auto transition-all duration-300 group-hover:opacity-0" />
+              <img :src="beat" alt="p9-hover" class="absolute inset-0 w-full h-full object-cover aspect-auto opacity-0 scale-105 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-black/40 opacity-0 flex items-center justify-center text-white transition-all duration-300 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
+                <span class="text-lg font-medium">Visualizza →</span>
+              </div>
             </div>
           </RouterLink>
           <h3 class="text-lg font-medium mt-3">Titolo Progetto 9</h3>
@@ -114,8 +132,13 @@
 </template>
 
 <script setup>
-import { onMounted, ref } from 'vue'
+import { onMounted, onBeforeUnmount, ref } from 'vue'
 import { gsap } from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
+import { useParallaxCards } from '../composables/useParallaxCards'
+
+// register here as well to ensure plugin available
+gsap.registerPlugin(ScrollTrigger)
 
 // Import existing assets to avoid missing /img references
 import rebert from '../assets/rebert.webp'
@@ -133,14 +156,29 @@ const gridRef = ref(null)
 
 // Cards are manually written in the template to respect the editorial pattern.
 
+const { init, kill } = useParallaxCards(gridRef)
+
 onMounted(() => {
+  // entrance tween for cards (keeps existing behaviour)
   const els = gridRef.value?.querySelectorAll('.project-card') || []
   if (els.length) {
-    gsap.fromTo(els,
+    gsap.fromTo(
+      els,
       { autoAlpha: 0, y: 20 },
       { autoAlpha: 1, y: 0, duration: 0.6, ease: 'power3.out', stagger: 0.1 }
     )
   }
+  // init parallax + magnetic hover (composable handles desktop checks)
+  try {
+    init()
+  } catch (err) {
+    console.error('[Projects.vue] useParallaxCards init failed:', err)
+  }
+})
+
+onBeforeUnmount(() => {
+  // cleanup parallax & listeners
+  kill()
 })
 </script>
 
@@ -154,7 +192,6 @@ onMounted(() => {
 .project-card {
   display: block;
   width: 100%;
-  height: 100%;
 }
 
 /* Card height types */
@@ -173,4 +210,6 @@ onMounted(() => {
 /* Parallax hooks */
 .parallax-column { will-change: transform; }
 .parallax-card { will-change: transform; }
+.parallax-content { will-change: transform; position: absolute; inset: 0; }
+.parallax-content img { display: block; width: 100%; height: 100%; object-fit: cover; }
 </style>
