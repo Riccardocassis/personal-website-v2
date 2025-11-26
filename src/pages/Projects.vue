@@ -208,6 +208,12 @@ onBeforeUnmount(() => {
   .project-card.offset-3 .parallax-content { transform: translateY(80px); }
 }
 
+/* Fix columns height on desktop so all three columns match visually
+   Calculation: 3 cards * 420px + 2 * 48px (space-y-12 => 3rem = 48px) = 1356px */
+@media (min-width: 1024px) {
+  .parallax-column { min-height: 1356px; }
+}
+
 /* Parallax hooks */
 .parallax-column { will-change: transform; }
 .parallax-card { will-change: transform; }
