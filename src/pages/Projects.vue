@@ -21,7 +21,7 @@
               </div>
             </div>
           </RouterLink>
-          <h3 class="text-lg font-medium mt-3">RE</h3>
+          <h3 class="text-lg font-medium mt-3">New Gibson website concept </h3>
 
           <!-- Card 4 -->
           <RouterLink to="/projects/project-4" class="project-card group relative overflow-hidden rounded-2xl parallax-card offset-3">
@@ -33,7 +33,7 @@
               </div>
             </div>
           </RouterLink>
-          <h3 class="text-lg font-medium mt-3">Titolo Progetto 4</h3>
+          <h3 class="text-lg font-medium mt-3">Fillbo App</h3>
 
           <!-- Card 7 -->
           <RouterLink to="/projects/project-7" class="project-card group relative overflow-hidden rounded-2xl parallax-card offset-1">
@@ -45,7 +45,7 @@
               </div>
             </div>
           </RouterLink>
-          <h3 class="text-lg font-medium mt-3">Titolo Progetto 7</h3>
+          <h3 class="text-lg font-medium mt-3">Heller Garden Art direction proposal</h3>
         </div>
 
         <!-- Column 2 -->
@@ -60,7 +60,7 @@
               </div>
             </div>
           </RouterLink>
-          <h3 class="text-lg font-medium mt-3">Titolo Progetto 2</h3>
+          <h3 class="text-lg font-medium mt-3">SizeXL website</h3>
 
           <!-- Card 5 -->
           <RouterLink to="/projects/project-5" class="project-card group relative overflow-hidden rounded-2xl parallax-card offset-2">
@@ -72,7 +72,7 @@
               </div>
             </div>
           </RouterLink>
-          <h3 class="text-lg font-medium mt-3">Titolo Progetto 5</h3>
+          <h3 class="text-lg font-medium mt-3">Opsify App</h3>
 
           <!-- Card 8 -->
           <RouterLink to="/projects/project-8" class="project-card group relative overflow-hidden rounded-2xl parallax-card">
@@ -84,7 +84,7 @@
               </div>
             </div>
           </RouterLink>
-          <h3 class="text-lg font-medium mt-3">Titolo Progetto 8</h3>
+          <h3 class="text-lg font-medium mt-3">Piadine Roberto Art direction proposal</h3>
         </div>
 
         <!-- Column 3 -->
@@ -98,7 +98,7 @@
                 </div>
             </div>
           </RouterLink>
-            <h3 class="text-lg font-medium mt-3">Opsify App</h3>
+            <h3 class="text-lg font-medium mt-3">Synapses landing page </h3>
 
           <!-- Card 6 -->
           <RouterLink to="/projects/project-6" class="project-card group relative overflow-hidden rounded-2xl parallax-card offset-2">
@@ -110,7 +110,7 @@
               </div>
             </div>
           </RouterLink>
-          <h3 class="text-lg font-medium mt-3">Titolo Progetto 6</h3>
+          <h3 class="text-lg font-medium mt-3">WebAble App</h3>
 
           <!-- Card 9 -->
           <RouterLink to="/projects/project-9" class="project-card group relative overflow-hidden rounded-2xl parallax-card offset-3">
@@ -122,7 +122,7 @@
               </div>
             </div>
           </RouterLink>
-          <h3 class="text-lg font-medium mt-3">Titolo Progetto 9</h3>
+          <h3 class="text-lg font-medium mt-3">Control-Alt-Canc fanzine</h3>
         </div>
 
       </div>
