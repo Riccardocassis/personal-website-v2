@@ -177,15 +177,16 @@ const gridRef = ref(null)
 const { init, kill } = useParallaxCards(gridRef)
 
 onMounted(() => {
-  // entrance tween for cards (keeps existing behaviour)
+  // simple entrance animation for project cards (no full-screen loader)
   const els = gridRef.value?.querySelectorAll('.project-card') || []
   if (els.length) {
     gsap.fromTo(
       els,
-      { autoAlpha: 0, y: 20 },
-      { autoAlpha: 1, y: 0, duration: 0.6, ease: 'power3.out', stagger: 0.1 }
+      { autoAlpha: 0, y: 20, scale: 0.98 },
+      { autoAlpha: 1, y: 0, scale: 1, duration: 0.8, ease: 'power3.out', stagger: 0.08 }
     )
   }
+
   // init parallax + magnetic hover (composable handles desktop checks)
   try {
     init()

@@ -25,6 +25,7 @@ const routes = [
   { path: '/projects/project-9',  name: 'project-9',  component: () => import('../pages/projects/project-9.vue') },
   { path: '/projects/project-10', name: 'project-10', component: () => import('../pages/projects/project-10.vue') },
   // old project sub-routes removed
+  { path: '/services',     name: 'services',          component: () => import('../pages/Services.vue') },
   { path: '/social',       name: 'social',             component: () => import('../pages/Social.vue') },
   { path: '/seo',          name: 'seo',                component: () => import('../pages/Seo.vue') },
   { path: '/process',       name: 'process',           component: () => import('../pages/Process.vue') },
