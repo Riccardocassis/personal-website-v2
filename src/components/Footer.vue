@@ -1,28 +1,63 @@
 <template>
-  <footer class="w-full bg-gray-900 text-gray-300 py-6 mt-12">
-    <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-4">
-      <div class="mb-4 md:mb-0 text-center md:text-left">
-        <span class="font-semibold text-lg tracking-wide">Riccardo Cassis</span>
-        <span class="ml-2 text-sm">© 2025 Tutti i diritti riservati</span>
+  <footer class="w-full bg-[#05060a] text-white py-12 relative z-10">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+
+        <!-- Column 1: Branding -->
+        <div class="flex flex-col items-center md:items-start text-center md:text-left">
+          <RouterLink to="/" class="inline-block mb-4">
+            <img src="../assets/logo-rc.webp" alt="RC logo" class="w-10 h-10 object-contain" />
+          </RouterLink>
+          <div class="text-sm font-semibold">Riccardo Cassis – UI/UX &amp; Web Designer</div>
+          <div class="text-xs text-white/60 mt-2">Bergamo / Brescia</div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div>
+          <h4 class="text-sm font-semibold text-white/90 mb-4 text-center md:text-left">Quick Links</h4>
+          <nav class="flex flex-col items-center md:items-start gap-2">
+            <RouterLink to="/projects" class="text-sm text-white/70 hover:text-white transition">Projects</RouterLink>
+            <RouterLink to="/services" class="text-sm text-white/70 hover:text-white transition">Services</RouterLink>
+            <RouterLink to="/about" class="text-sm text-white/70 hover:text-white transition">About me</RouterLink>
+            <RouterLink to="/contact" class="text-sm text-white/70 hover:text-white transition">Contact</RouterLink>
+          </nav>
+        </div>
+
+        <!-- Column 3: Follow me -->
+        <div>
+          <h4 class="text-sm font-semibold text-white/90 mb-4 text-center md:text-left">Follow me</h4>
+          <div class="flex items-center justify-center md:justify-start gap-4">
+            <a href="https://www.linkedin.com/in/riccardo-cassis" target="_blank" rel="noopener" aria-label="LinkedIn" class="inline-flex items-center justify-center w-8 h-8 text-white/70 hover:text-white hover:scale-[1.05] transition-all duration-200">
+              <img src="../assets/icon-linkedin.svg" alt="LinkedIn" class="w-5 h-5 object-contain" />
+            </a>
+            <a href="https://github.com/riccardocassis" target="_blank" rel="noopener" aria-label="GitHub" class="inline-flex items-center justify-center w-8 h-8 text-white/70 hover:text-white hover:scale-[1.05] transition-all duration-200">
+              <img src="../assets/icon-github.webp" alt="GitHub" class="w-5 h-5 object-contain" />
+            </a>
+            <a href="https://www.behance.net/riccardocassis" target="_blank" rel="noopener" aria-label="Behance" class="inline-flex items-center justify-center w-8 h-8 text-white/70 hover:text-white hover:scale-[1.05] transition-all duration-200">
+              <img src="../assets/icon-behance.webp" alt="Behance" class="w-5 h-5 object-contain" />
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 4: Legal -->
+        <div>
+          <h4 class="text-sm font-semibold text-white/90 mb-4 text-center md:text-left">Legal</h4>
+          <nav class="flex flex-col items-center md:items-start gap-2">
+            <RouterLink to="/privacy" class="text-sm text-white/70 hover:text-white transition">Privacy Policy</RouterLink>
+            <RouterLink to="/cookies" class="text-sm text-white/70 hover:text-white transition">Cookie Policy</RouterLink>
+            <RouterLink to="/legal" class="text-sm text-white/70 hover:text-white transition">Legal Notice</RouterLink>
+          </nav>
+        </div>
       </div>
-      <div class="flex space-x-4 justify-center md:justify-end">
-        <a href="https://www.instagram.com/riccardocassis" target="_blank" aria-label="Instagram" class="hover:scale-110 transition">
-          <img src="../assets/icon-instagram.webp" alt="Instagram" class="w-8 h-8" />
-        </a>
-        <a href="https://www.linkedin.com/in/riccardocassis/" target="_blank" aria-label="LinkedIn" class="hover:scale-110 transition text-white">
-          <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="3" stroke="currentColor" stroke-width="1.8"/><path d="M7 10h2v8H7zM8 7.8a1 1 0 110-2 1 1 0 010 2zM13 10c1.1 0 2 .9 2 2v4h-2v-4c0-.55-.45-1-1-1s-1 .45-1 1v4h-2v-4c0-1.1.9-2 2-2z" fill="currentColor"/></svg>
-        </a>
-        <a href="https://www.behance.net/riccardocassis" target="_blank" aria-label="Behance" class="hover:scale-110 transition">
-          <img src="../assets/icon-behance.webp" alt="Behance" class="w-8 h-8" />
-        </a>
-        <a href="https://github.com/riccardocassis" target="_blank" aria-label="GitHub" class="hover:scale-110 transition">
-          <img src="../assets/icon-github.webp" alt="GitHub" class="w-8 h-8" />
-        </a>
+
+      <!-- Copyright -->
+      <div class="w-full text-center">
+        <div class="text-xs text-white/40 mt-8">© 2025 Riccardo Cassis. All rights reserved.</div>
       </div>
     </div>
   </footer>
 </template>
 
 <script setup>
-// Footer semplice, elegante e responsive
+import { RouterLink } from 'vue-router'
 </script>

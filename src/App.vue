@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import Navbar from './components/navbar.vue'
+import Footer from './components/Footer.vue'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 
@@ -70,6 +71,7 @@ onBeforeUnmount(() => {
 
     <Navbar />
     <router-view />
+    <Footer />
 
     <!-- Vertical scroll indicator (right side) - hidden on mobile -->
     <div aria-hidden="true" class="fixed right-6 top-1/2 transform -translate-y-1/2 z-50 hidden md:block">
