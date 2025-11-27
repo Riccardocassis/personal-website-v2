@@ -1,16 +1,20 @@
 <template>
   <section class="min-h-screen bg-black">
 
-    <!-- Full-width HERO with title overlay -->
+    <!-- Title section (newspaper headline style) -->
+    <div class="w-full pt-24 md:pt-32 pb-12 md:pb-20 flex items-center justify-center text-center px-6">
+      <div class="max-w-3xl">
+        <h1 class="text-4xl md:text-6xl font-bold text-white">Gibson SG-1961 — Concept Experience</h1>
+        <p class="text-lg md:text-xl text-white/70 mt-4">Un concept tra 3D, UI e interattività musicale.</p>
+      </div>
+    </div>
+
+    <!-- Main image below the title -->
     <div class="relative w-full h-[60vh] md:h-[80vh]">
       <img :src="gibsonCover" class="absolute inset-0 w-full h-full object-cover" />
       <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/10 to-transparent"></div>
       <!-- Subtle black overlay to improve readability (light) -->
       <div class="absolute inset-0 bg-black/20 transition-opacity duration-300"></div>
-      <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-6 z-10">
-        <h1 class="text-4xl md:text-6xl font-bold text-white">Gibson SG-1961 — Concept Experience</h1>
-        <p class="text-lg md:text-xl text-white/70 mt-4">Un concept tra 3D, UI e interattività musicale.</p>
-      </div>
     </div>
 
     <div class="pt-12 pb-24 max-w-4xl mx-auto px-6">
