@@ -1,110 +1,265 @@
 <template>
-  <section class="min-h-screen bg-black">
 
-    <!-- Title section (newspaper headline style) -->
-    <div class="w-full pt-24 md:pt-32 pb-12 md:pb-20 flex items-center justify-center text-center px-6">
-      <div class="max-w-3xl">
-        <h1 class="text-4xl md:text-6xl font-bold text-white">Gibson SG-1961 — Concept Experience</h1>
-        <p class="text-lg md:text-xl text-white/70 mt-4">Un concept tra 3D, UI e interattività musicale.</p>
+  <!-- HERO (Apple-like, generous whitespace) -->
+  <section class="relative w-full h-[85vh] overflow-hidden bg-black">
+    <img
+      src="../../assets/gibson cover pagina progetti.webp"
+      alt="Gibson cover"
+      class="absolute inset-0 w-full h-full object-cover object-center opacity-90"
+    />
+
+    <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-transparent"></div>
+
+    <div class="absolute inset-0 flex items-end justify-start pb-20 pl-6 md:pl-20">
+      <div class="max-w-3xl text-left px-6">
+        <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight">Gibson SG-1961</h1>
+        <p class="text-sm md:text-base text-white/70 mt-4 tracking-wide">Concept Experience — 3D, UI e interattività musicale</p>
       </div>
     </div>
-
-    <!-- Main image below the title (hero preserved) -->
-    <div class="relative w-full h-[60vh] md:h-[80vh]">
-      <img :src="gibsonCover" class="absolute inset-0 w-full h-full object-cover" />
-      <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/10 to-transparent"></div>
-      <!-- Subtle black overlay to improve readability (light) -->
-      <div class="absolute inset-0 bg-black/20 transition-opacity duration-300"></div>
-    </div>
-
-    <!-- Project Intro -->
-    <section class="max-w-3xl mx-auto px-6 text-center py-20" data-aos="fade-up">
-      <h2 class="text-2xl md:text-3xl font-semibold text-white">Overview</h2>
-      <p class="mt-4 text-white/70">Un concept che unisce esperienza 3D, interfacce UI e interattività musicale: esplora mockup, workflow e prototipi interattivi.</p>
-    </section>
-
-    <!-- Main Mockups -->
-    <section class="max-w-5xl mx-auto px-6 py-12" data-aos="fade-up">
-      <div class="rounded-xl shadow-xl overflow-hidden">
-        <img :src="mockDesktop" alt="desktop mockup" class="w-full object-cover rounded-xl" />
-      </div>
-      <div class="max-w-sm mx-auto mt-6">
-        <img :src="mockMobile" alt="mobile mockup" class="w-full rounded-xl shadow-xl object-cover" />
-      </div>
-    </section>
-
-    <!-- Workflow -->
-    <section class="max-w-6xl mx-auto px-6 py-16" data-aos="fade-up">
-      <h2 class="text-2xl md:text-3xl font-semibold text-white text-center">Workflow</h2>
-      <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="rounded-xl bg-white/5 p-6 backdrop-blur-sm transform transition-transform hover:scale-105">
-          <h3 class="text-white font-medium">Research</h3>
-          <p class="text-white/70 mt-2 text-sm">Analisi utenti e benchmark per definire tono e interazione.</p>
-          <img :src="thumb1" class="mt-4 w-20 h-12 object-cover rounded-md" />
-        </div>
-        <div class="rounded-xl bg-white/5 p-6 backdrop-blur-sm transform transition-transform hover:scale-105">
-          <h3 class="text-white font-medium">Concept</h3>
-          <p class="text-white/70 mt-2 text-sm">Sketching e moodboards per definire l'estetica.</p>
-          <img :src="thumb2" class="mt-4 w-20 h-12 object-cover rounded-md" />
-        </div>
-        <div class="rounded-xl bg-white/5 p-6 backdrop-blur-sm transform transition-transform hover:scale-105">
-          <h3 class="text-white font-medium">UI</h3>
-          <p class="text-white/70 mt-2 text-sm">Wireframes e componenti per flussi coerenti.</p>
-          <img :src="thumb3" class="mt-4 w-20 h-12 object-cover rounded-md" />
-        </div>
-        <div class="rounded-xl bg-white/5 p-6 backdrop-blur-sm transform transition-transform hover:scale-105">
-          <h3 class="text-white font-medium">Prototype</h3>
-          <p class="text-white/70 mt-2 text-sm">Prototipi interattivi per test e iterazioni rapide.</p>
-          <img :src="thumb4" class="mt-4 w-20 h-12 object-cover rounded-md" />
-        </div>
-      </div>
-    </section>
-
-    <!-- Behind the Scenes (masonry-like) -->
-    <section class="max-w-6xl mx-auto px-6 py-16" data-aos="fade-up">
-      <h2 class="text-2xl md:text-3xl font-semibold text-white text-center">Behind the Scenes</h2>
-      <div class="mt-8 columns-1 md:columns-2 lg:columns-3 gap-4">
-        <img :src="bts1" class="mb-4 w-full rounded-xl break-inside-avoid shadow-lg object-cover" />
-        <img :src="bts2" class="mb-4 w-full rounded-xl break-inside-avoid shadow-lg object-cover" />
-        <img :src="bts3" class="mb-4 w-full rounded-xl break-inside-avoid shadow-lg object-cover" />
-        <img :src="bts4" class="mb-4 w-full rounded-xl break-inside-avoid shadow-lg object-cover" />
-      </div>
-    </section>
-
-    <!-- Interactive Prototype (video) -->
-    <section class="max-w-4xl mx-auto px-6 py-16 text-center" data-aos="fade-up">
-      <h2 class="text-2xl md:text-3xl font-semibold text-white">Interactive Prototype</h2>
-      <p class="text-white/70 mt-4">Guarda il prototipo interattivo e prova le animazioni e transizioni.</p>
-      <video controls class="w-full max-w-4xl mx-auto rounded-xl shadow-2xl mt-6">
-        <source src="https://raw.githubusercontent.com/Riccardocassis/-gibson-video/main/gb_behance.mp4" type="video/mp4">
-      </video>
-    </section>
-
-    <!-- Call to Action -->
-    <section class="max-w-3xl mx-auto px-6 py-16 text-center">
-      <p class="text-white/70">Vuoi vedere altri progetti o collaborare?</p>
-      <div class="mt-6 flex gap-6 justify-center">
-        <router-link to="/projects" class="text-white/90 underline">Tutti i progetti</router-link>
-        <router-link to="/contact" class="text-white/90 underline">Contattami</router-link>
-      </div>
-    </section>
   </section>
+
+  <!-- Project Intro (Apple-style clear intro) -->
+  <section class="bg-black py-20 px-6">
+    <div class="max-w-3xl mx-auto text-left">
+      <h2 class="text-3xl md:text-4xl font-semibold text-white mb-6 text-center">Un concept essenziale</h2>
+      <p class="text-white/60 text-lg leading-relaxed">Un progetto minimale che unisce design, 3D e interazione per raccontare la chitarra Gibson in modo emozionale e funzionale. Focus su semplicità, ritmo e dettaglio visivo.</p>
+    </div>
+  </section>
+
+  <!-- Key Features (three clean columns) -->
+  <section class="bg-black py-20 px-6">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
+      <div class="px-6">
+        <h3 class="text-xl font-semibold text-white">Design System</h3>
+        <p class="text-white/60 mt-3">Componenti UI modulari e coerenti con un linguaggio tipografico pulito.</p>
+      </div>
+      <div class="px-6">
+        <h3 class="text-xl font-semibold text-white">3D Interattivo</h3>
+        <p class="text-white/60 mt-3">Elementi 3D integrati nell'interfaccia con animazioni leggere e reattive.</p>
+      </div>
+      <div class="px-6">
+        <h3 class="text-xl font-semibold text-white">Prototipazione</h3>
+        <p class="text-white/60 mt-3">Flussi interattivi e prototipi testabili per validare UX e micro-interazioni.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Sections: 8 alternating 60:40 full-bleed image with text appearing on scroll -->
+  <section class="bg-black">
+    <!-- For spacing between sections -->
+    <div class="space-y-20">
+
+      <!-- Helper: each section is full-width; h2 aligned left with px -->
+
+      <!-- 1 -->
+      <div class="w-full">
+        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6">Concept & Forma</h2>
+        <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
+          <div class="w-full">
+            <div class="w-full aspect-[16/9] overflow-hidden">
+              <img src="../../assets/ironriff.webp" alt="Concept" class="w-full h-full object-cover" />
+            </div>
+          </div>
+          <div class="px-6 md:pr-20 flex items-center">
+            <div class="opacity-0 translate-y-6 will-change-transform" data-animate>
+              <h3 class="text-xl text-white font-semibold">Linea e silhouette</h3>
+              <p class="text-white/70 mt-4">Analizziamo la forma classica della SG-1961 per adattarla a un'interfaccia visiva che enfatizzi proporzioni e equilibrio.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="w-full">
+        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6">Materiali & Texture</h2>
+        <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
+          <div class="px-6 md:pl-20 flex items-center">
+            <div class="opacity-0 translate-y-6 will-change-transform" data-animate>
+              <h3 class="text-xl text-white font-semibold">Finiture</h3>
+              <p class="text-white/70 mt-4">Lavoriamo sulle texture legno e vernici per ottenere profondità e riflesso caratteristico della chitarra.</p>
+            </div>
+          </div>
+          <div class="w-full">
+            <div class="w-full aspect-[16/9] overflow-hidden">
+              <img src="../../assets/rebert.webp" alt="Materials" class="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="w-full">
+        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6">3D Modeling</h2>
+        <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
+          <div class="w-full">
+            <div class="w-full aspect-[16/9] overflow-hidden">
+              <img src="../../assets/synapses-a.webp" alt="3D" class="w-full h-full object-cover" />
+            </div>
+          </div>
+          <div class="px-6 md:pr-20 flex items-center">
+            <div class="opacity-0 translate-y-6 will-change-transform" data-animate>
+              <h3 class="text-xl text-white font-semibold">Modellazione</h3>
+              <p class="text-white/70 mt-4">Costruzione del modello 3D con attenzione a dettagli come manopole, pickup e venature del legno.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="w-full">
+        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6">Interazione</h2>
+        <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
+          <div class="px-6 md:pl-20 flex items-center">
+            <div class="opacity-0 translate-y-6 will-change-transform" data-animate>
+              <h3 class="text-xl text-white font-semibold">Micro-interazioni</h3>
+              <p class="text-white/70 mt-4">Animazioni micro che rispondono all'input musicale e alle azioni dell'utente.</p>
+            </div>
+          </div>
+          <div class="w-full">
+            <div class="w-full aspect-[16/9] overflow-hidden">
+              <img src="../../assets/vasi.webp" alt="Interaction" class="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="w-full">
+        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6">Sound Design</h2>
+        <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
+          <div class="w-full">
+            <div class="w-full aspect-[16/9] overflow-hidden">
+              <img src="../../assets/hero-riccardo.webp" alt="Sound" class="w-full h-full object-cover" />
+            </div>
+          </div>
+          <div class="px-6 md:pr-20 flex items-center">
+            <div class="opacity-0 translate-y-6 will-change-transform" data-animate>
+              <h3 class="text-xl text-white font-semibold">Timbro e feedback</h3>
+              <p class="text-white/70 mt-4">Integrazione dei campioni sonori con feedback visivo per un'esperienza coerente.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="w-full">
+        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6">UI Dettagli</h2>
+        <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
+          <div class="px-6 md:pl-20 flex items-center">
+            <div class="opacity-0 translate-y-6 will-change-transform" data-animate>
+              <h3 class="text-xl text-white font-semibold">Controlli UI</h3>
+              <p class="text-white/70 mt-4">Design dei controlli: leggibilità, accessibilità e animazioni di stato.</p>
+            </div>
+          </div>
+          <div class="w-full">
+            <div class="w-full aspect-[16/9] overflow-hidden">
+              <img src="../../assets/appchitarra.webp" alt="UI details" class="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="w-full">
+        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6">Performance</h2>
+        <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
+          <div class="w-full">
+            <div class="w-full aspect-[16/9] overflow-hidden">
+              <img src="../../assets/finia.webp" alt="Performance" class="w-full h-full object-cover" />
+            </div>
+          </div>
+          <div class="px-6 md:pr-20 flex items-center">
+            <div class="opacity-0 translate-y-6 will-change-transform" data-animate>
+              <h3 class="text-xl text-white font-semibold">Ottimizzazione</h3>
+              <p class="text-white/70 mt-4">Bilanciamento tra qualità visiva e prestazioni per garantire fluidità su dispositivi diversi.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="w-full">
+        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6">Presentazione Finale</h2>
+        <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
+          <div class="px-6 md:pl-20 flex items-center">
+            <div class="opacity-0 translate-y-6 will-change-transform" data-animate>
+              <h3 class="text-xl text-white font-semibold">Case study</h3>
+              <p class="text-white/70 mt-4">Racconto finale del progetto, scelte progettuali e risultati raggiunti.</p>
+            </div>
+          </div>
+          <div class="w-full">
+            <div class="w-full aspect-[16/9] overflow-hidden">
+              <img src="../../assets/beat.webp" alt="Presentation" class="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Prototype Video (kept at end) -->
+  <section class="bg-black py-24 px-6">
+    <div class="max-w-4xl mx-auto text-left">
+      <h2 class="text-3xl md:text-4xl font-semibold text-white mb-6">Interactive Prototype</h2>
+      <p class="text-white/60 mb-8">Guarda il prototipo — controlla le animazioni e il flow.</p>
+      <video controls class="w-full rounded-2xl shadow-2xl">
+        <source src="https://raw.githubusercontent.com/Riccardocassis/-gibson-video/main/gb_behance.mp4" type="video/mp4" />
+      </video>
+    </div>
+  </section>
+
+  <!-- CTA minimal -->
+  <section class="bg-black py-12 px-6 text-center">
+    <div class="max-w-2xl mx-auto">
+      <p class="text-white/60 mb-6">Vuoi esplorare altri progetti o collaborare?</p>
+      <div class="flex justify-center gap-8">
+        <a href="/projects" class="text-white font-semibold underline">Progetti</a>
+        <a href="/contact" class="text-blue-400 font-semibold underline">Contattami</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prototype Video (kept at end) -->
+  <section class="bg-black py-24 px-6">
+    <div class="max-w-4xl mx-auto text-left">
+      <h2 class="text-3xl md:text-4xl font-semibold text-white mb-6">Interactive Prototype</h2>
+      <p class="text-white/60 mb-8">Guarda il prototipo — controlla le animazioni e il flow.</p>
+      <video controls class="w-full rounded-2xl shadow-2xl">
+        <source src="https://raw.githubusercontent.com/Riccardocassis/-gibson-video/main/gb_behance.mp4" type="video/mp4" />
+      </video>
+    </div>
+  </section>
+
+  <!-- CTA minimal -->
+  <section class="bg-black py-12 px-6 text-center">
+    <div class="max-w-2xl mx-auto">
+      <p class="text-white/60 mb-6">Vuoi esplorare altri progetti o collaborare?</p>
+      <div class="flex justify-center gap-8">
+        <a href="/projects" class="text-white font-semibold underline">Progetti</a>
+        <a href="/contact" class="text-blue-400 font-semibold underline">Contattami</a>
+      </div>
+    </div>
+  </section>
+
 </template>
 
 <script setup>
-import gibsonCover from '../../assets/gibson cover pagina progetti.webp'
-import mockDesktop from '../../assets/gibson b.webp'
-import mockMobile from '../../assets/gibson a.webp'
-import thumb1 from '../../assets/museodellacarta-a.webp'
-import thumb2 from '../../assets/webable a.webp'
-import thumb3 from '../../assets/finia.webp'
-import thumb4 from '../../assets/hero-riccardo.webp'
-import bts1 from '../../assets/ironriff.webp'
-import bts2 from '../../assets/rebert.webp'
-import bts3 from '../../assets/synapses-a.webp'
-import bts4 from '../../assets/vasi.webp'
-</script>
+import { onMounted } from 'vue'
 
-<style scoped>
-/* No custom background here — Tailwind utilities used in template */
-</style>
+onMounted(() => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.remove('opacity-0', 'translate-y-6')
+        entry.target.classList.add('opacity-100', 'translate-y-0', 'transition', 'duration-700')
+        observer.unobserve(entry.target)
+      }
+    })
+  }, { threshold: 0.12 })
+
+  document.querySelectorAll('[data-animate]').forEach(el => {
+    observer.observe(el)
+  })
+})
+</script>
