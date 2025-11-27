@@ -5,7 +5,7 @@
     <img
       src="../../assets/gibson cover pagina progetti.webp"
       alt="Gibson cover"
-      class="absolute inset-0 w-full h-full object-cover object-center opacity-90"
+      class="reveal-img absolute inset-0 w-full h-full object-cover object-center opacity-90"
     />
 
     <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-transparent"></div>
@@ -57,7 +57,7 @@
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
             <div class="w-full aspect-[16/9] overflow-hidden">
-              <img src="../../assets/ironriff.webp" alt="Concept" class="w-full h-full object-cover" />
+              <img src="../../assets/ironriff.webp" alt="Concept" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
           <div class="px-6 md:pr-20 flex items-center">
@@ -81,7 +81,7 @@
           </div>
           <div class="w-full">
             <div class="w-full aspect-[16/9] overflow-hidden">
-              <img src="../../assets/rebert.webp" alt="Materials" class="w-full h-full object-cover" />
+              <img src="../../assets/rebert.webp" alt="Materials" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -93,7 +93,7 @@
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
             <div class="w-full aspect-[16/9] overflow-hidden">
-              <img src="../../assets/synapses-a.webp" alt="3D" class="w-full h-full object-cover" />
+              <img src="../../assets/synapses-a.webp" alt="3D" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
           <div class="px-6 md:pr-20 flex items-center">
@@ -117,7 +117,7 @@
           </div>
           <div class="w-full">
             <div class="w-full aspect-[16/9] overflow-hidden">
-              <img src="../../assets/vasi.webp" alt="Interaction" class="w-full h-full object-cover" />
+              <img src="../../assets/vasi.webp" alt="Interaction" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -129,7 +129,7 @@
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
             <div class="w-full aspect-[16/9] overflow-hidden">
-              <img src="../../assets/hero-riccardo.webp" alt="Sound" class="w-full h-full object-cover" />
+              <img src="../../assets/hero-riccardo.webp" alt="Sound" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
           <div class="px-6 md:pr-20 flex items-center">
@@ -153,7 +153,7 @@
           </div>
           <div class="w-full">
             <div class="w-full aspect-[16/9] overflow-hidden">
-              <img src="../../assets/appchitarra.webp" alt="UI details" class="w-full h-full object-cover" />
+              <img src="../../assets/appchitarra.webp" alt="UI details" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -165,7 +165,7 @@
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
             <div class="w-full aspect-[16/9] overflow-hidden">
-              <img src="../../assets/finia.webp" alt="Performance" class="w-full h-full object-cover" />
+              <img src="../../assets/finia.webp" alt="Performance" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
           <div class="px-6 md:pr-20 flex items-center">
@@ -189,7 +189,7 @@
           </div>
           <div class="w-full">
             <div class="w-full aspect-[16/9] overflow-hidden">
-              <img src="../../assets/beat.webp" alt="Presentation" class="w-full h-full object-cover" />
+              <img src="../../assets/beat.webp" alt="Presentation" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -198,27 +198,7 @@
     </div>
   </section>
 
-  <!-- Prototype Video (kept at end) -->
-  <section class="bg-black py-24 px-6">
-    <div class="max-w-4xl mx-auto text-left">
-      <h2 class="text-3xl md:text-4xl font-semibold text-white mb-6">Interactive Prototype</h2>
-      <p class="text-white/60 mb-8">Guarda il prototipo — controlla le animazioni e il flow.</p>
-      <video controls class="w-full rounded-2xl shadow-2xl">
-        <source src="https://raw.githubusercontent.com/Riccardocassis/-gibson-video/main/gb_behance.mp4" type="video/mp4" />
-      </video>
-    </div>
-  </section>
-
-  <!-- CTA minimal -->
-  <section class="bg-black py-12 px-6 text-center">
-    <div class="max-w-2xl mx-auto">
-      <p class="text-white/60 mb-6">Vuoi esplorare altri progetti o collaborare?</p>
-      <div class="flex justify-center gap-8">
-        <a href="/projects" class="text-white font-semibold underline">Progetti</a>
-        <a href="/contact" class="text-blue-400 font-semibold underline">Contattami</a>
-      </div>
-    </div>
-  </section>
+  
 
   <!-- Prototype Video (kept at end) -->
   <section class="bg-black py-24 px-6">
@@ -241,13 +221,19 @@
       </div>
     </div>
   </section>
+
 
 </template>
 
 <script setup>
 import { onMounted } from 'vue'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
 
 onMounted(() => {
+  // Text reveal (existing IntersectionObserver)
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -260,6 +246,41 @@ onMounted(() => {
 
   document.querySelectorAll('[data-animate]').forEach(el => {
     observer.observe(el)
+  })
+
+  // GSAP image reveal & subtle parallax
+  const images = gsap.utils.toArray('.reveal-img')
+
+  images.forEach((img) => {
+    // initial state
+    gsap.set(img, { y: 40, scale: 1.06, opacity: 0, transformOrigin: 'center center' })
+
+    // reveal animation when image enters viewport
+    gsap.to(img, {
+      y: 0,
+      scale: 1,
+      opacity: 1,
+      ease: 'power3.out',
+      duration: 1.2,
+      scrollTrigger: {
+        trigger: img,
+        start: 'top 85%',
+        end: 'bottom 60%',
+        scrub: 0.6
+      }
+    })
+
+    // subtle parallax while scrolling through image
+    gsap.to(img, {
+      yPercent: -6,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: img,
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: 0.8
+      }
+    })
   })
 })
 </script>
