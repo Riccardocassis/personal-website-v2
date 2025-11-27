@@ -56,7 +56,7 @@
         <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6">Concept & Forma</h2>
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
-            <div class="w-full aspect-[16/9] overflow-hidden">
+            <div class="w-full aspect-[4/3] overflow-hidden">
               <img src="../../assets/ironriff.webp" alt="Concept" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
@@ -80,7 +80,7 @@
             </div>
           </div>
           <div class="w-full">
-            <div class="w-full aspect-[16/9] overflow-hidden">
+            <div class="w-full aspect-[4/3] overflow-hidden">
               <img src="../../assets/rebert.webp" alt="Materials" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
@@ -92,7 +92,7 @@
         <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6">3D Modeling</h2>
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
-            <div class="w-full aspect-[16/9] overflow-hidden">
+            <div class="w-full aspect-[4/3] overflow-hidden">
               <img src="../../assets/synapses-a.webp" alt="3D" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
@@ -116,7 +116,7 @@
             </div>
           </div>
           <div class="w-full">
-            <div class="w-full aspect-[16/9] overflow-hidden">
+            <div class="w-full aspect-[4/3] overflow-hidden">
               <img src="../../assets/vasi.webp" alt="Interaction" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
@@ -128,7 +128,7 @@
         <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6">Sound Design</h2>
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
-            <div class="w-full aspect-[16/9] overflow-hidden">
+            <div class="w-full aspect-[4/3] overflow-hidden">
               <img src="../../assets/hero-riccardo.webp" alt="Sound" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
@@ -152,7 +152,7 @@
             </div>
           </div>
           <div class="w-full">
-            <div class="w-full aspect-[16/9] overflow-hidden">
+            <div class="w-full aspect-[4/3] overflow-hidden">
               <img src="../../assets/appchitarra.webp" alt="UI details" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
@@ -164,7 +164,7 @@
         <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6">Performance</h2>
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
-            <div class="w-full aspect-[16/9] overflow-hidden">
+            <div class="w-full aspect-[4/3] overflow-hidden">
               <img src="../../assets/finia.webp" alt="Performance" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
@@ -188,7 +188,7 @@
             </div>
           </div>
           <div class="w-full">
-            <div class="w-full aspect-[16/9] overflow-hidden">
+            <div class="w-full aspect-[4/3] overflow-hidden">
               <img src="../../assets/beat.webp" alt="Presentation" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
