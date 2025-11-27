@@ -61,7 +61,7 @@
             </div>
           </div>
           <div class="px-6 md:pr-20 flex items-center">
-            <div class="opacity-0 translate-y-6 will-change-transform" data-animate>
+            <div class="reveal-text opacity-0 translate-y-6 will-change-transform" data-animate>
               <h3 class="text-xl text-white font-semibold">Linea e silhouette</h3>
               <p class="text-white/70 mt-4">Analizziamo la forma classica della SG-1961 per adattarla a un'interfaccia visiva che enfatizzi proporzioni e equilibrio.</p>
             </div>
@@ -74,7 +74,7 @@
         <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6">Materiali & Texture</h2>
         <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
           <div class="px-6 md:pl-20 flex items-center">
-            <div class="opacity-0 translate-y-6 will-change-transform" data-animate>
+            <div class="reveal-text opacity-0 translate-y-6 will-change-transform" data-animate>
               <h3 class="text-xl text-white font-semibold">Finiture</h3>
               <p class="text-white/70 mt-4">Lavoriamo sulle texture legno e vernici per ottenere profondità e riflesso caratteristico della chitarra.</p>
             </div>
@@ -97,7 +97,7 @@
             </div>
           </div>
           <div class="px-6 md:pr-20 flex items-center">
-            <div class="opacity-0 translate-y-6 will-change-transform" data-animate>
+            <div class="reveal-text opacity-0 translate-y-6 will-change-transform" data-animate>
               <h3 class="text-xl text-white font-semibold">Modellazione</h3>
               <p class="text-white/70 mt-4">Costruzione del modello 3D con attenzione a dettagli come manopole, pickup e venature del legno.</p>
             </div>
@@ -110,7 +110,7 @@
         <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6">Interazione</h2>
         <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
           <div class="px-6 md:pl-20 flex items-center">
-            <div class="opacity-0 translate-y-6 will-change-transform" data-animate>
+            <div class="reveal-text opacity-0 translate-y-6 will-change-transform" data-animate>
               <h3 class="text-xl text-white font-semibold">Micro-interazioni</h3>
               <p class="text-white/70 mt-4">Animazioni micro che rispondono all'input musicale e alle azioni dell'utente.</p>
             </div>
@@ -133,7 +133,7 @@
             </div>
           </div>
           <div class="px-6 md:pr-20 flex items-center">
-            <div class="opacity-0 translate-y-6 will-change-transform" data-animate>
+            <div class="reveal-text opacity-0 translate-y-6 will-change-transform" data-animate>
               <h3 class="text-xl text-white font-semibold">Timbro e feedback</h3>
               <p class="text-white/70 mt-4">Integrazione dei campioni sonori con feedback visivo per un'esperienza coerente.</p>
             </div>
@@ -146,7 +146,7 @@
         <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6">UI Dettagli</h2>
         <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
           <div class="px-6 md:pl-20 flex items-center">
-            <div class="opacity-0 translate-y-6 will-change-transform" data-animate>
+            <div class="reveal-text opacity-0 translate-y-6 will-change-transform" data-animate>
               <h3 class="text-xl text-white font-semibold">Controlli UI</h3>
               <p class="text-white/70 mt-4">Design dei controlli: leggibilità, accessibilità e animazioni di stato.</p>
             </div>
@@ -169,7 +169,7 @@
             </div>
           </div>
           <div class="px-6 md:pr-20 flex items-center">
-            <div class="opacity-0 translate-y-6 will-change-transform" data-animate>
+            <div class="reveal-text opacity-0 translate-y-6 will-change-transform" data-animate>
               <h3 class="text-xl text-white font-semibold">Ottimizzazione</h3>
               <p class="text-white/70 mt-4">Bilanciamento tra qualità visiva e prestazioni per garantire fluidità su dispositivi diversi.</p>
             </div>
@@ -182,7 +182,7 @@
         <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6">Presentazione Finale</h2>
         <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
           <div class="px-6 md:pl-20 flex items-center">
-            <div class="opacity-0 translate-y-6 will-change-transform" data-animate>
+            <div class="reveal-text opacity-0 translate-y-6 will-change-transform" data-animate>
               <h3 class="text-xl text-white font-semibold">Case study</h3>
               <p class="text-white/70 mt-4">Racconto finale del progetto, scelte progettuali e risultati raggiunti.</p>
             </div>
@@ -202,10 +202,10 @@
 
   <!-- Prototype Video (kept at end) -->
   <section class="bg-black py-24 px-6">
-    <div class="max-w-4xl mx-auto text-left">
+    <div class="max-w-6xl mx-auto text-left">
       <h2 class="text-3xl md:text-4xl font-semibold text-white mb-6">Interactive Prototype</h2>
       <p class="text-white/60 mb-8">Guarda il prototipo — controlla le animazioni e il flow.</p>
-      <video controls class="w-full rounded-2xl shadow-2xl">
+      <video controls class="reveal-video w-full rounded-2xl shadow-2xl">
         <source src="https://raw.githubusercontent.com/Riccardocassis/-gibson-video/main/gb_behance.mp4" type="video/mp4" />
       </video>
     </div>
@@ -233,44 +233,31 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
 onMounted(() => {
-  // Text reveal (existing IntersectionObserver)
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.remove('opacity-0', 'translate-y-6')
-        entry.target.classList.add('opacity-100', 'translate-y-0', 'transition', 'duration-700')
-        observer.unobserve(entry.target)
-      }
-    })
-  }, { threshold: 0.12 })
-
-  document.querySelectorAll('[data-animate]').forEach(el => {
-    observer.observe(el)
-  })
-
-  // GSAP image reveal & subtle parallax
+  // GSAP-controlled reveal: animate image first, then text; keep subtle parallax
   const images = gsap.utils.toArray('.reveal-img')
 
   images.forEach((img) => {
-    // initial state
-    gsap.set(img, { y: 40, scale: 1.06, opacity: 0, transformOrigin: 'center center' })
+    // find the nearest grid container and its text block
+    const grid = img.closest('.grid')
+    const text = grid ? grid.querySelector('.reveal-text') : null
 
-    // reveal animation when image enters viewport
-    gsap.to(img, {
-      y: 0,
-      scale: 1,
-      opacity: 1,
-      ease: 'power3.out',
-      duration: 1.2,
+    // initial states
+    gsap.set(img, { y: 40, scale: 1.06, opacity: 0, transformOrigin: 'center center' })
+    if (text) gsap.set(text, { y: 24, opacity: 0 })
+
+    // timeline: reveal image then text
+    const tl = gsap.timeline({
       scrollTrigger: {
         trigger: img,
         start: 'top 85%',
-        end: 'bottom 60%',
-        scrub: 0.6
+        toggleActions: 'play none none reverse'
       }
     })
 
-    // subtle parallax while scrolling through image
+    tl.to(img, { y: 0, scale: 1, opacity: 1, ease: 'power3.out', duration: 1.1 })
+      .to(text || {}, { y: 0, opacity: 1, ease: 'power2.out', duration: 0.6 }, '-=0.35')
+
+    // subtle parallax while scrolling through image (scrubbed)
     gsap.to(img, {
       yPercent: -6,
       ease: 'none',
@@ -282,5 +269,22 @@ onMounted(() => {
       }
     })
   })
+
+  // Emphasize final video: stronger reveal
+  const revealVideo = document.querySelector('.reveal-video')
+  if (revealVideo) {
+    gsap.set(revealVideo, { scale: 0.98, opacity: 0 })
+    gsap.to(revealVideo, {
+      scale: 1,
+      opacity: 1,
+      ease: 'power2.out',
+      duration: 1.2,
+      scrollTrigger: {
+        trigger: revealVideo,
+        start: 'top 80%',
+        toggleActions: 'play none none reverse'
+      }
+    })
+  }
 })
 </script>
