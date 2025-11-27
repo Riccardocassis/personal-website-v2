@@ -57,11 +57,11 @@
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden">
-              <img src="../../assets/ironriff.webp" alt="Concept" class="reveal-img w-full h-full object-cover" />
+              <img src="../../assets/p1slide1.webp" alt="Concept" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
           <div class="px-6 md:pr-20 flex items-center">
-            <div class="reveal-text opacity-0 translate-y-6 will-change-transform" data-animate>
+            <div class="reveal-text translate-y-6 will-change-transform" data-animate>
               <h3 class="text-xl text-white font-semibold">Linea e silhouette</h3>
               <p class="text-white/70 mt-4">Analizziamo la forma classica della SG-1961 per adattarla a un'interfaccia visiva che enfatizzi proporzioni e equilibrio.</p>
             </div>
@@ -74,14 +74,14 @@
         <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6">Materiali & Texture</h2>
         <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
           <div class="px-6 md:pl-20 flex items-center">
-            <div class="reveal-text opacity-0 translate-y-6 will-change-transform" data-animate>
+            <div class="reveal-text translate-y-6 will-change-transform" data-animate>
               <h3 class="text-xl text-white font-semibold">Finiture</h3>
               <p class="text-white/70 mt-4">Lavoriamo sulle texture legno e vernici per ottenere profondità e riflesso caratteristico della chitarra.</p>
             </div>
           </div>
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden">
-              <img src="../../assets/rebert.webp" alt="Materials" class="reveal-img w-full h-full object-cover" />
+              <img src="../../assets/p1slide2.webp" alt="Materials" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -93,11 +93,11 @@
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden">
-              <img src="../../assets/synapses-a.webp" alt="3D" class="reveal-img w-full h-full object-cover" />
+              <img src="../../assets/p1slide3.webp" alt="3D" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
           <div class="px-6 md:pr-20 flex items-center">
-            <div class="reveal-text opacity-0 translate-y-6 will-change-transform" data-animate>
+            <div class="reveal-text translate-y-6 will-change-transform" data-animate>
               <h3 class="text-xl text-white font-semibold">Modellazione</h3>
               <p class="text-white/70 mt-4">Costruzione del modello 3D con attenzione a dettagli come manopole, pickup e venature del legno.</p>
             </div>
@@ -110,7 +110,7 @@
         <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6">Interazione</h2>
         <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
           <div class="px-6 md:pl-20 flex items-center">
-            <div class="reveal-text opacity-0 translate-y-6 will-change-transform" data-animate>
+            <div class="reveal-text translate-y-6 will-change-transform" data-animate>
               <h3 class="text-xl text-white font-semibold">Micro-interazioni</h3>
               <p class="text-white/70 mt-4">Animazioni micro che rispondono all'input musicale e alle azioni dell'utente.</p>
             </div>
@@ -133,7 +133,7 @@
             </div>
           </div>
           <div class="px-6 md:pr-20 flex items-center">
-            <div class="reveal-text opacity-0 translate-y-6 will-change-transform" data-animate>
+            <div class="reveal-text translate-y-6 will-change-transform" data-animate>
               <h3 class="text-xl text-white font-semibold">Timbro e feedback</h3>
               <p class="text-white/70 mt-4">Integrazione dei campioni sonori con feedback visivo per un'esperienza coerente.</p>
             </div>
@@ -146,7 +146,7 @@
         <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6">UI Dettagli</h2>
         <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
           <div class="px-6 md:pl-20 flex items-center">
-            <div class="reveal-text opacity-0 translate-y-6 will-change-transform" data-animate>
+            <div class="reveal-text translate-y-6 will-change-transform" data-animate>
               <h3 class="text-xl text-white font-semibold">Controlli UI</h3>
               <p class="text-white/70 mt-4">Design dei controlli: leggibilità, accessibilità e animazioni di stato.</p>
             </div>
@@ -169,7 +169,7 @@
             </div>
           </div>
           <div class="px-6 md:pr-20 flex items-center">
-            <div class="reveal-text opacity-0 translate-y-6 will-change-transform" data-animate>
+            <div class="reveal-text translate-y-6 will-change-transform" data-animate>
               <h3 class="text-xl text-white font-semibold">Ottimizzazione</h3>
               <p class="text-white/70 mt-4">Bilanciamento tra qualità visiva e prestazioni per garantire fluidità su dispositivi diversi.</p>
             </div>
