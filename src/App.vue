@@ -1,13 +1,20 @@
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { ref, onMounted, onBeforeUnmount, computed } from 'vue'
 import Navbar from './components/navbar.vue'
 import Footer from './components/Footer.vue'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
+import { useRoute } from 'vue-router'
 
 // scroll progress (0..1)
 const scrollProgress = ref(0)
 let rafId = null
+
+const route = useRoute()
+const showGlobalGradient = computed(() => {
+  // hide the global radial gradient on the Gibson project page (/projects/project-1)
+  return route.path !== '/projects/project-1'
+})
 
 function updateProgress() {
   const doc = document.documentElement
@@ -62,8 +69,9 @@ onBeforeUnmount(() => {
 
 <template>
   <div class="relative bg-black text-white min-h-screen">
-    <!-- Global radial gradient layer (same as hero) -->
+    <!-- Global radial gradient layer (same as hero) - hidden on Gibson page -->
     <div
+      v-if="showGlobalGradient"
       ref="globalGradient"
       class="absolute inset-0 pointer-events-none z-0"
       :style="{ background: 'radial-gradient(circle at 70% 50%, rgba(59,130,246,0.22), rgba(29,78,216,0.16) 28%, rgba(30,58,138,0.10) 60%)' }"
