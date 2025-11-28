@@ -21,7 +21,7 @@
   <!-- Project Intro (Apple-style clear intro) -->
   <section class="bg-black py-20 px-6">
     <div class="max-w-3xl mx-auto text-left">
-      <h2 class="text-3xl md:text-4xl font-semibold text-white mb-6 text-center">Un concept essenziale</h2>
+      <h2 class="text-3xl md:text-4xl font-semibold text-white mb-6 text-center">Lo scopo del progetto</h2>
       <p class="text-white/60 text-lg leading-relaxed">Un progetto minimale che unisce design, 3D e interazione per raccontare la chitarra Gibson in modo emozionale e funzionale. Focus su semplicità, ritmo e dettaglio visivo.</p>
     </div>
   </section>
@@ -34,24 +34,27 @@
           <source src="https://raw.githubusercontent.com/Riccardocassis/-gibson-video/main/gb_behance.mp4" type="video/mp4" />
         </video>
       </div>
-      <p class="text-white/60 mt-6">Guarda il prototipo — controlla le animazioni e il flow.</p>
+      <p class="text-white/60 mt-6">In questo video viene mostrata le preview del sito.</p>
     </div>
   </section>
 
   <!-- Key Features (three clean columns) moved under Video CTA -->
   <section class="bg-black py-20 px-6">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
-      <div class="px-6">
-        <h3 class="text-xl font-semibold text-white">Design System</h3>
-        <p class="text-white/60 mt-3">Componenti UI modulari e coerenti con un linguaggio tipografico pulito.</p>
-      </div>
-      <div class="px-6">
-        <h3 class="text-xl font-semibold text-white">3D Interattivo</h3>
-        <p class="text-white/60 mt-3">Elementi 3D integrati nell'interfaccia con animazioni leggere e reattive.</p>
-      </div>
-      <div class="px-6">
-        <h3 class="text-xl font-semibold text-white">Prototipazione</h3>
-        <p class="text-white/60 mt-3">Flussi interattivi e prototipi testabili per validare UX e micro-interazioni.</p>
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-2xl md:text-3xl font-semibold text-white mb-8">Elementi cardine</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-start text-center">
+        <div class="px-6">
+          <h3 class="text-xl font-semibold text-white">Design System</h3>
+          <p class="text-white/60 mt-3">Componenti UI modulari e coerenti con un linguaggio tipografico pulito.</p>
+        </div>
+        <div class="px-6">
+          <h3 class="text-xl font-semibold text-white">3D Interattivo</h3>
+          <p class="text-white/60 mt-3">Elementi 3D integrati nell'interfaccia con animazioni leggere e reattive.</p>
+        </div>
+        <div class="px-6">
+          <h3 class="text-xl font-semibold text-white">Prototipazione</h3>
+          <p class="text-white/60 mt-3">Flussi interattivi e prototipi testabili per validare UX e micro-interazioni.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -162,6 +165,8 @@
 
   <!-- Prototype Video removed -->
 
+  <!-- Horizontal carousel removed -->
+
   <!-- CTA minimal -->
   <section class="bg-black py-12 px-6 text-center">
     <div class="max-w-2xl mx-auto">
@@ -172,6 +177,20 @@
       </div>
     </div>
   </section>
+
+  <!-- Prev / Next arrows below CTA -->
+  <section class="bg-black py-6 px-6">
+    <div class="max-w-2xl mx-auto flex justify-center gap-8">
+      <a href="/projects/project-9" class="inline-flex items-center justify-center w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full">
+        <span class="text-white">←</span>
+      </a>
+      <a href="/projects/project-2" class="inline-flex items-center justify-center w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full">
+        <span class="text-white">→</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Prev/Next arrows removed -->
 
   <!-- Fullscreen video modal -->
   <div v-if="showVideo" class="fixed inset-0 z-50 flex items-center justify-center bg-black/90">
@@ -232,6 +251,8 @@ onMounted(() => {
   
 
   // final video has been removed from the template
+
+  // Horizontal carousel logic removed
 })
 
 // Video modal state & controls
