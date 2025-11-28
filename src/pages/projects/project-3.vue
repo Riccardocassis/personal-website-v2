@@ -12,7 +12,7 @@
 
     <div class="absolute inset-0 flex items-center md:items-end justify-center md:justify-start pt-6 md:pb-20 pl-4 md:pl-20">
       <div class="max-w-3xl text-center md:text-left px-4 md:px-6">
-        <h1 class="text-3xl md:text-6xl font-extrabold text-white leading-tight">Gibson SG-1961</h1>
+        <h1 class="text-3xl md:text-6xl font-extrabold text-white leading-tight">Synapses landing Page</h1>
         <p class="text-xs md:text-sm text-white/70 mt-3 md:mt-4 tracking-wide">Concept Experience — Il suono della SG-1961 trasformato in un’esperienza digitale interattiva</p>
       </div>
     </div>
@@ -32,7 +32,7 @@
       <h3 class="text-center text-white/70 mb-6">preview della pagina</h3>
       <div class="relative w-full aspect-[16/9] max-h-[65vh] mx-auto overflow-hidden rounded-2xl shadow-2xl bg-black">
         <video controls playsinline preload="metadata" class="w-full h-full object-cover">
-          <source src="https://raw.githubusercontent.com/Riccardocassis/-gibson-video/main/gb_behance.mp4" type="video/mp4" />
+          <source src="https://github.com/Riccardocassis/synapses/raw/refs/heads/main/Video_sito.mp4" type="video/mp4" />
         </video>
       </div>
     </div>
@@ -211,7 +211,7 @@ Posso aiutarti a creare esperienze digitali su misura.</p>
   <div v-if="showVideo" class="fixed inset-0 z-50 flex items-center justify-center bg-black/90">
     <button @click="closeVideo" class="absolute top-6 right-6 text-white bg-black/40 hover:bg-black/60 px-3 py-2 rounded">Chiudi</button>
     <video ref="videoRef" controls class="w-full h-full max-w-[1400px] max-h-[90vh] rounded-lg shadow-2xl">
-      <source src="https://raw.githubusercontent.com/Riccardocassis/-gibson-video/main/gb_behance.mp4" type="video/mp4" />
+      <source src="https://github.com/Riccardocassis/synapses/raw/refs/heads/main/Video_sito.mp4" type="video/mp4" />
     </video>
   </div>
 
