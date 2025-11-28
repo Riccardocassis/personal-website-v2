@@ -1,7 +1,7 @@
 <template>
 
   <!-- HERO (Apple-like, generous whitespace) -->
-  <section class="relative w-full h-[85vh] overflow-hidden bg-black">
+  <section class="relative w-full md:h-[85vh] h-[60vh] overflow-hidden bg-black">
     <img
       src="../../assets/gibson cover pagina progetti.webp"
       alt="Gibson cover"
@@ -10,8 +10,8 @@
 
     <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-transparent"></div>
 
-    <div class="absolute inset-0 flex items-end justify-start pb-20 pl-6 md:pl-20">
-      <div class="max-w-3xl text-left px-6">
+    <div class="absolute inset-0 flex items-end justify-center md:justify-start pb-12 md:pb-20 pl-6 md:pl-20">
+      <div class="max-w-3xl text-center md:text-left px-6">
         <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight">Gibson SG-1961</h1>
         <p class="text-sm md:text-base text-white/70 mt-4 tracking-wide">Concept Experience — 3D, UI e interattività musicale</p>
       </div>
@@ -20,7 +20,7 @@
 
   <!-- Project Intro (Apple-style clear intro) -->
   <section class="bg-black py-20 px-6">
-    <div class="max-w-3xl mx-auto text-left">
+    <div class="max-w-3xl mx-auto text-center md:text-left">
       <h2 class="text-3xl md:text-4xl font-semibold text-white mb-6 text-center">Lo scopo del progetto</h2>
       <p class="text-white/60 text-lg leading-relaxed">Un progetto minimale che unisce design, 3D e interazione per raccontare la chitarra Gibson in modo emozionale e funzionale. Focus su semplicità, ritmo e dettaglio visivo.</p>
     </div>
@@ -68,15 +68,15 @@
 
       <!-- 1 -->
       <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6">Concept & Forma</h2>
+        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Concept & Forma</h2>
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden">
               <img src="../../assets/p1slide1.webp" alt="Concept" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
-          <div class="px-6 md:pr-20 flex items-center">
-            <div class="reveal-text translate-y-6 will-change-transform" data-animate>
+          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
+            <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">Linea e silhouette</h3>
               <p class="text-white/70 mt-4">Analizziamo la forma classica della SG-1961 per adattarla a un'interfaccia visiva che enfatizzi proporzioni e equilibrio.</p>
             </div>
@@ -86,10 +86,10 @@
 
       <!-- 2 -->
       <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6">Materiali & Texture</h2>
+        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Materiali & Texture</h2>
         <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
-          <div class="px-6 md:pl-20 flex items-center">
-            <div class="reveal-text translate-y-6 will-change-transform" data-animate>
+          <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start">
+            <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">Finiture</h3>
               <p class="text-white/70 mt-4">Lavoriamo sulle texture legno e vernici per ottenere profondità e riflesso caratteristico della chitarra.</p>
             </div>
@@ -104,15 +104,15 @@
 
       <!-- 3 -->
       <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6">3D Modeling</h2>
+        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">3D Modeling</h2>
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden">
               <img src="../../assets/p1slide3.webp" alt="3D" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
-          <div class="px-6 md:pr-20 flex items-center">
-            <div class="reveal-text translate-y-6 will-change-transform" data-animate>
+          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
+            <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">Modellazione</h3>
               <p class="text-white/70 mt-4">Costruzione del modello 3D con attenzione a dettagli come manopole, pickup e venature del legno.</p>
             </div>
@@ -122,10 +122,10 @@
 
       <!-- 4 -->
       <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6">Interazione</h2>
+        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Interazione</h2>
         <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
-          <div class="px-6 md:pl-20 flex items-center">
-            <div class="reveal-text translate-y-6 will-change-transform" data-animate>
+          <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start">
+            <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">Micro-interazioni</h3>
               <p class="text-white/70 mt-4">Animazioni micro che rispondono all'input musicale e alle azioni dell'utente.</p>
             </div>
@@ -140,15 +140,15 @@
 
       <!-- 5 -->
       <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6">Sound Design</h2>
+        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Sound Design</h2>
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden">
               <img src="../../assets/p1slide5.webp" alt="Sound" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
-          <div class="px-6 md:pr-20 flex items-center">
-            <div class="reveal-text translate-y-6 will-change-transform" data-animate>
+          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
+            <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">Timbro e feedback</h3>
               <p class="text-white/70 mt-4">Integrazione dei campioni sonori con feedback visivo per un'esperienza coerente.</p>
             </div>
