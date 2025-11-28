@@ -13,7 +13,7 @@
     <div class="absolute inset-0 flex items-end justify-center md:justify-start pb-12 md:pb-20 pl-6 md:pl-20">
       <div class="max-w-3xl text-center md:text-left px-6">
         <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight">Gibson SG-1961</h1>
-        <p class="text-sm md:text-base text-white/70 mt-4 tracking-wide">Concept Experience — 3D, UI e interattività musicale</p>
+        <p class="text-sm md:text-base text-white/70 mt-4 tracking-wide">Concept Experience — Il suono della SG-1961 trasformato in un’esperienza digitale interattiva</p>
       </div>
     </div>
   </section>
@@ -29,12 +29,12 @@
   <!-- Video CTA: preview + button that opens fullscreen modal -->
   <section class="bg-black py-8 px-6">
     <div class="max-w-6xl mx-auto text-center">
+      <h3 class="text-center text-white/70 mb-6">preview della pagina</h3>
       <div class="relative w-full aspect-[16/9] max-h-[65vh] mx-auto overflow-hidden rounded-2xl shadow-2xl bg-black">
         <video controls playsinline preload="metadata" class="w-full h-full object-cover">
           <source src="https://raw.githubusercontent.com/Riccardocassis/-gibson-video/main/gb_behance.mp4" type="video/mp4" />
         </video>
       </div>
-      <p class="text-white/60 mt-6">In questo video viene mostrata le preview del sito.</p>
     </div>
   </section>
 
@@ -44,16 +44,16 @@
       <h2 class="text-2xl md:text-3xl font-semibold text-white mb-8">Elementi cardine</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-start text-center">
         <div class="px-6">
-          <h3 class="text-xl font-semibold text-white">Design System</h3>
-          <p class="text-white/60 mt-3">Componenti UI modulari e coerenti con un linguaggio tipografico pulito.</p>
+          <h3 class="text-xl font-semibold text-white"> Direzione Creativa & Concept</h3>
+          <p class="text-white/60 mt-3">Ho definito il concept visivo e il tono dell’esperienza partendo dall’identità della SG-1961: rock, materica e iconica. Ogni scelta:colori, tipografia, ritmo visivo, è calibrata per trasmettere la personalità dello strumento in un ambiente digitale.</p>
         </div>
         <div class="px-6">
-          <h3 class="text-xl font-semibold text-white">3D Interattivo</h3>
-          <p class="text-white/60 mt-3">Elementi 3D integrati nell'interfaccia con animazioni leggere e reattive.</p>
+          <h3 class="text-xl font-semibold text-white">3D e interazioni</h3>
+          <p class="text-white/60 mt-3">Ho realizzato modelli 3D e micro-interazioni che rispondono al suono e all’input dell’utente, trasformando la chitarra in un elemento interattivo. Il 3D non è decorazione, ma parte del linguaggio narrativo: rende la SG “suonabile” anche sul web.</p>
         </div>
         <div class="px-6">
-          <h3 class="text-xl font-semibold text-white">Prototipazione</h3>
-          <p class="text-white/60 mt-3">Flussi interattivi e prototipi testabili per validare UX e micro-interazioni.</p>
+          <h3 class="text-xl font-semibold text-white">Sviluppo Web & Integrazione</h3>
+          <p class="text-white/60 mt-3">Ho sviluppato le funzionalità interattive tramite codice e le ho integrate in Webflow grazie a GitHub Pages e componenti custom. L’obiettivo era mantenere fluidità, performance e totale coerenza visiva tra design, interazioni e contenuti.</p>
         </div>
       </div>
     </div>
