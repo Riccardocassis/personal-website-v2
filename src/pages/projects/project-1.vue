@@ -26,7 +26,19 @@
     </div>
   </section>
 
-  <!-- Key Features (three clean columns) -->
+  <!-- Video CTA: preview + button that opens fullscreen modal -->
+  <section class="bg-black py-8 px-6">
+    <div class="max-w-6xl mx-auto text-center">
+      <div class="relative w-full aspect-[16/9] max-h-[65vh] mx-auto overflow-hidden rounded-2xl shadow-2xl bg-black">
+        <video controls playsinline preload="metadata" class="w-full h-full object-cover">
+          <source src="https://raw.githubusercontent.com/Riccardocassis/-gibson-video/main/gb_behance.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <p class="text-white/60 mt-6">Guarda il prototipo — controlla le animazioni e il flow.</p>
+    </div>
+  </section>
+
+  <!-- Key Features (three clean columns) moved under Video CTA -->
   <section class="bg-black py-20 px-6">
     <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
       <div class="px-6">
@@ -148,16 +160,7 @@
 
   
 
-  <!-- Prototype Video (kept at end) -->
-  <section class="bg-black py-24 px-6">
-    <div class="max-w-6xl mx-auto text-left">
-      <h2 class="text-3xl md:text-4xl font-semibold text-white mb-6">Interactive Prototype</h2>
-      <p class="text-white/60 mb-8">Guarda il prototipo — controlla le animazioni e il flow.</p>
-      <video controls class="reveal-video w-full rounded-2xl shadow-2xl">
-        <source src="https://raw.githubusercontent.com/Riccardocassis/-gibson-video/main/gb_behance.mp4" type="video/mp4" />
-      </video>
-    </div>
-  </section>
+  <!-- Prototype Video removed -->
 
   <!-- CTA minimal -->
   <section class="bg-black py-12 px-6 text-center">
@@ -170,11 +173,19 @@
     </div>
   </section>
 
+  <!-- Fullscreen video modal -->
+  <div v-if="showVideo" class="fixed inset-0 z-50 flex items-center justify-center bg-black/90">
+    <button @click="closeVideo" class="absolute top-6 right-6 text-white bg-black/40 hover:bg-black/60 px-3 py-2 rounded">Chiudi</button>
+    <video ref="videoRef" controls class="w-full h-full max-w-[1400px] max-h-[90vh] rounded-lg shadow-2xl">
+      <source src="https://raw.githubusercontent.com/Riccardocassis/-gibson-video/main/gb_behance.mp4" type="video/mp4" />
+    </video>
+  </div>
+
 
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
+import { onMounted, ref, nextTick } from 'vue'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
@@ -220,21 +231,29 @@ onMounted(() => {
 
   
 
-  // Emphasize final video: stronger reveal
-  const revealVideo = document.querySelector('.reveal-video')
-  if (revealVideo) {
-    gsap.set(revealVideo, { scale: 0.98, opacity: 0 })
-    gsap.to(revealVideo, {
-      scale: 1,
-      opacity: 1,
-      ease: 'power2.out',
-      duration: 1.2,
-      scrollTrigger: {
-        trigger: revealVideo,
-        start: 'top 80%',
-        toggleActions: 'play none none reverse'
-      }
-    })
-  }
+  // final video has been removed from the template
 })
+
+// Video modal state & controls
+const showVideo = ref(false)
+const videoRef = ref(null)
+
+function openVideo() {
+  showVideo.value = true
+  nextTick(() => {
+    if (videoRef.value) {
+      // try to play; some browsers block autoplay without user gesture but click opened it
+      videoRef.value.currentTime = 0
+      videoRef.value.play().catch(() => {})
+    }
+  })
+}
+
+function closeVideo() {
+  if (videoRef.value) {
+    videoRef.value.pause()
+    videoRef.value.currentTime = 0
+  }
+  showVideo.value = false
+}
 </script>
