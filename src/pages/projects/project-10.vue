@@ -195,7 +195,7 @@ Posso aiutarti a creare esperienze digitali su misura.</p>
       <div class="hidden md:block flex-1"></div>
 
       <!-- Next -->
-      <a href="/projects/project-2" class="flex flex-col md:flex-row-reverse items-center gap-3 md:gap-4 text-center md:text-right">
+      <a href="/projects/project-1" class="flex flex-col md:flex-row-reverse items-center gap-3 md:gap-4 text-center md:text-right">
         <span class="inline-flex items-center justify-center w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full">
           <span class="text-white">→</span>
         </span>

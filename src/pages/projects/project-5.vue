@@ -32,7 +32,7 @@
       <h3 class="text-center text-white/70 mb-6">preview della pagina</h3>
       <div class="relative w-full aspect-[16/9] max-h-[65vh] mx-auto overflow-hidden rounded-2xl shadow-2xl bg-black">
         <video controls playsinline preload="metadata" class="w-full h-full object-cover">
-          <source src="https://raw.githubusercontent.com/Riccardocassis/-gibson-video/main/gb_behance.mp4" type="video/mp4" />
+          <source src="https://github.com/Riccardocassis/opsify/raw/refs/heads/main/Video_app_scuse.mp4" type="video/mp4" />
         </video>
       </div>
     </div>
@@ -187,7 +187,7 @@ Posso aiutarti a creare esperienze digitali su misura.</p>
   <section class="bg-black py-6 md:py-8 px-6">
     <div class="max-w-2xl mx-auto flex flex-col md:flex-row items-center md:items-stretch justify-between gap-6">
       <!-- Previous -->
-      <a href="/projects/project-9" class="flex flex-col md:flex-row items-center gap-3 md:gap-4 text-center md:text-left">
+      <a href="/projects/project-4" class="flex flex-col md:flex-row items-center gap-3 md:gap-4 text-center md:text-left">
         <span class="inline-flex items-center justify-center w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full">
           <span class="text-white">←</span>
         </span>
@@ -198,7 +198,7 @@ Posso aiutarti a creare esperienze digitali su misura.</p>
       <div class="hidden md:block flex-1"></div>
 
       <!-- Next -->
-      <a href="/projects/project-2" class="flex flex-col md:flex-row-reverse items-center gap-3 md:gap-4 text-center md:text-right">
+      <a href="/projects/project-6" class="flex flex-col md:flex-row-reverse items-center gap-3 md:gap-4 text-center md:text-right">
         <span class="inline-flex items-center justify-center w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full">
           <span class="text-white">→</span>
         </span>
@@ -211,7 +211,7 @@ Posso aiutarti a creare esperienze digitali su misura.</p>
   <div v-if="showVideo" class="fixed inset-0 z-50 flex items-center justify-center bg-black/90">
     <button @click="closeVideo" class="absolute top-6 right-6 text-white bg-black/40 hover:bg-black/60 px-3 py-2 rounded">Chiudi</button>
     <video ref="videoRef" controls class="w-full h-full max-w-[1400px] max-h-[90vh] rounded-lg shadow-2xl">
-      <source src="https://raw.githubusercontent.com/Riccardocassis/-gibson-video/main/gb_behance.mp4" type="video/mp4" />
+      <source src="https://github.com/Riccardocassis/opsify/raw/refs/heads/main/Video_app_scuse.mp4" type="video/mp4" />
     </video>
   </div>
 
