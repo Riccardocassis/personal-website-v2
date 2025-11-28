@@ -191,7 +191,7 @@ Posso aiutarti a creare esperienze digitali su misura.</p>
   <section class="bg-black py-6 md:py-8 px-6">
     <div class="max-w-2xl mx-auto flex flex-col md:flex-row items-center md:items-stretch justify-between gap-6">
       <!-- Previous -->
-      <a href="/projects/project-10" class="flex flex-col md:flex-row items-center gap-3 md:gap-4 text-center md:text-left">
+      <a href="/projects/project-9" class="flex flex-col md:flex-row items-center gap-3 md:gap-4 text-center md:text-left">
         <span class="inline-flex items-center justify-center w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full">
           <span class="text-white">←</span>
         </span>

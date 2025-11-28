@@ -3,8 +3,8 @@
   <!-- HERO (Apple-like, generous whitespace) -->
   <section class="relative w-full md:h-[85vh] h-[50vh] overflow-hidden bg-black">
     <img
-      src="../../assets/gibson cover pagina progetti.webp"
-      alt="Gibson cover"
+      src="../../assets/webable-imgcop.webp"
+      alt="Webable cover"
       class="reveal-img absolute inset-0 w-full h-full object-cover object-top md:object-center opacity-90"
     />
 
@@ -30,9 +30,9 @@
   <section class="bg-black py-8 px-6">
     <div class="max-w-6xl mx-auto text-center">
       <h3 class="text-center text-white/70 mb-6">preview della pagina</h3>
-      <div class="relative w-full aspect-[16/9] max-h-[65vh] mx-auto overflow-hidden rounded-2xl shadow-2xl bg-black">
-        <video controls playsinline preload="metadata" class="w-full h-full object-cover">
-          <source src="https://raw.githubusercontent.com/Riccardocassis/-gibson-video/main/gb_behance.mp4" type="video/mp4" />
+      <div class="relative w-full aspect-[16/9] max-h-[65vh] mx-auto overflow-hidden rounded-2xl shadow-2xl bg-black flex items-center justify-center">
+        <video controls playsinline preload="metadata" class="w-full h-full object-contain object-center bg-black block rounded-2xl border-0 outline-none">
+          <source src="https://riccardocassis.github.io/webable/Webable%20registrazione%20schermo.mp4" type="video/mp4" />
         </video>
       </div>
     </div>
@@ -210,8 +210,8 @@ Posso aiutarti a creare esperienze digitali su misura.</p>
   <!-- Fullscreen video modal -->
   <div v-if="showVideo" class="fixed inset-0 z-50 flex items-center justify-center bg-black/90">
     <button @click="closeVideo" class="absolute top-6 right-6 text-white bg-black/40 hover:bg-black/60 px-3 py-2 rounded">Chiudi</button>
-    <video ref="videoRef" controls class="w-full h-full max-w-[1400px] max-h-[90vh] rounded-lg shadow-2xl">
-      <source src="https://raw.githubusercontent.com/Riccardocassis/-gibson-video/main/gb_behance.mp4" type="video/mp4" />
+    <video ref="videoRef" controls class="w-full h-full max-w-[1400px] max-h-[90vh] rounded-2xl shadow-2xl object-contain object-center bg-black block border-0 outline-none">
+      <source src="https://riccardocassis.github.io/webable/Webable%20registrazione%20schermo.mp4" type="video/mp4" />
     </video>
   </div>
 
