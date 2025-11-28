@@ -22,7 +22,7 @@
   <section class="bg-black py-20 px-6">
     <div class="max-w-3xl mx-auto text-center md:text-left">
       <h2 class="text-3xl md:text-4xl font-semibold text-white mb-6 text-center">Lo scopo del progetto</h2>
-      <p class="text-white/60 text-lg leading-relaxed">Un progetto minimale che unisce design, 3D e interazione per raccontare la chitarra Gibson in modo emozionale e funzionale. Focus su semplicità, ritmo e dettaglio visivo.</p>
+      <p class="text-white/60 text-lg leading-relaxed">In questo progetto ho voluto ricreare un concept di landing page dedicata a uno strumento iconico come la Gibson SG-1961, capace di comunicare la sua anima rock in ogni parte dell’esperienza. L’obiettivo era trasmettere l’essenza dello strumento attraverso tutta la navigazione, aumentando awareness e coinvolgimento, e restituendo il giusto valore a un prodotto che ha segnato la storia della musica.</p>
     </div>
   </section>
 
