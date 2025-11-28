@@ -1,19 +1,19 @@
 <template>
 
   <!-- HERO (Apple-like, generous whitespace) -->
-  <section class="relative w-full md:h-[85vh] h-[60vh] overflow-hidden bg-black">
+  <section class="relative w-full md:h-[85vh] h-[50vh] overflow-hidden bg-black">
     <img
       src="../../assets/gibson cover pagina progetti.webp"
       alt="Gibson cover"
-      class="reveal-img absolute inset-0 w-full h-full object-cover object-center opacity-90"
+      class="reveal-img absolute inset-0 w-full h-full object-cover object-top md:object-center opacity-90"
     />
 
     <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-transparent"></div>
 
-    <div class="absolute inset-0 flex items-end justify-center md:justify-start pb-12 md:pb-20 pl-6 md:pl-20">
-      <div class="max-w-3xl text-center md:text-left px-6">
-        <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight">Gibson SG-1961</h1>
-        <p class="text-sm md:text-base text-white/70 mt-4 tracking-wide">Concept Experience — Il suono della SG-1961 trasformato in un’esperienza digitale interattiva</p>
+    <div class="absolute inset-0 flex items-center md:items-end justify-center md:justify-start pt-6 md:pb-20 pl-4 md:pl-20">
+      <div class="max-w-3xl text-center md:text-left px-4 md:px-6">
+        <h1 class="text-3xl md:text-6xl font-extrabold text-white leading-tight">Gibson SG-1961</h1>
+        <p class="text-xs md:text-sm text-white/70 mt-3 md:mt-4 tracking-wide">Concept Experience — Il suono della SG-1961 trasformato in un’esperienza digitale interattiva</p>
       </div>
     </div>
   </section>
