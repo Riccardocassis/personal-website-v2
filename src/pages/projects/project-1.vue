@@ -141,59 +141,7 @@
         </div>
       </div>
 
-      <!-- 6 -->
-      <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6">UI Dettagli</h2>
-        <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
-          <div class="px-6 md:pl-20 flex items-center">
-            <div class="reveal-text translate-y-6 will-change-transform" data-animate>
-              <h3 class="text-xl text-white font-semibold">Controlli UI</h3>
-              <p class="text-white/70 mt-4">Design dei controlli: leggibilità, accessibilità e animazioni di stato.</p>
-            </div>
-          </div>
-          <div class="w-full">
-            <div class="w-full aspect-[4/3] overflow-hidden">
-              <img src="../../assets/appchitarra.webp" alt="UI details" class="reveal-img w-full h-full object-cover" />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 7 -->
-      <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6">Performance</h2>
-        <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
-          <div class="w-full">
-            <div class="w-full aspect-[4/3] overflow-hidden">
-              <img src="../../assets/finia.webp" alt="Performance" class="reveal-img w-full h-full object-cover" />
-            </div>
-          </div>
-          <div class="px-6 md:pr-20 flex items-center">
-            <div class="reveal-text translate-y-6 will-change-transform" data-animate>
-              <h3 class="text-xl text-white font-semibold">Ottimizzazione</h3>
-              <p class="text-white/70 mt-4">Bilanciamento tra qualità visiva e prestazioni per garantire fluidità su dispositivi diversi.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 8 -->
-      <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6">Presentazione Finale</h2>
-        <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
-          <div class="px-6 md:pl-20 flex items-center">
-            <div class="reveal-text opacity-0 translate-y-6 will-change-transform" data-animate>
-              <h3 class="text-xl text-white font-semibold">Case study</h3>
-              <p class="text-white/70 mt-4">Racconto finale del progetto, scelte progettuali e risultati raggiunti.</p>
-            </div>
-          </div>
-          <div class="w-full">
-            <div class="w-full aspect-[4/3] overflow-hidden">
-              <img src="../../assets/beat.webp" alt="Presentation" class="reveal-img w-full h-full object-cover" />
-            </div>
-          </div>
-        </div>
-      </div>
+      <!-- sections 6-8 removed -->
 
     </div>
   </section>
