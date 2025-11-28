@@ -179,9 +179,10 @@ Ho combinato suoni, micro-animazioni e feedback visivi per trasformare la SG-196
   <!-- CTA minimal -->
   <section class="bg-black py-12 px-6 text-center">
     <div class="max-w-2xl mx-auto">
-      <p class="text-white/60 mb-6">Vuoi esplorare altri progetti o collaborare?</p>
+      <p class="text-white/60 mb-6">Ti è piaciuto questo progetto?
+Posso aiutarti a creare esperienze digitali su misura.</p>
       <div class="flex justify-center gap-8">
-        <a href="/projects" class="text-white font-semibold underline">Progetti</a>
+       
         <a href="/contact" class="text-blue-400 font-semibold underline">Contattami</a>
       </div>
     </div>
