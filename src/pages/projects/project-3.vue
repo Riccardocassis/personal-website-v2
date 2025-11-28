@@ -22,7 +22,10 @@
   <section class="bg-black py-20 px-6">
     <div class="max-w-3xl mx-auto text-center md:text-left">
       <h2 class="text-3xl md:text-4xl font-semibold text-white mb-6 text-center">Lo scopo del progetto</h2>
-      <p class="text-white/60 text-lg leading-relaxed">In questo progetto ho voluto ricreare un concept di landing page dedicata a uno strumento iconico come la Gibson SG-1961, capace di comunicare la sua anima rock in ogni parte dell’esperienza. L’obiettivo era trasmettere l’essenza dello strumento attraverso tutta la navigazione, aumentando awareness e coinvolgimento, e restituendo il giusto valore a un prodotto che ha segnato la storia della musica.</p>
+      <p class="text-white/60 text-lg leading-relaxed">In questo progetto web che ho realizzato all'interno del progetto Synapses della Libera accademia delle belle arti di Brescia (LABA).
+Ho realizzato una landing page che doveva essere funzionale alla giornata dell'evento.
+I requisiti che mi sono stati dati erano: rendere chiara la data degli eventi, spiegare dove si sarebbero svolti e creare uno strumento consultabile da parte degli utenti per sapere gli orari.
+Il logo e il concept artistico in questo caso era già stato deciso dalla direzione ed è stato realizzato da una mia compagna di corso..</p>
     </div>
   </section>
 
