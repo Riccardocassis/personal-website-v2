@@ -117,7 +117,7 @@
           </div>
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden">
-              <img src="../../assets/vasi.webp" alt="Interaction" class="reveal-img w-full h-full object-cover" />
+              <img src="../../assets/p1slide4.webp" alt="Interaction" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -129,7 +129,7 @@
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden">
-              <img src="../../assets/hero-riccardo.webp" alt="Sound" class="reveal-img w-full h-full object-cover" />
+              <img src="../../assets/p1slide5.webp" alt="Sound" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
           <div class="px-6 md:pr-20 flex items-center">
@@ -269,6 +269,8 @@ onMounted(() => {
       }
     })
   })
+
+  
 
   // Emphasize final video: stronger reveal
   const revealVideo = document.querySelector('.reveal-video')
