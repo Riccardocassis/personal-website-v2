@@ -68,7 +68,7 @@
 
       <!-- 1 -->
       <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Concept & Forma</h2>
+        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Concept e sviluppo dei Wireframes</h2>
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden">
@@ -77,8 +77,8 @@
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Linea e silhouette</h3>
-              <p class="text-white/70 mt-4">Analizziamo la forma classica della SG-1961 per adattarla a un'interfaccia visiva che enfatizzi proporzioni e equilibrio.</p>
+              <h3 class="text-xl text-white font-semibold">Stile estetico</h3>
+              <p class="text-white/70 mt-4">Sono partito analizzando le parti che costituivano questo prodotto come materiali e finiture e il sentiment che ha suscitato nella cultura Rock e negli appassionati. Successivamente ho ripreso questi elementi e li ho reinterpretati a modo mio per creare il giusto mix tra passato presente e futuro costruendo un'esperienza immersiva mirata.</p>
             </div>
           </div>
         </div>
@@ -86,12 +86,15 @@
 
       <!-- 2 -->
       <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Materiali & Texture</h2>
+        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Scelta della piattaforma</h2>
         <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
           <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Finiture</h3>
-              <p class="text-white/70 mt-4">Lavoriamo sulle texture legno e vernici per ottenere profondità e riflesso caratteristico della chitarra.</p>
+              <h3 class="text-xl text-white font-semibold">Controllo totale sul layout, performance solide, zero compromessi sull’esperienza.</h3>
+              <p class="text-white/70 mt-4">Webflow è stata la scelta ideale per un concept che vive di dettaglio visivo e micro–interazioni.
+Mi ha permesso di tradurre le scelte di design con precisione millimetrica, mantenendo il pieno controllo su griglie, transizioni e responsive senza dipendere da plugin esterni.
+
+Inoltre, il motore nativo consente un output pulito e performante, perfetto per dare al progetto il ritmo visivo che meritava: fluido, leggero e fedele al design originale.</p>
             </div>
           </div>
           <div class="w-full">
@@ -113,8 +116,9 @@
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Modellazione</h3>
-              <p class="text-white/70 mt-4">Costruzione del modello 3D con attenzione a dettagli come manopole, pickup e venature del legno.</p>
+              <h3 class="text-xl text-white font-semibold">Spline — 3D leggero, interattivo e integrabile nel web.</h3>
+              <p class="text-white/70 mt-4">Ho scelto Spline per modellare la SG-1961 perché permette un 3D credibile e facilmente integrabile nel web.
+Grazie all’embed nativo, il modello si inserisce in Webflow senza codice complesso, garantendo performance e la possibilità di aggiornare materiali e dettagli in modo immediato.</p>
             </div>
           </div>
         </div>
@@ -122,12 +126,15 @@
 
       <!-- 4 -->
       <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Interazione</h2>
+        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Sviluppo dell'app</h2>
         <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
           <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Micro-interazioni</h3>
-              <p class="text-white/70 mt-4">Animazioni micro che rispondono all'input musicale e alle azioni dell'utente.</p>
+              <h3 class="text-xl text-white font-semibold">Ho scelto il codice come alleato e lo Sviluppo di una app interattiva per aumentare l'immersività e migliorare l'esperienza utente.</h3>
+
+              <p class="text-white/70 mt-4">Con Visual Studio Code ho realizzato una web-app che permette di suonare la SG-1961 direttamente dal browser.
+Input, animazioni e suoni lavorano insieme per creare un’interazione musicale semplice e immersiva.
+L’app è stata poi caricata su GitHub Pages e integrata in Webflow.</p>
             </div>
           </div>
           <div class="w-full">
@@ -140,7 +147,7 @@
 
       <!-- 5 -->
       <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Sound Design</h2>
+        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Interfaccia </h2>
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden">
@@ -149,8 +156,10 @@
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Timbro e feedback</h3>
-              <p class="text-white/70 mt-4">Integrazione dei campioni sonori con feedback visivo per un'esperienza coerente.</p>
+              <h3 class="text-xl text-white font-semibold">Ho pensato a tre modalità pensate per ridurre la curva d’apprendimento.</h3>
+              <p class="text-white/70 mt-4">La struttura dell’app l’ho basata su tre modalità di gioco, ognuna pensata per rendere l’esperienza musicale intuitiva fin dal primo tap.
+Ogni modalità offre un livello di complessità crescente, ma ho mantenuto un’interfaccia chiara e reattiva per permettere all’utente di sperimentare senza sentirsi sopraffatto.
+Ho combinato suoni, micro-animazioni e feedback visivi per trasformare la SG-1961 in un’esperienza interattiva accessibile anche a chi non ha mai suonato una chitarra.</p>
             </div>
           </div>
         </div>
