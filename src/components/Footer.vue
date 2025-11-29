@@ -1,5 +1,7 @@
 <template>
   <footer class="w-full bg-[#05060a] text-white py-12 relative z-10">
+    <!-- Small top-strip to hide any seam between sections (covers a few px) -->
+    <div class="absolute top-0 left-0 right-0 h-8 md:h-6 bg-[#05060a] pointer-events-none" aria-hidden="true"></div>
     <div class="max-w-6xl mx-auto px-6">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
 

@@ -16,8 +16,8 @@
               <img
                 src="../assets/hero-riccardo.webp"
                 alt="Portrait of Riccardo Cassis"
-                class="w-full h-auto object-cover rounded-3xl brightness-[1.2] contrast-105 opacity-95 transform scale-105 md:scale-[1.3] relative z-30"
-                style="mask-image: radial-gradient(circle at 68% 50%, rgba(0,0,0,0.95) 45%, rgba(0,0,0,0.6) 65%, transparent 100%); -webkit-mask-image: radial-gradient(circle at 68% 50%, rgba(0,0,0,0.95) 45%, rgba(0,0,0,0.6) 65%, transparent 100%);"
+                class="w-full h-auto object-cover rounded-3xl transform scale-[2.5] md:scale-[3.6] relative z-30 opacity-100"
+                style="opacity:1; filter: brightness(0.82) contrast(1.05) saturate(1.0); mask-image: radial-gradient(circle at 68% 50%, rgba(0,0,0,0.95) 45%, rgba(0,0,0,0.6) 65%, transparent 100%); -webkit-mask-image: radial-gradient(circle at 68% 50%, rgba(0,0,0,0.95) 45%, rgba(0,0,0,0.6) 65%, transparent 100%);"
               />
             </div>
           </div>
