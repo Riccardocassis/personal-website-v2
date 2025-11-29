@@ -48,15 +48,15 @@ Il logo e il concept artistico in questo caso era già stato deciso dalla direzi
       <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-start text-center">
         <div class="px-6">
           <h3 class="text-xl font-semibold text-white"> Direzione Creativa & Concept</h3>
-          <p class="text-white/60 mt-3">Ho definito il concept visivo e il tono dell’esperienza partendo dall’identità della SG-1961: rock, materica e iconica. Ogni scelta:colori, tipografia, ritmo visivo, è calibrata per trasmettere la personalità dello strumento in un ambiente digitale.</p>
+          <p class="text-white/60 mt-3">La direzione creativa generale come gli asset che mi sono stati forniti sono stati preparati da dei miei compagni di corso e dalla LABA. Io in questa fase mi sono occupato di rendere fruibile i contenuti e a sviluppare il codice per pubblicare la landing page e renderla operativa.</p>
         </div>
         <div class="px-6">
-          <h3 class="text-xl font-semibold text-white">3D e interazioni</h3>
-          <p class="text-white/60 mt-3">Ho realizzato modelli 3D e micro-interazioni che rispondono al suono e all’input dell’utente, trasformando la chitarra in un elemento interattivo. Il 3D non è decorazione, ma parte del linguaggio narrativo: rende la SG “suonabile” anche sul web.</p>
+          <h3 class="text-xl font-semibold text-white">Interazioni</h3>
+          <p class="text-white/60 mt-3">Ho voluto mettere delle leggere interazioni come uno zoom al passaggio del mouse sulla data per darle enfasi e creare dei drop down menù con le informazioni degli eventi relativi per facilitarne la consultazione da parte degli utenti.</p>
         </div>
         <div class="px-6">
-          <h3 class="text-xl font-semibold text-white">Sviluppo Web & Integrazione</h3>
-          <p class="text-white/60 mt-3">Ho sviluppato le funzionalità interattive tramite codice e le ho integrate in Webflow grazie a GitHub Pages e componenti custom. L’obiettivo era mantenere fluidità, performance e totale coerenza visiva tra design, interazioni e contenuti.</p>
+          <h3 class="text-xl font-semibold text-white">Sviluppo Web</h3>
+          <p class="text-white/60 mt-3">La pagina è stata creata tramite codice in Visual Studio Code e successivamente pubblicata su un dominio dedicato fornitomi dal reparto It della LABA.</p>
         </div>
       </div>
     </div>
