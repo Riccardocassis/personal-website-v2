@@ -1,19 +1,19 @@
 <template>
 
+<div class="min-h-screen" style="background: radial-gradient(circle at 12% 20%, rgba(255,0,150,0.04) 0 12%, rgba(0,122,255,0.03) 12% 30%, rgba(255,140,0,0.025) 30% 50%, rgba(0,0,0,1) 50% 100%), #000;">
+
   <!-- HERO (Apple-like, generous whitespace) -->
-  <section class="relative w-full md:h-[85vh] h-[50vh] overflow-hidden bg-black">
-    <img
-      src="../../assets/gibson cover pagina progetti.webp"
-      alt="Gibson cover"
-      class="reveal-img absolute inset-0 w-full h-full object-cover object-top md:object-center opacity-90"
-    />
+  <section class="relative w-full md:h-[85vh] h-[50vh] overflow-hidden">
+    <!-- Background image placed above the page gradient; slight opacity to soften contrast -->
+    <img src="../../assets/landingsynapses.webp" alt="Landingsynapses" class="absolute inset-0 w-full h-full object-cover object-top md:object-center opacity-90" />
 
-    <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-transparent"></div>
+    <!-- Dark overlay to increase contrast for white text -->
+    <div class="absolute inset-0" style="background-color: rgba(0,0,0,0.55)"></div>
 
-    <div class="absolute inset-0 flex items-center md:items-end justify-center md:justify-start pt-6 md:pb-20 pl-4 md:pl-20">
+    <div class="absolute inset-0 flex items-center md:items-end justify-center md:justify-start pt-6 md:pb-20 pl-4 md:pl-20 z-10">
       <div class="max-w-3xl text-center md:text-left px-4 md:px-6">
         <h1 class="text-3xl md:text-6xl font-extrabold text-white leading-tight">Synapses landing Page</h1>
-        <p class="text-xs md:text-sm text-white/70 mt-3 md:mt-4 tracking-wide">Concept Experience — Il suono della SG-1961 trasformato in un’esperienza digitale interattiva</p>
+        <p class="text-xs md:text-sm text-white/70 mt-3 md:mt-4 tracking-wide">Sviluppo della landing page informativa per l'evento Synapses della Libera Accademia delle Belle Arti di Brescia (LABA)</p>
       </div>
     </div>
   </section>
@@ -121,6 +121,7 @@ Posso aiutarti a creare esperienze digitali su misura.</p>
     </video>
   </div>
 
+</div>
 
 </template>
 
