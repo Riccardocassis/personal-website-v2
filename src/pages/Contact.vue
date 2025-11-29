@@ -18,12 +18,11 @@
         </form>
       </div>
     </section>
-    <Footer />
   </div>
 </template>
 <script setup>
 import { ref } from 'vue'
-import Footer from '../components/Footer.vue'
+// Footer removed from this page per request
 
 const cardRef = ref(null)
 const cardStyle = ref('')
