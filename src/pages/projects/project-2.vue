@@ -76,7 +76,7 @@ Ho curato performance, responsive design, SEO on-page e micro-miglioramenti che 
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden">
-              <img src="../../assets/p1slide1.webp" alt="Concept" class="reveal-img w-full h-full object-cover" />
+              <img src="../../assets/img2sizexl.webp" alt="Concept" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
@@ -102,7 +102,7 @@ I colori sono stati scelti per migliorare leggibilità, contrasto e coerenza vis
           </div>
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden">
-              <img src="../../assets/p1slide2.webp" alt="Materials" class="reveal-img w-full h-full object-cover" />
+              <img src="../../assets/colorpalettesizexl.webp" alt="Materials" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -114,7 +114,7 @@ I colori sono stati scelti per migliorare leggibilità, contrasto e coerenza vis
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden">
-              <img src="../../assets/p1slide3.webp" alt="3D" class="reveal-img w-full h-full object-cover" />
+              <img src="../../assets/fontsizexl.webp" alt="3D" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
@@ -141,14 +141,14 @@ La nuova struttura facilita l’accesso alle informazioni principali e riduce il
           </div>
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden">
-              <img src="../../assets/p1slide4.webp" alt="Interaction" class="reveal-img w-full h-full object-cover" />
+              <img src="../../assets/cardsize.webp" alt="Interaction" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
         </div>
       </div>
 
       <!-- 5 (replaced) -->
-      <div class="w-full">
+      <div class="w-full mb-12 md:mb-40">
         <div class="px-6 md:pl-20">
           <div class="max-w-3xl mx-auto text-center">
             <h2 class="text-2xl md:text-3xl font-semibold text-white mb-6">SEO & Content Strategy</h2>
