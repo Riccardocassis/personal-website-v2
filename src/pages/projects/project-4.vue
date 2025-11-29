@@ -5,12 +5,12 @@
     <img
       src="../../assets/fillbohero.webp"
       alt="fillbohero"
-      class="reveal-img absolute inset-0 w-full h-full object-cover object-top md:object-center opacity-90"
+      class="reveal-img absolute inset-0 w-full h-full object-cover object-top md:object-center"
     />
 
-    <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-transparent"></div>
+    <!-- overlay removed so hero image is fully visible -->
 
-    <div class="absolute inset-0 flex items-center md:items-end justify-center md:justify-start pt-6 md:pb-20 pl-4 md:pl-20">
+    <div class="absolute inset-0 flex items-center md:items-end justify-center md:justify-start pt-6 md:pb-20 pl-4 md:pl-20 z-20">
       <div class="max-w-3xl text-center md:text-left px-4 md:px-6">
         <h1 class="text-3xl md:text-6xl font-extrabold text-white leading-tight">Fillbo concept app</h1>
         <p class="text-xs md:text-sm text-white/70 mt-3 md:mt-4 tracking-wide">Un prototipo mobile progettato per aiutare supermercati e distributori a tracciare prodotti in scadenza e donare più facilmente alimenti a CAUTO.</p>
