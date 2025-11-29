@@ -74,7 +74,7 @@ Il risultato è un prototipo che semplifica il lavoro quotidiano, riduce errori 
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden">
-              <img src="../../assets/p1slide1.webp" alt="Concept" class="reveal-img w-full h-full object-cover" />
+              <img src="../../assets/fillbos1.webp" alt="Concept" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
