@@ -2,8 +2,8 @@
   <!-- HERO (Apple-like, generous whitespace) -->
   <section class="relative w-full md:h-[85vh] h-[50vh] overflow-hidden bg-black">
     <img
-      src="../../assets/gibson cover pagina progetti.webp"
-      alt="Gibson cover"
+      src="../../assets/fumettohero.webp"
+      alt="fumettohero"
       class="reveal-img absolute inset-0 w-full h-full object-cover object-top md:object-center opacity-90"
     />
 
