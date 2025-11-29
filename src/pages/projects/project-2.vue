@@ -72,7 +72,7 @@ Ho curato performance, responsive design, SEO on-page e micro-miglioramenti che 
 
       <!-- 1 -->
       <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Concept e sviluppo dei Wireframes</h2>
+        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Situazione iniziale</h2>
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden">
@@ -81,8 +81,9 @@ Ho curato performance, responsive design, SEO on-page e micro-miglioramenti che 
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Stile estetico</h3>
-              <p class="text-white/70 mt-4">Sono partito analizzando le parti che costituivano questo prodotto come materiali e finiture e il sentiment che ha suscitato nella cultura Rock e negli appassionati. Successivamente ho ripreso questi elementi e li ho reinterpretati a modo mio per creare il giusto mix tra passato presente e futuro costruendo un'esperienza immersiva mirata.</p>
+              <h3 class="text-xl text-white font-semibold">Analisi del sito</h3>
+              <p class="text-white/70 mt-4">Ho analizzato il sito esistente per individuare punti deboli in struttura, UI e contenuti.
+Le principali criticità erano la scarsa leggibilità, la distribuzione poco chiara delle informazioni e un’identità visiva poco allineata alla professionalità dell’azienda.</p>
             </div>
           </div>
         </div>
@@ -90,15 +91,13 @@ Ho curato performance, responsive design, SEO on-page e micro-miglioramenti che 
 
       <!-- 2 -->
       <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Scelta della piattaforma</h2>
+        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Branding & Palette Colori</h2>
         <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
           <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Controllo totale sul layout, performance solide, zero compromessi sull’esperienza.</h3>
-              <p class="text-white/70 mt-4">Webflow è stata la scelta ideale per un concept che vive di dettaglio visivo e micro–interazioni.
-Mi ha permesso di tradurre le scelte di design con precisione millimetrica, mantenendo il pieno controllo su griglie, transizioni e responsive senza dipendere da plugin esterni.
-
-Inoltre, il motore nativo consente un output pulito e performante, perfetto per dare al progetto il ritmo visivo che meritava: fluido, leggero e fedele al design originale.</p>
+              <h3 class="text-xl text-white font-semibold">Nuova direzione visiva</h3>
+              <p class="text-white/70 mt-4">Ho definito una palette aggiornata per dare al sito un tono più professionale e contemporaneo.
+I colori sono stati scelti per migliorare leggibilità, contrasto e coerenza visiva tra le diverse sezioni.</p>
             </div>
           </div>
           <div class="w-full">
@@ -111,7 +110,7 @@ Inoltre, il motore nativo consente un output pulito e performante, perfetto per 
 
       <!-- 3 -->
       <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">3D Modeling</h2>
+        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Tipografia</h2>
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden">
@@ -120,9 +119,9 @@ Inoltre, il motore nativo consente un output pulito e performante, perfetto per 
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Spline — 3D leggero, interattivo e integrabile nel web.</h3>
-              <p class="text-white/70 mt-4">Ho scelto Spline per modellare la SG-1961 perché permette un 3D credibile e facilmente integrabile nel web.
-Grazie all’embed nativo, il modello si inserisce in Webflow senza codice complesso, garantendo performance e la possibilità di aggiornare materiali e dettagli in modo immediato.</p>
+              <h3 class="text-xl text-white font-semibold">Un font semplice ma efficace</h3>
+              <p class="text-white/70 mt-4">In accordo con il cliente abbiamo scelto Inter come font: per la sua chiarezza, la leggibilità eccellente e la versatilità dei suoi pesi.
+La gerarchia tipografica costruita con Inter rende i contenuti più immediati, migliora la scansione visiva e garantisce un’esperienza coerente su ogni dispositivo.</p>
             </div>
           </div>
         </div>
@@ -130,15 +129,14 @@ Grazie all’embed nativo, il modello si inserisce in Webflow senza codice compl
 
       <!-- 4 -->
       <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Sviluppo dell'app</h2>
+        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Architettura del sito</h2>
         <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
           <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Ho scelto il codice come alleato e lo Sviluppo di una app interattiva per aumentare l'immersività e migliorare l'esperienza utente.</h3>
+              <h3 class="text-xl text-white font-semibold">Struttura & UX semplificata.</h3>
 
-              <p class="text-white/70 mt-4">Con Visual Studio Code ho realizzato una web-app che permette di suonare la SG-1961 direttamente dal browser.
-Input, animazioni e suoni lavorano insieme per creare un’interazione musicale semplice e immersiva.
-L’app è stata poi caricata su GitHub Pages e integrata in Webflow.</p>
+              <p class="text-white/70 mt-4">Ho riorganizzato contenuti e percorsi di navigazione per renderli più chiari e immediati.
+La nuova struttura facilita l’accesso alle informazioni principali e riduce il carico cognitivo dell’utente.</p>
             </div>
           </div>
           <div class="w-full">
@@ -151,7 +149,7 @@ L’app è stata poi caricata su GitHub Pages e integrata in Webflow.</p>
 
       <!-- 5 -->
       <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Interfaccia </h2>
+        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">SEO & Performance </h2>
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden">
