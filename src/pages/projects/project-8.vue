@@ -12,7 +12,7 @@
     <div class="absolute inset-0 flex items-center md:items-end justify-center md:justify-start pt-6 md:pb-20 pl-4 md:pl-20">
       <div class="max-w-3xl text-center md:text-left px-4 md:px-6">
         <h1 class="text-3xl md:text-6xl font-extrabold text-white leading-tight">Roberto piadine</h1>
-        <p class="text-xs md:text-sm text-white/70 mt-3 md:mt-4 tracking-wide">Concept Experience — Il suono della SG-1961 trasformato in un’esperienza digitale interattiva</p>
+        <p class="text-xs md:text-sm text-white/70 mt-3 md:mt-4 tracking-wide">Art direction proposal | un brand di piadine con un’identità nuova, coraggiosa e irriverente.</p>
       </div>
     </div>
   </section>
@@ -21,7 +21,10 @@
   <section class="bg-black py-20 px-6">
     <div class="max-w-3xl mx-auto text-center md:text-left">
       <h2 class="text-3xl md:text-4xl font-semibold text-white mb-6 text-center">Lo scopo del progetto</h2>
-      <p class="text-white/60 text-lg leading-relaxed">In questo progetto ho voluto ricreare un concept di landing page dedicata a uno strumento iconico come la Gibson SG-1961, capace di comunicare la sua anima rock in ogni parte dell’esperienza. L’obiettivo era trasmettere l’essenza dello strumento attraverso tutta la navigazione, aumentando awareness e coinvolgimento, e restituendo il giusto valore a un prodotto che ha segnato la storia della musica.</p>
+      <p class="text-white/60 text-lg leading-relaxed">In questo concept ho deciso di prendere un classico brand di piadine e conferirgli un’identità nuova: coraggiosa, irriverente e impossibile da ignorare.
+Attorno ad esso ho costruito un immaginario visivo ribelle prendendo come riferimento il "ribelli per eccezione" ovvero gli hippy, ribelli ironici, colorati e iconici.
+Ho scelto di creare un ponte tra passato e presente con i ribelli di un tempo e un attitude che è ancora presente in ciascuno di noi.
+Ho optato per un linguaggio diretto e volutamente sopra le righe per emergere in un mercato saturo e indistinguibile, conferendo ad un prodotto semplice un aura mistica e accattivante.</p>
     </div>
   </section>
 
@@ -44,15 +47,18 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-start text-center">
         <div class="px-6">
           <h3 class="text-xl font-semibold text-white"> Direzione Creativa & Concept</h3>
-          <p class="text-white/60 mt-3">Ho definito il concept visivo e il tono dell’esperienza partendo dall’identità della SG-1961: rock, materica e iconica. Ogni scelta:colori, tipografia, ritmo visivo, è calibrata per trasmettere la personalità dello strumento in un ambiente digitale.</p>
+          <p class="text-white/60 mt-3">Ho definito un’identità visiva che rompe gli schemi del food tradizionale e parla a un pubblico che vuole distinguersi. Palette psichedeliche, tono provocatorio e immaginario hippy diventano gli strumenti narrativi del brand.</p>
         </div>
         <div class="px-6">
-          <h3 class="text-xl font-semibold text-white">3D e interazioni</h3>
-          <p class="text-white/60 mt-3">Ho realizzato modelli 3D e micro-interazioni che rispondono al suono e all’input dell’utente, trasformando la chitarra in un elemento interattivo. Il 3D non è decorazione, ma parte del linguaggio narrativo: rende la SG “suonabile” anche sul web.</p>
+          <h3 class="text-xl font-semibold text-white">Sistema visivo & Art direction</h3>
+          <p class="text-white/60 mt-3">Ho costruito un linguaggio visivo fatto di tipografie espressive, pattern audaci e una fotografia diretta, spontanea e “viva”.
+Ogni elemento è pensato per creare un’identità che vibra: posters, composizioni pop, contrasti saturi e un mood energico che supporta il payoff “Don’t ask, act.”</p>
         </div>
         <div class="px-6">
-          <h3 class="text-xl font-semibold text-white">Sviluppo Web & Integrazione</h3>
-          <p class="text-white/60 mt-3">Ho sviluppato le funzionalità interattive tramite codice e le ho integrate in Webflow grazie a GitHub Pages e componenti custom. L’obiettivo era mantenere fluidità, performance e totale coerenza visiva tra design, interazioni e contenuti.</p>
+          <h3 class="text-xl font-semibold text-white">Branding & Applicazioni</h3>
+          <p class="text-white/60 mt-3">Ho ridisegnato il logo, sviluppato il packaging, creato gli OOH e i contenuti social.
+L’obiettivo era uno: costruire un sistema coerente, riconoscibile e scalabile.
+Il risultato è un brand che funziona in ogni formato: dallo scaffale alla strada, fino ai social.</p>
         </div>
       </div>
     </div>
@@ -67,7 +73,7 @@
 
       <!-- 1 -->
       <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Concept e sviluppo dei Wireframes</h2>
+        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Logo e Identità</h2>
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden">
@@ -76,8 +82,8 @@
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Stile estetico</h3>
-              <p class="text-white/70 mt-4">Sono partito analizzando le parti che costituivano questo prodotto come materiali e finiture e il sentiment che ha suscitato nella cultura Rock e negli appassionati. Successivamente ho ripreso questi elementi e li ho reinterpretati a modo mio per creare il giusto mix tra passato presente e futuro costruendo un'esperienza immersiva mirata.</p>
+              <h3 class="text-xl text-white font-semibold">Ribelli dalle fondamenta</h3>
+              <p class="text-white/70 mt-4">Ho scelto di partire in questo concept rivisitando il logo, mi sono avvalso del font Losta Bonita per richiamare il tema musicale e lo stile degli anni sessanta e settanta tipico delle cover dei vinili.</p>
             </div>
           </div>
         </div>
@@ -85,15 +91,12 @@
 
       <!-- 2 -->
       <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Scelta della piattaforma</h2>
+        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Palette e Tipografia</h2>
         <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
           <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Controllo totale sul layout, performance solide, zero compromessi sull’esperienza.</h3>
-              <p class="text-white/70 mt-4">Webflow è stata la scelta ideale per un concept che vive di dettaglio visivo e micro–interazioni.
-Mi ha permesso di tradurre le scelte di design con precisione millimetrica, mantenendo il pieno controllo su griglie, transizioni e responsive senza dipendere da plugin esterni.
-
-Inoltre, il motore nativo consente un output pulito e performante, perfetto per dare al progetto il ritmo visivo che meritava: fluido, leggero e fedele al design originale.</p>
+              <h3 class="text-xl text-white font-semibold">Colori psichedelici, tipografia libera.</h3>
+              <p class="text-white/70 mt-4">La scelta della palette cromatica si ispira ai colori vivaci e saturi tipici dell’epoca psichedelica, coniugati comunque in chiave food e quindi senza una iperbole stilistica per non cadere nella banalità. Ho scelto inoltre di far dialogare un font energico come Losta Bonita con uno più pettinato e chiaro come l'Inter crendo il giusto mix volto a garantire la leggibilità</p>
             </div>
           </div>
           <div class="w-full">
@@ -106,7 +109,7 @@ Inoltre, il motore nativo consente un output pulito e performante, perfetto per 
 
       <!-- 3 -->
       <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">3D Modeling</h2>
+        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Photography Direction</h2>
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden">
@@ -115,9 +118,9 @@ Inoltre, il motore nativo consente un output pulito e performante, perfetto per 
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Spline — 3D leggero, interattivo e integrabile nel web.</h3>
-              <p class="text-white/70 mt-4">Ho scelto Spline per modellare la SG-1961 perché permette un 3D credibile e facilmente integrabile nel web.
-Grazie all’embed nativo, il modello si inserisce in Webflow senza codice complesso, garantendo performance e la possibilità di aggiornare materiali e dettagli in modo immediato.</p>
+              <h3 class="text-xl text-white font-semibold">Fotografia spontanea e imperfetta (nel modo giusto).</h3>
+              <p class="text-white/70 mt-4">Ho scelto una fotografia che valorizza corpi reali, situazioni quotidiane e un’estetica volutamente “raw”.
+Cibo e persone convivono nella stessa atmosfera: colori intensi, complicità e uno stile diretto che rompe con la classica food photography patinata.</p>
             </div>
           </div>
         </div>
@@ -125,15 +128,14 @@ Grazie all’embed nativo, il modello si inserisce in Webflow senza codice compl
 
       <!-- 4 -->
       <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Sviluppo dell'app</h2>
+        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Packaging</h2>
         <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
           <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Ho scelto il codice come alleato e lo Sviluppo di una app interattiva per aumentare l'immersività e migliorare l'esperienza utente.</h3>
+              <h3 class="text-xl text-white font-semibold">Un Packaging che si vede anche da lontano, ti chiama senza guardarti in grado di comunicarel’essenza del brand.</h3>
 
-              <p class="text-white/70 mt-4">Con Visual Studio Code ho realizzato una web-app che permette di suonare la SG-1961 direttamente dal browser.
-Input, animazioni e suoni lavorano insieme per creare un’interazione musicale semplice e immersiva.
-L’app è stata poi caricata su GitHub Pages e integrata in Webflow.</p>
+              <p class="text-white/70 mt-4">Le confezioni sono pensate per emergere dallo scaffale: colori shock che variano in base al prodotto, pattern dichiarati e messaggi diretti.
+Ogni pack è un manifesto del brand, non solo un contenitore.</p>
             </div>
           </div>
           <div class="w-full">
@@ -146,7 +148,7 @@ L’app è stata poi caricata su GitHub Pages e integrata in Webflow.</p>
 
       <!-- 5 -->
       <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Interfaccia </h2>
+        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Campagne</h2>
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden">
@@ -155,16 +157,52 @@ L’app è stata poi caricata su GitHub Pages e integrata in Webflow.</p>
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Ho pensato a tre modalità pensate per ridurre la curva d’apprendimento.</h3>
-              <p class="text-white/70 mt-4">La struttura dell’app l’ho basata su tre modalità di gioco, ognuna pensata per rendere l’esperienza musicale intuitiva fin dal primo tap.
-Ogni modalità offre un livello di complessità crescente, ma ho mantenuto un’interfaccia chiara e reattiva per permettere all’utente di sperimentare senza sentirsi sopraffatto.
-Ho combinato suoni, micro-animazioni e feedback visivi per trasformare la SG-1961 in un’esperienza interattiva accessibile anche a chi non ha mai suonato una chitarra.</p>
+              <h3 class="text-xl text-white font-semibold">Uno stile comunicativo senza filtri.</h3>
+              <p class="text-white/70 mt-4">Poster irriverenti, contrasti saturi e messaggi brevi.
+Ho progettato una serie di OOH che incarnano l’archetipo ribelle: provocatori, pop, immediati e divertenti.
+Sono pensati per catturare l’attenzione prima ancora che il pubblico capisca di cosa si tratta.</p>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- sections 6-8 removed -->
+      <!-- 6: Eventi e attivazioni -->
+      <div class="w-full">
+        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Contenuti social</h2>
+        <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
+          <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start">
+            <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
+              <h3 class="text-xl text-white font-semibold">Un tono di voce che colpisce e diverte</h3>
+              <p class="text-white/70 mt-4">Ho sviluppato i contenuti social amplificandol’identità del brand caratterizzandoli conironia, spontaneità e un linguaggio grafico che non ha paura di esagerare (superando forse i confini del politicamente corretto).
+L’obiettivo cardine è stato quello di puntare alla creazione di una community attiva e che si rispecchia nel brand, non un semplice numero di follower.</p>
+            </div>
+          </div>
+          <div class="w-full">
+            <div class="w-full aspect-[4/3] overflow-hidden">
+              <img src="../../assets/p1slide6.webp" alt="Eventi" class="reveal-img w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7: Store & Retail -->
+      <div class="w-full">
+        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Sito web e touchpoint digitali</h2>
+        <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
+          <div class="w-full">
+            <div class="w-full aspect-[4/3] overflow-hidden">
+              <img src="../../assets/p1slide7.webp" alt="Sito web" class="reveal-img w-full h-full object-cover" />
+            </div>
+          </div>
+          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
+            <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
+              <h3 class="text-xl text-white font-semibold">Un’esperienza digitale coerente</h3>
+              <p class="text-white/70 mt-4">L’interfaccia segue la stessa direzione ribelle del brand: colori forti, tipografia espressiva e una navigazione veloce.
+La UI accoglie l’utente con la stessa energia degli OOH e del packaging.</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
     </div>
   </section>
