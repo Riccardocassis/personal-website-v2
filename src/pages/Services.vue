@@ -1,12 +1,11 @@
 <template>
   <section class="max-w-6xl mx-auto px-4 py-20 text-white">
-    <header class="mb-10 px-2">
-      <h2 class="text-3xl md:text-4xl font-semibold">Services</h2>
-      <p class="text-white/70 mt-2 text-sm">Strategia, design e sviluppo per prodotti digitali eleganti.</p>
+    <header class="mb-4 px-2">
+      <h1 class="text-3xl md:text-6xl font-extrabold text-white leading-tight">Services</h1>
     </header>
 
     <!-- Symmetric 2x2 icon block -->
-    <div class="icons-2x2 mx-auto mb-8">
+    <div class="icons-2x2 mx-auto mb-4">
       <div class="grid grid-cols-2 gap-4 w-max mx-auto">
         <div class="w-6 h-6 rounded-full bg-white/6"></div>
         <div class="w-6 h-6 rounded-full bg-white/6"></div>
