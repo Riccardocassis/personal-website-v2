@@ -160,6 +160,42 @@ Per la comunicazione ho utilizzato Work Sans: accessibile, leggibile e neutra, i
       </div>
 
       <!-- sections 6-8 removed -->
+      
+        <!-- 6: la mappa -->
+        <div class="w-full">
+          <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">La mappa</h2>
+          <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
+            <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start">
+              <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
+                <h3 class="text-xl text-white font-semibold">Tre macro aree suddivise in tasselli che compongono un puzzle organico da visitare</h3>
+                <p class="text-white/70 mt-4">La nuova mappa suddivide il giardino in tre macro-zone e integra percorsi e i punti d’interesse artistici e botanici.</p>
+              </div>
+            </div>
+            <div class="w-full">
+              <div class="w-full aspect-[4/3] overflow-hidden">
+                <img src="../../assets/p1slide6.webp" alt="La mappa" class="reveal-img w-full h-full object-cover" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7: Materiali e applicazioni -->
+        <div class="w-full">
+          <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Merchandising</h2>
+          <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
+            <div class="w-full">
+              <div class="w-full aspect-[4/3] overflow-hidden">
+                <img src="../../assets/p1slide7.webp" alt="Materiali" class="reveal-img w-full h-full object-cover" />
+              </div>
+            </div>
+            <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
+              <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
+                <h3 class="text-xl text-white font-semibold">Indossare il brand è farsi promotori di questo posto</h3>
+                <p class="text-white/70 mt-4">Poster, brochure, biglietti, gadget e materiali per eventi seguono il sistema visivo stagionale, creando coerenza tra fisico e digitale.</p>
+              </div>
+            </div>
+          </div>
+        </div>
 
     </div>
   </section>
