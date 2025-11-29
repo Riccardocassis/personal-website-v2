@@ -3,7 +3,8 @@
   <!-- HERO (Apple-like, generous whitespace) -->
   <section class="relative w-full md:h-[85vh] h-[50vh] overflow-hidden bg-black">
     <img
-      src="../../assets/gibson cover pagina progetti.webp"
+      src="../../assets/coversizexl.webp
+      "
       alt="Gibson cover"
       class="reveal-img absolute inset-0 w-full h-full object-cover object-top md:object-center opacity-90"
     />
@@ -22,7 +23,7 @@
   <section class="bg-black py-20 px-6">
     <div class="max-w-3xl mx-auto text-center md:text-left">
       <h2 class="text-3xl md:text-4xl font-semibold text-white mb-6 text-center">Lo scopo del progetto</h2>
-      <p class="text-white/60 text-lg leading-relaxed">In questo progetto ho voluto ricreare un concept di landing page dedicata a uno strumento iconico come la Gibson SG-1961, capace di comunicare la sua anima rock in ogni parte dell’esperienza. L’obiettivo era trasmettere l’essenza dello strumento attraverso tutta la navigazione, aumentando awareness e coinvolgimento, e restituendo il giusto valore a un prodotto che ha segnato la storia della musica.</p>
+      <p class="text-white/60 text-lg leading-relaxed">In questo progetto ho ricostruito l’intera esperienza digitale di Sizexl, riorganizzando contenuti, navigazione e interfaccia visiva. L’obiettivo era rendere il sito più chiaro, credibile e coerente con la qualità dei servizi offerti, utilizzando strumenti già in uso dall’azienda e ottimizzando ogni pagina per una comunicazione più efficace.</p>
     </div>
   </section>
 
@@ -32,7 +33,7 @@
       <h3 class="text-center text-white/70 mb-6">preview della pagina</h3>
       <div class="relative w-full aspect-[16/9] max-h-[65vh] mx-auto overflow-hidden rounded-2xl shadow-2xl bg-black">
         <video controls playsinline preload="metadata" class="w-full h-full object-cover">
-          <source src="https://raw.githubusercontent.com/Riccardocassis/-gibson-video/main/gb_behance.mp4" type="video/mp4" />
+          <source src="https://github.com/Riccardocassis/sizexl/raw/refs/heads/main/videosizexl.mp4" type="video/mp4" />
         </video>
       </div>
     </div>
@@ -45,15 +46,18 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-start text-center">
         <div class="px-6">
           <h3 class="text-xl font-semibold text-white"> Direzione Creativa & Concept</h3>
-          <p class="text-white/60 mt-3">Ho definito il concept visivo e il tono dell’esperienza partendo dall’identità della SG-1961: rock, materica e iconica. Ogni scelta:colori, tipografia, ritmo visivo, è calibrata per trasmettere la personalità dello strumento in un ambiente digitale.</p>
+          <p class="text-white/60 mt-3">Ho ridisegnato la struttura del sito per renderla più intuitiva, chiara e funzionale.
+L’obiettivo era migliorare la comunicazione del brand e facilitare il percorso dell’utente, ottimizzando contenuti, gerarchie e flussi di navigazione.</p>
         </div>
         <div class="px-6">
-          <h3 class="text-xl font-semibold text-white">3D e interazioni</h3>
-          <p class="text-white/60 mt-3">Ho realizzato modelli 3D e micro-interazioni che rispondono al suono e all’input dell’utente, trasformando la chitarra in un elemento interattivo. Il 3D non è decorazione, ma parte del linguaggio narrativo: rende la SG “suonabile” anche sul web.</p>
+          <h3 class="text-xl font-semibold text-white">UI Design & Rinnovamento Visivo</h3>
+          <p class="text-white/60 mt-3">Ho sviluppato un’interfaccia moderna, coerente e più leggibile, migliorando tipografia, colori e layout.
+Il redesign mantiene l’identità del brand ma la rende più professionale, credibile e adatta agli standard digitali attuali.</p>
         </div>
         <div class="px-6">
-          <h3 class="text-xl font-semibold text-white">Sviluppo Web & Integrazione</h3>
-          <p class="text-white/60 mt-3">Ho sviluppato le funzionalità interattive tramite codice e le ho integrate in Webflow grazie a GitHub Pages e componenti custom. L’obiettivo era mantenere fluidità, performance e totale coerenza visiva tra design, interazioni e contenuti.</p>
+          <h3 class="text-xl font-semibold text-white">Sviluppo Web & Ottimizzazioni</h3>
+          <p class="text-white/60 mt-3">Mi sono occupato dell’implementazione tecnica del sito, adattandomi alle specifiche della piattaforma scelta dal cliente.
+Ho curato performance, responsive design, SEO on-page e micro-miglioramenti che aumentano chiarezza, stabilità e qualità percepita dell’esperienza.</p>
         </div>
       </div>
     </div>

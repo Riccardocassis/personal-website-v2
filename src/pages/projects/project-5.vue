@@ -3,7 +3,7 @@
   <!-- HERO (Apple-like, generous whitespace) -->
   <section class="relative w-full md:h-[85vh] h-[50vh] overflow-hidden bg-black">
     <img
-      src="../../assets/gibson cover pagina progetti.webp"
+      src="../../assets/coveropsify.webp"
       alt="Gibson cover"
       class="reveal-img absolute inset-0 w-full h-full object-cover object-top md:object-center opacity-90"
     />
@@ -12,7 +12,7 @@
 
     <div class="absolute inset-0 flex items-center md:items-end justify-center md:justify-start pt-6 md:pb-20 pl-4 md:pl-20">
       <div class="max-w-3xl text-center md:text-left px-4 md:px-6">
-        <h1 class="text-3xl md:text-6xl font-extrabold text-white leading-tight">Opsify App</h1>
+        <h1 class="text-3xl md:text-6xl font-extrabold text-blue leading-tight">Opsify App</h1>
         <p class="text-xs md:text-sm text-white/70 mt-3 md:mt-4 tracking-wide">Concept Experience — Il suono della SG-1961 trasformato in un’esperienza digitale interattiva</p>
       </div>
     </div>
@@ -22,7 +22,9 @@
   <section class="bg-black py-20 px-6">
     <div class="max-w-3xl mx-auto text-center md:text-left">
       <h2 class="text-3xl md:text-4xl font-semibold text-white mb-6 text-center">Lo scopo del progetto</h2>
-      <p class="text-white/60 text-lg leading-relaxed">In questo progetto ho voluto ricreare un concept di landing page dedicata a uno strumento iconico come la Gibson SG-1961, capace di comunicare la sua anima rock in ogni parte dell’esperienza. L’obiettivo era trasmettere l’essenza dello strumento attraverso tutta la navigazione, aumentando awareness e coinvolgimento, e restituendo il giusto valore a un prodotto che ha segnato la storia della musica.</p>
+      <p class="text-white/60 text-lg leading-relaxed">Questo progetto riguarda lo sviluppo in figma e la prototipazione su protopie di una applicazione mobile, volta alla creazione e alla condivisione di scuse amichevoli tra gli utenti.
+Ho scelto di dargli il nome Opsify, perché: opsi è uno termine amichevole che si usa per chiedere scusa in modo informale, l’aggiunta “-fy” richiama il significato di trasformare qualcosa, quindi “Opsify” vuol dire rendere più semplice e naturale il modo di chiedere scusa.
+Ho scelto di utilizzare dunque un Tov amichevole ed informale nella applicazione e anche i colori che ho scelto abbinati ai font e in generale a tutta la struttura dell’interfaccia, sono volti a creare armonia all’utente.</p>
     </div>
   </section>
 
