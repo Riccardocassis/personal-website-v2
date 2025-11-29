@@ -1,5 +1,6 @@
 <template>
   <div class="min-h-screen relative flex flex-col bg-black">
+    <div class="fixed inset-0 pointer-events-none z-0" aria-hidden="true" style="background: radial-gradient(circle at 70% 50%, rgba(59,130,246,0.22), rgba(29,78,216,0.16) 28%, rgba(30,58,138,0.10) 60%);"></div>
     <section class="flex-1 relative z-20 flex flex-col justify-center items-center px-8">
       <h1 class="text-6xl font-extrabold mb-8 tracking-tight text-white text-center animate-fade-in">About me</h1>
       <div class="max-w-2xl text-white/90 text-lg leading-relaxed mb-8 text-center animate-fade-in delay-200">
@@ -15,8 +16,8 @@
       </h2>
     </section>
     <!-- Immagini fisse ai lati sopra il footer -->
-  <img src="../assets/ioartista.webp" alt="Artista" class="absolute left-0 bottom-20 w-[32vw] min-w-[180px] max-w-none object-contain opacity-80 z-0 pointer-events-none" />
-  <img src="../assets/ionerd.webp" alt="Nerd" class="absolute right-0 bottom-20 w-[32vw] min-w-[180px] max-w-none object-contain opacity-80 z-0 pointer-events-none" />
+  <img src="../assets/ioartista.webp" alt="Artista" class="absolute left-0 bottom-0 w-[32vw] min-w-[180px] max-w-none object-contain opacity-80 z-0 pointer-events-none" />
+  <img src="../assets/ionerd.webp" alt="Nerd" class="absolute right-0 bottom-0 w-[32vw] min-w-[180px] max-w-none object-contain opacity-80 z-0 pointer-events-none" />
   </div>
 </template>
 <script setup>
