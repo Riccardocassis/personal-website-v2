@@ -70,41 +70,30 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
-import gsap from 'gsap'
-
-// Entrance animation on load + hover animation with GSAP
-onMounted(() => {
-  const cards = gsap.utils.toArray('.service-card')
-
-  // Entrance: appear when the page loads (staggered)
-  gsap.from(cards, {
-    y: 28,
-    opacity: 0,
-    stagger: 0.12,
-    duration: 0.7,
-    ease: 'power2.out'
-  })
-
-  // Hover interactions
-  cards.forEach((card) => {
-    card.addEventListener('mouseenter', () => {
-      gsap.to(card, { scale: 1.03, duration: 0.25, ease: 'power1.out' })
-    })
-    card.addEventListener('mouseleave', () => {
-      gsap.to(card, { scale: 1, duration: 0.25, ease: 'power1.out' })
-    })
-    // keyboard focus support
-    card.addEventListener('focus', () => {
-      gsap.to(card, { scale: 1.03, duration: 0.25, ease: 'power1.out' })
-    })
-    card.addEventListener('blur', () => {
-      gsap.to(card, { scale: 1, duration: 0.25, ease: 'power1.out' })
-    })
-  })
-})
+// No JS-driven hover/entrance animation here to avoid conflicts.
 </script>
 
 <style scoped>
 .text-muted { color: rgba(255,255,255,0.65); }
+
+/* CSS entrance animation (staggered via nth-child delays) */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.service-card {
+  opacity: 1; /* ensure visible by default */
+  animation: fadeInUp 0.7s cubic-bezier(.22,1,.32,1) both;
+}
+.service-card:nth-child(1) { animation-delay: 0.06s; }
+.service-card:nth-child(2) { animation-delay: 0.18s; }
+.service-card:nth-child(3) { animation-delay: 0.30s; }
+.service-card:nth-child(4) { animation-delay: 0.42s; }
+
+.service-card:hover,
+.service-card:focus {
+  transform: translateY(-0.25rem);
+  border-color: rgba(96,165,250,1);
+}
+
 </style>
