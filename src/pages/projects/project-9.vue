@@ -12,7 +12,7 @@
     <div class="absolute inset-0 flex items-center md:items-end justify-center md:justify-start pt-6 md:pb-20 pl-4 md:pl-20">
       <div class="max-w-3xl text-center md:text-left px-4 md:px-6">
         <h1 class="text-3xl md:text-6xl font-extrabold text-white leading-tight">Control alt canc</h1>
-        <p class="text-xs md:text-sm text-white/70 mt-3 md:mt-4 tracking-wide">Concept Experience — Il suono della SG-1961 trasformato in un’esperienza digitale interattiva</p>
+        <p class="text-xs md:text-sm text-white/70 mt-3 md:mt-4 tracking-wide">Una fanzine illustrata dedicata alla Giornata Mondiale della Salute Mentale </p>
       </div>
     </div>
   </section>
@@ -21,7 +21,10 @@
   <section class="bg-black py-20 px-6">
     <div class="max-w-3xl mx-auto text-center md:text-left">
       <h2 class="text-3xl md:text-4xl font-semibold text-white mb-6 text-center">Lo scopo del progetto</h2>
-      <p class="text-white/60 text-lg leading-relaxed">In questo progetto ho voluto ricreare un concept di landing page dedicata a uno strumento iconico come la Gibson SG-1961, capace di comunicare la sua anima rock in ogni parte dell’esperienza. L’obiettivo era trasmettere l’essenza dello strumento attraverso tutta la navigazione, aumentando awareness e coinvolgimento, e restituendo il giusto valore a un prodotto che ha segnato la storia della musica.</p>
+      <p class="text-white/60 text-lg leading-relaxed">n questo progetto ho voluto tradurre l’overthinking in una narrazione visiva semplice da capire ma difficile da ignorare.
+Ho scelto un’estetica in bianco e nero per togliere il superfluo e concentrare l’attenzione su ciò che conta: il rumore mentale, il peso dei pensieri, la lotta quotidiana che molti vivono in silenzio.
+
+La fanzine è stata realizzata per la Giornata Mondiale della Salute Mentale (10 ottobre) e successivamente condivisa con psicologi e professionisti del settore, come strumento divulgativo e conversazionale.</p>
     </div>
   </section>
 
@@ -43,16 +46,16 @@
       <h2 class="text-2xl md:text-3xl font-semibold text-white mb-8">Elementi cardine</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-start text-center">
         <div class="px-6">
-          <h3 class="text-xl font-semibold text-white"> Direzione Creativa & Concept</h3>
-          <p class="text-white/60 mt-3">Ho definito il concept visivo e il tono dell’esperienza partendo dall’identità della SG-1961: rock, materica e iconica. Ogni scelta:colori, tipografia, ritmo visivo, è calibrata per trasmettere la personalità dello strumento in un ambiente digitale.</p>
+          <h3 class="text-xl font-semibold text-white">Linguaggio visivo essenziale</h3>
+          <p class="text-white/60 mt-3">Ho scelto un tratto volutamente semplice, quasi infantile, per parlare di temi complessi senza farli sembrare “pesanti”. La mancanza di sfumature e la scelta del bianco/nero amplificano il contrasto emotivo.</p>
         </div>
         <div class="px-6">
-          <h3 class="text-xl font-semibold text-white">3D e interazioni</h3>
-          <p class="text-white/60 mt-3">Ho realizzato modelli 3D e micro-interazioni che rispondono al suono e all’input dell’utente, trasformando la chitarra in un elemento interattivo. Il 3D non è decorazione, ma parte del linguaggio narrativo: rende la SG “suonabile” anche sul web.</p>
+          <h3 class="text-xl font-semibold text-white">Narrazione diretta e metaforica</h3>
+          <p class="text-white/60 mt-3"> La fanzine trasforma l’overthinking in un racconto militare: soldati, missioni, mostri interiori. Una metafora che permette al lettore di prendere distanza dai propri pensieri e guardarli con più lucidità.</p>
         </div>
         <div class="px-6">
-          <h3 class="text-xl font-semibold text-white">Sviluppo Web & Integrazione</h3>
-          <p class="text-white/60 mt-3">Ho sviluppato le funzionalità interattive tramite codice e le ho integrate in Webflow grazie a GitHub Pages e componenti custom. L’obiettivo era mantenere fluidità, performance e totale coerenza visiva tra design, interazioni e contenuti.</p>
+          <h3 class="text-xl font-semibold text-white"> Funzione divulgativa</h3>
+          <p class="text-white/60 mt-3">Pur essendo illustrata, la fanzine è pensata per essere usata come strumento educativo da psicologi e operatori. Il suo obiettivo è rompere il ghiaccio, normalizzare il dialogo e far capire che chiedere aiuto non è un fallimento, anzi un atto di coraggio volto a migliorare la qualità della propria vita.</p>
         </div>
       </div>
     </div>
@@ -67,7 +70,7 @@
 
       <!-- 1 -->
       <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Concept e sviluppo dei Wireframes</h2>
+        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Disegno & stile</h2>
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden">
@@ -76,8 +79,8 @@
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Stile estetico</h3>
-              <p class="text-white/70 mt-4">Sono partito analizzando le parti che costituivano questo prodotto come materiali e finiture e il sentiment che ha suscitato nella cultura Rock e negli appassionati. Successivamente ho ripreso questi elementi e li ho reinterpretati a modo mio per creare il giusto mix tra passato presente e futuro costruendo un'esperienza immersiva mirata.</p>
+              <h3 class="text-xl text-white font-semibold">L'imperfezione del fatto a manno riflette l'imperfezione in ciascuno di noi</h3>
+              <p class="text-white/70 mt-4">Tutte le illustrazioni sono state disegnate a mano tramite tavoletta grafica, adottando uno stile volutamente “grezzo”, perché l’overthinking non è pulito, ordinato o patinato. È caotico, scomodo, rumoroso.</p>
             </div>
           </div>
         </div>
@@ -85,15 +88,19 @@
 
       <!-- 2 -->
       <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Scelta della piattaforma</h2>
+        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Costruzione narrativa</h2>
         <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
           <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Controllo totale sul layout, performance solide, zero compromessi sull’esperienza.</h3>
-              <p class="text-white/70 mt-4">Webflow è stata la scelta ideale per un concept che vive di dettaglio visivo e micro–interazioni.
-Mi ha permesso di tradurre le scelte di design con precisione millimetrica, mantenendo il pieno controllo su griglie, transizioni e responsive senza dipendere da plugin esterni.
-
-Inoltre, il motore nativo consente un output pulito e performante, perfetto per dare al progetto il ritmo visivo che meritava: fluido, leggero e fedele al design originale.</p>
+              <h3 class="text-xl text-white font-semibold">Una trama fantasy sarcastica ma con un messaggio chiaro.</h3>
+              <p class="text-white/70 mt-4">Ho strutturato la fanzine in step, come un manuale per soldati:
+	•	riconosci il problema
+	•	entra nella tua mente
+	•	identifica i mostri
+	•	affrontali
+	•	liberatene
+  Ovviamente questo non è un manuale e serve come primo approccio ma a mio avviso specialmente quando si pensa troppo è utile seguire un piano senza divagare, il tutto scritto con un tono sarcastico e leggero
+.</p>
             </div>
           </div>
           <div class="w-full">
@@ -106,7 +113,7 @@ Inoltre, il motore nativo consente un output pulito e performante, perfetto per 
 
       <!-- 3 -->
       <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">3D Modeling</h2>
+        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Il poster</h2>
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden">
@@ -115,56 +122,16 @@ Inoltre, il motore nativo consente un output pulito e performante, perfetto per 
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Spline — 3D leggero, interattivo e integrabile nel web.</h3>
-              <p class="text-white/70 mt-4">Ho scelto Spline per modellare la SG-1961 perché permette un 3D credibile e facilmente integrabile nel web.
-Grazie all’embed nativo, il modello si inserisce in Webflow senza codice complesso, garantendo performance e la possibilità di aggiornare materiali e dettagli in modo immediato.</p>
+              <h3 class="text-xl text-white font-semibold">Un messaggio visivo chiaro.</h3>
+              <p class="text-white/70 mt-4">Il poster riassume il messaggio della fanzine.</p>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- 4 -->
-      <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Sviluppo dell'app</h2>
-        <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
-          <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start">
-            <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Ho scelto il codice come alleato e lo Sviluppo di una app interattiva per aumentare l'immersività e migliorare l'esperienza utente.</h3>
+      <!-- 'Sviluppo dell'app' section removed -->
 
-              <p class="text-white/70 mt-4">Con Visual Studio Code ho realizzato una web-app che permette di suonare la SG-1961 direttamente dal browser.
-Input, animazioni e suoni lavorano insieme per creare un’interazione musicale semplice e immersiva.
-L’app è stata poi caricata su GitHub Pages e integrata in Webflow.</p>
-            </div>
-          </div>
-          <div class="w-full">
-            <div class="w-full aspect-[4/3] overflow-hidden">
-              <img src="../../assets/p1slide4.webp" alt="Interaction" class="reveal-img w-full h-full object-cover" />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 5 -->
-      <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Interfaccia </h2>
-        <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
-          <div class="w-full">
-            <div class="w-full aspect-[4/3] overflow-hidden">
-              <img src="../../assets/p1slide5.webp" alt="Sound" class="reveal-img w-full h-full object-cover" />
-            </div>
-          </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
-            <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Ho pensato a tre modalità pensate per ridurre la curva d’apprendimento.</h3>
-              <p class="text-white/70 mt-4">La struttura dell’app l’ho basata su tre modalità di gioco, ognuna pensata per rendere l’esperienza musicale intuitiva fin dal primo tap.
-Ogni modalità offre un livello di complessità crescente, ma ho mantenuto un’interfaccia chiara e reattiva per permettere all’utente di sperimentare senza sentirsi sopraffatto.
-Ho combinato suoni, micro-animazioni e feedback visivi per trasformare la SG-1961 in un’esperienza interattiva accessibile anche a chi non ha mai suonato una chitarra.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- sections 6-8 removed -->
+      <!-- sections 4-5 removed -->
 
     </div>
   </section>
