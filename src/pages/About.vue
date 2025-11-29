@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen flex flex-col bg-black overflow-hidden">
+  <div class="min-h-screen flex flex-col bg-black">
     <section class="flex-1 flex flex-col justify-center items-center px-8">
       <h1 class="text-6xl font-extrabold mb-8 tracking-tight text-white text-center animate-fade-in">About me</h1>
       <div class="max-w-2xl text-white/90 text-lg leading-relaxed mb-8 text-center animate-fade-in delay-200">

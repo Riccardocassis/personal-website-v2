@@ -32,7 +32,7 @@
               </h1>
 
               <p ref="subtitleRef" class="mt-8 text-base md:text-lg text-white/90 max-w-md md:max-w-xl leading-relaxed mx-auto md:mx-0">
-                Progetto interfacce chiare e flussi ordinati, unendo design e front-end leggero.
+                Progetto interfacce chiare e flussi ordinati, unendo design e sviluppo web.
               </p>
 
               <!-- Social icons row (small, white/70, gap-6, centered, mt-8) -->
