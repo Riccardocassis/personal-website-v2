@@ -147,21 +147,31 @@ La nuova struttura facilita l’accesso alle informazioni principali e riduce il
         </div>
       </div>
 
-      <!-- 5 -->
+      <!-- 5 (replaced) -->
       <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">SEO & Performance </h2>
-        <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
-          <div class="w-full">
-            <div class="w-full aspect-[4/3] overflow-hidden">
-              <img src="../../assets/p1slide5.webp" alt="Sound" class="reveal-img w-full h-full object-cover" />
-            </div>
+        <div class="px-6 md:pl-20">
+          <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-2xl md:text-3xl font-semibold text-white mb-6">SEO & Content Strategy</h2>
+            <p class="text-white/60 text-lg leading-relaxed">Ho lavorato su tre livelli di SEO per poter ottenere e garantire un risultato significativo al cliente.</p>
           </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
-            <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Ho pensato a tre modalità pensate per ridurre la curva d’apprendimento.</h3>
-              <p class="text-white/70 mt-4">La struttura dell’app l’ho basata su tre modalità di gioco, ognuna pensata per rendere l’esperienza musicale intuitiva fin dal primo tap.
-Ogni modalità offre un livello di complessità crescente, ma ho mantenuto un’interfaccia chiara e reattiva per permettere all’utente di sperimentare senza sentirsi sopraffatto.
-Ho combinato suoni, micro-animazioni e feedback visivi per trasformare la SG-1961 in un’esperienza interattiva accessibile anche a chi non ha mai suonato una chitarra.</p>
+
+          <div class="max-w-6xl mx-auto text-center mt-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-start text-center">
+              <div class="px-6">
+                <h3 class="text-xl font-semibold text-white">SEO On-page</h3>
+                <p class="text-white/60 mt-3">Ho riscritto titoli, testi e struttura delle pagine per renderli più leggibili sia per gli utenti che per i motori di ricerca.
+Obiettivo: chiarezza, coerenza e contenuti che rispondono davvero alle intenzioni di ricerca.</p>
+              </div>
+              <div class="px-6">
+                <h3 class="text-xl font-semibold text-white">SEO Tecnica</h3>
+                <p class="text-white/60 mt-3">Ho ottimizzato performance, immagini, semantic tag e struttura HTML.
+Risultato: sito più veloce, stabile e facilmente interpretabile dai crawler.
+</p>
+              </div>
+              <div class="px-6">
+                <h3 class="text-xl font-semibold text-white">SEO Off-page</h3>
+                <p class="text-white/60 mt-3">Ho migliorato la struttura dei link, la coerenza con le pagine chiave e la qualità generale dell’ecosistema digitale, rendendo più solida la presenza online del brand.</p>
+              </div>
             </div>
           </div>
         </div>
