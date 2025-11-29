@@ -1,5 +1,7 @@
 <template>
-  <section class="max-w-6xl mx-auto px-4 py-20 text-white">
+  <section class="relative max-w-6xl mx-auto px-4 py-20 text-white">
+    <div class="fixed inset-0 pointer-events-none z-0" aria-hidden="true" style="background: radial-gradient(circle at 70% 50%, rgba(59,130,246,0.22), rgba(29,78,216,0.16) 28%, rgba(30,58,138,0.10) 60%);"></div>
+    <div class="relative z-10">
     <header class="mb-4 px-2">
       <h1 class="text-3xl md:text-6xl font-extrabold text-white leading-tight">Services</h1>
     </header>
@@ -16,7 +18,7 @@
 
     <div class="services-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8 px-2">
       <!-- Card 1 -->
-      <article class="service-card bg-neutral-900 border border-white/10 p-8 rounded-2xl transform transition-all duration-300 hover:-translate-y-1 hover:border-blue-500" tabindex="0">
+      <article class="service-card bg-transparent border p-8 rounded-2xl transform transition-all duration-300 hover:-translate-y-1 hover:border-blue-500" tabindex="0">
         <h2 class="text-xl font-semibold text-white mb-3">Web Design & Development</h2>
         <p class="text-white/70 leading-relaxed text-[15px]">Realizzo siti chiari, leggeri e ben strutturati, con attenzione a design, responsive e performance.</p>
         <ul class="mt-4 space-y-1 text-white/60 text-sm">
@@ -28,7 +30,7 @@
       </article>
 
       <!-- Card 2 -->
-      <article class="service-card bg-neutral-900 border border-white/10 p-8 rounded-2xl transform transition-all duration-300 hover:-translate-y-1 hover:border-blue-500" tabindex="0">
+      <article class="service-card bg-transparent border p-8 rounded-2xl transform transition-all duration-300 hover:-translate-y-1 hover:border-blue-500" tabindex="0">
         <h2 class="text-xl font-semibold text-white mb-3">UI/UX Design</h2>
         <p class="text-white/70 leading-relaxed text-[15px]">Progetto interfacce semplici da usare, riducendo attriti e complessità.</p>
         <ul class="mt-4 space-y-1 text-white/60 text-sm">
@@ -40,7 +42,7 @@
       </article>
 
       <!-- Card 3 -->
-      <article class="service-card bg-neutral-900 border border-white/10 p-8 rounded-2xl transform transition-all duration-300 hover:-translate-y-1 hover:border-blue-500" tabindex="0">
+      <article class="service-card bg-transparent border p-8 rounded-2xl transform transition-all duration-300 hover:-translate-y-1 hover:border-blue-500" tabindex="0">
         <h2 class="text-xl font-semibold text-white mb-3">Brand Identity & Art Direction</h2>
         <p class="text-white/70 leading-relaxed text-[15px]">Definisco identità visive coerenti, leggibili e riconoscibili.</p>
         <ul class="mt-4 space-y-1 text-white/60 text-sm">
@@ -52,7 +54,7 @@
       </article>
 
       <!-- Card 4 -->
-      <article class="service-card bg-neutral-900 border border-white/10 p-8 rounded-2xl transform transition-all duration-300 hover:-translate-y-1 hover:border-blue-500" tabindex="0">
+      <article class="service-card bg-transparent border p-8 rounded-2xl transform transition-all duration-300 hover:-translate-y-1 hover:border-blue-500" tabindex="0">
         <h2 class="text-xl font-semibold text-white mb-3">SEO & Web Optimization</h2>
         <p class="text-white/70 leading-relaxed text-[15px]">Ottimizzo struttura, contenuti e performance per un sito più veloce e più trovabile.</p>
         <ul class="mt-4 space-y-1 text-white/60 text-sm">
@@ -64,6 +66,7 @@
       </article>
 
       
+    </div>
     </div>
   </section>
 </template>
@@ -82,6 +85,12 @@
 }
 .service-card {
   opacity: 1; /* ensure visible by default */
+  /* glass effect */
+  background: rgba(255,255,255,0.03);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-color: rgba(255,255,255,0.06);
+  box-shadow: 0 8px 30px rgba(2,6,23,0.35);
   animation: fadeInUp 0.7s cubic-bezier(.22,1,.32,1) both;
 }
 .service-card:nth-child(1) { animation-delay: 0.06s; }
