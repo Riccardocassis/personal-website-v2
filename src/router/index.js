@@ -28,6 +28,7 @@ const routes = [
   { path: '/social',       name: 'social',             component: () => import('../pages/Social.vue') },
   { path: '/seo',          name: 'seo',                component: () => import('../pages/Seo.vue') },
   { path: '/process',       name: 'process',           component: () => import('../pages/Process.vue') },
+  { path: '/privacy',      name: 'privacy',           component: () => import('../pages/Privacy.vue') },
 ]
 
 const router = createRouter({
