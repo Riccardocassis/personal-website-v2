@@ -106,7 +106,7 @@ La mappatura in Figma è servita per tradurre i bisogni del personale — commes
           </div>
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden">
-              <img src="../../assets/p1slide2.webp" alt="Materials" class="reveal-img w-full h-full object-cover" />
+              <img src="../../assets/fillbos2.webp" alt="Materials" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -118,7 +118,7 @@ La mappatura in Figma è servita per tradurre i bisogni del personale — commes
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden">
-              <img src="../../assets/p1slide3.webp" alt="3D" class="reveal-img w-full h-full object-cover" />
+              <img src="../../assets/fillbos5.webp" alt="3D" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
@@ -143,7 +143,7 @@ La mappatura in Figma è servita per tradurre i bisogni del personale — commes
           </div>
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden">
-              <img src="../../assets/p1slide4.webp" alt="Interaction" class="reveal-img w-full h-full object-cover" />
+              <img src="../../assets/fillbos4.webp" alt="Interaction" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -155,7 +155,7 @@ La mappatura in Figma è servita per tradurre i bisogni del personale — commes
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden">
-              <img src="../../assets/p1slide5.webp" alt="Sound" class="reveal-img w-full h-full object-cover" />
+              <img src="../../assets/fillbos3.webp" alt="Sound" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
