@@ -6,18 +6,18 @@
       :style="{ background: 'radial-gradient(circle at 70% 50%, rgba(59,130,246,0.22), rgba(29,78,216,0.16) 28%, rgba(30,58,138,0.10) 60%)' }"
     ></div>
 
-    <div class="max-w-screen-xl mx-auto px-6 pt-36 pb-24">
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center min-h-[72vh]">
+    <div class="max-w-screen-xl mx-auto px-6 pt-20 md:pt-36 pb-16 md:pb-24">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center min-h-[60vh] md:min-h-[72vh]">
 
         <!-- IMAGE: mobile on top, desktop on the left -->
         <div class="order-1 md:col-span-6 flex items-center justify-center md:justify-start">
           <div class="relative w-full flex justify-center md:justify-start">
-            <div class="w-[86%] md:w-[45%]">
+            <div class="w-[92%] sm:w-[86%] md:w-[45%]">
               <img
                 src="../assets/hero-riccardo.webp"
                 alt="Portrait of Riccardo Cassis"
-                class="w-full h-auto object-cover rounded-3xl transform scale-[2.5] md:scale-[3.6] relative z-30 opacity-100"
-                style="opacity:1; filter: brightness(0.82) contrast(1.05) saturate(1.0); mask-image: radial-gradient(circle at 68% 50%, rgba(0,0,0,0.95) 45%, rgba(0,0,0,0.6) 65%, transparent 100%); -webkit-mask-image: radial-gradient(circle at 68% 50%, rgba(0,0,0,0.95) 45%, rgba(0,0,0,0.6) 65%, transparent 100%);"
+                class="w-full h-auto object-cover rounded-3xl transform hero-mask scale-[1.4] sm:scale-[1.8] md:scale-[3.6] relative z-30 opacity-100"
+                style="opacity:1; filter: brightness(0.82) contrast(1.05) saturate(1.0);"
               />
             </div>
           </div>
@@ -27,22 +27,22 @@
         <div class="order-2 md:col-span-6 flex items-center">
           <div class="w-full text-white pr-6 md:pr-20 pl-0 md:pl-12 lg:pl-20">
             <div class="max-w-xl md:max-w-xl lg:max-w-xl md:text-left text-center">
-              <h1 ref="titleRef" id="hero-title" class="text-2xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
+              <h1 ref="titleRef" id="hero-title" class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
                 <span class="whitespace-nowrap">Riccardo Cassis</span> <span class="block md:inline mt-2 md:mt-0">UI/UX &amp; Web Designer</span>
               </h1>
 
-              <p ref="subtitleRef" class="mt-8 text-base md:text-lg text-white/90 max-w-md md:max-w-xl leading-relaxed mx-auto md:mx-0">
+              <p ref="subtitleRef" class="mt-6 md:mt-8 text-sm sm:text-base md:text-lg text-white/90 max-w-md md:max-w-xl leading-relaxed mx-auto md:mx-0">
                 Progetto interfacce chiare e flussi ordinati, unendo design e sviluppo web.
               </p>
 
               <!-- Social icons row (small, white/70, gap-6, centered, mt-8) -->
-              <div class="mt-8 flex justify-center md:justify-start gap-6">
+              <div class="mt-6 md:mt-8 flex justify-center md:justify-start gap-4 md:gap-6">
                 <a
                   href="https://example.com/linkedin"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"
-                  class="inline-flex items-center justify-center w-9 h-9 text-white/70 hover:text-white hover:scale-105 transition-all duration-200 ease-out cursor-pointer"
+                  class="inline-flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 text-white/70 hover:text-white hover:scale-105 transition-all duration-200 ease-out cursor-pointer"
                 >
                   <!-- LinkedIn (simple glyph) -->
                   <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -55,7 +55,7 @@
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="GitHub"
-                  class="inline-flex items-center justify-center w-9 h-9 text-white/70 hover:text-white hover:scale-105 transition-all duration-200 ease-out cursor-pointer"
+                  class="inline-flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 text-white/70 hover:text-white hover:scale-105 transition-all duration-200 ease-out cursor-pointer"
                 >
                   <!-- GitHub (octocat simplified) -->
                   <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -68,10 +68,10 @@
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Behance"
-                  class="inline-flex items-center justify-center w-10 h-10 text-white/70 hover:text-white hover:scale-105 transition-all duration-200 ease-out cursor-pointer"
+                  class="inline-flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 text-white/70 hover:text-white hover:scale-105 transition-all duration-200 ease-out cursor-pointer"
                 >
                   <!-- Behance image asset (preferred for fidelity) -->
-                  <img src="../assets/icon-behance.webp" alt="Behance" class="w-7 h-7 object-contain" />
+                  <img src="../assets/icon-behance.webp" alt="Behance" class="w-5 h-5 sm:w-7 sm:h-7 object-contain" />
                 </a>
               </div>
               <!-- end social icons -->
@@ -136,4 +136,19 @@ onBeforeUnmount(() => {
   }
 })
 </script>
+
+<style scoped>
+/* Responsive adjustments for hero image mask and spacing */
+.hero-mask {
+  -webkit-mask-image: radial-gradient(circle at 68% 50%, rgba(0,0,0,0.95) 45%, rgba(0,0,0,0.6) 65%, transparent 100%);
+  mask-image: radial-gradient(circle at 68% 50%, rgba(0,0,0,0.95) 45%, rgba(0,0,0,0.6) 65%, transparent 100%);
+}
+
+@media (max-width: 640px) {
+  .hero-mask {
+    -webkit-mask-image: radial-gradient(circle at 60% 50%, rgba(0,0,0,0.98) 55%, rgba(0,0,0,0.7) 75%, transparent 100%);
+    mask-image: radial-gradient(circle at 60% 50%, rgba(0,0,0,0.98) 55%, rgba(0,0,0,0.7) 75%, transparent 100%);
+  }
+}
+</style>
 
