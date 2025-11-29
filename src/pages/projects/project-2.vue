@@ -12,8 +12,8 @@
 
     <div class="absolute inset-0 flex items-center md:items-end justify-center md:justify-start pt-6 md:pb-20 pl-4 md:pl-20">
       <div class="max-w-3xl text-center md:text-left px-4 md:px-6">
-        <h1 class="text-3xl md:text-6xl font-extrabold text-white leading-tight">Sizexl new website</h1>
-        <p class="text-xs md:text-sm text-white/70 mt-3 md:mt-4 tracking-wide">Concept Experience — Il suono della SG-1961 trasformato in un’esperienza digitale interattiva</p>
+        <h1 class="text-3xl md:text-6xl font-extrabold text-white leading-tight">Sizexl — Restyling del sito e ottimizzazione della presenza digitale</h1>
+        <p class="text-xs md:text-sm text-white/70 mt-3 md:mt-4 tracking-wide">Un progetto di UX, UI e ottimizzazione dei contenuti per migliorare chiarezza, credibilità e navigazione.</p>
       </div>
     </div>
   </section>
