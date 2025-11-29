@@ -1,6 +1,6 @@
 <template>
-  <div class="min-h-screen flex flex-col bg-black">
-    <section class="flex-1 flex flex-col justify-center items-center px-8">
+  <div class="min-h-screen relative flex flex-col bg-black">
+    <section class="flex-1 relative z-20 flex flex-col justify-center items-center px-8">
       <h1 class="text-6xl font-extrabold mb-8 tracking-tight text-white text-center animate-fade-in">About me</h1>
       <div class="max-w-2xl text-white/90 text-lg leading-relaxed mb-8 text-center animate-fade-in delay-200">
         Ho sempre avuto una grande passione per i computer e per tutto ciò che riguarda la creatività. Mi piace mettermi in gioco, lavorare insieme agli altri e imparare da ogni nuova esperienza.<br>
@@ -15,8 +15,8 @@
       </h2>
     </section>
     <!-- Immagini fisse ai lati sopra il footer -->
-  <img src="../assets/ioartista.webp" alt="Artista" class="fixed left-0 bottom-20 w-[32vw] min-w-[180px] max-w-none object-contain opacity-80 z-10 pointer-events-none" />
-  <img src="../assets/ionerd.webp" alt="Nerd" class="fixed right-0 bottom-20 w-[32vw] min-w-[180px] max-w-none object-contain opacity-80 z-10 pointer-events-none" />
+  <img src="../assets/ioartista.webp" alt="Artista" class="absolute left-0 bottom-20 w-[32vw] min-w-[180px] max-w-none object-contain opacity-80 z-0 pointer-events-none" />
+  <img src="../assets/ionerd.webp" alt="Nerd" class="absolute right-0 bottom-20 w-[32vw] min-w-[180px] max-w-none object-contain opacity-80 z-0 pointer-events-none" />
   </div>
 </template>
 <script setup>
