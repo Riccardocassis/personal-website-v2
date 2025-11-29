@@ -13,7 +13,7 @@
     <div class="absolute inset-0 flex items-center md:items-end justify-center md:justify-start pt-6 md:pb-20 pl-4 md:pl-20">
       <div class="max-w-3xl text-center md:text-left px-4 md:px-6">
         <h1 class="text-3xl md:text-6xl font-extrabold text-white leading-tight">Fillbo concept app</h1>
-        <p class="text-xs md:text-sm text-white/70 mt-3 md:mt-4 tracking-wide">Concept Experience — Il suono della SG-1961 trasformato in un’esperienza digitale interattiva</p>
+        <p class="text-xs md:text-sm text-white/70 mt-3 md:mt-4 tracking-wide">Un prototipo mobile progettato per aiutare supermercati e distributori a tracciare prodotti in scadenza e donare più facilmente alimenti a CAUTO.</p>
       </div>
     </div>
   </section>
@@ -22,14 +22,16 @@
   <section class="bg-black py-20 px-6">
     <div class="max-w-3xl mx-auto text-center md:text-left">
       <h2 class="text-3xl md:text-4xl font-semibold text-white mb-6 text-center">Lo scopo del progetto</h2>
-      <p class="text-white/60 text-lg leading-relaxed">In questo progetto ho voluto ricreare un concept di landing page dedicata a uno strumento iconico come la Gibson SG-1961, capace di comunicare la sua anima rock in ogni parte dell’esperienza. L’obiettivo era trasmettere l’essenza dello strumento attraverso tutta la navigazione, aumentando awareness e coinvolgimento, e restituendo il giusto valore a un prodotto che ha segnato la storia della musica.</p>
+      <p class="text-white/60 text-lg leading-relaxed">In questo progetto ho progettato Fillbo, un’app mobile pensata per ridurre gli sprechi alimentari migliorando il flusso tra supermercati e CAUTO.
+Ho analizzato il processo reale con cui i commessi identificano i prodotti in scadenza e l’ho trasformato in un sistema digitale più rapido, chiaro e tracciabile.
+Il risultato è un prototipo che semplifica il lavoro quotidiano, riduce errori e accelera la donazione degli alimenti.</p>
     </div>
   </section>
 
   <!-- Video CTA: preview + button that opens fullscreen modal -->
   <section class="bg-black py-8 px-6">
     <div class="max-w-6xl mx-auto text-center">
-      <h3 class="text-center text-white/70 mb-6">preview della pagina</h3>
+      <h3 class="text-center text-white/70 mb-6">preview dell'app in azione</h3>
       <div class="relative w-full max-w-4xl aspect-square mx-auto overflow-hidden rounded-2xl shadow-2xl bg-black">
         <video controls playsinline preload="metadata" class="w-full h-full object-contain">
           <source src="https://raw.githubusercontent.com/Riccardocassis/fillbo/refs/heads/main/fillbovideo.mp4" type="video/mp4" />
@@ -44,16 +46,16 @@
       <h2 class="text-2xl md:text-3xl font-semibold text-white mb-8">Elementi cardine</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-start text-center">
         <div class="px-6">
-          <h3 class="text-xl font-semibold text-white"> Direzione Creativa & Concept</h3>
-          <p class="text-white/60 mt-3">Ho definito il concept visivo e il tono dell’esperienza partendo dall’identità della SG-1961: rock, materica e iconica. Ogni scelta:colori, tipografia, ritmo visivo, è calibrata per trasmettere la personalità dello strumento in un ambiente digitale.</p>
+          <h3 class="text-xl font-semibold text-white"> Ricerca & Concept</h3>
+          <p class="text-white/60 mt-3">Ho costruito il concept di Fillbo a partire dai bisogni reali del personale: velocità, chiarezza e riduzione degli errori operativi. Il tono dell’interfaccia è volutamente amichevole per abbassare lo stress in un contesto già operativo e intenso.</p>
         </div>
         <div class="px-6">
-          <h3 class="text-xl font-semibold text-white">3D e interazioni</h3>
-          <p class="text-white/60 mt-3">Ho realizzato modelli 3D e micro-interazioni che rispondono al suono e all’input dell’utente, trasformando la chitarra in un elemento interattivo. Il 3D non è decorazione, ma parte del linguaggio narrativo: rende la SG “suonabile” anche sul web.</p>
+          <h3 class="text-xl font-semibold text-white">UX Design & Flussi</h3>
+          <p class="text-white/60 mt-3">Ho progettato flussi che accompagnano l’utente passo dopo passo, minimizzando la complessità. Tutti i percorsi sono stati pensati per essere completati con una mano sola e in pochi tap.</p>
         </div>
         <div class="px-6">
-          <h3 class="text-xl font-semibold text-white">Sviluppo Web & Integrazione</h3>
-          <p class="text-white/60 mt-3">Ho sviluppato le funzionalità interattive tramite codice e le ho integrate in Webflow grazie a GitHub Pages e componenti custom. L’obiettivo era mantenere fluidità, performance e totale coerenza visiva tra design, interazioni e contenuti.</p>
+          <h3 class="text-xl font-semibold text-white">UI Design & Prototipo</h3>
+          <p class="text-white/60 mt-3">Ho realizzato un prototipo completo in Figma, curando gerarchie visive, leggibilità e micro-feedback. L’obiettivo: permettere anche a personale non tecnico di usarlo senza formazione.</p>
         </div>
       </div>
     </div>
@@ -68,7 +70,7 @@
 
       <!-- 1 -->
       <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Concept e sviluppo dei Wireframes</h2>
+        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Ricerca sul campo e comprensione del problema</h2>
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden">
@@ -77,8 +79,13 @@
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Stile estetico</h3>
-              <p class="text-white/70 mt-4">Sono partito analizzando le parti che costituivano questo prodotto come materiali e finiture e il sentiment che ha suscitato nella cultura Rock e negli appassionati. Successivamente ho ripreso questi elementi e li ho reinterpretati a modo mio per creare il giusto mix tra passato presente e futuro costruendo un'esperienza immersiva mirata.</p>
+              <h3 class="text-xl text-white font-semibold"> Analisi dei processi reali per ridurre gli sprechi alimentari.</h3>
+              <p class="text-white/70 mt-4">SNel team della Dispensa Alimentare di Cauto, il problema non era la mancanza di volontà ma la mancanza di uno strumento che semplificasse un flusso operativo frammentato.
+Per capire davvero dove intervenire, ho osservato da vicino il lavoro quotidiano: dagli addetti dei supermercati che monitorano le scadenze, fino ai responsabili del magazzino che gestiscono la redistribuzione.
+
+Ho raccolto insight tramite interviste, osservazione diretta e analisi dei punti critici: errori di trascrizione, passaggi ridondanti, mancanza di uno storico digitale e zero visibilità sul volume dei prodotti recuperati.
+
+Questa fase ha definito le basi dell’app: leggerezza, velocità e zero complessità.</p>
             </div>
           </div>
         </div>
@@ -86,15 +93,15 @@
 
       <!-- 2 -->
       <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Scelta della piattaforma</h2>
+        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Flussi, requisiti e architettura dell’app</h2>
         <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
           <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Controllo totale sul layout, performance solide, zero compromessi sull’esperienza.</h3>
-              <p class="text-white/70 mt-4">Webflow è stata la scelta ideale per un concept che vive di dettaglio visivo e micro–interazioni.
-Mi ha permesso di tradurre le scelte di design con precisione millimetrica, mantenendo il pieno controllo su griglie, transizioni e responsive senza dipendere da plugin esterni.
+              <h3 class="text-xl text-white font-semibold">Dal caos dei processi fisici a un flusso digitale lineare.</h3>
+              <p class="text-white/70 mt-4">Dopo la fase di ricerca, ho ricostruito tutti i flussi reali in una mappa operativa: dalla segnalazione dei prodotti in scadenza fino alla loro categorizzazione in box e alla consegna finale al magazzino.
+Questo lavoro ha permesso di eliminare passaggi ridondanti, chiarire ruoli e priorità e definire i requisiti funzionali della prima versione dell’app.
 
-Inoltre, il motore nativo consente un output pulito e performante, perfetto per dare al progetto il ritmo visivo che meritava: fluido, leggero e fedele al design originale.</p>
+La mappatura in Figma è servita per tradurre i bisogni del personale — commessi, volontari e responsabili — in un sistema coerente, semplice e tracciabile.</p>
             </div>
           </div>
           <div class="w-full">
@@ -107,7 +114,7 @@ Inoltre, il motore nativo consente un output pulito e performante, perfetto per 
 
       <!-- 3 -->
       <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">3D Modeling</h2>
+        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Wireframes / Concept</h2>
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden">
@@ -116,9 +123,8 @@ Inoltre, il motore nativo consente un output pulito e performante, perfetto per 
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Spline — 3D leggero, interattivo e integrabile nel web.</h3>
-              <p class="text-white/70 mt-4">Ho scelto Spline per modellare la SG-1961 perché permette un 3D credibile e facilmente integrabile nel web.
-Grazie all’embed nativo, il modello si inserisce in Webflow senza codice complesso, garantendo performance e la possibilità di aggiornare materiali e dettagli in modo immediato.</p>
+              <h3 class="text-xl text-white font-semibold">L'esperienza sul campo è stato l'elemento più importante per lo svilupo dei Wireframes</h3>
+              <p class="text-white/70 mt-4">Sono partito dall’analisi dei bisogni operativi di supermercati e magazzini. Ho definito i flussi principali e li ho trasformati in wireframe chiari, dove ogni step è ottimizzato per velocizzare le operazioni quotidiane e ridurre gli errori di catalogazione.</p>
             </div>
           </div>
         </div>
@@ -126,15 +132,13 @@ Grazie all’embed nativo, il modello si inserisce in Webflow senza codice compl
 
       <!-- 4 -->
       <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Sviluppo dell'app</h2>
+        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Scelta della piattaforma</h2>
         <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
           <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Ho scelto il codice come alleato e lo Sviluppo di una app interattiva per aumentare l'immersività e migliorare l'esperienza utente.</h3>
+              <h3 class="text-xl text-white font-semibold">Figma — prototipazione veloce, collaborazione immediata</h3>
 
-              <p class="text-white/70 mt-4">Con Visual Studio Code ho realizzato una web-app che permette di suonare la SG-1961 direttamente dal browser.
-Input, animazioni e suoni lavorano insieme per creare un’interazione musicale semplice e immersiva.
-L’app è stata poi caricata su GitHub Pages e integrata in Webflow.</p>
+              <p class="text-white/70 mt-4">Ho scelto Figma per la progettazione di Fillbo perché permette iterazioni rapide, componenti riutilizzabili e la possibilità di testare l’intero flusso direttamente dal browser. Questo mi ha permesso di simulare l’esperienza d’uso reale e ottimizzare ogni dettaglio dell’interfaccia.</p>
             </div>
           </div>
           <div class="w-full">
@@ -156,10 +160,10 @@ L’app è stata poi caricata su GitHub Pages e integrata in Webflow.</p>
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Ho pensato a tre modalità pensate per ridurre la curva d’apprendimento.</h3>
-              <p class="text-white/70 mt-4">La struttura dell’app l’ho basata su tre modalità di gioco, ognuna pensata per rendere l’esperienza musicale intuitiva fin dal primo tap.
-Ogni modalità offre un livello di complessità crescente, ma ho mantenuto un’interfaccia chiara e reattiva per permettere all’utente di sperimentare senza sentirsi sopraffatto.
-Ho combinato suoni, micro-animazioni e feedback visivi per trasformare la SG-1961 in un’esperienza interattiva accessibile anche a chi non ha mai suonato una chitarra.</p>
+              <h3 class="text-xl text-white font-semibold">Un’interfaccia semplice per ridurre errori e tempi operativi</h3>
+              <p class="text-white/70 mt-4">Ho progettato Fillbo per essere usabile anche nelle situazioni più frenetiche.
+L’interfaccia si basa su liste chiare, pulsanti grandi e percorsi brevi. Ogni prodotto viene inserito con pochi tap e assegnato automaticamente alla box corretta in base alla categoria.
+L’obiettivo è eliminare confusione, accelerare il processo e rendere più intuitiva la donazione degli alimenti.</p>
             </div>
           </div>
         </div>
