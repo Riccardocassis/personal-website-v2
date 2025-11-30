@@ -126,7 +126,7 @@ Per la comunicazione ho utilizzato Work Sans: accessibile, leggibile e neutra, i
           </div>
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden">
-              <img src="../../assets/p1slide4.webp" alt="Interaction" class="reveal-img w-full h-full object-cover" />
+              <img src="../../assets/hellers2.webp" alt="Interaction" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
         </div>
