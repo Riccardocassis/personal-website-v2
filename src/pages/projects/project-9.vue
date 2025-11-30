@@ -29,16 +29,7 @@ La fanzine è stata realizzata per la Giornata Mondiale della Salute Mentale (10
   </section>
 
   <!-- Video CTA: preview + button that opens fullscreen modal -->
-  <section class="bg-black py-8 px-6">
-    <div class="max-w-6xl mx-auto text-center">
-      <h3 class="text-center text-white/70 mb-6">preview della pagina</h3>
-      <div class="relative w-full aspect-[16/9] max-h-[65vh] mx-auto overflow-hidden rounded-2xl shadow-2xl bg-black">
-        <video controls playsinline preload="metadata" class="w-full h-full object-cover">
-          <source src="https://raw.githubusercontent.com/Riccardocassis/-gibson-video/main/gb_behance.mp4" type="video/mp4" />
-        </video>
-      </div>
-    </div>
-  </section>
+  <!-- Video section removed as requested -->
 
   <!-- Key Features (three clean columns) moved under Video CTA -->
   <section class="bg-black py-20 px-6">
@@ -171,18 +162,12 @@ Posso aiutarti a creare esperienze digitali su misura.</p>
     </div>
   </section>
 
-  <!-- Fullscreen video modal -->
-  <div v-if="showVideo" class="fixed inset-0 z-50 flex items-center justify-center bg-black/90">
-    <button @click="closeVideo" class="absolute top-6 right-6 text-white bg-black/40 hover:bg-black/60 px-3 py-2 rounded">Chiudi</button>
-    <video ref="videoRef" controls class="w-full h-full max-w-[1400px] max-h-[90vh] rounded-lg shadow-2xl">
-      <source src="https://raw.githubusercontent.com/Riccardocassis/-gibson-video/main/gb_behance.mp4" type="video/mp4" />
-    </video>
-  </div>
+  <!-- Video modal removed -->
 
 </template>
 
 <script setup>
-import { onMounted, ref, nextTick } from 'vue'
+import { onMounted, ref } from 'vue'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
@@ -222,25 +207,6 @@ onMounted(() => {
   })
 })
 
-const showVideo = ref(false)
-const videoRef = ref(null)
-
-function openVideo() {
-  showVideo.value = true
-  nextTick(() => {
-    if (videoRef.value) {
-      videoRef.value.currentTime = 0
-      videoRef.value.play().catch(() => {})
-    }
-  })
-}
-
-function closeVideo() {
-  if (videoRef.value) {
-    videoRef.value.pause()
-    videoRef.value.currentTime = 0
-  }
-  showVideo.value = false
-}
+// Video functionality removed
 </script>
 
