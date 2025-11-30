@@ -74,7 +74,7 @@ Ho scelto di utilizzare dunque un Tov amichevole ed informale nella applicazione
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden">
-              <img src="../../assets/opsifys1.webp" alt="Concept" class="reveal-img w-full h-full object-cover" />
+              <img src="../../assets/opsifywirewebp.webp" alt="Concept" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
@@ -93,7 +93,7 @@ Ho scelto di utilizzare dunque un Tov amichevole ed informale nella applicazione
           <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">Un’interfaccia leggera e amichevole</h3>
-              <p class="text-white/70 mt-4">Ho costruito l’identità visiva scegliendo colori chiari, contrasti morbidi e una tipografia rotonda per creare un ambiente accogliente e non giudicante. Ogni scelta contribuisce a rendere l’esperienza immediata e piacevole.</p>
+              <p class="text-white/70 mt-4">Ho costruito l’identità visiva scegliendo colori chiari, contrasti morbidi e una tipografia rotonda per creare un ambiente accogliente e allegro. Ogni scelta contribuisce a rendere l’esperienza immediata e piacevole.</p>
             </div>
           </div>
           <div class="w-full">
