@@ -72,12 +72,12 @@ Ho scelto di utilizzare dunque un Tov amichevole ed informale nella applicazione
       <div class="w-full">
         <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left"> Wireframes</h2>
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
-          <div class="w-full">
-            <div class="w-full aspect-[4/3] overflow-hidden">
+            <div class="w-full">
+            <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
               <img src="../../assets/opsifywirewebp.webp" alt="Concept" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
+          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-4 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">Dai primi wireframe alla struttura dell’app</h3>
               <p class="text-white/70 mt-4">Ho sviluppato una prima struttura low-fi per testare navigazione, categorie e priorità dei contenuti prima di passare alla fase visual.</p>
@@ -97,7 +97,7 @@ Ho scelto di utilizzare dunque un Tov amichevole ed informale nella applicazione
             </div>
           </div>
           <div class="w-full">
-            <div class="w-full aspect-[4/3] overflow-hidden">
+            <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
               <img src="../../assets/oopsyf.webp" alt="Materials" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
@@ -108,12 +108,12 @@ Ho scelto di utilizzare dunque un Tov amichevole ed informale nella applicazione
       <div class="w-full">
         <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Prototipazione con Protopie</h2>
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
-          <div class="w-full">
-            <div class="w-full aspect-[4/3] overflow-hidden">
+            <div class="w-full">
+            <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
               <img src="../../assets/opsyfyproto.webp" alt="3D" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
+          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-4 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">Il tocco finale che migliora l'esperienza.</h3>
               <p class="text-white/70 mt-4">Ho prototipato micro-interazioni e transizioni con Protopie per validare la fluidità dell’esperienza e simulare il comportamento reale dell’app.</p>

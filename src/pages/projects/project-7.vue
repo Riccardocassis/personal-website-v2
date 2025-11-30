@@ -62,11 +62,11 @@ Con il nuovo brand system ho voluto provare a riorganizza la comunicazione, semp
         <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Concept</h2>
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
-            <div class="w-full aspect-[4/3] overflow-hidden">
+            <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
               <img src="../../assets/hgintro.webp" alt="Concept" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
+          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-4 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">Un ecosistema naturale e artificiale in grado di respirare e cambiare sguardo in base alle stagioni.</h3>
               <p class="text-white/70 mt-4">Il concept nasce dall’idea di un organismo vivo: un giardino che cambia con le stagioni, si trasforma con lo sguardo dei visitatori e racconta narrazioni diverse a seconda del percorso. La direzione creativa costruisce un linguaggio fluido, naturale e contemporaneo che unisce leggerezza, movimento e scoperta.</p>
@@ -86,7 +86,7 @@ Con il nuovo brand system ho voluto provare a riorganizza la comunicazione, semp
             </div>
           </div>
           <div class="w-full">
-            <div class="w-full aspect-[4/3] overflow-hidden">
+            <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
               <img src="../../assets/hglogo.webp" alt="Materials" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
@@ -98,11 +98,11 @@ Con il nuovo brand system ho voluto provare a riorganizza la comunicazione, semp
         <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Font</h2>
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
-            <div class="w-full aspect-[4/3] overflow-hidden">
+            <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
               <img src="../../assets/hgfont.webp" alt="3D" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
+          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-4 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">Il passato scolpito nel presente e nel futuro.</h3>
               <p class="text-white/70 mt-4">Ho scelto Skia come carattere espressivo per titoli e logotipo: organico, variabile, scolpito.
@@ -125,7 +125,7 @@ Per la comunicazione ho utilizzato Work Sans: accessibile, leggibile e neutra, i
             </div>
           </div>
           <div class="w-full">
-            <div class="w-full aspect-[4/3] overflow-hidden">
+            <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
               <img src="../../assets/hellers2.webp" alt="Interaction" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
@@ -137,11 +137,11 @@ Per la comunicazione ho utilizzato Work Sans: accessibile, leggibile e neutra, i
         <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Iconografia e segnaletica </h2>
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
-            <div class="w-full aspect-[4/3] overflow-hidden">
+            <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
               <img src="../../assets/hgptg.webp" alt="Sound" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
+          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-4 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">Pittogrammi morbidi e organici</h3>
               <p class="text-white/70 mt-4">Ho scelto di disegnare delle icone botaniche e di navigazione dal tratto morbido, ad alta leggibilità e di facile comprensione per tutti gli utenti che visitano il giardino e che trasmettano una vibrazione in linea con tutto il concept.</p>
@@ -163,7 +163,7 @@ Per la comunicazione ho utilizzato Work Sans: accessibile, leggibile e neutra, i
               </div>
             </div>
             <div class="w-full">
-              <div class="w-full aspect-[4/3] overflow-hidden">
+              <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
                 <img src="../../assets/hgmp.webp" alt="La mappa" class="reveal-img w-full h-full object-cover" />
               </div>
             </div>
@@ -175,11 +175,11 @@ Per la comunicazione ho utilizzato Work Sans: accessibile, leggibile e neutra, i
           <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Merchandising</h2>
           <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
             <div class="w-full">
-              <div class="w-full aspect-[4/3] overflow-hidden">
+              <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
                 <img src="../../assets/hgmerch.webp" alt="Materiali" class="reveal-img w-full h-full object-cover" />
               </div>
             </div>
-            <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
+            <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-4 md:pt-0">
               <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
                 <h3 class="text-xl text-white font-semibold">Indossare il brand è farsi promotori di questo posto</h3>
                 <p class="text-white/70 mt-4">Poster, brochure, biglietti, gadget e materiali per eventi seguono il sistema visivo stagionale, creando coerenza tra fisico e digitale.</p>

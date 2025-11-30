@@ -73,11 +73,11 @@ Il risultato è un prototipo che semplifica il lavoro quotidiano, riduce errori 
         <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Ricerca sul campo e comprensione del problema</h2>
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
-            <div class="w-full aspect-[4/3] overflow-hidden">
+            <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
               <img src="../../assets/fillbos1.webp" alt="Concept" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
+          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-4 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold"> Analisi dei processi reali per ridurre gli sprechi alimentari.</h3>
               <p class="text-white/70 mt-4">SNel team della Dispensa Alimentare di Cauto, il problema non era la mancanza di volontà ma la mancanza di uno strumento che semplificasse un flusso operativo frammentato.
@@ -105,7 +105,7 @@ La mappatura in Figma è servita per tradurre i bisogni del personale — commes
             </div>
           </div>
           <div class="w-full">
-            <div class="w-full aspect-[4/3] overflow-hidden">
+            <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
               <img src="../../assets/fillbos2.webp" alt="Materials" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
@@ -117,11 +117,11 @@ La mappatura in Figma è servita per tradurre i bisogni del personale — commes
         <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Wireframes / Concept</h2>
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
-            <div class="w-full aspect-[4/3] overflow-hidden">
+            <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
               <img src="../../assets/fillbos5.webp" alt="3D" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
+          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-4 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">L'esperienza sul campo è stato l'elemento più importante per lo svilupo dei Wireframes</h3>
               <p class="text-white/70 mt-4">Sono partito dall’analisi dei bisogni operativi di supermercati e magazzini. Ho definito i flussi principali e li ho trasformati in wireframe chiari, dove ogni step è ottimizzato per velocizzare le operazioni quotidiane e ridurre gli errori di catalogazione.</p>
@@ -142,7 +142,7 @@ La mappatura in Figma è servita per tradurre i bisogni del personale — commes
             </div>
           </div>
           <div class="w-full">
-            <div class="w-full aspect-[4/3] overflow-hidden">
+            <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
               <img src="../../assets/fillbos4.webp" alt="Interaction" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
@@ -154,11 +154,11 @@ La mappatura in Figma è servita per tradurre i bisogni del personale — commes
         <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Interfaccia </h2>
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
-            <div class="w-full aspect-[4/3] overflow-hidden">
+            <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
               <img src="../../assets/fillbos3.webp" alt="Sound" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
+          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-4 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">Un’interfaccia semplice per ridurre errori e tempi operativi</h3>
               <p class="text-white/70 mt-4">Ho progettato Fillbo per essere usabile anche nelle situazioni più frenetiche.

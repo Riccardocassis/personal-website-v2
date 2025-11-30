@@ -67,11 +67,11 @@ Il risultato è un brand che funziona in ogni formato: dallo scaffale alla strad
         <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Logo e Identità</h2>
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
-            <div class="w-full aspect-[4/3] overflow-hidden">
+            <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
               <img src="../../assets/rbpayoff.webp" alt="Concept" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
+          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-4 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">Ribelli dalle fondamenta</h3>
               <p class="text-white/70 mt-4">Ho scelto di partire in questo concept rivisitando il logo, mi sono avvalso del font Losta Bonita per richiamare il tema musicale e lo stile degli anni sessanta e settanta tipico delle cover dei vinili.</p>
@@ -91,7 +91,7 @@ Il risultato è un brand che funziona in ogni formato: dallo scaffale alla strad
             </div>
           </div>
           <div class="w-full">
-            <div class="w-full aspect-[4/3] overflow-hidden">
+            <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
               <img src="../../assets/rbcolorietipografia.webp" alt="Materials" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
@@ -103,11 +103,11 @@ Il risultato è un brand che funziona in ogni formato: dallo scaffale alla strad
         <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Photography Direction</h2>
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
-            <div class="w-full aspect-[4/3] overflow-hidden">
+            <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
               <img src="../../assets/rbft.webp" alt="3D" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
+          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-4 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">Fotografia spontanea e imperfetta (nel modo giusto).</h3>
               <p class="text-white/70 mt-4">Ho scelto una fotografia che valorizza corpi reali, situazioni quotidiane e un’estetica volutamente “raw”.
@@ -130,7 +130,7 @@ Ogni pack è un manifesto del brand, non solo un contenitore.</p>
             </div>
           </div>
           <div class="w-full">
-            <div class="w-full aspect-[4/3] overflow-hidden">
+            <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
               <img src="../../assets/rbpackaging.webp" alt="Interaction" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
@@ -142,11 +142,11 @@ Ogni pack è un manifesto del brand, non solo un contenitore.</p>
         <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Campagne</h2>
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
-            <div class="w-full aspect-[4/3] overflow-hidden">
+            <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
               <img src="../../assets/rbcmp.webp" alt="Sound" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
+          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-4 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">Uno stile comunicativo senza filtri.</h3>
               <p class="text-white/70 mt-4">Poster irriverenti, contrasti saturi e messaggi brevi.
@@ -169,7 +169,7 @@ L’obiettivo cardine è stato quello di puntare alla creazione di una community
             </div>
           </div>
           <div class="w-full">
-            <div class="w-full aspect-[4/3] overflow-hidden">
+            <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
               <img src="../../assets/rbsc.webp" alt="Eventi" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
@@ -181,11 +181,11 @@ L’obiettivo cardine è stato quello di puntare alla creazione di una community
         <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Sito web e touchpoint digitali</h2>
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
-            <div class="w-full aspect-[4/3] overflow-hidden">
+            <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
               <img src="../../assets/rbsw.webp" alt="Sito web" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
+          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-4 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">Un’esperienza digitale coerente</h3>
               <p class="text-white/70 mt-4">L’interfaccia segue la stessa direzione ribelle del brand: colori forti, tipografia espressiva e una navigazione veloce.

@@ -67,15 +67,15 @@
       <!-- Helper: each section is full-width; h2 aligned left with px -->
 
       <!-- 1 -->
-      <div class="w-full">
+      <div class="w-full mb-6 md:mb-0">
         <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Concept e sviluppo dei Wireframes</h2>
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
-            <div class="w-full aspect-[4/3] overflow-hidden">
+              <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
               <img src="../../assets/p1slide1.webp" alt="Concept" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
+          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-4 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">Stile estetico</h3>
               <p class="text-white/70 mt-4">Sono partito analizzando le parti che costituivano questo prodotto come materiali e finiture e il sentiment che ha suscitato nella cultura Rock e negli appassionati. Successivamente ho ripreso questi elementi e li ho reinterpretati a modo mio per creare il giusto mix tra passato presente e futuro costruendo un'esperienza immersiva mirata.</p>
@@ -98,7 +98,7 @@ Inoltre, il motore nativo consente un output pulito e performante, perfetto per 
             </div>
           </div>
           <div class="w-full">
-            <div class="w-full aspect-[4/3] overflow-hidden">
+              <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
               <img src="../../assets/p1slide2.webp" alt="Materials" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
@@ -110,11 +110,11 @@ Inoltre, il motore nativo consente un output pulito e performante, perfetto per 
         <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">3D Modeling</h2>
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
-            <div class="w-full aspect-[4/3] overflow-hidden">
+              <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
               <img src="../../assets/p1slide3.webp" alt="3D" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
+          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-4 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">Spline — 3D leggero, interattivo e integrabile nel web.</h3>
               <p class="text-white/70 mt-4">Ho scelto Spline per modellare la SG-1961 perché permette un 3D credibile e facilmente integrabile nel web.
@@ -138,7 +138,7 @@ L’app è stata poi caricata su GitHub Pages e integrata in Webflow.</p>
             </div>
           </div>
           <div class="w-full">
-            <div class="w-full aspect-[4/3] overflow-hidden">
+              <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
               <img src="../../assets/p1slide4.webp" alt="Interaction" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
@@ -150,11 +150,11 @@ L’app è stata poi caricata su GitHub Pages e integrata in Webflow.</p>
         <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Interfaccia </h2>
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
-            <div class="w-full aspect-[4/3] overflow-hidden">
+              <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
               <img src="../../assets/p1slide5.webp" alt="Sound" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
+          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-4 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">Ho pensato a tre modalità pensate per ridurre la curva d’apprendimento.</h3>
               <p class="text-white/70 mt-4">La struttura dell’app l’ho basata su tre modalità di gioco, ognuna pensata per rendere l’esperienza musicale intuitiva fin dal primo tap.

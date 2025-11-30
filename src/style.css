@@ -4,6 +4,12 @@
 
 @layer base {
 	body {
+
+@layer components {
+	.project-img-wrap {
+		@apply mb-6 md:mb-0;
+	}
+}
 		@apply bg-black min-h-screen;
 	}
 	/* Smooth scrolling and correct anchor offset for fixed navbar */

@@ -71,15 +71,15 @@ Ho curato performance, responsive design, SEO on-page e micro-miglioramenti che 
       <!-- Helper: each section is full-width; h2 aligned left with px -->
 
       <!-- 1 -->
-      <div class="w-full">
+      <div class="w-full mb-6 md:mb-0">
         <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Situazione iniziale</h2>
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
-            <div class="w-full aspect-[4/3] overflow-hidden">
+            <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
               <img src="../../assets/img2sizexl.webp" alt="Concept" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
+          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-4 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">Analisi del sito</h3>
               <p class="text-white/70 mt-4">Ho analizzato il sito esistente per individuare punti deboli in struttura, UI e contenuti.
@@ -101,7 +101,7 @@ I colori sono stati scelti per migliorare leggibilità, contrasto e coerenza vis
             </div>
           </div>
           <div class="w-full">
-            <div class="w-full aspect-[4/3] overflow-hidden">
+            <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
               <img src="../../assets/colorpalettesizexl.webp" alt="Materials" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
@@ -113,11 +113,11 @@ I colori sono stati scelti per migliorare leggibilità, contrasto e coerenza vis
         <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Tipografia</h2>
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
-            <div class="w-full aspect-[4/3] overflow-hidden">
+            <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
               <img src="../../assets/fontsizexl.webp" alt="3D" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
+          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-4 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">Un font semplice ma efficace</h3>
               <p class="text-white/70 mt-4">In accordo con il cliente abbiamo scelto Inter come font: per la sua chiarezza, la leggibilità eccellente e la versatilità dei suoi pesi.
@@ -140,7 +140,7 @@ La nuova struttura facilita l’accesso alle informazioni principali e riduce il
             </div>
           </div>
           <div class="w-full">
-            <div class="w-full aspect-[4/3] overflow-hidden">
+            <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
               <img src="../../assets/cardsize.webp" alt="Interaction" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
