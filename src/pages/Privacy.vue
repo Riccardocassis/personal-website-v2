@@ -6,7 +6,7 @@
       <p class="text-base text-neutral-300 mb-6">Questa informativa descrive come vengono raccolti, utilizzati e protetti i dati personali degli utenti che visitano questo sito web.</p>
 
       <h2 class="text-xl font-semibold mt-6 mb-2">Titolare del trattamento</h2>
-      <p class="text-base text-neutral-300 mb-4">Il titolare del trattamento dei dati è [Nome Titolare] — inserire qui il nome o la ragione sociale e i contatti (indirizzo, e-mail).</p>
+      <p class="text-base text-neutral-300 mb-4">Il titolare del trattamento dei dati è Riccardo Cassis riccardo cassis.rc@gmail.com.</p>
 
       <h2 class="text-xl font-semibold mt-6 mb-2">Dati raccolti</h2>
       <ul class="list-disc ml-5 text-neutral-300 mb-4">
@@ -38,7 +38,7 @@
       <p class="text-base text-neutral-300 mb-4">La presente informativa può essere aggiornata nel tempo; la versione pubblicata online è quella vigente.</p>
 
       <h2 class="text-xl font-semibold mt-6 mb-2">Contatti</h2>
-      <p class="text-base text-neutral-300">Per domande relative alla privacy e al trattamento dei dati contattare: <br /><a href="mailto:info@example.com" class="text-indigo-400">info@example.com</a></p>
+      <p class="text-base text-neutral-300">Per domande relative alla privacy e al trattamento dei dati contattare: <br /><a href="mailto:Riccardocassis.rc@gmail.com" class="text-indigo-400">Riccardocassis.rc@gmail.com</a></p>
     </div>
   </section>
 </template>
