@@ -59,7 +59,7 @@ Con il nuovo brand system ho voluto provare a riorganizza la comunicazione, semp
 
       <!-- 1 -->
       <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Narrazione dell'idea</h2>
+        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Concept</h2>
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden">
@@ -77,7 +77,7 @@ Con il nuovo brand system ho voluto provare a riorganizza la comunicazione, semp
 
       <!-- 2 -->
       <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Logo approfondito</h2>
+        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Logo</h2>
         <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
           <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
