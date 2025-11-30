@@ -18,7 +18,7 @@
 
     <div class="services-grid grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-10 lg:gap-12 px-2 items-stretch auto-rows-fr">
       <!-- Card 1 -->
-      <article class="service-card bg-transparent border p-8 rounded-2xl hover:border-blue-500 flex flex-col justify-between h-full w-full" tabindex="0">
+      <article class="service-card bg-transparent border p-8 rounded-2xl flex flex-col justify-between h-full w-full" tabindex="0">
         <h2 class="text-xl font-semibold text-white mb-3">Web Design & Development</h2>
         <p class="text-white/70 leading-relaxed text-[15px]">Realizzo siti chiari, leggeri e ben strutturati, con attenzione a design, responsive e performance.</p>
         <ul class="mt-4 space-y-1 text-white/60 text-sm">
@@ -30,7 +30,7 @@
       </article>
 
       <!-- Card 2 -->
-      <article class="service-card bg-transparent border p-8 rounded-2xl hover:border-blue-500 flex flex-col justify-between h-full w-full" tabindex="0">
+      <article class="service-card bg-transparent border p-8 rounded-2xl flex flex-col justify-between h-full w-full" tabindex="0">
         <h2 class="text-xl font-semibold text-white mb-3">UI/UX Design</h2>
         <p class="text-white/70 leading-relaxed text-[15px]">Progetto interfacce semplici da usare, riducendo attriti e complessità.</p>
         <ul class="mt-4 space-y-1 text-white/60 text-sm">
@@ -42,7 +42,7 @@
       </article>
 
       <!-- Card 3 -->
-      <article class="service-card bg-transparent border p-8 rounded-2xl hover:border-blue-500 flex flex-col justify-between h-full w-full" tabindex="0">
+      <article class="service-card bg-transparent border p-8 rounded-2xl flex flex-col justify-between h-full w-full" tabindex="0">
         <h2 class="text-xl font-semibold text-white mb-3">Brand Identity & Art Direction</h2>
         <p class="text-white/70 leading-relaxed text-[15px]">Definisco identità visive coerenti, leggibili e riconoscibili.</p>
         <ul class="mt-4 space-y-1 text-white/60 text-sm">
@@ -54,7 +54,7 @@
       </article>
 
       <!-- Card 4 -->
-      <article class="service-card bg-transparent border p-8 rounded-2xl hover:border-blue-500 flex flex-col justify-between h-full w-full" tabindex="0">
+      <article class="service-card bg-transparent border p-8 rounded-2xl flex flex-col justify-between h-full w-full" tabindex="0">
         <h2 class="text-xl font-semibold text-white mb-3">SEO & Web Optimization</h2>
         <p class="text-white/70 leading-relaxed text-[15px]">Ottimizzo struttura, contenuti e performance per un sito più veloce e più trovabile.</p>
         <ul class="mt-4 space-y-1 text-white/60 text-sm">
@@ -105,7 +105,6 @@
 .service-card:hover,
 .service-card:focus {
   transform: translateY(-0.375rem) scale(1.03) translateZ(0) !important;
-  border-color: rgba(96,165,250,1);
   will-change: transform;
 }
 
