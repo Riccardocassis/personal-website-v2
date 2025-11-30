@@ -12,11 +12,12 @@
         <!-- IMAGE: mobile on top, desktop on the left -->
         <div class="order-1 md:col-span-6 flex items-center justify-center md:justify-start">
           <div class="relative w-full flex justify-center md:justify-start">
-            <div class="w-[92%] sm:w-[86%] md:w-[45%]">
+            <!-- keep existing wrapper classes; image will be styled via CSS to be full-width on mobile -->
+            <div class="w-[92%] sm:w-[86%] md:w-[45%] hero-image-container">
               <img
                 src="../assets/hero-riccardo.webp"
                 alt="Portrait of Riccardo Cassis"
-                class="w-full h-auto object-cover rounded-3xl transform hero-mask scale-[1.4] sm:scale-[1.8] md:scale-[3.6] relative z-30 opacity-100"
+                class="w-full h-auto object-cover rounded-3xl hero-mask"
                 style="opacity:1; filter: brightness(0.82) contrast(1.05) saturate(1.0);"
               />
             </div>
