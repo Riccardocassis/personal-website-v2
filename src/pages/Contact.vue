@@ -12,11 +12,28 @@
         ref="cardRef"
         :style="cardStyle"
       >
-        <form class="w-full flex flex-col gap-5">
-          <input type="text" placeholder="Nome" class="input-contact" />
-          <input type="email" placeholder="Email" class="input-contact" />
-          <textarea placeholder="Messaggio" rows="4" class="input-contact"></textarea>
-          <button type="submit" class="btn-contact">Invia</button>
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          class="w-full flex flex-col gap-5"
+          @submit.prevent="handleSubmit"
+          ref="contactForm"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <!-- honeypot -->
+          <p class="hidden"><label>Non compilare questo campo<input name="bot-field" /></label></p>
+
+          <input name="name" v-model="name" type="text" placeholder="Nome" class="input-contact" required />
+          <input name="email" v-model="email" type="email" placeholder="Email" class="input-contact" required />
+          <textarea name="message" v-model="message" placeholder="Messaggio" rows="4" class="input-contact" required></textarea>
+
+          <div class="flex items-center justify-between gap-4">
+            <button type="submit" class="btn-contact" :disabled="submitting">{{ submitting ? 'Invio...' : 'Invia' }}</button>
+            <div v-if="success" class="text-sm text-emerald-300">Messaggio inviato, grazie!</div>
+            <div v-if="error" class="text-sm text-rose-300">Errore durante l'invio. Riprova più tardi.</div>
+          </div>
         </form>
       </div>
     </section>
@@ -28,6 +45,15 @@ import { ref } from 'vue'
 
 const cardRef = ref(null)
 const cardStyle = ref('')
+const contactForm = ref(null)
+
+// form state
+const name = ref('')
+const email = ref('')
+const message = ref('')
+const submitting = ref(false)
+const success = ref(false)
+const error = ref(false)
 
 function handleMouseMove(e) {
   const card = cardRef.value
@@ -43,6 +69,42 @@ function handleMouseMove(e) {
 }
 function resetTilt() {
   cardStyle.value = 'transform: perspective(700px) rotateX(0deg) rotateY(0deg); transition: transform 0.3s;'
+}
+
+async function handleSubmit(e) {
+  submitting.value = true
+  success.value = false
+  error.value = false
+  try {
+    const formEl = contactForm.value || e.target
+    const formData = new FormData(formEl)
+
+    // First: call Netlify Function to send mail via SendGrid
+    await fetch('/.netlify/functions/sendEmail', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(Object.fromEntries(formData.entries()))
+    })
+
+    // Second: submit to Netlify Forms so Netlify keeps a copy of the submission
+    const urlEncoded = new URLSearchParams()
+    for (const pair of formData.entries()) {
+      urlEncoded.append(pair[0], pair[1])
+    }
+    // include form-name (already present) - POST to current origin
+    await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: urlEncoded })
+
+    success.value = true
+    // clear fields
+    name.value = ''
+    email.value = ''
+    message.value = ''
+  } catch (err) {
+    console.error('Contact submit error', err)
+    error.value = true
+  } finally {
+    submitting.value = false
+  }
 }
 </script>
 
