@@ -28,7 +28,7 @@
   <section class="bg-black py-8 md:py-20 px-6">
     <div class="max-w-3xl mx-auto text-center md:text-left">
       <h2 class="text-3xl md:text-4xl font-semibold text-white mb-4 md:mb-6 text-center">Lo scopo del progetto</h2>
-      <p class="text-white/60 text-lg leading-snug md:leading-relaxed">In questo progetto ho progettato Fillbo, un’app mobile pensata per ridurre gli sprechi alimentari migliorando il flusso tra supermercati e CAUTO. Ho analizzato il processo reale con cui i commessi identificano i prodotti in scadenza e l’ho trasformato in un sistema digitale più rapido, chiaro e tracciabile. Il risultato è un prototipo che semplifica il lavoro quotidiano, riduce errori e accelera la donazione degli alimenti.</p>
+      <p class="text-white/60 text-lg leading-snug md:leading-relaxed">Fillbo è un prototipo di un’app mobile pensata per ridurre gli sprechi alimentari migliorando il flusso tra supermercati e CAUTO. Ho analizzato il processo reale con cui i commessi identificano i prodotti in scadenza e l’ho trasformato in un sistema digitale più rapido, chiaro e tracciabile. Il risultato è un prototipo che semplifica il lavoro quotidiano, riduce errori e accelera la donazione degli alimenti.</p>
     </div>
   </section>
 
@@ -84,7 +84,7 @@
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-1 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold mb-1"> Analisi dei processi reali per ridurre gli sprechi alimentari.</h3>
-              <p class="text-white/70 mt-1 md:mt-4">SNel team della Dispensa Alimentare di Cauto, il problema non era la mancanza di volontà ma la mancanza di uno strumento che semplificasse un flusso operativo frammentato.
+              <p class="text-white/70 mt-1 md:mt-4">Nel team della Dispensa Alimentare di Cauto, il problema era la mancanza di uno strumento che semplificasse un flusso operativo frammentato.
 Per capire davvero dove intervenire, ho osservato da vicino il lavoro quotidiano: dagli addetti dei supermercati che monitorano le scadenze, fino ai responsabili del magazzino che gestiscono la redistribuzione.
 
 Ho raccolto insight tramite interviste, osservazione diretta e analisi dei punti critici: errori di trascrizione, passaggi ridondanti, mancanza di uno storico digitale e zero visibilità sul volume dei prodotti recuperati.
@@ -193,24 +193,24 @@ Posso aiutarti a creare esperienze digitali su misura.</p>
 
   <!-- Prev / Next arrows below CTA with labels (responsive) -->
   <section class="bg-black py-6 md:py-8 px-6">
-    <div class="max-w-2xl mx-auto flex flex-col md:flex-row items-center md:items-stretch justify-between gap-6">
+    <div class="max-w-2xl mx-auto flex flex-row md:flex-row items-center md:items-stretch justify-center md:justify-between gap-6">
       <!-- Previous -->
-      <a href="/projects/project-3" class="flex flex-col md:flex-row items-center gap-3 md:gap-4 text-center md:text-left">
+      <a href="/projects/project-3" class="flex items-center gap-0 md:gap-4 md:flex-row text-center md:text-left">
         <span class="inline-flex items-center justify-center w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full">
           <span class="text-white">←</span>
         </span>
-        <span class="text-white/70 text-sm">Progetto precedente</span>
+        <span class="hidden md:inline-block text-white/70 text-sm">Progetto precedente</span>
       </a>
 
-      <!-- Center spacer for mobile -->
+      <!-- Center spacer for desktop -->
       <div class="hidden md:block flex-1"></div>
 
       <!-- Next -->
-      <a href="/projects/project-5" class="flex flex-col md:flex-row-reverse items-center gap-3 md:gap-4 text-center md:text-right">
+      <a href="/projects/project-5" class="flex items-center gap-0 md:gap-4 md:flex-row-reverse text-center md:text-right">
         <span class="inline-flex items-center justify-center w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full">
           <span class="text-white">→</span>
         </span>
-        <span class="text-white/70 text-sm">Progetto successivo</span>
+        <span class="hidden md:inline-block text-white/70 text-sm">Progetto successivo</span>
       </a>
     </div>
   </section>

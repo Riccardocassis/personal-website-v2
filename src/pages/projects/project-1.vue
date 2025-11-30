@@ -195,24 +195,24 @@ Posso aiutarti a creare esperienze digitali su misura.</p>
 
   <!-- Prev / Next arrows below CTA with labels (responsive) -->
   <section class="bg-black py-6 md:py-8 px-6">
-    <div class="max-w-2xl mx-auto flex flex-col md:flex-row items-center md:items-stretch justify-between gap-6">
+    <div class="max-w-2xl mx-auto flex flex-row md:flex-row items-center md:items-stretch justify-center md:justify-between gap-6">
       <!-- Previous -->
-      <a href="/projects/project-9" class="flex flex-col md:flex-row items-center gap-3 md:gap-4 text-center md:text-left">
+      <a href="/projects/project-9" class="flex items-center gap-0 md:gap-4 md:flex-row text-center md:text-left">
         <span class="inline-flex items-center justify-center w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full">
           <span class="text-white">←</span>
         </span>
-        <span class="text-white/70 text-sm">Progetto precedente</span>
+        <span class="hidden md:inline-block text-white/70 text-sm">Progetto precedente</span>
       </a>
 
-      <!-- Center spacer for mobile -->
+      <!-- Center spacer for desktop -->
       <div class="hidden md:block flex-1"></div>
 
       <!-- Next -->
-      <a href="/projects/project-2" class="flex flex-col md:flex-row-reverse items-center gap-3 md:gap-4 text-center md:text-right">
+      <a href="/projects/project-2" class="flex items-center gap-0 md:gap-4 md:flex-row-reverse text-center md:text-right">
         <span class="inline-flex items-center justify-center w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full">
           <span class="text-white">→</span>
         </span>
-        <span class="text-white/70 text-sm">Progetto successivo</span>
+        <span class="hidden md:inline-block text-white/70 text-sm">Progetto successivo</span>
       </a>
     </div>
   </section>

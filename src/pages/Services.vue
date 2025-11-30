@@ -20,7 +20,7 @@
       <!-- Card 1 -->
       <article class="service-card bg-transparent border p-8 rounded-2xl flex flex-col justify-between h-full w-full" tabindex="0">
         <h2 class="text-xl font-semibold text-white mb-3">Web Design & Development</h2>
-        <p class="text-white/70 leading-relaxed text-[15px]">Realizzo siti chiari, leggeri e ben strutturati, con attenzione a design, responsive e performance.</p>
+        <p class="text-white/70 leading-relaxed text-[15px]">Realizzo siti su misura, leggeri e ben strutturati, con attenzione a design, responsive e performance.</p>
         <ul class="mt-4 space-y-1 text-white/60 text-sm">
           <li>design responsive</li>
           <li>gerarchie pulite</li>
@@ -32,7 +32,7 @@
       <!-- Card 2 -->
       <article class="service-card bg-transparent border p-8 rounded-2xl flex flex-col justify-between h-full w-full" tabindex="0">
         <h2 class="text-xl font-semibold text-white mb-3">UI/UX Design</h2>
-        <p class="text-white/70 leading-relaxed text-[15px]">Progetto interfacce semplici da usare, riducendo attriti e complessità.</p>
+        <p class="text-white/70 leading-relaxed text-[15px]">Progetto interfacce semplici da usare, riducendo attriti e complessità nei processi operativi.</p>
         <ul class="mt-4 space-y-1 text-white/60 text-sm">
           <li>flussi UX</li>
           <li>wireframe</li>
@@ -44,7 +44,7 @@
       <!-- Card 3 -->
       <article class="service-card bg-transparent border p-8 rounded-2xl flex flex-col justify-between h-full w-full" tabindex="0">
         <h2 class="text-xl font-semibold text-white mb-3">Brand Identity & Art Direction</h2>
-        <p class="text-white/70 leading-relaxed text-[15px]">Definisco identità visive coerenti, leggibili e riconoscibili.</p>
+        <p class="text-white/70 leading-relaxed text-[15px]">Definisco identità visive funzionali in base alla richiesta, mirando a fare emergere i punti di forza di un brand e rendendolo unico e distinguibile dai competitors.</p>
         <ul class="mt-4 space-y-1 text-white/60 text-sm">
           <li>logo</li>
           <li>palette</li>
@@ -56,7 +56,7 @@
       <!-- Card 4 -->
       <article class="service-card bg-transparent border p-8 rounded-2xl flex flex-col justify-between h-full w-full" tabindex="0">
         <h2 class="text-xl font-semibold text-white mb-3">SEO & Web Optimization</h2>
-        <p class="text-white/70 leading-relaxed text-[15px]">Ottimizzo struttura, contenuti e performance per un sito più veloce e più trovabile.</p>
+        <p class="text-white/70 leading-relaxed text-[15px]">Ottimizzo la struttura del tuo sito rendendolo più performante e facilmente trovabile sui motori di ricerca.</p>
         <ul class="mt-4 space-y-1 text-white/60 text-sm">
           <li>SEO tecnica</li>
           <li>on-page</li>
