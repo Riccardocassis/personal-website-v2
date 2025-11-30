@@ -1,6 +1,6 @@
 <template>
   <!-- HERO (Apple-like, generous whitespace) -->
-  <section class="relative w-full md:h-[85vh] h-[35vh] overflow-hidden bg-black">
+  <section class="relative w-full md:h-[85vh] h-[35vh] overflow-hidden bg-transparent -mt-12 md:mt-0">
     <img
       src="../../assets/cover-brandbibler1.webp"
       alt="Cover"
