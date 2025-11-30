@@ -63,7 +63,7 @@ Con il nuovo brand system ho voluto provare a riorganizza la comunicazione, semp
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden">
-              <img src="../../assets/p1slide1.webp" alt="Concept" class="reveal-img w-full h-full object-cover" />
+              <img src="../../assets/hgintro.webp" alt="Concept" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
@@ -87,7 +87,7 @@ Con il nuovo brand system ho voluto provare a riorganizza la comunicazione, semp
           </div>
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden">
-              <img src="../../assets/p1slide2.webp" alt="Materials" class="reveal-img w-full h-full object-cover" />
+              <img src="../../assets/hglogo.webp" alt="Materials" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -99,7 +99,7 @@ Con il nuovo brand system ho voluto provare a riorganizza la comunicazione, semp
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden">
-              <img src="../../assets/p1slide3.webp" alt="3D" class="reveal-img w-full h-full object-cover" />
+              <img src="../../assets/hgfont.webp" alt="3D" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
@@ -138,7 +138,7 @@ Per la comunicazione ho utilizzato Work Sans: accessibile, leggibile e neutra, i
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden">
-              <img src="../../assets/p1slide5.webp" alt="Sound" class="reveal-img w-full h-full object-cover" />
+              <img src="../../assets/hgptg.webp" alt="Sound" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
@@ -164,7 +164,7 @@ Per la comunicazione ho utilizzato Work Sans: accessibile, leggibile e neutra, i
             </div>
             <div class="w-full">
               <div class="w-full aspect-[4/3] overflow-hidden">
-                <img src="../../assets/p1slide6.webp" alt="La mappa" class="reveal-img w-full h-full object-cover" />
+                <img src="../../assets/hgmp.webp" alt="La mappa" class="reveal-img w-full h-full object-cover" />
               </div>
             </div>
           </div>
@@ -176,7 +176,7 @@ Per la comunicazione ho utilizzato Work Sans: accessibile, leggibile e neutra, i
           <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
             <div class="w-full">
               <div class="w-full aspect-[4/3] overflow-hidden">
-                <img src="../../assets/p1slide7.webp" alt="Materiali" class="reveal-img w-full h-full object-cover" />
+                <img src="../../assets/hgmerch.webp" alt="Materiali" class="reveal-img w-full h-full object-cover" />
               </div>
             </div>
             <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
