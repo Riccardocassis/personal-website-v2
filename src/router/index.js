@@ -29,6 +29,7 @@ const routes = [
   { path: '/seo',          name: 'seo',                component: () => import('../pages/Seo.vue') },
   { path: '/process',       name: 'process',           component: () => import('../pages/Process.vue') },
   { path: '/privacy',      name: 'privacy',           component: () => import('../pages/Privacy.vue') },
+  { path: '/cookie-policy', name: 'cookie-policy',     component: () => import('../pages/CookiePolicy.vue') },
 ]
 
 const router = createRouter({
