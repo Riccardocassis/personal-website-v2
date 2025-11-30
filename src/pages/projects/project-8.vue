@@ -68,7 +68,7 @@ Il risultato è un brand che funziona in ogni formato: dallo scaffale alla strad
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden">
-              <img src="../../assets/p1slide1.webp" alt="Concept" class="reveal-img w-full h-full object-cover" />
+              <img src="../../assets/rbpayoff.webp" alt="Concept" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
@@ -92,7 +92,7 @@ Il risultato è un brand che funziona in ogni formato: dallo scaffale alla strad
           </div>
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden">
-              <img src="../../assets/p1slide2.webp" alt="Materials" class="reveal-img w-full h-full object-cover" />
+              <img src="../../assets/rbcolorietipografia.webp" alt="Materials" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -104,7 +104,7 @@ Il risultato è un brand che funziona in ogni formato: dallo scaffale alla strad
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden">
-              <img src="../../assets/p1slide3.webp" alt="3D" class="reveal-img w-full h-full object-cover" />
+              <img src="../../assets/rbft.webp" alt="3D" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
@@ -131,7 +131,7 @@ Ogni pack è un manifesto del brand, non solo un contenitore.</p>
           </div>
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden">
-              <img src="../../assets/p1slide4.webp" alt="Interaction" class="reveal-img w-full h-full object-cover" />
+              <img src="../../assets/rbpackaging.webp" alt="Interaction" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -143,7 +143,7 @@ Ogni pack è un manifesto del brand, non solo un contenitore.</p>
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden">
-              <img src="../../assets/p1slide5.webp" alt="Sound" class="reveal-img w-full h-full object-cover" />
+              <img src="../../assets/rbcmp.webp" alt="Sound" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
@@ -170,7 +170,7 @@ L’obiettivo cardine è stato quello di puntare alla creazione di una community
           </div>
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden">
-              <img src="../../assets/p1slide6.webp" alt="Eventi" class="reveal-img w-full h-full object-cover" />
+              <img src="../../assets/rbsc.webp" alt="Eventi" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -182,7 +182,7 @@ L’obiettivo cardine è stato quello di puntare alla creazione di una community
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden">
-              <img src="../../assets/p1slide7.webp" alt="Sito web" class="reveal-img w-full h-full object-cover" />
+              <img src="../../assets/rbsw.webp" alt="Sito web" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start">
