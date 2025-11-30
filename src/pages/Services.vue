@@ -2,12 +2,12 @@
   <section class="relative max-w-6xl mx-auto px-4 py-20 text-white">
     <div class="fixed inset-0 pointer-events-none z-0" aria-hidden="true" style="background: radial-gradient(circle at 70% 50%, rgba(59,130,246,0.22), rgba(29,78,216,0.16) 28%, rgba(30,58,138,0.10) 60%);"></div>
     <div class="relative z-10">
-    <header class="mb-4 px-2">
-      <h1 class="text-3xl md:text-6xl font-extrabold text-white leading-tight">Services</h1>
+    <header class="mb-4 px-2 text-center">
+      <h1 class="text-5xl font-extrabold mb-2 text-white">Services</h1>
     </header>
 
     <!-- Symmetric 2x2 icon block -->
-    <div class="icons-2x2 mx-auto mb-4">
+    <div class="icons-2x2 mx-auto mb-2">
       <div class="grid grid-cols-2 gap-4 w-max mx-auto">
         <div class="w-6 h-6 rounded-full bg-white/6"></div>
         <div class="w-6 h-6 rounded-full bg-white/6"></div>
@@ -16,7 +16,7 @@
       </div>
     </div>
 
-    <div class="services-grid grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-10 lg:gap-12 px-2 items-stretch auto-rows-fr">
+    <div class="services-grid grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-10 lg:gap-12 px-2 items-stretch auto-rows-fr -mt-6 md:mt-0">
       <!-- Card 1 -->
       <article class="service-card bg-transparent border p-8 rounded-2xl flex flex-col justify-between h-full w-full" tabindex="0">
         <h2 class="text-xl font-semibold text-white mb-3">Web Design & Development</h2>
