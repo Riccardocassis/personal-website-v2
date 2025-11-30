@@ -79,7 +79,7 @@ Ho curato performance, responsive design, SEO on-page e micro-miglioramenti che 
               <img src="../../assets/img2sizexl.webp" alt="Concept" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-4 md:pt-0">
+          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">Analisi del sito</h3>
               <p class="text-white/70 mt-4">Ho analizzato il sito esistente per individuare punti deboli in struttura, UI e contenuti.
@@ -117,7 +117,7 @@ I colori sono stati scelti per migliorare leggibilità, contrasto e coerenza vis
               <img src="../../assets/fontsizexl.webp" alt="3D" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-4 md:pt-0">
+          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">Un font semplice ma efficace</h3>
               <p class="text-white/70 mt-4">In accordo con il cliente abbiamo scelto Inter come font: per la sua chiarezza, la leggibilità eccellente e la versatilità dei suoi pesi.
@@ -239,6 +239,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 onMounted(() => {
   // GSAP-controlled reveal: animate image first, then text; keep subtle parallax
+  const isMobile = typeof window !== 'undefined' && window.matchMedia('(max-width: 767px)').matches
   const images = gsap.utils.toArray('.reveal-img')
 
   images.forEach((img) => {
@@ -246,7 +247,13 @@ onMounted(() => {
     const grid = img.closest('.grid')
     const text = grid ? grid.querySelector('.reveal-text') : null
 
-    // initial states
+    if (isMobile) {
+      gsap.set(img, { y: 0, scale: 1, opacity: 1, clearProps: 'all' })
+      if (text) gsap.set(text, { y: 0, opacity: 1, clearProps: 'all' })
+      return
+    }
+
+    // initial states for desktop
     gsap.set(img, { y: 40, scale: 1.06, opacity: 0, transformOrigin: 'center center' })
     if (text) gsap.set(text, { y: 24, opacity: 0 })
 
@@ -262,7 +269,6 @@ onMounted(() => {
     tl.to(img, { y: 0, scale: 1, opacity: 1, ease: 'power3.out', duration: 1.1 })
       .to(text || {}, { y: 0, opacity: 1, ease: 'power2.out', duration: 0.6 }, '-=0.35')
 
-    // subtle parallax while scrolling through image (scrubbed)
     gsap.to(img, {
       yPercent: -6,
       ease: 'none',
@@ -274,8 +280,6 @@ onMounted(() => {
       }
     })
   })
-
-  
 
   // final video has been removed from the template
 

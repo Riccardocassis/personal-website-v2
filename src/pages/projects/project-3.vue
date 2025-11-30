@@ -134,18 +134,22 @@ gsap.registerPlugin(ScrollTrigger)
 
 onMounted(() => {
   // GSAP-controlled reveal: animate image first, then text; keep subtle parallax
+  const isMobile = typeof window !== 'undefined' && window.matchMedia('(max-width: 767px)').matches
   const images = gsap.utils.toArray('.reveal-img')
 
   images.forEach((img) => {
-    // find the nearest grid container and its text block
     const grid = img.closest('.grid')
     const text = grid ? grid.querySelector('.reveal-text') : null
 
-    // initial states
+    if (isMobile) {
+      gsap.set(img, { y: 0, scale: 1, opacity: 1, clearProps: 'all' })
+      if (text) gsap.set(text, { y: 0, opacity: 1, clearProps: 'all' })
+      return
+    }
+
     gsap.set(img, { y: 40, scale: 1.06, opacity: 0, transformOrigin: 'center center' })
     if (text) gsap.set(text, { y: 24, opacity: 0 })
 
-    // timeline: reveal image then text
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: img,
@@ -157,7 +161,6 @@ onMounted(() => {
     tl.to(img, { y: 0, scale: 1, opacity: 1, ease: 'power3.out', duration: 1.1 })
       .to(text || {}, { y: 0, opacity: 1, ease: 'power2.out', duration: 0.6 }, '-=0.35')
 
-    // subtle parallax while scrolling through image (scrubbed)
     gsap.to(img, {
       yPercent: -6,
       ease: 'none',
@@ -169,8 +172,6 @@ onMounted(() => {
       }
     })
   })
-
-  
 
   // final video has been removed from the template
 

@@ -71,7 +71,7 @@ Il risultato è un brand che funziona in ogni formato: dallo scaffale alla strad
               <img src="../../assets/rbpayoff.webp" alt="Concept" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-4 md:pt-0">
+          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">Ribelli dalle fondamenta</h3>
               <p class="text-white/70 mt-4">Ho scelto di partire in questo concept rivisitando il logo, mi sono avvalso del font Losta Bonita per richiamare il tema musicale e lo stile degli anni sessanta e settanta tipico delle cover dei vinili.</p>
@@ -107,7 +107,7 @@ Il risultato è un brand che funziona in ogni formato: dallo scaffale alla strad
               <img src="../../assets/rbft.webp" alt="3D" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-4 md:pt-0">
+          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">Fotografia spontanea e imperfetta (nel modo giusto).</h3>
               <p class="text-white/70 mt-4">Ho scelto una fotografia che valorizza corpi reali, situazioni quotidiane e un’estetica volutamente “raw”.
@@ -146,7 +146,7 @@ Ogni pack è un manifesto del brand, non solo un contenitore.</p>
               <img src="../../assets/rbcmp.webp" alt="Sound" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-4 md:pt-0">
+          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">Uno stile comunicativo senza filtri.</h3>
               <p class="text-white/70 mt-4">Poster irriverenti, contrasti saturi e messaggi brevi.
@@ -185,7 +185,7 @@ L’obiettivo cardine è stato quello di puntare alla creazione di una community
               <img src="../../assets/rbsw.webp" alt="Sito web" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-4 md:pt-0">
+          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">Un’esperienza digitale coerente</h3>
               <p class="text-white/70 mt-4">L’interfaccia segue la stessa direzione ribelle del brand: colori forti, tipografia espressiva e una navigazione veloce.
@@ -245,11 +245,18 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
 onMounted(() => {
+  const isMobile = typeof window !== 'undefined' && window.matchMedia('(max-width: 767px)').matches
   const images = gsap.utils.toArray('.reveal-img')
 
   images.forEach((img) => {
     const grid = img.closest('.grid')
     const text = grid ? grid.querySelector('.reveal-text') : null
+
+    if (isMobile) {
+      gsap.set(img, { y: 0, scale: 1, opacity: 1, clearProps: 'all' })
+      if (text) gsap.set(text, { y: 0, opacity: 1, clearProps: 'all' })
+      return
+    }
 
     gsap.set(img, { y: 40, scale: 1.06, opacity: 0, transformOrigin: 'center center' })
     if (text) gsap.set(text, { y: 24, opacity: 0 })

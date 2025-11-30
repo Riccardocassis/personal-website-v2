@@ -66,7 +66,7 @@ Con il nuovo brand system ho voluto provare a riorganizza la comunicazione, semp
               <img src="../../assets/hgintro.webp" alt="Concept" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-4 md:pt-0">
+          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">Un ecosistema naturale e artificiale in grado di respirare e cambiare sguardo in base alle stagioni.</h3>
               <p class="text-white/70 mt-4">Il concept nasce dall’idea di un organismo vivo: un giardino che cambia con le stagioni, si trasforma con lo sguardo dei visitatori e racconta narrazioni diverse a seconda del percorso. La direzione creativa costruisce un linguaggio fluido, naturale e contemporaneo che unisce leggerezza, movimento e scoperta.</p>
@@ -102,7 +102,7 @@ Con il nuovo brand system ho voluto provare a riorganizza la comunicazione, semp
               <img src="../../assets/hgfont.webp" alt="3D" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-4 md:pt-0">
+          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">Il passato scolpito nel presente e nel futuro.</h3>
               <p class="text-white/70 mt-4">Ho scelto Skia come carattere espressivo per titoli e logotipo: organico, variabile, scolpito.
@@ -141,7 +141,7 @@ Per la comunicazione ho utilizzato Work Sans: accessibile, leggibile e neutra, i
               <img src="../../assets/hgptg.webp" alt="Sound" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-4 md:pt-0">
+          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">Pittogrammi morbidi e organici</h3>
               <p class="text-white/70 mt-4">Ho scelto di disegnare delle icone botaniche e di navigazione dal tratto morbido, ad alta leggibilità e di facile comprensione per tutti gli utenti che visitano il giardino e che trasmettano una vibrazione in linea con tutto il concept.</p>
@@ -179,7 +179,7 @@ Per la comunicazione ho utilizzato Work Sans: accessibile, leggibile e neutra, i
                 <img src="../../assets/hgmerch.webp" alt="Materiali" class="reveal-img w-full h-full object-cover" />
               </div>
             </div>
-            <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-4 md:pt-0">
+            <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
               <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
                 <h3 class="text-xl text-white font-semibold">Indossare il brand è farsi promotori di questo posto</h3>
                 <p class="text-white/70 mt-4">Poster, brochure, biglietti, gadget e materiali per eventi seguono il sistema visivo stagionale, creando coerenza tra fisico e digitale.</p>
@@ -238,11 +238,18 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
 onMounted(() => {
+  const isMobile = typeof window !== 'undefined' && window.matchMedia('(max-width: 767px)').matches
   const images = gsap.utils.toArray('.reveal-img')
 
   images.forEach((img) => {
     const grid = img.closest('.grid')
     const text = grid ? grid.querySelector('.reveal-text') : null
+
+    if (isMobile) {
+      gsap.set(img, { y: 0, scale: 1, opacity: 1, clearProps: 'all' })
+      if (text) gsap.set(text, { y: 0, opacity: 1, clearProps: 'all' })
+      return
+    }
 
     gsap.set(img, { y: 40, scale: 1.06, opacity: 0, transformOrigin: 'center center' })
     if (text) gsap.set(text, { y: 24, opacity: 0 })

@@ -77,7 +77,7 @@ Ho scelto di utilizzare dunque un Tov amichevole ed informale nella applicazione
               <img src="../../assets/opsifywirewebp.webp" alt="Concept" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-4 md:pt-0">
+          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">Dai primi wireframe alla struttura dell’app</h3>
               <p class="text-white/70 mt-4">Ho sviluppato una prima struttura low-fi per testare navigazione, categorie e priorità dei contenuti prima di passare alla fase visual.</p>
@@ -113,7 +113,7 @@ Ho scelto di utilizzare dunque un Tov amichevole ed informale nella applicazione
               <img src="../../assets/opsyfyproto.webp" alt="3D" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-4 md:pt-0">
+          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">Il tocco finale che migliora l'esperienza.</h3>
               <p class="text-white/70 mt-4">Ho prototipato micro-interazioni e transizioni con Protopie per validare la fluidità dell’esperienza e simulare il comportamento reale dell’app.</p>
@@ -186,6 +186,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 onMounted(() => {
   // GSAP-controlled reveal: animate image first, then text; keep subtle parallax
+  const isMobile = typeof window !== 'undefined' && window.matchMedia('(max-width: 767px)').matches
   const images = gsap.utils.toArray('.reveal-img')
 
   images.forEach((img) => {
@@ -193,7 +194,13 @@ onMounted(() => {
     const grid = img.closest('.grid')
     const text = grid ? grid.querySelector('.reveal-text') : null
 
-    // initial states
+    if (isMobile) {
+      gsap.set(img, { y: 0, scale: 1, opacity: 1, clearProps: 'all' })
+      if (text) gsap.set(text, { y: 0, opacity: 1, clearProps: 'all' })
+      return
+    }
+
+    // initial states for desktop
     gsap.set(img, { y: 40, scale: 1.06, opacity: 0, transformOrigin: 'center center' })
     if (text) gsap.set(text, { y: 24, opacity: 0 })
 
@@ -223,7 +230,7 @@ onMounted(() => {
   })
 
   
-
+  
   // final video has been removed from the template
 
   // Horizontal carousel logic removed

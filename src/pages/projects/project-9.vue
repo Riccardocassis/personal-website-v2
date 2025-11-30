@@ -68,7 +68,7 @@ La fanzine è stata realizzata per la Giornata Mondiale della Salute Mentale (10
               <img src="../../assets/ctrlaltcanc-illustrazione.webp" alt="Concept" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-4 md:pt-0">
+          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">L'imperfezione del fatto a manno riflette l'imperfezione in ciascuno di noi</h3>
               <p class="text-white/70 mt-4">Tutte le illustrazioni sono state disegnate a mano sull'Ipad, adottando uno stile volutamente “grezzo”, perché l’overthinking non è pulito, ordinato o patinato. È caotico, scomodo, rumoroso.</p>
@@ -111,7 +111,7 @@ La fanzine è stata realizzata per la Giornata Mondiale della Salute Mentale (10
               <img src="../../assets/crtlaltcanc-poster.webp" alt="3D" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-4 md:pt-0">
+          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">Un messaggio visivo chiaro.</h3>
               <p class="text-white/70 mt-4">Il poster riassume il messaggio della fanzine.</p>
@@ -174,11 +174,18 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
 onMounted(() => {
+  const isMobile = typeof window !== 'undefined' && window.matchMedia('(max-width: 767px)').matches
   const images = gsap.utils.toArray('.reveal-img')
 
   images.forEach((img) => {
     const grid = img.closest('.grid')
     const text = grid ? grid.querySelector('.reveal-text') : null
+
+    if (isMobile) {
+      gsap.set(img, { y: 0, scale: 1, opacity: 1, clearProps: 'all' })
+      if (text) gsap.set(text, { y: 0, opacity: 1, clearProps: 'all' })
+      return
+    }
 
     gsap.set(img, { y: 40, scale: 1.06, opacity: 0, transformOrigin: 'center center' })
     if (text) gsap.set(text, { y: 24, opacity: 0 })

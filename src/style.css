@@ -1,20 +1,168 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @layer base {
 	body {
-
-@layer components {
-	.project-img-wrap {
-		@apply mb-6 md:mb-0;
-	}
-}
 		@apply bg-black min-h-screen;
 	}
+
 	/* Smooth scrolling and correct anchor offset for fixed navbar */
 	html {
 		scroll-behavior: smooth;
 		scroll-padding-top: 78px; /* leave room for fixed navbar (height ~70px) */
+	}
+}
+
+@layer components {
+	.project-img-wrap {
+		@apply mt-6 mb-8 md:mt-0 md:mb-0;
+	}
+}
+
+/* Mobile-specific overrides to ensure consistent vertical rhythm and prevent text-image overlap
+	 Targets only screens up to 768px and uses strong overrides where necessary. */
+@media (max-width: 768px) {
+	:root {
+		--v-space: 1.5rem; /* base vertical rhythm */
+		--v-space-lg: 2.25rem; /* larger gaps for section separation */
+	}
+
+	/* Ensure image wrappers behave like block-level elements and are fully responsive */
+	.project-img-wrap {
+		display: block !important;
+		width: 100% !important;
+		overflow: visible !important; /* avoid cropping text */
+		margin-top: var(--v-space) !important;
+		margin-bottom: var(--v-space) !important;
+	}
+
+	/* Normalize image sizing inside wrappers and any reveal images */
+	.project-img-wrap img,
+	img.reveal-img,
+	.reveal-img {
+		display: block !important;
+		width: 100% !important;
+		height: auto !important;
+		max-width: 100% !important;
+		object-fit: cover !important;
+	}
+
+	/* Make reveal text flow naturally and remove transforms that could hide it */
+	.reveal-text {
+		position: static !important;
+		transform: none !important;
+		opacity: 1 !important;
+		margin-top: calc(var(--v-space) / 2) !important;
+		margin-bottom: var(--v-space) !important;
+	}
+
+		/* Prevent absolute/fixed positioning from causing overlap on small screens.
+			 Only target reveal/image/text elements used in project sections so
+			 global UI (e.g. navbar `.fixed`) is not affected. */
+		.reveal-img[class*="absolute"],
+		.reveal-img.absolute,
+		.reveal-text.absolute,
+		.absolute.reveal-img,
+		.fixed.reveal-img {
+			position: static !important;
+			top: auto !important;
+			left: auto !important;
+			right: auto !important;
+			bottom: auto !important;
+		}
+
+		/* Avoid clipping caused by overflow hidden on mobile for containers inside project sections */
+		section.bg-black [class*="overflow-hidden"],
+		section.bg-black .overflow-hidden {
+			overflow: visible !important;
+		}
+
+	/* Vertical rhythm for headings, paragraphs and sections inside project pages
+		 Reduced from --v-space-lg to --v-space to tighten layout and bring footer up. */
+	section,
+	.space-y-20 > *,
+	.max-w-3xl,
+	.max-w-6xl {
+		padding-top: var(--v-space) !important;
+		padding-bottom: var(--v-space) !important;
+	}
+
+	h1, h2, h3 {
+		margin-top: var(--v-space) !important;
+		margin-bottom: calc(var(--v-space) / 2) !important;
+		line-height: 1.1 !important;
+	}
+
+	p {
+		margin-top: 0 !important;
+		margin-bottom: var(--v-space) !important;
+		line-height: 1.6 !important;
+	}
+
+	/* Tighten the layout gutters on mobile for predictable flow */
+	.px-6 {
+		padding-left: 1rem !important;
+		padding-right: 1rem !important;
+	}
+
+	/* Hero tweaks: keep the portrait contained on small screens so it doesn't "exit" the page */
+	section[aria-labelledby="hero-title"] {
+		overflow: hidden !important; /* intentionally clip large scaled portrait */
+		padding-top: 3rem !important; /* reduce very large top paddings on mobile */
+		padding-bottom: 3rem !important;
+	}
+
+	section[aria-labelledby="hero-title"] .hero-mask,
+	section[aria-labelledby="hero-title"] .hero-mask img,
+	section[aria-labelledby="hero-title"] img.hero-mask {
+		display: block !important;
+		transform: none !important; /* remove large scale transforms on mobile */
+		-webkit-transform: none !important;
+		width: 92% !important; /* keep the intended relative width */
+		max-width: 92% !important;
+		height: auto !important;
+		max-height: calc(100vh - 120px) !important; /* leave room for nav + some breathing */
+		margin-left: auto !important;
+		margin-right: auto !important;
+		object-fit: cover !important;
+	}
+
+	/* Force hero grid to center content vertically on mobile and stack nicely */
+	section[aria-labelledby="hero-title"] .grid {
+		display: flex !important;
+		flex-direction: column !important;
+		align-items: center !important;
+		justify-content: center !important;
+		gap: 1.25rem !important;
+		min-height: calc(100vh - 70px) !important; /* occupy most viewport but leave room for nav */
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+
+	/* Ensure hero text block is centered on mobile */
+	section[aria-labelledby="hero-title"] .text-white {
+		text-align: center !important;
+	}
+
+	section[aria-labelledby="hero-title"] h1 {
+		font-size: 2.25rem !important; /* slightly smaller on small screens */
+		line-height: 1.05 !important;
+	}
+
+	section[aria-labelledby="hero-title"] p {
+		margin-left: auto !important;
+		margin-right: auto !important;
+		max-width: 20rem !important;
+	}
+
+	/* Small spacing between portrait and heading */
+	section[aria-labelledby="hero-title"] .w-[92%] {
+		margin-bottom: 1rem !important;
+	}
+
+	/* Footer: reduce top spacing so footer appears higher on mobile */
+	footer {
+		padding-top: 2rem !important;
+		padding-bottom: 2rem !important;
 	}
 }

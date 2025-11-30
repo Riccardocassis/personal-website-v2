@@ -77,7 +77,7 @@ Il risultato è un prototipo che semplifica il lavoro quotidiano, riduce errori 
               <img src="../../assets/fillbos1.webp" alt="Concept" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-4 md:pt-0">
+          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold"> Analisi dei processi reali per ridurre gli sprechi alimentari.</h3>
               <p class="text-white/70 mt-4">SNel team della Dispensa Alimentare di Cauto, il problema non era la mancanza di volontà ma la mancanza di uno strumento che semplificasse un flusso operativo frammentato.
@@ -121,7 +121,7 @@ La mappatura in Figma è servita per tradurre i bisogni del personale — commes
               <img src="../../assets/fillbos5.webp" alt="3D" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-4 md:pt-0">
+          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">L'esperienza sul campo è stato l'elemento più importante per lo svilupo dei Wireframes</h3>
               <p class="text-white/70 mt-4">Sono partito dall’analisi dei bisogni operativi di supermercati e magazzini. Ho definito i flussi principali e li ho trasformati in wireframe chiari, dove ogni step è ottimizzato per velocizzare le operazioni quotidiane e ridurre gli errori di catalogazione.</p>
@@ -158,7 +158,7 @@ La mappatura in Figma è servita per tradurre i bisogni del personale — commes
               <img src="../../assets/fillbos3.webp" alt="Sound" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-4 md:pt-0">
+          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">Un’interfaccia semplice per ridurre errori e tempi operativi</h3>
               <p class="text-white/70 mt-4">Ho progettato Fillbo per essere usabile anche nelle situazioni più frenetiche.
@@ -231,6 +231,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 onMounted(() => {
   // GSAP-controlled reveal: animate image first, then text; keep subtle parallax
+  const isMobile = typeof window !== 'undefined' && window.matchMedia('(max-width: 767px)').matches
   const images = gsap.utils.toArray('.reveal-img')
 
   images.forEach((img) => {
@@ -238,7 +239,14 @@ onMounted(() => {
     const grid = img.closest('.grid')
     const text = grid ? grid.querySelector('.reveal-text') : null
 
-    // initial states
+    if (isMobile) {
+      // show immediately on small screens
+      gsap.set(img, { y: 0, scale: 1, opacity: 1, clearProps: 'all' })
+      if (text) gsap.set(text, { y: 0, opacity: 1, clearProps: 'all' })
+      return
+    }
+
+    // initial states for desktop
     gsap.set(img, { y: 40, scale: 1.06, opacity: 0, transformOrigin: 'center center' })
     if (text) gsap.set(text, { y: 24, opacity: 0 })
 
@@ -266,8 +274,6 @@ onMounted(() => {
       }
     })
   })
-
-  
 
   // final video has been removed from the template
 

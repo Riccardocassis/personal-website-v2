@@ -75,7 +75,7 @@
                 <img src="../../assets/webintro.webp" alt="Concept" class="reveal-img w-full h-full object-cover" />
               </div>
           </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-4 md:pt-0">
+          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">Come nasce Webable</h3>
               <p class="text-white/70 mt-4">La formazione sull’accessibilità è spesso troppo teorica, dispersiva e complessa per chi lavora nel digitale.
@@ -113,7 +113,7 @@ Questo step permette alla piattaforma di generare un percorso formativo su misur
                 <img src="../../assets/webads.webp" alt="3D" class="reveal-img w-full h-full object-cover" />
               </div>
           </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-4 md:pt-0">
+          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">Le linee guida per creare una web app efficace.</h3>
               <p class="text-white/70 mt-4">Ho definito una palette morbida, una tipografia leggibile e componenti semplici per costruire un’interfaccia accessibile e coerente.
@@ -152,7 +152,7 @@ Ogni step è pensato per essere breve, chiaro e motivante.</p>
                 <img src="../../assets/webainterface.webp" alt="Sound" class="reveal-img w-full h-full object-cover" />
               </div>
           </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-4 md:pt-0">
+          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">Un’interfaccia amichevole e motivante.</h3>
               <p class="text-white/70 mt-4">L’interfaccia finale combina colori morbidi, icone rotonde e micro-feedback per rendere il tema dell’accessibilità più accessibile.
@@ -224,6 +224,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 onMounted(() => {
   // GSAP-controlled reveal: animate image first, then text; keep subtle parallax
+  const isMobile = typeof window !== 'undefined' && window.matchMedia('(max-width: 767px)').matches
   const images = gsap.utils.toArray('.reveal-img')
 
   images.forEach((img) => {
@@ -231,7 +232,13 @@ onMounted(() => {
     const grid = img.closest('.grid')
     const text = grid ? grid.querySelector('.reveal-text') : null
 
-    // initial states
+    if (isMobile) {
+      gsap.set(img, { y: 0, scale: 1, opacity: 1, clearProps: 'all' })
+      if (text) gsap.set(text, { y: 0, opacity: 1, clearProps: 'all' })
+      return
+    }
+
+    // initial states for desktop
     gsap.set(img, { y: 40, scale: 1.06, opacity: 0, transformOrigin: 'center center' })
     if (text) gsap.set(text, { y: 24, opacity: 0 })
 
@@ -261,7 +268,7 @@ onMounted(() => {
   })
 
   
-
+  
   // final video has been removed from the template
 
   // Horizontal carousel logic removed
