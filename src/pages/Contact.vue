@@ -1,6 +1,8 @@
 <template>
   <div class="contact-viewport flex flex-col min-h-screen animated-gradient-bg">
-    <section class="flex-1 flex flex-col justify-center items-center pt-20 md:pt-32 pb-8 px-4">
+    <div aria-hidden="true" class="fixed inset-0 pointer-events-none" style="background: radial-gradient(600px 400px at 10% 20%, rgba(59,130,246,0.14), transparent 30%), radial-gradient(500px 400px at 90% 80%, rgba(59,130,246,0.12), transparent 25%); -webkit-backdrop-filter: none; backdrop-filter: none;">
+    </div>
+    <section class="relative z-10 flex-1 flex flex-col justify-center items-center pt-20 md:pt-32 pb-8 px-4">
       <h1 class="text-5xl md:text-6xl font-extrabold mb-4 text-white text-center animate-contact-title">Contattami</h1>
       <h2 class="text-2xl md:text-3xl font-bold text-cyan-400 mb-8 text-center animate-contact-sub">Hai un progetto, una domanda o vuoi collaborare?</h2>
       <div 

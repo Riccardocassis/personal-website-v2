@@ -1,6 +1,8 @@
 <template>
   <section class="grid-root pt-20 pb-32 px-10 lg:px-20">
-    <div class="max-w-7xl mx-auto">
+    <div aria-hidden="true" class="fixed inset-0 pointer-events-none" style="background: radial-gradient(600px 400px at 10% 20%, rgba(59,130,246,0.14), transparent 30%), radial-gradient(500px 400px at 90% 80%, rgba(59,130,246,0.12), transparent 25%); -webkit-backdrop-filter: none; backdrop-filter: none;">
+    </div>
+    <div class="max-w-7xl mx-auto relative z-10">
       <div class="text-center mb-12">
         <h1 class="text-4xl md:text-5xl font-extrabold">Projects</h1>
         <p class="text-lg text-white/80 mt-3">Una selezione dei miei lavori tra identità visive, UI/UX e web design.</p>
