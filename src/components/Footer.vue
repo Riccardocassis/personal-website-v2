@@ -41,12 +41,11 @@
                 <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.78-.25.78-.55 0-.27-.01-1.17-.01-2.12-3.2.7-3.88-1.35-3.88-1.35-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.75.4-1.25.72-1.54-2.56-.29-5.26-1.28-5.26-5.71 0-1.26.45-2.29 1.18-3.1-.12-.29-.52-1.45.11-3.02 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.21-1.5 3.18-1.18 3.18-1.18.63 1.57.23 2.73.11 3.02.73.81 1.18 1.84 1.18 3.1 0 4.44-2.7 5.41-5.28 5.7.41.36.77 1.08.77 2.18 0 1.58-.01 2.85-.01 3.24 0 .3.2.66.79.55C20.71 21.39 24 17.08 24 12 24 5.65 18.35.5 12 .5z"/>
               </svg>
             </a>
-            <a href="https://www.behance.net/riccardocassis" target="_blank" rel="noopener" aria-label="Behance" class="inline-flex items-center justify-center w-8 h-8 text-white/70 hover:text-white hover:scale-[1.05] transition-all duration-200">
-              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-                <title>Behance</title>
-                <path d="M3.5 7.5h4.5v1H3.5v-1zm0 3.5h4.5v1H3.5v-1zm0 3.5h4.5v1H3.5v-1zM13.5 7c.7 0 1.25.55 1.25 1.25S14.2 9.5 13.5 9.5H11v-2.5h2.5zM11 11h2.7c.9 0 1.8.6 1.8 1.5 0 .9-.9 1.5-1.8 1.5H11V11zm6.5-4.5h3v9h-3v-9z"/>
-              </svg>
-            </a>
+              <a href="https://www.behance.net/riccardocassis" target="_blank" rel="noopener" aria-label="Behance" class="inline-flex items-center justify-center w-8 h-8 text-white/70 hover:text-white hover:scale-[1.05] transition-all duration-200">
+                <span class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-white/5 text-white/70 group-hover:bg-white/10 transition-colors duration-200">
+                  <img src="../assets/icon-behance.webp" alt="Behance" class="w-5 h-5 sm:w-6 sm:h-6 object-contain" />
+                </span>
+              </a>
           </div>
         </div>
 
