@@ -1,22 +1,22 @@
 <template>
-  <section aria-labelledby="hero-title" class="relative w-full bg-black">
+  <section aria-labelledby="hero-title" class="relative w-full bg-transparent md:bg-black">
     <div
       ref="gradientRef"
       class="absolute inset-0 pointer-events-none z-0"
       :style="{ background: 'radial-gradient(circle at 70% 50%, rgba(59,130,246,0.22), rgba(29,78,216,0.16) 28%, rgba(30,58,138,0.10) 60%)' }"
     ></div>
 
-    <div class="max-w-screen-xl mx-auto px-6 pt-20 md:pt-36 pb-16 md:pb-24">
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center min-h-[60vh] md:min-h-[72vh]">
+    <div class="max-w-screen-xl mx-auto px-6 pt-6 md:pt-36 pb-12 md:pb-24">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center min-h-[72vh] md:min-h-[72vh]">
 
         <!-- IMAGE: mobile on top, desktop on the left -->
-        <div class="order-1 md:col-span-6 flex items-center justify-center md:justify-start">
-          <div class="relative w-full flex justify-center md:justify-start">
-            <div class="w-[92%] sm:w-[86%] md:w-[45%]">
+        <div class="order-1 md:col-span-6 flex items-center justify-start md:justify-start">
+          <div class="relative w-full flex justify-start md:justify-start -mx-6 md:mx-0">
+            <div class="w-full sm:w-[86%] md:w-[45%]">
               <img
                 src="../assets/hero-riccardo.webp"
                 alt="Portrait of Riccardo Cassis"
-                class="w-full h-auto object-cover rounded-3xl transform hero-mask scale-[1.4] sm:scale-[1.8] md:scale-[3.6] relative z-30 opacity-100"
+                class="w-full h-auto object-cover object-left rounded-3xl transform hero-mask scale-[2.7] sm:scale-[3.3] md:scale-[3.6] relative z-30 opacity-100"
                 style="opacity:1; filter: brightness(0.82) contrast(1.05) saturate(1.0);"
               />
             </div>
@@ -25,7 +25,7 @@
 
         <!-- TEXT: desktop on the right -->
         <div class="order-2 md:col-span-6 flex items-center">
-          <div class="w-full text-white pr-6 md:pr-20 pl-0 md:pl-12 lg:pl-20">
+          <div class="w-full text-white pr-6 md:pr-20 pl-0 md:pl-12 lg:pl-20 -mt-8 md:mt-0">
             <div class="max-w-xl md:max-w-xl lg:max-w-xl md:text-left text-center">
               <h1 ref="titleRef" id="hero-title" class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
                 <span class="whitespace-nowrap">Riccardo Cassis</span> <span class="block md:inline mt-2 md:mt-0">UI/UX &amp; Web Designer</span>
@@ -76,17 +76,24 @@
               </div>
               <!-- end social icons -->
 
+              <!-- Mobile-only footer attached right after social icons -->
+              <div class="md:hidden mt-4">
+                <Footer />
+              </div>
+
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+ 
 </template>
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { RouterLink } from 'vue-router'
+import Footer from './Footer.vue'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 

@@ -27,7 +27,7 @@
   <section class="bg-black py-8 md:py-20 px-6">
     <div class="max-w-3xl mx-auto text-center md:text-left">
       <h2 class="text-3xl md:text-4xl font-semibold text-white mb-4 md:mb-6 text-center">Lo scopo del progetto</h2>
-      <p class="text-white/60 text-lg leading-snug md:leading-relaxed">n questo progetto ho voluto tradurre l’overthinking in una narrazione visiva semplice da capire ma difficile da ignorare. Ho scelto un’estetica in bianco e nero per togliere il superfluo e concentrare l’attenzione su ciò che conta: il rumore mentale, il peso dei pensieri, la lotta quotidiana che molti vivono in silenzio. La fanzine è stata realizzata per la Giornata Mondiale della Salute Mentale (10 ottobre) e successivamente condivisa con psicologi e professionisti del settore, come strumento divulgativo e conversazionale.</p>
+      <p class="text-white/60 text-lg leading-snug md:leading-relaxed">In questo progetto ho voluto tradurre l’overthinking in una narrazione visiva semplice da capire ma difficile da ignorare. Ho scelto un’estetica in bianco e nero per togliere il superfluo e concentrare l’attenzione su ciò che conta: il rumore mentale, il peso dei pensieri, la lotta quotidiana che molti vivono in silenzio. La fanzine è stata realizzata per la Giornata Mondiale della Salute Mentale (10 ottobre) e successivamente condivisa con psicologi e professionisti del settore, come strumento divulgativo e conversazionale.</p>
     </div>
   </section>
 
@@ -86,13 +86,13 @@
         <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
           <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start order-2 md:order-1">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Una trama fantasy sarcastica ma con un messaggio chiaro.</h3>
+              <h3 class="text-xl text-white font-semibold">Una trama fantasy sarcastica ma con un messaggio chiaro</h3>
               <p class="text-white/70 mt-4">Ho strutturato la fanzine in step, come un manuale per soldati:
-	•	riconosci il problema
-	•	entra nella tua mente
-	•	identifica i mostri
-	•	affrontali
-	•	liberatene
+	riconosci il problema,
+	entra nella tua mente prendendo consapevolezza dei tuoi pensieri,
+	identifica i mostri,
+	affrontali,
+	ed infine liberatene (riconoscendoli).
   Ovviamente questo non è un manuale e serve come primo approccio ma a mio avviso specialmente quando si pensa troppo è utile seguire un piano senza divagare, il tutto scritto con un tono sarcastico e leggero
 .</p>
             </div>
@@ -116,8 +116,8 @@
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Un messaggio visivo chiaro.</h3>
-              <p class="text-white/70 mt-4">Il poster riassume il messaggio della fanzine.</p>
+              <h3 class="text-xl text-white font-semibold">Un messaggio visivo chiaro</h3>
+              <p class="text-white/70 mt-4">Il poster riassume il messaggio della fanzine. Ho voluto fare un parallelismo tra la mente e un computer</p>
             </div>
           </div>
         </div>
