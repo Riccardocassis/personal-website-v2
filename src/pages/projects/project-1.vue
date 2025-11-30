@@ -12,11 +12,16 @@
 
     <div class="absolute inset-0 flex items-center md:items-end justify-center md:justify-start pt-2 md:pb-20 pl-4 md:pl-20">
       <div class="max-w-3xl text-center md:text-left px-4 md:px-6">
-        <h1 class="text-3xl md:text-6xl font-extrabold text-white leading-tight">Gibson SG-1961</h1>
+        <h1 class="hidden md:block text-3xl md:text-6xl font-extrabold text-white leading-tight">Gibson SG-1961</h1>
         <p class="text-xs md:text-sm text-white/70 mt-3 md:mt-4 tracking-wide">Concept Experience — Il suono della SG-1961 trasformato in un’esperienza digitale interattiva</p>
       </div>
     </div>
   </section>
+
+  <!-- Mobile H1: show immediately below hero on small screens -->
+  <div class="md:hidden px-6 pt-4">
+    <h1 class="text-3xl font-extrabold text-white leading-tight">Gibson SG-1961</h1>
+  </div>
 
   <!-- Project Intro (Apple-style clear intro) -->
   <section class="bg-black py-8 md:py-20 px-6">
@@ -68,14 +73,14 @@
 
       <!-- 1 -->
       <div class="w-full mb-6 md:mb-0">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Concept e sviluppo dei Wireframes</h2>
+        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-3 md:mb-6 text-center md:text-left">Concept e sviluppo dei Wireframes</h2>
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
               <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
               <img src="../../assets/p1slide1.webp" alt="Concept" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
+          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-3 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">Stile estetico</h3>
               <p class="text-white/70 mt-4">Sono partito analizzando le parti che costituivano questo prodotto come materiali e finiture e il sentiment che ha suscitato nella cultura Rock e negli appassionati. Successivamente ho ripreso questi elementi e li ho reinterpretati a modo mio per creare il giusto mix tra passato presente e futuro costruendo un'esperienza immersiva mirata.</p>

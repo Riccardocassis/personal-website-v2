@@ -12,11 +12,16 @@
 
     <div class="absolute inset-0 flex items-center md:items-end justify-center md:justify-start pt-2 md:pb-20 pl-4 md:pl-20 z-10">
       <div class="max-w-3xl text-center md:text-left px-4 md:px-6">
-        <h1 class="text-3xl md:text-6xl font-extrabold text-white leading-tight">Synapses landing Page</h1>
+        <h1 class="hidden md:block text-3xl md:text-6xl font-extrabold text-white leading-tight">Synapses landing Page</h1>
         <p class="text-xs md:text-sm text-white/70 mt-3 md:mt-4 tracking-wide">Sviluppo della landing page informativa per l'evento Synapses della Libera Accademia delle Belle Arti di Brescia (LABA)</p>
       </div>
     </div>
   </section>
+
+  <!-- Mobile H1: show immediately below hero on small screens -->
+  <div class="md:hidden px-6 pt-4">
+    <h1 class="text-3xl font-extrabold text-white leading-tight">Synapses landing Page</h1>
+  </div>
 
   <!-- Project Intro (Apple-style clear intro) -->
   <section class="bg-black py-8 md:py-20 px-6">

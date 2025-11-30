@@ -11,11 +11,16 @@
 
     <div class="absolute inset-0 flex items-center md:items-end justify-center md:justify-start pt-2 md:pb-20 pl-4 md:pl-20">
       <div class="max-w-3xl text-center md:text-left px-4 md:px-6">
-        <h1 class="text-3xl md:text-6xl font-extrabold text-white leading-tight">Roberto piadine</h1>
+        <h1 class="hidden md:block text-3xl md:text-6xl font-extrabold text-white leading-tight">Roberto piadine</h1>
         <p class="text-xs md:text-sm text-white/70 mt-3 md:mt-4 tracking-wide">Art direction proposal | un brand di piadine con un’identità nuova, coraggiosa e irriverente.</p>
       </div>
     </div>
   </section>
+
+  <!-- Mobile H1: show immediately below hero on small screens -->
+  <div class="md:hidden px-6 pt-4">
+    <h1 class="text-3xl font-extrabold text-white leading-tight">Roberto piadine</h1>
+  </div>
 
   <!-- Project Intro (Apple-style clear intro) -->
   <section class="bg-black py-8 md:py-20 px-6">
@@ -61,14 +66,14 @@ Il risultato è un brand che funziona in ogni formato: dallo scaffale alla strad
 
       <!-- 1 -->
       <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Logo e Identità</h2>
+        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-3 md:mb-6 text-center md:text-left">Logo e Identità</h2>
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
               <img src="../../assets/rbpayoff.webp" alt="Concept" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
+          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-3 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">Ribelli dalle fondamenta</h3>
               <p class="text-white/70 mt-4">Ho scelto di partire in questo concept rivisitando il logo, mi sono avvalso del font Losta Bonita per richiamare il tema musicale e lo stile degli anni sessanta e settanta tipico delle cover dei vinili.</p>
