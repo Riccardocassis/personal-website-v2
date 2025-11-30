@@ -38,7 +38,7 @@
               <!-- Social icons row (small, white/70, gap-6, centered, mt-8) -->
               <div class="mt-6 md:mt-8 flex justify-center md:justify-start gap-4 md:gap-6">
                 <a
-                  href="https://example.com/linkedin"
+                  href="https://www.linkedin.com/in/riccardo-cassis/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"
@@ -51,7 +51,7 @@
                 </a>
 
                 <a
-                  href="https://example.com/github"
+                  href="https://github.com/Riccardocassis"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="GitHub"
@@ -64,7 +64,7 @@
                 </a>
 
                 <a
-                  href="https://example.com/behance"
+                  href="https://www.behance.net/riccardocassis"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Behance"
