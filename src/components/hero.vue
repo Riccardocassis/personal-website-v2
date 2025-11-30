@@ -1,22 +1,17 @@
 <template>
-  <section aria-labelledby="hero-title" class="relative w-full bg-transparent md:bg-black">
-    <div
-      ref="gradientRef"
-      class="absolute inset-0 pointer-events-none z-0"
-      :style="{ background: 'radial-gradient(circle at 70% 50%, rgba(59,130,246,0.22), rgba(29,78,216,0.16) 28%, rgba(30,58,138,0.10) 60%)' }"
-    ></div>
+  <section aria-labelledby="hero-title" class="relative w-full bg-black">
 
     <div class="max-w-screen-xl mx-auto px-6 pt-0 md:pt-36 pb-12 md:pb-24">
       <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center md:min-h-[72vh]">
 
         <!-- IMAGE: mobile on top, desktop on the left -->
-        <div class="order-1 md:col-span-6 flex items-center justify-center md:justify-start">
-          <div class="relative w-full flex justify-center md:justify-start">
+        <div class="order-1 md:col-span-6 flex items-center justify-start">
+          <div class="relative w-full flex justify-start -mx-6 md:mx-0">
             <div class="w-[80%] sm:w-[70%] md:w-[45%]">
               <img
                 src="../assets/hero-riccardo.webp"
                 alt="Portrait of Riccardo Cassis"
-                class="w-full h-auto object-cover rounded-3xl hero-mask scale-100 sm:scale-105 md:scale-[1.35]"
+                class="w-full h-auto object-cover rounded-3xl hero-mask transform origin-left scale-[2] relative z-10"
                 style="opacity:1; filter: brightness(0.82) contrast(1.05) saturate(1.0);"
               />
             </div>
@@ -82,7 +77,7 @@
         </div>
       </div>
     </div>
-    <!-- mobile footer removed from hero; footer is global or handled elsewhere -->
+    <!-- footer is managed globally in App.vue; no mobile footer inside hero -->
   </section>
  
 </template>
@@ -154,5 +149,7 @@ onBeforeUnmount(() => {
             mask-image: radial-gradient(circle at 68% 50%, rgba(0,0,0,0.95) 45%, rgba(0,0,0,0.6) 65%, transparent 100%);
   }
 }
+
+/* (diagnostic helpers removed) */
 </style>
 

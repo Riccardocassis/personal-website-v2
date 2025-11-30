@@ -1,6 +1,6 @@
 <template>
-  <section class="relative max-w-6xl mx-auto px-4 py-20 text-white">
-    <div class="fixed inset-0 pointer-events-none z-0" aria-hidden="true" style="background: radial-gradient(circle at 70% 50%, rgba(59,130,246,0.22), rgba(29,78,216,0.16) 28%, rgba(30,58,138,0.10) 60%);"></div>
+  <section class="relative max-w-6xl mx-auto px-4 py-20 text-white bg-black">
+    <!-- blue radial gradient removed; page uses solid background -->
     <div class="relative z-10">
     <header class="mb-4 px-2 text-center">
       <h1 class="text-5xl font-extrabold mb-2 text-white">Services</h1>

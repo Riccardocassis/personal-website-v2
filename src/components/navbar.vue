@@ -31,7 +31,7 @@ onBeforeUnmount(() => {
 
 <template>
   <!-- fissa sopra -->
-  <nav :class="['fixed top-0 left-0 right-0 z-50 transition-all duration-300', scrolled ? 'bg-transparent md:bg-black/40 md:backdrop-blur-md md:shadow-md md:border-b md:border-white/5' : 'bg-transparent']" style="height:70px;">
+  <nav :class="['fixed top-0 left-0 right-0 z-50 transition-all duration-300', scrolled ? 'bg-black/30 backdrop-blur-sm shadow-sm border-b border-white/6' : 'bg-transparent']" style="height:70px;">
     <div class="flex items-center justify-between max-w-7xl mx-auto w-full px-6 md:px-16 h-full">
       <!-- Logo RC -->
       <div class="flex items-center h-full">
@@ -80,21 +80,26 @@ onBeforeUnmount(() => {
       </button>
     </div>
 
-    <!-- Mobile menu panel -->
-    <transition enter-active-class="transition duration-150 ease-out" enter-from-class="opacity-0 -translate-y-2" enter-to-class="opacity-100 translate-y-0" leave-active-class="transition duration-100 ease-in" leave-from-class="opacity-100 translate-y-0" leave-to-class="opacity-0 -translate-y-2">
-      <div v-show="mobileOpen" class="md:hidden bg-black/80 backdrop-blur-sm text-white border-t border-white/10">
-        <div class="px-4 py-3 space-y-2">
+    <!-- Mobile full-screen off-canvas glass menu (slides in from left) -->
+    <div class="md:hidden">
+      <nav :class="['fixed inset-0 z-50 transform transition-transform duration-300 ease-out', mobileOpen ? 'translate-x-0' : '-translate-x-full']" aria-hidden="false" style="padding-top:70px;">
+        <div class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
+        <div class="relative h-full flex flex-col items-center justify-center px-6">
+          <button class="absolute top-6 right-6 text-white/80 hover:text-white focus:outline-none" @click="mobileOpen = false" aria-label="Chiudi menu">
+            <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
 
-          <RouterLink to="/projects" class="block px-2 py-2 rounded text-white transition-colors duration-200 ease-in-out hover:text-white/80" @click="mobileOpen=false">Projects</RouterLink>
-
-          <RouterLink to="/services" class="block px-2 py-2 rounded text-white transition-colors duration-200 ease-in-out hover:text-white/80" @click="mobileOpen=false">Services</RouterLink>
-
-          <RouterLink to="/about" class="block px-2 py-2 rounded text-white transition-colors duration-200 ease-in-out hover:text-white/80" @click="mobileOpen=false">About me</RouterLink>
-
-          <RouterLink to="/contact" class="block px-6 py-3 rounded-xl bg-blue-600 text-white text-center font-semibold hover:bg-blue-700" @click="mobileOpen=false">Contattami</RouterLink>
+          <div class="space-y-6 z-10 text-center w-full max-w-xs">
+            <RouterLink to="/projects" class="block text-2xl font-semibold text-white/90 hover:text-white" @click="mobileOpen=false">Projects</RouterLink>
+            <RouterLink to="/services" class="block text-2xl font-semibold text-white/90 hover:text-white" @click="mobileOpen=false">Services</RouterLink>
+            <RouterLink to="/about" class="block text-2xl font-semibold text-white/90 hover:text-white" @click="mobileOpen=false">About me</RouterLink>
+            <RouterLink to="/contact" class="block mt-4 px-6 py-3 rounded-xl bg-blue-600 text-white text-lg font-semibold hover:bg-blue-700" @click="mobileOpen=false">Contattami</RouterLink>
+          </div>
         </div>
-      </div>
-    </transition>
+      </nav>
+    </div>
   </nav>
 </template>
 

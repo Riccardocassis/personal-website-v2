@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-screen relative flex flex-col bg-black">
-    <div class="fixed inset-0 pointer-events-none z-0" aria-hidden="true" style="background: radial-gradient(circle at 70% 50%, rgba(59,130,246,0.22), rgba(29,78,216,0.16) 28%, rgba(30,58,138,0.10) 60%);"></div>
+    <!-- gradient removed; background kept to page CSS or default -->
     <section class="flex-1 relative z-20 flex flex-col justify-center items-center px-8">
       <h1 class="text-6xl font-extrabold mb-8 tracking-tight text-white text-center animate-fade-in">About me</h1>
       <div class="max-w-2xl text-white/90 text-lg leading-relaxed mb-8 text-center animate-fade-in delay-200">

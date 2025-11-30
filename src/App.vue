@@ -69,17 +69,11 @@ onBeforeUnmount(() => {
 
 <template>
   <div class="relative bg-black text-white min-h-screen overflow-x-hidden">
-    <!-- Global radial gradient layer (same as hero) - hidden on Gibson page -->
-    <div
-      v-if="showGlobalGradient"
-      ref="globalGradient"
-      class="hidden md:block absolute inset-0 pointer-events-none z-0"
-      :style="{ background: 'radial-gradient(circle at 70% 50%, rgba(59,130,246,0.22), rgba(29,78,216,0.16) 28%, rgba(30,58,138,0.10) 60%)', maskImage: 'linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 75%)', WebkitMaskImage: 'linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 75%)' }"
-    ></div>
+    <!-- global radial gradient removed — pages use solid black background -->
 
     <Navbar />
     <router-view />
-    <Footer :class="route.path === '/' ? 'hidden md:block' : ''" />
+    <Footer :class="route.path === '/' ? 'hidden' : ''" />
 
     <!-- Vertical scroll indicator (right side) - hidden on mobile -->
     <div aria-hidden="true" class="fixed right-6 top-1/2 transform -translate-y-1/2 z-50 hidden md:block">

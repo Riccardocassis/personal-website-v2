@@ -1,7 +1,6 @@
 <template>
-  <section class="grid-root pt-20 pb-32 px-10 lg:px-20">
-    <div aria-hidden="true" class="fixed inset-0 pointer-events-none" style="background: radial-gradient(600px 400px at 10% 20%, rgba(59,130,246,0.14), transparent 30%), radial-gradient(500px 400px at 90% 80%, rgba(59,130,246,0.12), transparent 25%); -webkit-backdrop-filter: none; backdrop-filter: none;">
-    </div>
+  <section class="grid-root pt-20 pb-32 px-10 lg:px-20 bg-black text-white">
+    <!-- blue background removed from Projects overview; gradients remain in individual project pages -->
     <div class="max-w-7xl mx-auto relative z-10">
       <div class="text-center mb-12">
         <h1 class="text-4xl md:text-5xl font-extrabold">Projects</h1>
@@ -241,4 +240,16 @@ onBeforeUnmount(() => {
 .parallax-card { will-change: transform; }
 .parallax-content { will-change: transform; position: absolute; inset: 0; border-radius: inherit; overflow: hidden; transition: transform 0.45s ease; }
 .parallax-content img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+/* Subtle white stroke for project cards */
+.parallax-content {
+  border: 2px solid rgba(255,255,255,0.12);
+  transition: transform 0.45s ease, border-color 180ms ease, box-shadow 180ms ease;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+.project-card:hover .parallax-content,
+.project-card:focus .parallax-content {
+  border-color: rgba(255,255,255,0.22);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+}
 </style>
