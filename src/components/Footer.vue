@@ -49,13 +49,11 @@
           </div>
         </div>
 
-        <!-- Column 4: Legal -->
-        <div>
-          <h4 class="text-sm font-semibold text-white/90 mb-4 text-center md:text-left">Legal</h4>
-          <nav class="flex flex-col items-center md:items-start gap-2">
+        <!-- Column 4: Policies (moved to right) -->
+        <div class="md:text-right">
+          <nav class="flex flex-col items-center md:items-end gap-2">
             <RouterLink to="/privacy" class="text-sm text-white/70 hover:text-white transition">Privacy Policy</RouterLink>
             <RouterLink to="/cookie-policy" class="text-sm text-white/70 hover:text-white transition">Cookie Policy</RouterLink>
-            <RouterLink to="/legal" class="text-sm text-white/70 hover:text-white transition">Legal Notice</RouterLink>
           </nav>
         </div>
       </div>
