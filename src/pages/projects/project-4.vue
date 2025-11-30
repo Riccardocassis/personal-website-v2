@@ -1,7 +1,7 @@
 <template>
 
   <!-- HERO (Apple-like, generous whitespace) -->
-  <section class="relative w-full md:h-[85vh] h-[50vh] overflow-hidden bg-black">
+  <section class="relative w-full md:h-[85vh] h-[35vh] overflow-hidden bg-black">
     <img
       src="../../assets/fillbohero.webp"
       alt="fillbohero"
@@ -10,7 +10,7 @@
 
     <!-- overlay removed so hero image is fully visible -->
 
-    <div class="absolute inset-0 flex items-center md:items-end justify-center md:justify-start pt-6 md:pb-20 pl-4 md:pl-20 z-20">
+    <div class="absolute inset-0 flex items-center md:items-end justify-center md:justify-start pt-2 md:pb-20 pl-4 md:pl-20 z-20">
       <div class="max-w-3xl text-center md:text-left px-4 md:px-6">
         <h1 class="text-3xl md:text-6xl font-extrabold text-white leading-tight">Fillbo concept app</h1>
         <p class="text-xs md:text-sm text-white/70 mt-3 md:mt-4 tracking-wide">Un prototipo mobile progettato per aiutare supermercati e distributori a tracciare prodotti in scadenza e donare più facilmente alimenti a CAUTO.</p>
@@ -19,12 +19,10 @@
   </section>
 
   <!-- Project Intro (Apple-style clear intro) -->
-  <section class="bg-black py-20 px-6">
+  <section class="bg-black py-8 md:py-20 px-6">
     <div class="max-w-3xl mx-auto text-center md:text-left">
-      <h2 class="text-3xl md:text-4xl font-semibold text-white mb-6 text-center">Lo scopo del progetto</h2>
-      <p class="text-white/60 text-lg leading-relaxed">In questo progetto ho progettato Fillbo, un’app mobile pensata per ridurre gli sprechi alimentari migliorando il flusso tra supermercati e CAUTO.
-Ho analizzato il processo reale con cui i commessi identificano i prodotti in scadenza e l’ho trasformato in un sistema digitale più rapido, chiaro e tracciabile.
-Il risultato è un prototipo che semplifica il lavoro quotidiano, riduce errori e accelera la donazione degli alimenti.</p>
+      <h2 class="text-3xl md:text-4xl font-semibold text-white mb-4 md:mb-6 text-center">Lo scopo del progetto</h2>
+      <p class="text-white/60 text-lg leading-snug md:leading-relaxed">In questo progetto ho progettato Fillbo, un’app mobile pensata per ridurre gli sprechi alimentari migliorando il flusso tra supermercati e CAUTO. Ho analizzato il processo reale con cui i commessi identificano i prodotti in scadenza e l’ho trasformato in un sistema digitale più rapido, chiaro e tracciabile. Il risultato è un prototipo che semplifica il lavoro quotidiano, riduce errori e accelera la donazione degli alimenti.</p>
     </div>
   </section>
 

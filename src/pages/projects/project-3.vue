@@ -3,14 +3,14 @@
 <div class="min-h-screen" style="background: radial-gradient(circle at 12% 20%, rgba(255,0,150,0.04) 0 12%, rgba(0,122,255,0.03) 12% 30%, rgba(255,140,0,0.025) 30% 50%, rgba(0,0,0,1) 50% 100%), #000;">
 
   <!-- HERO (Apple-like, generous whitespace) -->
-  <section class="relative w-full md:h-[85vh] h-[50vh] overflow-hidden">
+  <section class="relative w-full md:h-[85vh] h-[35vh] overflow-hidden">
     <!-- Background image placed above the page gradient; slight opacity to soften contrast -->
     <img src="../../assets/landingsynapses.webp" alt="Landingsynapses" class="absolute inset-0 w-full h-full object-cover object-top md:object-center opacity-90" />
 
     <!-- Dark overlay to increase contrast for white text -->
     <div class="absolute inset-0" style="background-color: rgba(0,0,0,0.55)"></div>
 
-    <div class="absolute inset-0 flex items-center md:items-end justify-center md:justify-start pt-6 md:pb-20 pl-4 md:pl-20 z-10">
+    <div class="absolute inset-0 flex items-center md:items-end justify-center md:justify-start pt-2 md:pb-20 pl-4 md:pl-20 z-10">
       <div class="max-w-3xl text-center md:text-left px-4 md:px-6">
         <h1 class="text-3xl md:text-6xl font-extrabold text-white leading-tight">Synapses landing Page</h1>
         <p class="text-xs md:text-sm text-white/70 mt-3 md:mt-4 tracking-wide">Sviluppo della landing page informativa per l'evento Synapses della Libera Accademia delle Belle Arti di Brescia (LABA)</p>
@@ -19,13 +19,10 @@
   </section>
 
   <!-- Project Intro (Apple-style clear intro) -->
-  <section class="bg-black py-20 px-6">
+  <section class="bg-black py-8 md:py-20 px-6">
     <div class="max-w-3xl mx-auto text-center md:text-left">
-      <h2 class="text-3xl md:text-4xl font-semibold text-white mb-6 text-center">Lo scopo del progetto</h2>
-      <p class="text-white/60 text-lg leading-relaxed">In questo progetto web che ho realizzato all'interno del progetto Synapses della Libera accademia delle belle arti di Brescia (LABA).
-Ho realizzato una landing page che doveva essere funzionale alla giornata dell'evento.
-I requisiti che mi sono stati dati erano: rendere chiara la data degli eventi, spiegare dove si sarebbero svolti e creare uno strumento consultabile da parte degli utenti per sapere gli orari.
-Il logo e il concept artistico in questo caso era già stato deciso dalla direzione ed è stato realizzato da una mia compagna di corso..</p>
+      <h2 class="text-3xl md:text-4xl font-semibold text-white mb-4 md:mb-6 text-center">Lo scopo del progetto</h2>
+      <p class="text-white/60 text-lg leading-snug md:leading-relaxed">In questo progetto web che ho realizzato all'interno del progetto Synapses della Libera accademia delle belle arti di Brescia (LABA). Ho realizzato una landing page che doveva essere funzionale alla giornata dell'evento. I requisiti che mi sono stati dati erano: rendere chiara la data degli eventi, spiegare dove si sarebbero svolti e creare uno strumento consultabile da parte degli utenti per sapere gli orari. Il logo e il concept artistico in questo caso era già stato deciso dalla direzione ed è stato realizzato da una mia compagna di corso.</p>
     </div>
   </section>
 

@@ -1,6 +1,6 @@
 <template>
   <!-- HERO (Apple-like, generous whitespace) -->
-  <section class="relative w-full md:h-[85vh] h-[50vh] overflow-hidden bg-black">
+  <section class="relative w-full md:h-[85vh] h-[35vh] overflow-hidden bg-black">
     <img
       src="../../assets/cover-brandbibler1.webp"
       alt="Cover"
@@ -9,7 +9,7 @@
 
     <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-transparent"></div>
 
-    <div class="absolute inset-0 flex items-center md:items-end justify-center md:justify-start pt-6 md:pb-20 pl-4 md:pl-20">
+    <div class="absolute inset-0 flex items-center md:items-end justify-center md:justify-start pt-2 md:pb-20 pl-4 md:pl-20">
       <div class="max-w-3xl text-center md:text-left px-4 md:px-6">
         <h1 class="text-3xl md:text-6xl font-extrabold text-white leading-tight">Roberto piadine</h1>
         <p class="text-xs md:text-sm text-white/70 mt-3 md:mt-4 tracking-wide">Art direction proposal | un brand di piadine con un’identità nuova, coraggiosa e irriverente.</p>
@@ -18,13 +18,10 @@
   </section>
 
   <!-- Project Intro (Apple-style clear intro) -->
-  <section class="bg-black py-20 px-6">
+  <section class="bg-black py-8 md:py-20 px-6">
     <div class="max-w-3xl mx-auto text-center md:text-left">
-      <h2 class="text-3xl md:text-4xl font-semibold text-white mb-6 text-center">Lo scopo del progetto</h2>
-      <p class="text-white/60 text-lg leading-relaxed">In questo concept ho deciso di prendere un classico brand di piadine e conferirgli un’identità nuova: coraggiosa, irriverente e impossibile da ignorare.
-Attorno ad esso ho costruito un immaginario visivo ribelle prendendo come riferimento il "ribelli per eccezione" ovvero gli hippy, ribelli ironici, colorati e iconici.
-Ho scelto di creare un ponte tra passato e presente con i ribelli di un tempo e un attitude che è ancora presente in ciascuno di noi.
-Ho optato per un linguaggio diretto e volutamente sopra le righe per emergere in un mercato saturo e indistinguibile, conferendo ad un prodotto semplice un aura mistica e accattivante.</p>
+      <h2 class="text-3xl md:text-4xl font-semibold text-white mb-4 md:mb-6 text-center">Lo scopo del progetto</h2>
+      <p class="text-white/60 text-lg leading-snug md:leading-relaxed">In questo concept ho deciso di prendere un classico brand di piadine e conferirgli un’identità nuova: coraggiosa, irriverente e impossibile da ignorare. Attorno ad esso ho costruito un immaginario visivo ribelle prendendo come riferimento il "ribelli per eccezione" ovvero gli hippy, ribelli ironici, colorati e iconici. Ho scelto di creare un ponte tra passato e presente con i ribelli di un tempo e un attitude che è ancora presente in ciascuno di noi. Ho optato per un linguaggio diretto e volutamente sopra le righe per emergere in un mercato saturo e indistinguibile, conferendo ad un prodotto semplice un aura mistica e accattivante.</p>
     </div>
   </section>
 

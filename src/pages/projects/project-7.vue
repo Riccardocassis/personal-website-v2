@@ -1,6 +1,6 @@
 <template>
   <!-- HERO (Apple-like, generous whitespace) -->
-  <section class="relative w-full md:h-[85vh] h-[50vh] overflow-hidden bg-black">
+  <section class="relative w-full md:h-[85vh] h-[35vh] overflow-hidden bg-black">
     <img
       src="../../assets/hellerhero.webp"
       alt="hellerhero"
@@ -9,7 +9,7 @@
 
     <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-transparent"></div>
 
-    <div class="absolute inset-0 flex items-center md:items-end justify-center md:justify-start pt-6 md:pb-20 pl-4 md:pl-20">
+    <div class="absolute inset-0 flex items-center md:items-end justify-center md:justify-start pt-2 md:pb-20 pl-4 md:pl-20">
       <div class="max-w-3xl text-center md:text-left px-4 md:px-6">
         <h1 class="text-3xl md:text-6xl font-extrabold text-white leading-tight">Heller garden</h1>
         <p class="text-xs md:text-sm text-white/70 mt-3 md:mt-4 tracking-wide">Art direction proposal| un giardino botanico contemporaneo dove arte e natura convivono in un ecosistema narrativo e dinamico.</p>
@@ -18,11 +18,10 @@
   </section>
 
   <!-- Project Intro (Apple-style clear intro) -->
-  <section class="bg-black py-20 px-6">
+  <section class="bg-black py-8 md:py-20 px-6">
     <div class="max-w-3xl mx-auto text-center md:text-left">
-      <h2 class="text-3xl md:text-4xl font-semibold text-white mb-6 text-center">Lo scopo del progetto</h2>
-      <p class="text-white/60 text-lg leading-relaxed">In questo progetto ho voluto ridefinire l’identità visiva di Heller Garden, creando una direzione creativa coerente al luogo e un linguaggio visivo capace di raccontare l’essenza del giardino: un luogo in cui arte, botanica e movimento si intrecciano.
-Con il nuovo brand system ho voluto provare a riorganizza la comunicazione, semplificando l’esperienza del visitatore e dando vita a un’identità riconoscibile, fluida e contemporanea.</p>
+      <h2 class="text-3xl md:text-4xl font-semibold text-white mb-3 md:mb-6 text-center">Lo scopo del progetto</h2>
+      <p class="text-white/60 text-lg leading-snug md:leading-relaxed">In questo progetto ho voluto ridefinire l’identità visiva di Heller Garden, creando una direzione creativa coerente al luogo e un linguaggio visivo capace di raccontare l’essenza del giardino: un luogo in cui arte, botanica e movimento si intrecciano. Con il nuovo brand system ho voluto provare a riorganizza la comunicazione, semplificando l’esperienza del visitatore e dando vita a un’identità riconoscibile, fluida e contemporanea.</p>
     </div>
   </section>
 
