@@ -13,14 +13,15 @@
     <div class="absolute inset-0 flex items-center md:items-end justify-center md:justify-start pt-2 md:pb-20 pl-4 md:pl-20">
       <div class="max-w-3xl text-center md:text-left px-4 md:px-6">
         <h1 class="hidden md:block text-3xl md:text-6xl font-extrabold text-blue leading-tight">Opsify App</h1>
-        <p class="text-xs md:text-sm text-white/70 mt-3 md:mt-4 tracking-wide">Progettazione UX/UI, prototipazione avanzata in Protopie e sviluppo del design system per un’app mobile dedicata alla creazione e condivisione di scuse personalizzate.</p>
+        <p class="hidden md:block text-xs md:text-sm text-white/70 mt-3 md:mt-4 tracking-wide">Progettazione UX/UI, prototipazione avanzata in Protopie e sviluppo del design system per un’app mobile dedicata alla creazione e condivisione di scuse personalizzate.</p>
       </div>
     </div>
   </section>
 
   <!-- Mobile H1: show immediately below hero on small screens -->
-  <div class="md:hidden px-6 pt-4">
-    <h1 class="text-3xl font-extrabold text-blue leading-tight">Opsify App</h1>
+  <div class="md:hidden px-6 pt-3">
+    <h1 class="text-3xl font-extrabold text-blue leading-tight mb-1">Opsify App</h1>
+    <p class="text-xs text-white/70 mt-2">Progettazione UX/UI, prototipazione avanzata in Protopie e sviluppo del design system per un’app mobile dedicata alla creazione e condivisione di scuse personalizzate.</p>
   </div>
 
   <!-- Project Intro (Apple-style clear intro) -->
@@ -67,7 +68,7 @@
   <!-- Project Sections: 8 alternating 60:40 full-bleed image with text appearing on scroll -->
   <section class="bg-black">
     <!-- For spacing between sections -->
-    <div class="space-y-8 md:space-y-20">
+    <div class="space-y-4 md:space-y-20">
 
       <!-- Helper: each section is full-width; h2 aligned left with px -->
 
@@ -80,10 +81,10 @@
               <img src="../../assets/opsifywirewebp.webp" alt="Concept" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-3 md:pt-0">
+          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-1 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Dai primi wireframe alla struttura dell’app</h3>
-              <p class="text-white/70 mt-4">Ho sviluppato una prima struttura low-fi per testare navigazione, categorie e priorità dei contenuti prima di passare alla fase visual.</p>
+              <h3 class="text-xl text-white font-semibold mb-1">Dai primi wireframe alla struttura dell’app</h3>
+              <p class="text-white/70 mt-1 md:mt-4">Ho sviluppato una prima struttura low-fi per testare navigazione, categorie e priorità dei contenuti prima di passare alla fase visual.</p>
             </div>
           </div>
         </div>

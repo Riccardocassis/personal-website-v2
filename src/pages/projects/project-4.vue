@@ -13,14 +13,15 @@
     <div class="absolute inset-0 flex items-center md:items-end justify-center md:justify-start pt-2 md:pb-20 pl-4 md:pl-20 z-20">
       <div class="max-w-3xl text-center md:text-left px-4 md:px-6">
         <h1 class="hidden md:block text-3xl md:text-6xl font-extrabold text-white leading-tight">Fillbo concept app</h1>
-        <p class="text-xs md:text-sm text-white/70 mt-3 md:mt-4 tracking-wide">Un prototipo mobile progettato per aiutare supermercati e distributori a tracciare prodotti in scadenza e donare più facilmente alimenti a CAUTO.</p>
+        <p class="hidden md:block text-xs md:text-sm text-white/70 mt-3 md:mt-4 tracking-wide">Un prototipo mobile progettato per aiutare supermercati e distributori a tracciare prodotti in scadenza e donare più facilmente alimenti a CAUTO.</p>
       </div>
     </div>
   </section>
 
   <!-- Mobile H1: show immediately below hero on small screens -->
-  <div class="md:hidden px-6 pt-4">
-    <h1 class="text-3xl font-extrabold text-white leading-tight">Fillbo concept app</h1>
+  <div class="md:hidden px-6 pt-3">
+    <h1 class="text-3xl font-extrabold text-white leading-tight mb-1">Fillbo concept app</h1>
+    <p class="text-xs text-white/70 mt-2">Un prototipo mobile progettato per aiutare supermercati e distributori a tracciare prodotti in scadenza e donare più facilmente alimenti a CAUTO.</p>
   </div>
 
   <!-- Project Intro (Apple-style clear intro) -->
@@ -67,7 +68,7 @@
   <!-- Project Sections: 8 alternating 60:40 full-bleed image with text appearing on scroll -->
   <section class="bg-black">
     <!-- For spacing between sections -->
-    <div class="space-y-8 md:space-y-20">
+    <div class="space-y-4 md:space-y-20">
 
       <!-- Helper: each section is full-width; h2 aligned left with px -->
 
@@ -80,10 +81,10 @@
               <img src="../../assets/fillbos1.webp" alt="Concept" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-3 md:pt-0">
+          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-1 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold"> Analisi dei processi reali per ridurre gli sprechi alimentari.</h3>
-              <p class="text-white/70 mt-4">SNel team della Dispensa Alimentare di Cauto, il problema non era la mancanza di volontà ma la mancanza di uno strumento che semplificasse un flusso operativo frammentato.
+              <h3 class="text-xl text-white font-semibold mb-1"> Analisi dei processi reali per ridurre gli sprechi alimentari.</h3>
+              <p class="text-white/70 mt-1 md:mt-4">SNel team della Dispensa Alimentare di Cauto, il problema non era la mancanza di volontà ma la mancanza di uno strumento che semplificasse un flusso operativo frammentato.
 Per capire davvero dove intervenire, ho osservato da vicino il lavoro quotidiano: dagli addetti dei supermercati che monitorano le scadenze, fino ai responsabili del magazzino che gestiscono la redistribuzione.
 
 Ho raccolto insight tramite interviste, osservazione diretta e analisi dei punti critici: errori di trascrizione, passaggi ridondanti, mancanza di uno storico digitale e zero visibilità sul volume dei prodotti recuperati.

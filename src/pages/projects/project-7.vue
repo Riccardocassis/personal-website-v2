@@ -12,14 +12,15 @@
     <div class="absolute inset-0 flex items-center md:items-end justify-center md:justify-start pt-2 md:pb-20 pl-4 md:pl-20">
       <div class="max-w-3xl text-center md:text-left px-4 md:px-6">
         <h1 class="hidden md:block text-3xl md:text-6xl font-extrabold text-white leading-tight">Heller garden</h1>
-        <p class="text-xs md:text-sm text-white/70 mt-3 md:mt-4 tracking-wide">Art direction proposal| un giardino botanico contemporaneo dove arte e natura convivono in un ecosistema narrativo e dinamico.</p>
+        <p class="hidden md:block text-xs md:text-sm text-white/70 mt-3 md:mt-4 tracking-wide">Art direction proposal| un giardino botanico contemporaneo dove arte e natura convivono in un ecosistema narrativo e dinamico.</p>
       </div>
     </div>
   </section>
 
   <!-- Mobile H1: show immediately below hero on small screens -->
-  <div class="md:hidden px-6 pt-4">
-    <h1 class="text-3xl font-extrabold text-white leading-tight">Heller garden</h1>
+  <div class="md:hidden px-6 pt-3">
+    <h1 class="text-3xl font-extrabold text-white leading-tight mb-1">Heller garden</h1>
+    <p class="text-xs text-white/70 mt-2">Art direction proposal| un giardino botanico contemporaneo dove arte e natura convivono in un ecosistema narrativo e dinamico.</p>
   </div>
 
   <!-- Project Intro (Apple-style clear intro) -->
@@ -57,7 +58,7 @@
   <!-- Project Sections: 8 alternating 60:40 full-bleed image with text appearing on scroll -->
   <section class="bg-black">
     <!-- For spacing between sections -->
-    <div class="space-y-8 md:space-y-20">
+      <div class="space-y-4 md:space-y-20">
 
       <!-- Helper: each section is full-width; h2 aligned left with px -->
 
@@ -70,10 +71,10 @@
               <img src="../../assets/hgintro.webp" alt="Concept" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-3 md:pt-0">
+          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-1 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Un ecosistema naturale e artificiale in grado di respirare e cambiare sguardo in base alle stagioni.</h3>
-              <p class="text-white/70 mt-4">Il concept nasce dall’idea di un organismo vivo: un giardino che cambia con le stagioni, si trasforma con lo sguardo dei visitatori e racconta narrazioni diverse a seconda del percorso. La direzione creativa costruisce un linguaggio fluido, naturale e contemporaneo che unisce leggerezza, movimento e scoperta.</p>
+              <h3 class="text-xl text-white font-semibold mb-1">Un ecosistema naturale e artificiale in grado di respirare e cambiare sguardo in base alle stagioni.</h3>
+              <p class="text-white/70 mt-1 md:mt-4">Il concept nasce dall’idea di un organismo vivo: un giardino che cambia con le stagioni, si trasforma con lo sguardo dei visitatori e racconta narrazioni diverse a seconda del percorso. La direzione creativa costruisce un linguaggio fluido, naturale e contemporaneo che unisce leggerezza, movimento e scoperta.</p>
             </div>
           </div>
         </div>

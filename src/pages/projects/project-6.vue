@@ -13,14 +13,15 @@
     <div class="absolute inset-0 flex items-center md:items-end justify-center md:justify-start pt-2 md:pb-20 pl-4 md:pl-20">
       <div class="max-w-3xl text-center md:text-left px-4 md:px-6">
         <h1 class="hidden md:block text-3xl md:text-6xl font-extrabold text-white leading-tight">Webable</h1>
-        <p class="text-xs md:text-sm text-white/70 mt-3 md:mt-4 tracking-wide">La piattaforma di microlearning dedicata all’accessibilità</p>
+        <p class="hidden md:block text-xs md:text-sm text-white/70 mt-3 md:mt-4 tracking-wide">La piattaforma di microlearning dedicata all’accessibilità</p>
       </div>
     </div>
   </section>
 
   <!-- Mobile H1: show immediately below hero on small screens -->
-  <div class="md:hidden px-6 pt-4">
-    <h1 class="text-3xl font-extrabold text-white leading-tight">Webable</h1>
+  <div class="md:hidden px-6 pt-3">
+    <h1 class="text-3xl font-extrabold text-white leading-tight mb-1">Webable</h1>
+    <p class="text-xs text-white/70 mt-2">La piattaforma di microlearning dedicata all’accessibilità</p>
   </div>
 
   <!-- Project Intro (Apple-style clear intro) -->
@@ -67,7 +68,7 @@
   <!-- Project Sections: 8 alternating 60:40 full-bleed image with text appearing on scroll -->
   <section class="bg-black">
     <!-- For spacing between sections -->
-    <div class="space-y-8 md:space-y-20">
+    <div class="space-y-4 md:space-y-20">
 
       <!-- Helper: each section is full-width; h2 aligned left with px -->
 
@@ -80,10 +81,10 @@
                 <img src="../../assets/webintro.webp" alt="Concept" class="reveal-img w-full h-full object-cover" />
               </div>
           </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-3 md:pt-0">
+          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-1 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Come nasce Webable</h3>
-              <p class="text-white/70 mt-4">La formazione sull’accessibilità è spesso troppo teorica, dispersiva e complessa per chi lavora nel digitale.
+              <h3 class="text-xl text-white font-semibold mb-1">Come nasce Webable</h3>
+              <p class="text-white/70 mt-1 md:mt-4">La formazione sull’accessibilità è spesso troppo teorica, dispersiva e complessa per chi lavora nel digitale.
 Con Webable ho esplorato un approccio diverso: un sistema che crea percorsi personalizzati e propone micro-esercizi concreti, basati sugli standard WCAG ed EAA ma tradotti in un linguaggio semplice e immediato.</p>
             </div>
           </div>

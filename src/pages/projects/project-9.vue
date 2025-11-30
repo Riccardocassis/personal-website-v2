@@ -12,14 +12,15 @@
     <div class="absolute inset-0 flex items-center md:items-end justify-center md:justify-start pt-2 md:pb-20 pl-4 md:pl-20">
       <div class="max-w-3xl text-center md:text-left px-4 md:px-6">
         <h1 class="hidden md:block text-3xl md:text-6xl font-extrabold text-white leading-tight">Control alt canc</h1>
-        <p class="text-xs md:text-sm text-white/70 mt-3 md:mt-4 tracking-wide">Una fanzine illustrata dedicata alla Giornata Mondiale della Salute Mentale </p>
+        <p class="hidden md:block text-xs md:text-sm text-white/70 mt-3 md:mt-4 tracking-wide">Una fanzine illustrata dedicata alla Giornata Mondiale della Salute Mentale </p>
       </div>
     </div>
   </section>
 
   <!-- Mobile H1: show immediately below hero on small screens -->
-  <div class="md:hidden px-6 pt-4">
-    <h1 class="text-3xl font-extrabold text-white leading-tight">Control alt canc</h1>
+  <div class="md:hidden px-6 pt-3">
+    <h1 class="text-3xl font-extrabold text-white leading-tight mb-1">Control alt canc</h1>
+    <p class="text-xs text-white/70 mt-2">Una fanzine illustrata dedicata alla Giornata Mondiale della Salute Mentale</p>
   </div>
 
   <!-- Project Intro (Apple-style clear intro) -->
@@ -57,7 +58,7 @@
   <!-- Project Sections: 8 alternating 60:40 full-bleed image with text appearing on scroll -->
   <section class="bg-black">
     <!-- For spacing between sections -->
-    <div class="space-y-8 md:space-y-20">
+    <div class="space-y-4 md:space-y-20">
 
       <!-- Helper: each section is full-width; h2 aligned left with px -->
 
@@ -70,10 +71,10 @@
               <img src="../../assets/ctrlaltcanc-illustrazione.webp" alt="Concept" class="reveal-img w-full h-full object-cover" />
             </div>
           </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-3 md:pt-0">
+          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-1 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">L'imperfezione del fatto a manno riflette l'imperfezione in ciascuno di noi</h3>
-              <p class="text-white/70 mt-4">Tutte le illustrazioni sono state disegnate a mano sull'Ipad, adottando uno stile volutamente “grezzo”, perché l’overthinking non è pulito, ordinato o patinato. È caotico, scomodo, rumoroso.</p>
+              <h3 class="text-xl text-white font-semibold mb-1">L'imperfezione del fatto a manno riflette l'imperfezione in ciascuno di noi</h3>
+              <p class="text-white/70 mt-1 md:mt-4">Tutte le illustrazioni sono state disegnate a mano sull'Ipad, adottando uno stile volutamente “grezzo”, perché l’overthinking non è pulito, ordinato o patinato. È caotico, scomodo, rumoroso.</p>
             </div>
           </div>
         </div>
