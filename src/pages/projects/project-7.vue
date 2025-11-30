@@ -53,7 +53,7 @@ Con il nuovo brand system ho voluto provare a riorganizza la comunicazione, semp
   <!-- Project Sections: 8 alternating 60:40 full-bleed image with text appearing on scroll -->
   <section class="bg-black">
     <!-- For spacing between sections -->
-    <div class="space-y-20">
+    <div class="space-y-8 md:space-y-20">
 
       <!-- Helper: each section is full-width; h2 aligned left with px -->
 
@@ -79,13 +79,13 @@ Con il nuovo brand system ho voluto provare a riorganizza la comunicazione, semp
       <div class="w-full">
         <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Logo</h2>
         <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
-          <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start">
+          <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start order-2 md:order-1">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">La consapevolezza al centro di tutto.</h3>
               <p class="text-white/70 mt-4">Il marchio combina una foglia stilizzata, un percorso circolare e la lettera “H”, creando un simbolo che rappresenta crescita, scoperta e ciclicità.</p>
             </div>
           </div>
-          <div class="w-full">
+          <div class="w-full order-1 md:order-2">
             <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
               <img src="../../assets/hglogo.webp" alt="Materials" class="reveal-img w-full h-full object-cover" />
             </div>
@@ -116,7 +116,7 @@ Per la comunicazione ho utilizzato Work Sans: accessibile, leggibile e neutra, i
       <div class="w-full">
         <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Palette stagionale</h2>
         <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
-          <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start">
+          <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start order-2 md:order-1">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">La natura cambia ai nostri occhi seguendo le stagioni.</h3>
 
@@ -124,7 +124,7 @@ Per la comunicazione ho utilizzato Work Sans: accessibile, leggibile e neutra, i
                 A mio avviso la scelta plurima di inserire un sistema visuale variabile crea nel visitatore la voglia di tornare più volte per scoprire le diverse sfumature del luogo.</p>
             </div>
           </div>
-          <div class="w-full">
+          <div class="w-full order-1 md:order-2">
             <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
               <img src="../../assets/hellers2.webp" alt="Interaction" class="reveal-img w-full h-full object-cover" />
             </div>
@@ -156,13 +156,13 @@ Per la comunicazione ho utilizzato Work Sans: accessibile, leggibile e neutra, i
         <div class="w-full">
           <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">La mappa</h2>
           <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
-            <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start">
+            <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start order-2 md:order-1">
               <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
                 <h3 class="text-xl text-white font-semibold">Tre macro aree suddivise in tasselli che compongono un puzzle organico da visitare</h3>
                 <p class="text-white/70 mt-4">La nuova mappa suddivide il giardino in tre macro-zone e integra percorsi e i punti d’interesse artistici e botanici.</p>
               </div>
             </div>
-            <div class="w-full">
+            <div class="w-full order-1 md:order-2">
               <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
                 <img src="../../assets/hgmp.webp" alt="La mappa" class="reveal-img w-full h-full object-cover" />
               </div>

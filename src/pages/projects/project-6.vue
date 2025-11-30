@@ -62,7 +62,7 @@
   <!-- Project Sections: 8 alternating 60:40 full-bleed image with text appearing on scroll -->
   <section class="bg-black">
     <!-- For spacing between sections -->
-    <div class="space-y-20">
+    <div class="space-y-8 md:space-y-20">
 
       <!-- Helper: each section is full-width; h2 aligned left with px -->
 
@@ -89,14 +89,14 @@ Con Webable ho esplorato un approccio diverso: un sistema che crea percorsi pers
       <div class="w-full">
         <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Onboarding low-fidelity </h2>
         <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
-          <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start">
+          <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start order-2 md:order-1">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">Capire chi sei per personalizzare l’apprendimento.</h3>
               <p class="text-white/70 mt-4">La prima fase che ho progettato è l’onboarding, in versione low-fidelity, per definire le domande fondamentali: ruolo dell’utente, esperienza con l’accessibilità, tempo disponibile e stile di apprendimento.
 Questo step permette alla piattaforma di generare un percorso formativo su misura..</p>
             </div>
           </div>
-          <div class="w-full">
+          <div class="w-full order-1 md:order-2">
               <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
                 <img src="../../assets/webablelow.webp" alt="Materials" class="reveal-img w-full h-full object-cover" />
               </div>
@@ -127,7 +127,7 @@ Il tone of voice è amichevole e leggero, coerente con l’obiettivo di rendere 
       <div class="w-full">
         <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Flusso principale dell’app</h2>
         <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
-          <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start">
+          <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start order-2 md:order-1">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">Flusso principale: dal percorso personalizzato al micro-learning.</h3>
 
@@ -135,7 +135,7 @@ Il tone of voice è amichevole e leggero, coerente con l’obiettivo di rendere 
 Ogni step è pensato per essere breve, chiaro e motivante.</p>
             </div>
           </div>
-          <div class="w-full">
+          <div class="w-full order-1 md:order-2">
               <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
                 <img src="../../assets/webapercorsi.webp" alt="Interaction" class="reveal-img w-full h-full object-cover" />
               </div>

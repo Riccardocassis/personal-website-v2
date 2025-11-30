@@ -241,11 +241,4 @@ onBeforeUnmount(() => {
 .parallax-card { will-change: transform; }
 .parallax-content { will-change: transform; position: absolute; inset: 0; border-radius: inherit; overflow: hidden; transition: transform 0.45s ease; }
 .parallax-content img { display: block; width: 100%; height: 100%; object-fit: cover; }
-
-/* Ensure rounded corners and clipping on mobile (force high specificity) */
-@media (max-width: 768px) {
-  .project-card { border-radius: 1rem !important; overflow: hidden !important; }
-  .project-card .parallax-content { border-radius: 1rem !important; overflow: hidden !important; position: absolute; inset: 0; }
-  .project-card .parallax-content img { border-radius: 1rem !important; }
-}
 </style>

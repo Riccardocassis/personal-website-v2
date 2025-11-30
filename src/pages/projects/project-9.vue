@@ -55,7 +55,7 @@ La fanzine è stata realizzata per la Giornata Mondiale della Salute Mentale (10
   <!-- Project Sections: 8 alternating 60:40 full-bleed image with text appearing on scroll -->
   <section class="bg-black">
     <!-- For spacing between sections -->
-    <div class="space-y-20">
+    <div class="space-y-8 md:space-y-20">
 
       <!-- Helper: each section is full-width; h2 aligned left with px -->
 
@@ -81,7 +81,7 @@ La fanzine è stata realizzata per la Giornata Mondiale della Salute Mentale (10
       <div class="w-full">
         <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Costruzione narrativa</h2>
         <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
-          <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start">
+          <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start order-2 md:order-1">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">Una trama fantasy sarcastica ma con un messaggio chiaro.</h3>
               <p class="text-white/70 mt-4">Ho strutturato la fanzine in step, come un manuale per soldati:
@@ -94,7 +94,7 @@ La fanzine è stata realizzata per la Giornata Mondiale della Salute Mentale (10
 .</p>
             </div>
           </div>
-          <div class="w-full">
+          <div class="w-full order-1 md:order-2">
             <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
               <img src="../../assets/ctrlaltcanc-narrazione.webp" alt="Materials" class="reveal-img w-full h-full object-cover" />
             </div>

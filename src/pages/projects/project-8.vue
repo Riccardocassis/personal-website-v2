@@ -58,7 +58,7 @@ Il risultato è un brand che funziona in ogni formato: dallo scaffale alla strad
   <!-- Project Sections: 8 alternating 60:40 full-bleed image with text appearing on scroll -->
   <section class="bg-black">
     <!-- For spacing between sections -->
-    <div class="space-y-20">
+    <div class="space-y-8 md:space-y-20">
 
       <!-- Helper: each section is full-width; h2 aligned left with px -->
 
@@ -84,13 +84,13 @@ Il risultato è un brand che funziona in ogni formato: dallo scaffale alla strad
       <div class="w-full">
         <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Palette e Tipografia</h2>
         <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
-          <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start">
+          <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start order-2 md:order-1">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">Colori psichedelici, tipografia libera.</h3>
               <p class="text-white/70 mt-4">La scelta della palette cromatica si ispira ai colori vivaci e saturi tipici dell’epoca psichedelica, coniugati comunque in chiave food e quindi senza una iperbole stilistica per non cadere nella banalità. Ho scelto inoltre di far dialogare un font energico come Losta Bonita con uno più pettinato e chiaro come l'Inter crendo il giusto mix volto a garantire la leggibilità</p>
             </div>
           </div>
-          <div class="w-full">
+          <div class="w-full order-1 md:order-2">
             <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
               <img src="../../assets/rbcolorietipografia.webp" alt="Materials" class="reveal-img w-full h-full object-cover" />
             </div>
@@ -121,7 +121,7 @@ Cibo e persone convivono nella stessa atmosfera: colori intensi, complicità e u
       <div class="w-full">
         <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Packaging</h2>
         <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
-          <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start">
+          <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start order-2 md:order-1">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">Un Packaging che si vede anche da lontano, ti chiama senza guardarti in grado di comunicarel’essenza del brand.</h3>
 
@@ -129,7 +129,7 @@ Cibo e persone convivono nella stessa atmosfera: colori intensi, complicità e u
 Ogni pack è un manifesto del brand, non solo un contenitore.</p>
             </div>
           </div>
-          <div class="w-full">
+          <div class="w-full order-1 md:order-2">
             <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
               <img src="../../assets/rbpackaging.webp" alt="Interaction" class="reveal-img w-full h-full object-cover" />
             </div>
@@ -161,14 +161,14 @@ Sono pensati per catturare l’attenzione prima ancora che il pubblico capisca d
       <div class="w-full">
         <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Contenuti social</h2>
         <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
-          <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start">
+          <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start order-2 md:order-1">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">Un tono di voce che colpisce e diverte</h3>
               <p class="text-white/70 mt-4">Ho sviluppato i contenuti social amplificandol’identità del brand caratterizzandoli conironia, spontaneità e un linguaggio grafico che non ha paura di esagerare (superando forse i confini del politicamente corretto).
 L’obiettivo cardine è stato quello di puntare alla creazione di una community attiva e che si rispecchia nel brand, non un semplice numero di follower.</p>
             </div>
           </div>
-          <div class="w-full">
+          <div class="w-full order-1 md:order-2">
             <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
               <img src="../../assets/rbsc.webp" alt="Eventi" class="reveal-img w-full h-full object-cover" />
             </div>

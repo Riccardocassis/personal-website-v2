@@ -64,7 +64,7 @@ Il risultato è un prototipo che semplifica il lavoro quotidiano, riduce errori 
   <!-- Project Sections: 8 alternating 60:40 full-bleed image with text appearing on scroll -->
   <section class="bg-black">
     <!-- For spacing between sections -->
-    <div class="space-y-20">
+    <div class="space-y-8 md:space-y-20">
 
       <!-- Helper: each section is full-width; h2 aligned left with px -->
 
@@ -95,7 +95,7 @@ Questa fase ha definito le basi dell’app: leggerezza, velocità e zero comples
       <div class="w-full">
         <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Flussi, requisiti e architettura dell’app</h2>
         <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
-          <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start">
+          <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start order-2 md:order-1">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">Dal caos dei processi fisici a un flusso digitale lineare.</h3>
               <p class="text-white/70 mt-4">Dopo la fase di ricerca, ho ricostruito tutti i flussi reali in una mappa operativa: dalla segnalazione dei prodotti in scadenza fino alla loro categorizzazione in box e alla consegna finale al magazzino.
@@ -104,7 +104,7 @@ Questo lavoro ha permesso di eliminare passaggi ridondanti, chiarire ruoli e pri
 La mappatura in Figma è servita per tradurre i bisogni del personale — commessi, volontari e responsabili — in un sistema coerente, semplice e tracciabile.</p>
             </div>
           </div>
-          <div class="w-full">
+          <div class="w-full order-1 md:order-2">
             <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
               <img src="../../assets/fillbos2.webp" alt="Materials" class="reveal-img w-full h-full object-cover" />
             </div>
@@ -134,14 +134,14 @@ La mappatura in Figma è servita per tradurre i bisogni del personale — commes
       <div class="w-full">
         <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Scelta della piattaforma</h2>
         <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
-          <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start">
+          <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start order-2 md:order-1">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">Figma — prototipazione veloce, collaborazione immediata</h3>
 
               <p class="text-white/70 mt-4">Ho scelto Figma per la progettazione di Fillbo perché permette iterazioni rapide, componenti riutilizzabili e la possibilità di testare l’intero flusso direttamente dal browser. Questo mi ha permesso di simulare l’esperienza d’uso reale e ottimizzare ogni dettaglio dell’interfaccia.</p>
             </div>
           </div>
-          <div class="w-full">
+          <div class="w-full order-1 md:order-2">
             <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
               <img src="../../assets/fillbos4.webp" alt="Interaction" class="reveal-img w-full h-full object-cover" />
             </div>

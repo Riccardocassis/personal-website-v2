@@ -64,7 +64,7 @@ Ho scelto di utilizzare dunque un Tov amichevole ed informale nella applicazione
   <!-- Project Sections: 8 alternating 60:40 full-bleed image with text appearing on scroll -->
   <section class="bg-black">
     <!-- For spacing between sections -->
-    <div class="space-y-20">
+    <div class="space-y-8 md:space-y-20">
 
       <!-- Helper: each section is full-width; h2 aligned left with px -->
 
@@ -90,13 +90,13 @@ Ho scelto di utilizzare dunque un Tov amichevole ed informale nella applicazione
       <div class="w-full">
         <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Visual Design / UI</h2>
         <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
-          <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start">
+          <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start order-2 md:order-1">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
               <h3 class="text-xl text-white font-semibold">Un’interfaccia leggera e amichevole</h3>
               <p class="text-white/70 mt-4">Ho costruito l’identità visiva scegliendo colori chiari, contrasti morbidi e una tipografia rotonda per creare un ambiente accogliente e allegro. Ogni scelta contribuisce a rendere l’esperienza immediata e piacevole.</p>
             </div>
           </div>
-          <div class="w-full">
+          <div class="w-full order-1 md:order-2">
             <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
               <img src="../../assets/oopsyf.webp" alt="Materials" class="reveal-img w-full h-full object-cover" />
             </div>
