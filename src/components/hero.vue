@@ -11,7 +11,7 @@
 
         <!-- IMAGE: mobile on top, desktop on the left -->
         <div class="order-1 md:col-span-6 flex items-center justify-start md:justify-start">
-          <div class="relative w-full flex justify-start md:justify-start -mx-6 md:mx-0">
+          <div class="relative w-full flex justify-start md:justify-start -mx-6 md:mx-0 -mt-12 md:mt-0">
             <div class="w-full sm:w-[86%] md:w-[45%]">
               <img
                 src="../assets/hero-riccardo.webp"

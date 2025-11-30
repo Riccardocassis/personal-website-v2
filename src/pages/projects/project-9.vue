@@ -86,13 +86,13 @@
         <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
           <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start order-2 md:order-1">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Una trama fantasy sarcastica ma con un messaggio chiaro</h3>
+              <h3 class="text-xl text-white font-semibold">Una trama che tratta una tematica seria in maniera giocosa con un messaggio chiaro</h3>
               <p class="text-white/70 mt-4">Ho strutturato la fanzine in step, come un manuale per soldati:
 	riconosci il problema,
 	entra nella tua mente prendendo consapevolezza dei tuoi pensieri,
 	identifica i mostri,
 	affrontali,
-	ed infine liberatene (riconoscendoli).
+	ed infine vedrai che affrontandoli nella maodalità corretta se ne andranno da soli.
   Ovviamente questo non è un manuale e serve come primo approccio ma a mio avviso specialmente quando si pensa troppo è utile seguire un piano senza divagare, il tutto scritto con un tono sarcastico e leggero
 .</p>
             </div>

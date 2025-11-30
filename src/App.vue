@@ -79,7 +79,7 @@ onBeforeUnmount(() => {
 
     <Navbar />
     <router-view />
-    <Footer />
+    <Footer :class="route.path === '/' ? 'hidden md:block' : ''" />
 
     <!-- Vertical scroll indicator (right side) - hidden on mobile -->
     <div aria-hidden="true" class="fixed right-6 top-1/2 transform -translate-y-1/2 z-50 hidden md:block">
