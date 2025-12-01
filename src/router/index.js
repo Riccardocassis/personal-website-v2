@@ -6,13 +6,21 @@ import Home          from '../pages/Home.vue'
 import About         from '../pages/About.vue'
 import Contact       from '../pages/Contact.vue'
 import Projects      from '../pages/Projects.vue'
-// Removed old project sub-pages: WebDesign, BrandDesign, ProductDesign
 
 const routes = [
   { path: '/',              name: 'home',              component: Home },
   { path: '/about',         name: 'about',             component: About },
   { path: '/contact',       name: 'contact',           component: Contact },
+
+  // 🔥 SUCCESS PAGE (necessaria per il form Netlify)
+  { 
+    path: '/success',
+    name: 'success',
+    component: () => import('../pages/Success.vue')
+  },
+
   { path: '/projects',      name: 'projects',          component: Projects },
+
   // Project detail placeholders
   { path: '/projects/project-1',  name: 'project-1',  component: () => import('../pages/projects/project-1.vue') },
   { path: '/projects/project-2',  name: 'project-2',  component: () => import('../pages/projects/project-2.vue') },
@@ -24,13 +32,13 @@ const routes = [
   { path: '/projects/project-8',  name: 'project-8',  component: () => import('../pages/projects/project-8.vue') },
   { path: '/projects/project-9',  name: 'project-9',  component: () => import('../pages/projects/project-9.vue') },
   { path: '/projects/project-10', name: 'project-10', component: () => import('../pages/projects/project-10.vue') },
-  // old project sub-routes removed
-  { path: '/services',     name: 'services',          component: () => import('../pages/Services.vue') },
-  { path: '/social',       name: 'social',             component: () => import('../pages/Social.vue') },
-  { path: '/seo',          name: 'seo',                component: () => import('../pages/Seo.vue') },
-  { path: '/process',       name: 'process',           component: () => import('../pages/Process.vue') },
-  { path: '/privacy',      name: 'privacy',           component: () => import('../pages/Privacy.vue') },
-  { path: '/cookie-policy', name: 'cookie-policy',     component: () => import('../pages/CookiePolicy.vue') },
+
+  { path: '/services',       name: 'services',        component: () => import('../pages/Services.vue') },
+  { path: '/social',         name: 'social',          component: () => import('../pages/Social.vue') },
+  { path: '/seo',            name: 'seo',             component: () => import('../pages/Seo.vue') },
+  { path: '/process',        name: 'process',         component: () => import('../pages/Process.vue') },
+  { path: '/privacy',        name: 'privacy',         component: () => import('../pages/Privacy.vue') },
+  { path: '/cookie-policy',  name: 'cookie-policy',   component: () => import('../pages/CookiePolicy.vue') },
 ]
 
 const router = createRouter({
