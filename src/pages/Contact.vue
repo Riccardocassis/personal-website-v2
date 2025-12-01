@@ -15,27 +15,26 @@
       >
 
         <!-- FORM NETLIFY FUNZIONANTE -->
-        <form
-          name="contact"
-          method="POST"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
-          class="w-full flex flex-col gap-5"
-        >
-          <!-- Importante per Netlify -->
-          <input type="hidden" name="form-name" value="contact" />
+       <form
+  name="contact"
+  method="POST"
+  action="/success"
+  data-netlify="true"
+  netlify-honeypot="bot-field"
+  class="w-full flex flex-col gap-5"
+>
+  <input type="hidden" name="form-name" value="contact" />
 
-          <!-- Honeypot -->
-          <p class="hidden">
-            <label>Non compilare questo campo:<input name="bot-field" /></label>
-          </p>
+  <p class="hidden">
+    <label>Non compilare questo campo:<input name="bot-field" /></label>
+  </p>
 
-          <input name="name" type="text" placeholder="Nome" class="input-contact" required />
-          <input name="email" type="email" placeholder="Email" class="input-contact" required />
-          <textarea name="message" placeholder="Messaggio" rows="4" class="input-contact" required></textarea>
+  <input name="name" type="text" placeholder="Nome" class="input-contact" required />
+  <input name="email" type="email" placeholder="Email" class="input-contact" required />
+  <textarea name="message" placeholder="Messaggio" rows="4" class="input-contact" required></textarea>
 
-          <button type="submit" class="btn-contact">Invia</button>
-        </form>
+  <button type="submit" class="btn-contact">Invia</button>
+</form>
 
       </div>
 
