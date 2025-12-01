@@ -11,10 +11,6 @@ const scrollProgress = ref(0)
 let rafId = null
 
 const route = useRoute()
-const showGlobalGradient = computed(() => {
-  // hide the global radial gradient on the Gibson project page (/projects/project-1)
-  return route.path !== '/projects/project-1'
-})
 
 function updateProgress() {
   const doc = document.documentElement
@@ -33,8 +29,7 @@ onMounted(() => {
   updateProgress()
   window.addEventListener('scroll', onScroll, { passive: true })
   window.addEventListener('resize', onScroll)
-  
-  // Register ScrollTrigger and add reveal animations for page sections
+
   try {
     gsap.registerPlugin(ScrollTrigger)
     const sections = gsap.utils.toArray('main > *')
@@ -49,14 +44,11 @@ onMounted(() => {
           trigger: sec,
           start: 'top 85%',
           end: 'top 60%',
-          toggleActions: 'play none none reverse',
-          markers: false,
-        },
+          toggleActions: 'play none none reverse'
+        }
       })
     })
-  } catch (e) {
-    // silently fail
-  }
+  } catch (e) {}
 })
 
 onBeforeUnmount(() => {
@@ -93,6 +85,4 @@ onBeforeUnmount(() => {
   transform-origin: bottom;
   transition: transform 220ms linear;
 }
-
-/* track visibility on dark bg */
 </style>
