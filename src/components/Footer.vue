@@ -8,7 +8,7 @@
         <!-- Column 1: Branding -->
         <div class="flex flex-col items-center md:items-start text-center md:text-left">
           <RouterLink to="/" class="inline-block mb-0 md:mb-4">
-            <img src="../assets/logo-rc.webp" alt="RC logo" class="w-6 h-6 md:w-10 md:h-10 object-contain" />
+            <img src="../assets/logo-rc.webp" alt="RC logo" class="hidden md:block w-6 h-6 md:w-10 md:h-10 object-contain" />
           </RouterLink>
           <div class="text-[0.75rem] md:text-sm font-semibold leading-tight">Riccardo Cassis – UI/UX &amp; Web Designer</div>
           <div class="text-[0.7rem] text-white/60 mt-0.5 md:mt-2">Bergamo / Brescia</div>
