@@ -27,7 +27,7 @@
               </h1>
 
               <p ref="subtitleRef" class="mt-6 md:mt-8 text-sm sm:text-base md:text-lg text-white/90 max-w-md md:max-w-xl leading-relaxed mx-auto md:mx-0">
-                Progetto interfacce chiare e flussi ordinati, unendo design e sviluppo web.
+                Trasformo le tue idee in soluzioni digitali.
               </p>
 
               <!-- Social icons row (small, white/70, gap-6, centered, mt-8) -->

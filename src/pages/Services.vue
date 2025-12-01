@@ -3,7 +3,8 @@
     <!-- blue radial gradient removed; page uses solid background -->
     <div class="relative z-10">
     <header class="mb-4 px-2 text-center">
-      <h1 class="text-5xl font-extrabold mb-2 text-white">Services</h1>
+      <h1 class="text-5xl font-extrabold mb-2 text-white">Servizi</h1>
+      <p class="text-lg text-white/80 mt-3">Di seguito puoi trovare i servizi che erogo.</p>
     </header>
 
     <!-- Symmetric 2x2 icon block -->
@@ -20,12 +21,14 @@
       <!-- Card 1 -->
       <article class="service-card bg-transparent border p-8 rounded-2xl flex flex-col justify-between h-full w-full" tabindex="0">
         <h2 class="text-xl font-semibold text-white mb-3">Web Design & Development</h2>
-        <p class="text-white/70 leading-relaxed text-[15px]">Realizzo siti su misura, leggeri e ben strutturati, con attenzione a design, responsive e performance.</p>
+        <p class="text-white/70 leading-relaxed text-[15px]">Realizzo siti su misura,con attenzione alla struttura, al design, e all'indicizzazione.
+          In modo da ottenere una presenza online efficace e performante.
+        </p>
         <ul class="mt-4 space-y-1 text-white/60 text-sm">
-          <li>design responsive</li>
-          <li>gerarchie pulite</li>
-          <li>sviluppo Webflow/custom</li>
-          <li>performance</li>
+          <li>Design responsive</li>
+          <li>Gerarchie pulite</li>
+          <li>Sviluppo Webflow/custom</li>
+          <li>Performance</li>
         </ul>
       </article>
 
@@ -34,10 +37,10 @@
         <h2 class="text-xl font-semibold text-white mb-3">UI/UX Design</h2>
         <p class="text-white/70 leading-relaxed text-[15px]">Progetto interfacce semplici da usare, riducendo attriti e complessità nei processi operativi.</p>
         <ul class="mt-4 space-y-1 text-white/60 text-sm">
-          <li>flussi UX</li>
-          <li>wireframe</li>
-          <li>prototipi</li>
-          <li>design system</li>
+          <li>Flussi UX</li>
+          <li>Wireframe</li>
+          <li>Prototipi</li>
+          <li>Design system</li>
         </ul>
       </article>
 
@@ -46,22 +49,22 @@
         <h2 class="text-xl font-semibold text-white mb-3">Brand Identity & Art Direction</h2>
         <p class="text-white/70 leading-relaxed text-[15px]">Definisco identità visive funzionali in base alla richiesta, mirando a fare emergere i punti di forza di un brand e rendendolo unico e distinguibile dai competitors.</p>
         <ul class="mt-4 space-y-1 text-white/60 text-sm">
-          <li>logo</li>
-          <li>palette</li>
-          <li>tipografia</li>
-          <li>materiali grafici</li>
+          <li>Logo</li>
+          <li>Palette</li>
+          <li>Tipografia</li>
+          <li>Materiali grafici</li>
         </ul>
       </article>
 
       <!-- Card 4 -->
       <article class="service-card bg-transparent border p-8 rounded-2xl flex flex-col justify-between h-full w-full" tabindex="0">
         <h2 class="text-xl font-semibold text-white mb-3">SEO & Web Optimization</h2>
-        <p class="text-white/70 leading-relaxed text-[15px]">Ottimizzo la struttura del tuo sito rendendolo più performante e facilmente trovabile sui motori di ricerca.</p>
+        <p class="text-white/70 leading-relaxed text-[15px]">Ottimizzo la struttura del tuo sito rendendolo più performante e facilmente trovabile dai motori di ricerca.</p>
         <ul class="mt-4 space-y-1 text-white/60 text-sm">
           <li>SEO tecnica</li>
-          <li>on-page</li>
-          <li>performance</li>
-          <li>accessibilità</li>
+          <li>On-page</li>
+          <li>Performance</li>
+          <li>Accessibilità</li>
         </ul>
       </article>
 
