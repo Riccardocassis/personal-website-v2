@@ -112,7 +112,7 @@ Il risultato è un brand che funziona in ogni formato: dallo scaffale alla strad
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Fotografia spontanea e imperfetta (nel modo giusto).</h3>
+              <h3 class="text-xl text-white font-semibold">Fotografia spontanea e imperfetta (nel modo giusto)</h3>
               <p class="text-white/70 mt-4">Ho scelto una fotografia che valorizza corpi reali, situazioni quotidiane e un’estetica volutamente “raw”.
 Cibo e persone convivono nella stessa atmosfera: colori intensi, complicità e uno stile diretto che rompe con la classica food photography patinata.</p>
             </div>
@@ -126,7 +126,7 @@ Cibo e persone convivono nella stessa atmosfera: colori intensi, complicità e u
         <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
           <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start order-2 md:order-1">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Un Packaging che si vede anche da lontano, ti chiama senza guardarti in grado di comunicarel’essenza del brand.</h3>
+              <h3 class="text-xl text-white font-semibold">Un Packaging che si vede anche da lontano, ti chiama senza guardarti in grado di comunicarel’essenza del brand</h3>
 
               <p class="text-white/70 mt-4">Le confezioni sono pensate per emergere dallo scaffale: colori shock che variano in base al prodotto, pattern dichiarati e messaggi diretti.
 Ogni pack è un manifesto del brand, non solo un contenitore.</p>
@@ -151,7 +151,7 @@ Ogni pack è un manifesto del brand, non solo un contenitore.</p>
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Uno stile comunicativo senza filtri.</h3>
+              <h3 class="text-xl text-white font-semibold">Uno stile comunicativo senza filtri</h3>
               <p class="text-white/70 mt-4">Poster irriverenti, contrasti saturi e messaggi brevi.
 Ho progettato una serie di OOH che incarnano l’archetipo ribelle: provocatori, pop, immediati e divertenti.
 Sono pensati per catturare l’attenzione prima ancora che il pubblico capisca di cosa si tratta.</p>
@@ -216,23 +216,23 @@ Posso aiutarti a creare esperienze digitali su misura.</p>
   <section class="bg-black py-6 md:py-8 px-6">
     <div class="max-w-2xl mx-auto flex flex-row md:flex-row items-center md:items-stretch justify-center md:justify-between gap-6">
       <!-- Previous -->
-      <a href="/projects/project-7" class="flex items-center gap-0 md:gap-4 md:flex-row text-center md:text-left">
+      <router-link to="/projects/project-7" class="flex items-center gap-0 md:gap-4 md:flex-row text-center md:text-left">
         <span class="inline-flex items-center justify-center w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full">
           <span class="text-white">←</span>
         </span>
         <span class="hidden md:inline-block text-white/70 text-sm">Progetto precedente</span>
-      </a>
+      </router-link>
 
       <!-- Center spacer for desktop -->
       <div class="hidden md:block flex-1"></div>
 
       <!-- Next -->
-      <a href="/projects/project-9" class="flex items-center gap-0 md:gap-4 md:flex-row-reverse text-center md:text-right">
+      <router-link to="/projects/project-9" class="flex items-center gap-0 md:gap-4 md:flex-row-reverse text-center md:text-right">
         <span class="inline-flex items-center justify-center w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full">
           <span class="text-white">→</span>
         </span>
         <span class="hidden md:inline-block text-white/70 text-sm">Progetto successivo</span>
-      </a>
+      </router-link>
     </div>
   </section>
 

@@ -73,7 +73,7 @@
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-1 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold mb-1">Un ecosistema naturale e artificiale in grado di respirare e cambiare sguardo in base alle stagioni.</h3>
+              <h3 class="text-xl text-white font-semibold mb-1">Un ecosistema naturale e artificiale in grado di respirare e cambiare sguardo in base al periodo</h3>
               <p class="text-white/70 mt-1 md:mt-4">Il concept nasce dall’idea di un organismo vivo: un giardino che cambia con le stagioni, si trasforma con lo sguardo dei visitatori e racconta narrazioni diverse a seconda del percorso. La direzione creativa costruisce un linguaggio fluido, naturale e contemporaneo che unisce leggerezza, movimento e scoperta.</p>
             </div>
           </div>
@@ -86,7 +86,7 @@
         <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
           <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start order-2 md:order-1">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">La consapevolezza al centro di tutto.</h3>
+              <h3 class="text-xl text-white font-semibold">La consapevolezza al centro di tutto</h3>
               <p class="text-white/70 mt-4">Il marchio combina una foglia stilizzata, un percorso circolare e la lettera “H”, creando un simbolo che rappresenta crescita, scoperta e ciclicità.</p>
             </div>
           </div>
@@ -109,7 +109,7 @@
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Il passato scolpito nel presente e nel futuro.</h3>
+              <h3 class="text-xl text-white font-semibold">Il passato scolpito nel presente e nel futuro</h3>
               <p class="text-white/70 mt-4">Ho scelto Skia come carattere espressivo per titoli e logotipo: organico, variabile, scolpito.
 Per la comunicazione ho utilizzato Work Sans: accessibile, leggibile e neutra, ideale per testi editoriali e materiali divulgativi.</p>
             </div>
@@ -123,7 +123,7 @@ Per la comunicazione ho utilizzato Work Sans: accessibile, leggibile e neutra, i
         <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
           <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start order-2 md:order-1">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">La natura cambia ai nostri occhi seguendo le stagioni.</h3>
+              <h3 class="text-xl text-white font-semibold">La natura cambia ai nostri occhi seguendo le stagioni</h3>
 
               <p class="text-white/70 mt-4">Ho deciso di sviluppare un sistema cromatico che segue il ciclo naturale del giardino (primavera, estate, autunno, inverno). Ogni stagione definisce l'identità per le campagne, il merchandising e la segnaletica.
                 A mio avviso la scelta plurima di inserire un sistema visuale variabile crea nel visitatore la voglia di tornare più volte per scoprire le diverse sfumature del luogo.</p>
@@ -211,23 +211,23 @@ Posso aiutarti a creare esperienze digitali su misura.</p>
   <section class="bg-black py-6 md:py-8 px-6">
     <div class="max-w-2xl mx-auto flex flex-row md:flex-row items-center md:items-stretch justify-center md:justify-between gap-6">
       <!-- Previous -->
-      <a href="/projects/project-6" class="flex items-center gap-0 md:gap-4 md:flex-row text-center md:text-left">
+      <router-link to="/projects/project-6" class="flex items-center gap-0 md:gap-4 md:flex-row text-center md:text-left">
         <span class="inline-flex items-center justify-center w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full">
           <span class="text-white">←</span>
         </span>
         <span class="hidden md:inline-block text-white/70 text-sm">Progetto precedente</span>
-      </a>
+      </router-link>
 
       <!-- Center spacer for desktop -->
       <div class="hidden md:block flex-1"></div>
 
       <!-- Next -->
-      <a href="/projects/project-8" class="flex items-center gap-0 md:gap-4 md:flex-row-reverse text-center md:text-right">
+      <router-link to="/projects/project-8" class="flex items-center gap-0 md:gap-4 md:flex-row-reverse text-center md:text-right">
         <span class="inline-flex items-center justify-center w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full">
           <span class="text-white">→</span>
         </span>
         <span class="hidden md:inline-block text-white/70 text-sm">Progetto successivo</span>
-      </a>
+      </router-link>
     </div>
   </section>
 

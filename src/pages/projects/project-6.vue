@@ -97,7 +97,7 @@ Con Webable ho esplorato un approccio diverso: un sistema che crea percorsi pers
         <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
           <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start order-2 md:order-1">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Capire chi sei per personalizzare l’apprendimento.</h3>
+              <h3 class="text-xl text-white font-semibold">Capire chi sei per personalizzare l’apprendimento</h3>
               <p class="text-white/70 mt-4">La prima fase che ho progettato è l’onboarding, in versione low-fidelity, per definire le domande fondamentali: ruolo dell’utente, esperienza con l’accessibilità, tempo disponibile e stile di apprendimento.
 Questo step permette alla piattaforma di generare un percorso formativo su misura..</p>
             </div>
@@ -121,7 +121,7 @@ Questo step permette alla piattaforma di generare un percorso formativo su misur
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Le linee guida per creare una web app efficace.</h3>
+              <h3 class="text-xl text-white font-semibold">Le linee guida per creare una web app efficace</h3>
               <p class="text-white/70 mt-4">Ho definito una palette morbida, una tipografia leggibile e componenti semplici per costruire un’interfaccia accessibile e coerente.
 Il tone of voice è amichevole e leggero, coerente con l’obiettivo di rendere la formazione più piacevole e meno tecnica.</p>
             </div>
@@ -135,7 +135,7 @@ Il tone of voice è amichevole e leggero, coerente con l’obiettivo di rendere 
         <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
           <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start order-2 md:order-1">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Flusso principale: dal percorso personalizzato al micro-learning.</h3>
+              <h3 class="text-xl text-white font-semibold">Flusso principale: dal percorso personalizzato al micro-learning</h3>
 
               <p class="text-white/70 mt-4">Ho progettato e prototipato il flusso principale: scelta del percorso, generazione personalizzata tramite AI, progressione attraverso micro-lezioni e reward gamificati.
 Ogni step è pensato per essere breve, chiaro e motivante.</p>
@@ -160,7 +160,7 @@ Ogni step è pensato per essere breve, chiaro e motivante.</p>
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Un’interfaccia amichevole e motivante.</h3>
+              <h3 class="text-xl text-white font-semibold">Un’interfaccia amichevole e motivante</h3>
               <p class="text-white/70 mt-4">L’interfaccia finale combina colori morbidi, icone rotonde e micro-feedback per rendere il tema dell’accessibilità più accessibile.
 Weby accompagna l’utente senza mai diventare invadente.</p>
             </div>
@@ -190,23 +190,23 @@ Posso aiutarti a creare esperienze digitali su misura.</p>
   <section class="bg-black py-6 md:py-8 px-6">
     <div class="max-w-2xl mx-auto flex flex-row md:flex-row items-center md:items-stretch justify-center md:justify-between gap-6">
       <!-- Previous -->
-      <a href="/projects/project-5" class="flex items-center gap-0 md:gap-4 md:flex-row text-center md:text-left">
+      <router-link to="/projects/project-5" class="flex items-center gap-0 md:gap-4 md:flex-row text-center md:text-left">
         <span class="inline-flex items-center justify-center w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full">
           <span class="text-white">←</span>
         </span>
         <span class="hidden md:inline-block text-white/70 text-sm">Progetto precedente</span>
-      </a>
+      </router-link>
 
       <!-- Center spacer for desktop -->
       <div class="hidden md:block flex-1"></div>
 
       <!-- Next -->
-      <a href="/projects/project-7" class="flex items-center gap-0 md:gap-4 md:flex-row-reverse text-center md:text-right">
+      <router-link to="/projects/project-7" class="flex items-center gap-0 md:gap-4 md:flex-row-reverse text-center md:text-right">
         <span class="inline-flex items-center justify-center w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full">
           <span class="text-white">→</span>
         </span>
         <span class="hidden md:inline-block text-white/70 text-sm">Progetto successivo</span>
-      </a>
+      </router-link>
     </div>
   </section>
 

@@ -96,7 +96,7 @@
         <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
           <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start order-2 md:order-1">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Controllo totale sul layout, performance solide, zero compromessi sull’esperienza.</h3>
+              <h3 class="text-xl text-white font-semibold">Controllo totale sul layout, performance solide, zero compromessi sull’esperienza</h3>
               <p class="text-white/70 mt-4">Webflow è stata la scelta ideale per un concept che vive di dettaglio visivo e micro–interazioni.
 Mi ha permesso di tradurre le scelte di design con precisione millimetrica, mantenendo il pieno controllo su griglie, transizioni e responsive senza dipendere da plugin esterni.
 
@@ -122,7 +122,7 @@ Inoltre, il motore nativo consente un output pulito e performante, perfetto per 
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Spline — 3D leggero, interattivo e integrabile nel web.</h3>
+              <h3 class="text-xl text-white font-semibold">Spline — 3D leggero, interattivo e integrabile nel web</h3>
               <p class="text-white/70 mt-4">Ho scelto Spline per modellare la SG-1961 perché permette un 3D credibile e facilmente integrabile nel web.
 Grazie all’embed nativo, il modello si inserisce in Webflow senza codice complesso, garantendo performance e la possibilità di aggiornare materiali e dettagli in modo immediato.</p>
             </div>
@@ -136,7 +136,7 @@ Grazie all’embed nativo, il modello si inserisce in Webflow senza codice compl
         <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
           <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start order-2 md:order-1">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Ho scelto il codice come alleato e lo Sviluppo di una app interattiva per aumentare l'immersività e migliorare l'esperienza utente.</h3>
+              <h3 class="text-xl text-white font-semibold">Ho scelto il codice come alleato e lo Sviluppo di una app interattiva per aumentare l'immersività e migliorare l'esperienza utente</h3>
 
               <p class="text-white/70 mt-4">Con Visual Studio Code ho realizzato una web-app che permette di suonare la SG-1961 direttamente dal browser.
 Input, animazioni e suoni lavorano insieme per creare un’interazione musicale semplice e immersiva.
@@ -162,7 +162,7 @@ L’app è stata poi caricata su GitHub Pages e integrata in Webflow.</p>
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Ho pensato a tre modalità pensate per ridurre la curva d’apprendimento.</h3>
+              <h3 class="text-xl text-white font-semibold">Ho pensato a tre modalità pensate per ridurre la curva d’apprendimento</h3>
               <p class="text-white/70 mt-4">La struttura dell’app l’ho basata su tre modalità di gioco, ognuna pensata per rendere l’esperienza musicale intuitiva fin dal primo tap.
 Ogni modalità offre un livello di complessità crescente, ma ho mantenuto un’interfaccia chiara e reattiva per permettere all’utente di sperimentare senza sentirsi sopraffatto.
 Ho combinato suoni, micro-animazioni e feedback visivi per trasformare la SG-1961 in un’esperienza interattiva accessibile anche a chi non ha mai suonato una chitarra.</p>
@@ -197,23 +197,23 @@ Posso aiutarti a creare esperienze digitali su misura.</p>
   <section class="bg-black py-6 md:py-8 px-6">
     <div class="max-w-2xl mx-auto flex flex-row md:flex-row items-center md:items-stretch justify-center md:justify-between gap-6">
       <!-- Previous -->
-      <a href="/projects/project-9" class="flex items-center gap-0 md:gap-4 md:flex-row text-center md:text-left">
+      <router-link to="/projects/project-9" class="flex items-center gap-0 md:gap-4 md:flex-row text-center md:text-left">
         <span class="inline-flex items-center justify-center w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full">
           <span class="text-white">←</span>
         </span>
         <span class="hidden md:inline-block text-white/70 text-sm">Progetto precedente</span>
-      </a>
+      </router-link>
 
       <!-- Center spacer for desktop -->
       <div class="hidden md:block flex-1"></div>
 
       <!-- Next -->
-      <a href="/projects/project-2" class="flex items-center gap-0 md:gap-4 md:flex-row-reverse text-center md:text-right">
+      <router-link to="/projects/project-2" class="flex items-center gap-0 md:gap-4 md:flex-row-reverse text-center md:text-right">
         <span class="inline-flex items-center justify-center w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full">
           <span class="text-white">→</span>
         </span>
         <span class="hidden md:inline-block text-white/70 text-sm">Progetto successivo</span>
-      </a>
+      </router-link>
     </div>
   </section>
 

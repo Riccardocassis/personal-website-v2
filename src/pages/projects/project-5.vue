@@ -119,7 +119,7 @@
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Il tocco finale che migliora l'esperienza.</h3>
+              <h3 class="text-xl text-white font-semibold">Il tocco finale che migliora l'esperienza</h3>
               <p class="text-white/70 mt-4">Ho prototipato micro-interazioni e transizioni con Protopie per validare la fluidità dell’esperienza e simulare il comportamento reale dell’app.</p>
             </div>
           </div>
@@ -150,23 +150,23 @@ Posso aiutarti a creare esperienze digitali su misura.</p>
   <section class="bg-black py-6 md:py-8 px-6">
     <div class="max-w-2xl mx-auto flex flex-row md:flex-row items-center md:items-stretch justify-center md:justify-between gap-6">
       <!-- Previous -->
-      <a href="/projects/project-4" class="flex items-center gap-0 md:gap-4 md:flex-row text-center md:text-left">
+      <router-link to="/projects/project-4" class="flex items-center gap-0 md:gap-4 md:flex-row text-center md:text-left">
         <span class="inline-flex items-center justify-center w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full">
           <span class="text-white">←</span>
         </span>
         <span class="hidden md:inline-block text-white/70 text-sm">Progetto precedente</span>
-      </a>
+      </router-link>
 
       <!-- Center spacer for desktop -->
       <div class="hidden md:block flex-1"></div>
 
       <!-- Next -->
-      <a href="/projects/project-6" class="flex items-center gap-0 md:gap-4 md:flex-row-reverse text-center md:text-right">
+      <router-link to="/projects/project-6" class="flex items-center gap-0 md:gap-4 md:flex-row-reverse text-center md:text-right">
         <span class="inline-flex items-center justify-center w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full">
           <span class="text-white">→</span>
         </span>
         <span class="hidden md:inline-block text-white/70 text-sm">Progetto successivo</span>
-      </a>
+      </router-link>
     </div>
   </section>
 
