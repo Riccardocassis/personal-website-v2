@@ -1,9 +1,10 @@
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { ref, onMounted, onBeforeUnmount, watch } from 'vue'
 import { RouterLink } from 'vue-router'
 import logo from '../assets/logo-rc.webp'
 
 const mobileOpen = ref(false)       // menu mobile
+let _scrollPos = 0
 // Chiudi mobile con ESC
 function onKeydown(e) {
   if (e.key === 'Escape') {
@@ -27,6 +28,25 @@ onBeforeUnmount(() => {
   document.removeEventListener('keydown', onKeydown)
   window.removeEventListener('scroll', onScroll)
 })
+
+// Quando il menu mobile è aperto, blocchiamo lo scroll dello sfondo
+watch(mobileOpen, (val) => {
+  if (val) {
+    _scrollPos = window.scrollY || window.pageYOffset || 0
+    document.body.style.position = 'fixed'
+    document.body.style.top = `-${_scrollPos}px`
+    document.body.style.left = '0'
+    document.body.style.right = '0'
+    document.body.style.overflow = 'hidden'
+  } else {
+    document.body.style.position = ''
+    document.body.style.top = ''
+    document.body.style.left = ''
+    document.body.style.right = ''
+    document.body.style.overflow = ''
+    window.scrollTo(0, _scrollPos)
+  }
+})
 </script>
 
 <template>
@@ -49,17 +69,17 @@ onBeforeUnmount(() => {
         <ul class="flex items-center gap-8 text-lg w-full justify-end">
           <!-- Projects (link to landing page) -->
           <li>
-            <RouterLink to="/projects" class="nav-link">Projects</RouterLink>
+            <RouterLink to="/projects" class="nav-link">Progetti</RouterLink>
           </li>
 
           <!-- Services -->
           <li>
-            <RouterLink to="/services" class="nav-link">Services</RouterLink>
+            <RouterLink to="/services" class="nav-link">Servizi</RouterLink>
           </li>
 
           <!-- About -->
           <li>
-            <RouterLink to="/about" class="nav-link">About me</RouterLink>
+            <RouterLink to="/about" class="nav-link">Chi sono</RouterLink>
           </li>
 
           <!-- CTA -->
@@ -84,18 +104,20 @@ onBeforeUnmount(() => {
     <div class="md:hidden">
       <nav :class="['fixed inset-0 z-50 transform transition-transform duration-300 ease-out', mobileOpen ? 'translate-x-0' : '-translate-x-full']" aria-hidden="false" style="padding-top:70px;">
         <div class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
-        <div class="relative h-full flex flex-col items-center justify-center px-6">
+        <div class="relative h-full flex items-center justify-center px-6">
           <button class="absolute top-6 right-6 text-white/80 hover:text-white focus:outline-none" @click="mobileOpen = false" aria-label="Chiudi menu">
             <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
             </svg>
           </button>
 
-          <div class="space-y-6 z-10 text-center w-full max-w-xs">
-            <RouterLink to="/projects" class="block text-2xl font-semibold text-white/90 hover:text-white" @click="mobileOpen=false">Projects</RouterLink>
-            <RouterLink to="/services" class="block text-2xl font-semibold text-white/90 hover:text-white" @click="mobileOpen=false">Services</RouterLink>
-            <RouterLink to="/about" class="block text-2xl font-semibold text-white/90 hover:text-white" @click="mobileOpen=false">About me</RouterLink>
-            <RouterLink to="/contact" class="block mt-4 px-6 py-3 rounded-xl bg-blue-600 text-white text-lg font-semibold hover:bg-blue-700" @click="mobileOpen=false">Contattami</RouterLink>
+          <div class="relative z-10 w-full max-w-xs" style="max-height:calc(100vh - 140px); overflow-y:auto; -webkit-overflow-scrolling: touch;">
+            <div class="space-y-6 text-center py-6">
+              <RouterLink to="/projects" class="block text-2xl font-semibold text-white/90 hover:text-white" @click="mobileOpen=false">Progetti</RouterLink>
+              <RouterLink to="/services" class="block text-2xl font-semibold text-white/90 hover:text-white" @click="mobileOpen=false">Servizi</RouterLink>
+              <RouterLink to="/about" class="block text-2xl font-semibold text-white/90 hover:text-white" @click="mobileOpen=false">Chi sono</RouterLink>
+              <RouterLink to="/contact" class="block mt-4 px-6 py-3 rounded-xl bg-blue-600 text-white text-lg font-semibold hover:bg-blue-700" @click="mobileOpen=false">Contattami</RouterLink>
+            </div>
           </div>
         </div>
       </nav>

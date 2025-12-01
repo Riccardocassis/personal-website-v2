@@ -3,7 +3,7 @@
     <!-- blue background removed from Projects overview; gradients remain in individual project pages -->
     <div class="max-w-7xl mx-auto relative z-10">
       <div class="text-center mb-12">
-        <h1 class="text-4xl md:text-5xl font-extrabold">Projects</h1>
+        <h1 class="text-4xl md:text-5xl font-extrabold">Progetti</h1>
         <p class="text-lg text-white/80 mt-3">Una selezione dei miei lavori tra identità visive, UI/UX e web design.</p>
       </div>
 

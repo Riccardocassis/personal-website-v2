@@ -2,7 +2,7 @@
   <div class="min-h-screen relative flex flex-col bg-black">
     <!-- gradient removed; background kept to page CSS or default -->
     <section class="flex-1 relative z-20 flex flex-col justify-center items-center px-8">
-      <h1 class="text-6xl font-extrabold mb-8 tracking-tight text-white text-center animate-fade-in">About me</h1>
+      <h1 class="text-6xl font-extrabold mb-8 tracking-tight text-white text-center animate-fade-in">Chi sono</h1>
       <div class="max-w-2xl text-white/90 text-lg leading-relaxed mb-8 text-center animate-fade-in delay-200">
         Ho sempre avuto una grande passione per i computer e per tutto ciò che riguarda la creatività. Mi piace mettermi in gioco, lavorare insieme agli altri e imparare da ogni nuova esperienza.<br>
         Per me il design non è solo una professione, ma un modo di pensare che si può applicare in tanti ambiti diversi.<br>
