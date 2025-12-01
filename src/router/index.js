@@ -15,7 +15,7 @@ const routes = [
   // 🔥 SUCCESS PAGE (necessaria per il form Netlify)
   { 
     path: '/success',
-    name: 'success',
+    name: 'Success',
     component: () => import('../pages/Success.vue')
   },
 
