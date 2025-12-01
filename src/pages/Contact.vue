@@ -15,14 +15,7 @@
       >
 
         <!-- FORM NETLIFY FUNZIONANTE -->
-       <form
-  name="contact"
-  method="POST"
-  action="/success"
-  data-netlify="true"
-  netlify-honeypot="bot-field"
-  class="w-full flex flex-col gap-5"
->
+<form name="contact" method="POST" action="/success" data-netlify="true" netlify-honeypot="bot-field" class="w-full flex flex-col gap-5">
   <input type="hidden" name="form-name" value="contact" />
 
   <p class="hidden">
@@ -34,6 +27,7 @@
   <textarea name="message" placeholder="Messaggio" rows="4" class="input-contact" required></textarea>
 
   <button type="submit" class="btn-contact">Invia</button>
+
 </form>
 
       </div>
