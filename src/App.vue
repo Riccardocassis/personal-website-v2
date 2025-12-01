@@ -55,8 +55,7 @@ onMounted(() => {
       })
     })
   } catch (e) {
-    // if GSAP not available, silently fail
-    // console.warn('GSAP reveal not initialized', e)
+    // silently fail
   }
 })
 
@@ -69,13 +68,11 @@ onBeforeUnmount(() => {
 
 <template>
   <div class="relative bg-black text-white min-h-screen overflow-x-hidden">
-    <!-- global radial gradient removed — pages use solid black background -->
-
     <Navbar />
     <router-view />
     <Footer :class="route.path === '/' ? 'hidden' : ''" />
 
-    <!-- Vertical scroll indicator (right side) - hidden on mobile -->
+    <!-- Vertical scroll indicator -->
     <div aria-hidden="true" class="fixed right-6 top-1/2 transform -translate-y-1/2 z-50 hidden md:block">
       <div class="w-2 h-56 rounded-full bg-white/6 overflow-hidden">
         <div
@@ -88,12 +85,14 @@ onBeforeUnmount(() => {
 </template>
 
 <style scoped>
-:root{--accent:#00BFFF}
-.scroll-indicator-fill{
+:root {
+  --accent: #00BFFF;
+}
+
+.scroll-indicator-fill {
   transform-origin: bottom;
   transition: transform 220ms linear;
 }
 
-/* make the track a bit visible on dark bg */
+/* track visibility on dark bg */
 </style>
-
