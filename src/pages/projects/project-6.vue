@@ -28,7 +28,9 @@
   <section class="bg-black py-8 md:py-20 px-6">
     <div class="max-w-3xl mx-auto text-center md:text-left">
       <h2 class="text-3xl md:text-4xl font-semibold text-white mb-4 md:mb-6 text-center">Lo scopo del progetto</h2>
-      <p class="text-white/60 text-lg leading-snug md:leading-relaxed">Ho prototipato micro-interazioni e transizioni con Protopie per validare la fluidità dell’esperienza e simulare il comportamento reale dell’app.</p>
+      <p class="text-white/60 text-lg leading-snug md:leading-relaxed">Questa applicazione nasce con l'obiettivo di rendere coinvolgetntel'apprendimento delle normative per l'accessibilità Web:i principi WCAG e la nuova normativa EAA agli addetti ai lavori e di conseguenza una navigazione più agevole agli utenti. Sono partito da uno stato di fatto,lo scenario attuale che ci circonda: nonostante la presenza di normative chiare molti parametri non vengono rispettati.
+        Il web nasce per unire non per separare, e dunque questa è la mia premessa che ha mosso il progetto.
+      </p>
     </div>
   </section>
 
@@ -59,7 +61,7 @@
         </div>
         <div class="px-6">
           <h3 class="text-xl font-semibold text-white">Community & Spazio Recruiting</h3>
-          <p class="text-white/60 mt-3">La piattaforma include un’area condivisa dove professionisti e recruiter possono confrontarsi, scambiarsi risorse e creare opportunità lavorative legate all’accessibilità..</p>
+          <p class="text-white/60 mt-3">La piattaforma include un’area condivisa dove professionisti e recruiter possono confrontarsi, scambiarsi risorse e creare opportunità lavorative legate all’accessibilità.</p>
         </div>
       </div>
     </div>
