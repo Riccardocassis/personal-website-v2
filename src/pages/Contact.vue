@@ -15,13 +15,12 @@
       >
 
         <!-- FORM NETLIFY FUNZIONANTE -->
-<form 
-  name="contact" 
-  method="POST" 
-  action="/success?no-cache=1"
-  data-netlify="true" 
+<form
+  name="contact"
+  method="POST"
+  data-netlify="true"
   netlify-honeypot="bot-field"
-  class="w-full flex flex-col gap-5"
+  action="/success"
 >
 
   <p class="hidden">
