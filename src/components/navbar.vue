@@ -84,7 +84,7 @@ watch(mobileOpen, (val) => {
 
           <!-- CTA -->
           <li class="flex items-center">
-            <RouterLink to="/contact" class="inline-block bg-blue-600 text-white text-lg px-4 py-2 rounded-xl font-semibold shadow-md hover:bg-blue-700 transition-colors">Contattami</RouterLink>
+            <a href="mailto:riccardocassis.rc@gmail.com" class="inline-block bg-blue-600 text-white text-lg px-4 py-2 rounded-xl font-semibold shadow-md hover:bg-blue-700 transition-colors">Contattami</a>
           </li>
         </ul>
       </div>
@@ -116,7 +116,7 @@ watch(mobileOpen, (val) => {
               <RouterLink to="/projects" class="block text-2xl font-semibold text-white/90 hover:text-white" @click="mobileOpen=false">Progetti</RouterLink>
               <RouterLink to="/services" class="block text-2xl font-semibold text-white/90 hover:text-white" @click="mobileOpen=false">Servizi</RouterLink>
               <RouterLink to="/about" class="block text-2xl font-semibold text-white/90 hover:text-white" @click="mobileOpen=false">Chi sono</RouterLink>
-              <RouterLink to="/contact" class="block mt-4 px-6 py-3 rounded-xl bg-blue-600 text-white text-lg font-semibold hover:bg-blue-700" @click="mobileOpen=false">Contattami</RouterLink>
+              <a href="mailto:riccardocassis.rc@gmail.com" class="block mt-4 px-6 py-3 rounded-xl bg-blue-600 text-white text-lg font-semibold hover:bg-blue-700" @click="mobileOpen=false">Contattami</a>
             </div>
           </div>
         </div>
