@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount, watch } from 'vue'
-import { RouterLink } from 'vue-router'
+import { useRouter, RouterLink } from 'vue-router'
 import logo from '../assets/logo-rc.webp'
 
 const mobileOpen = ref(false)       // menu mobile
@@ -47,6 +47,50 @@ watch(mobileOpen, (val) => {
     window.scrollTo(0, _scrollPos)
   }
 })
+
+const router = useRouter()
+
+// Rilevamento intelligente del supporto mailto (solo lettura, senza aprire client)
+function detectMailtoHandler(){
+  try{
+    const nav = window.navigator
+    // Controllo non standard: alcuni browser sperimentali potrebbero esporre una lista
+    if (Array.isArray(nav.protocolHandlers) && nav.protocolHandlers.length){
+      return nav.protocolHandlers.some(h => h.protocol && String(h.protocol).toLowerCase().includes('mailto'))
+    }
+    // Alcuni browser sperimentali potrebbero esporre questa funzione
+    if (typeof nav.isProtocolHandlerRegistered === 'function'){
+      try{ return !!nav.isProtocolHandlerRegistered('mailto') }catch(e){}
+    }
+  }catch(e){}
+  // Non determinabile: ritorna undefined (conservativo)
+  return undefined
+}
+
+function isPlatformWindows(){
+  try{
+    const p = navigator.userAgent || navigator.platform || ''
+    return /Win(dows)?/.test(p)
+  }catch(e){ return false }
+}
+
+const EMAIL = 'riccardocassis.rc@gmail.com'
+
+function handleContactClick(e, opts = {}){
+  if (e && typeof e.preventDefault === 'function') e.preventDefault()
+  const isWin = isPlatformWindows()
+  const hasHandler = detectMailtoHandler()
+
+  if (opts.closeMobile && typeof opts.closeMobile === 'function') opts.closeMobile()
+
+  if (isWin && hasHandler === false){
+    router.push({ path: '/contact-fallback' })
+    return
+  }
+
+  // Se non siamo su Windows, o non sappiamo, o c'è un handler, apriamo mailto
+  window.location.href = `mailto:${EMAIL}`
+}
 </script>
 
 <template>
@@ -84,7 +128,7 @@ watch(mobileOpen, (val) => {
 
           <!-- CTA -->
           <li class="flex items-center">
-            <a href="mailto:riccardocassis.rc@gmail.com" class="inline-block bg-blue-600 text-white text-lg px-4 py-2 rounded-xl font-semibold shadow-md hover:bg-blue-700 transition-colors">Contattami</a>
+            <a href="mailto:riccardocassis.rc@gmail.com" class="inline-block bg-blue-600 text-white text-lg px-4 py-2 rounded-xl font-semibold shadow-md hover:bg-blue-700 transition-colors" @click.prevent="handleContactClick($event)">Contattami</a>
           </li>
         </ul>
       </div>
@@ -116,7 +160,7 @@ watch(mobileOpen, (val) => {
               <RouterLink to="/projects" class="block text-2xl font-semibold text-white/90 hover:text-white" @click="mobileOpen=false">Progetti</RouterLink>
               <RouterLink to="/services" class="block text-2xl font-semibold text-white/90 hover:text-white" @click="mobileOpen=false">Servizi</RouterLink>
               <RouterLink to="/about" class="block text-2xl font-semibold text-white/90 hover:text-white" @click="mobileOpen=false">Chi sono</RouterLink>
-              <a href="mailto:riccardocassis.rc@gmail.com" class="block mt-4 px-6 py-3 rounded-xl bg-blue-600 text-white text-lg font-semibold hover:bg-blue-700" @click="mobileOpen=false">Contattami</a>
+              <a href="mailto:riccardocassis.rc@gmail.com" class="block mt-4 px-6 py-3 rounded-xl bg-blue-600 text-white text-lg font-semibold hover:bg-blue-700" @click.prevent="handleContactClick($event, { closeMobile: () => (mobileOpen.value = false) })">Contattami</a>
             </div>
           </div>
         </div>

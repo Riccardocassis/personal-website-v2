@@ -5,12 +5,14 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home          from '../pages/Home.vue'
 import About         from '../pages/About.vue'
 import Contact       from '../pages/Contact.vue'
+import ContactFallback from '../pages/contact-fallback.vue'
 import Projects      from '../pages/Projects.vue'
 
 const routes = [
   { path: '/',              name: 'home',              component: Home },
   { path: '/about',         name: 'about',             component: About },
   { path: '/contact',       name: 'contact',           component: Contact },
+  { path: '/contact-fallback', name: 'contact-fallback', component: ContactFallback },
 
   // Contact page (mail link) — Netlify form routes removed
 
