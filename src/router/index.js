@@ -18,6 +18,11 @@ const routes = [
     name: 'Success',
     component: () => import('../pages/Success.vue')
   },
+  // Redirect any /success/* variants back to /success (handles querystrings and subpaths)
+  {
+    path: '/success/:catchAll(.*)*',
+    redirect: '/success'
+  },
 
   { path: '/projects',      name: 'projects',          component: Projects },
 
@@ -39,10 +44,17 @@ const routes = [
   { path: '/process',        name: 'process',         component: () => import('../pages/Process.vue') },
   { path: '/privacy',        name: 'privacy',         component: () => import('../pages/Privacy.vue') },
   { path: '/cookie-policy',  name: 'cookie-policy',   component: () => import('../pages/CookiePolicy.vue') },
+
+  // ⛔ ROUTE CATCH-ALL (fondamentale per eliminare 404 in locale e per /success)
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'not-found',
+    component: Home
+  }
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes,
   scrollBehavior() { return { top: 0 } }
 })

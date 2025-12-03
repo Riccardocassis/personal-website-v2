@@ -15,8 +15,14 @@
       >
 
         <!-- FORM NETLIFY FUNZIONANTE -->
-<form name="contact" method="POST" action="/success" data-netlify="true" netlify-honeypot="bot-field" class="w-full flex flex-col gap-5">
-  <input type="hidden" name="form-name" value="contact" />
+<form 
+  name="contact" 
+  method="POST" 
+  action="/success?no-cache=1"
+  data-netlify="true" 
+  netlify-honeypot="bot-field"
+  class="w-full flex flex-col gap-5"
+>
 
   <p class="hidden">
     <label>Non compilare questo campo:<input name="bot-field" /></label>
