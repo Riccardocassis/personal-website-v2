@@ -77,19 +77,32 @@ function isPlatformWindows(){
 const EMAIL = 'riccardocassis.rc@gmail.com'
 
 function handleContactClick(e, opts = {}){
-  if (e && typeof e.preventDefault === 'function') e.preventDefault()
+  // Support calling either as handleContactClick(event, opts) or handleContactClick(opts)
+  let event = undefined
+  let options = opts || {}
+  if (e && typeof e.preventDefault === 'function'){
+    event = e
+  } else if (e && typeof e === 'object'){
+    options = e
+  }
+
+  if (event && typeof event.preventDefault === 'function') event.preventDefault()
+
   const isWin = isPlatformWindows()
   const hasHandler = detectMailtoHandler()
 
-  if (opts.closeMobile && typeof opts.closeMobile === 'function') opts.closeMobile()
+  if (options.closeMobile && typeof options.closeMobile === 'function') options.closeMobile()
 
-  if (isWin && hasHandler === false){
-    router.push({ path: '/contact-fallback' })
+  // Se il sistema supporta mailto (o non possiamo determinare negativamente), apri mailto immediatamente
+  if (hasHandler !== false){
+    window.location.href = `mailto:${EMAIL}`
     return
   }
 
-  // Se non siamo su Windows, o non sappiamo, o c'è un handler, apriamo mailto
-  window.location.href = `mailto:${EMAIL}`
+  // Se siamo qui, la detection ha restituito false (nessun handler). Facciamo il fallback dopo 700ms.
+  setTimeout(() => {
+    router.push({ path: '/contact-fallback' })
+  }, 700)
 }
 </script>
 
@@ -128,7 +141,7 @@ function handleContactClick(e, opts = {}){
 
           <!-- CTA -->
           <li class="flex items-center">
-            <a href="mailto:riccardocassis.rc@gmail.com" class="inline-block bg-blue-600 text-white text-lg px-4 py-2 rounded-xl font-semibold shadow-md hover:bg-blue-700 transition-colors" @click.prevent="handleContactClick($event)">Contattami</a>
+            <button class="text-white bg-blue-600 px-4 py-2 rounded-lg" @click="handleContactClick()">Contattami</button>
           </li>
         </ul>
       </div>
@@ -160,7 +173,12 @@ function handleContactClick(e, opts = {}){
               <RouterLink to="/projects" class="block text-2xl font-semibold text-white/90 hover:text-white" @click="mobileOpen=false">Progetti</RouterLink>
               <RouterLink to="/services" class="block text-2xl font-semibold text-white/90 hover:text-white" @click="mobileOpen=false">Servizi</RouterLink>
               <RouterLink to="/about" class="block text-2xl font-semibold text-white/90 hover:text-white" @click="mobileOpen=false">Chi sono</RouterLink>
-              <a href="mailto:riccardocassis.rc@gmail.com" class="block mt-4 px-6 py-3 rounded-xl bg-blue-600 text-white text-lg font-semibold hover:bg-blue-700" @click.prevent="handleContactClick($event, { closeMobile: () => (mobileOpen.value = false) })">Contattami</a>
+              <button
+                class="block text-white bg-blue-600 px-4 py-2 rounded-md"
+                @click="() => handleContactClick({ closeMobile: () => (mobileOpen.value = false) })"
+              >
+                Contattami
+              </button>
             </div>
           </div>
         </div>
