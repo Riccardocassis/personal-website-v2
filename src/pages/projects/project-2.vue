@@ -48,7 +48,7 @@
   <!-- Key Features (three clean columns) moved under Video CTA -->
   <section class="bg-black py-20 px-6">
     <div class="max-w-6xl mx-auto text-center">
-      <h2 class="text-2xl md:text-3xl font-semibold text-white mb-8">Elementi cardine</h2>
+      <h2 class="text-2xl md:text-3xl font-semibold text-white mb-8">Elementi chiave</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-start text-center">
         <div class="px-6">
           <h3 class="text-xl font-semibold text-white"> Direzione Creativa & Concept</h3>
