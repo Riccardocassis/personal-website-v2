@@ -103,11 +103,14 @@
 
         <!-- GRID -->
         <div
-          :class="[
-            'grid grid-cols-1 md:grid-cols-2 gap-10 items-center',
-            slide.reverse ? 'md:grid-flow-col-dense' : ''
-          ]"
-        >
+  :class="[
+    'grid grid-cols-1 gap-10 items-center',
+    slide.reverse
+      ? 'md:grid-cols-[40%_60%]'
+      : 'md:grid-cols-[60%_40%]'
+  ]"
+>
+
 
           <!-- IMAGE -->
           <div :class="slide.reverse ? 'order-2 md:order-1' : 'order-1'">
