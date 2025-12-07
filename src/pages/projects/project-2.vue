@@ -167,9 +167,12 @@
 </template>
 
 <script setup>
-import hero from '@/assets/coversizexl.webp'
-import situation from '@/assets/img2sizexl.webp'
-import palette from '@/assets/colorpalettesizexl.webp'
-import font from '@/assets/fontsizexl.webp'
-import architecture from '@/assets/cardsize.webp'
+import { onMounted, ref, nextTick } from 'vue'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import sizexlHero from '../../assets/coversizexl.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
+import sizexlSituation from '../../assets/img2sizexl.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
+import sizexlPalette from '../../assets/colorpalettesizexl.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
+import sizexlFont from '../../assets/fontsizexl.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
+import sizexlArchitecture from '../../assets/cardsize.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
 </script>
