@@ -2,15 +2,14 @@
 
   <!-- HERO -->
   <section class="relative w-full md:h-[85vh] h-[35vh] overflow-hidden bg-transparent -mt-12 md:mt-0">
-
     <picture>
-      <template v-for="src in gibsonHero.sources" :key="src.srcset">
-        <source :type="src.type" :srcset="src.srcset" />
+      <template v-for="source in gibsonHero.sources" :key="source.srcset">
+        <source :srcset="source.srcset" :type="source.type" />
       </template>
 
       <img
         :src="gibsonHero.img.src"
-        alt="Gibson cover"
+        alt="Gibson SG-1961 cover"
         class="reveal-img absolute inset-0 w-full h-full object-cover object-top md:object-center opacity-90"
         fetchpriority="high"
         decoding="async"
@@ -48,7 +47,7 @@
 
       <p class="text-white/60 text-lg leading-snug md:leading-relaxed">
         In questo progetto ho voluto ricreare un concept di landing page dedicata
-        a uno strumento iconico come la Gibson SG-1961, capace di comunicare la sua anima rock...
+        a uno strumento iconico come la Gibson SG-1961…
       </p>
     </div>
   </section>
@@ -97,22 +96,27 @@
 
       <div v-for="(slide, i) in slides" :key="i" class="w-full">
 
+        <!-- TITLE -->
         <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">
           {{ slide.title }}
         </h2>
 
+        <!-- GRID -->
         <div
-          :class="slide.reverse ? 'grid grid-cols-1 md:grid-cols-[40%_60%]' : 'grid grid-cols-1 md:grid-cols-[60%_40%]'"
+          :class="[
+            'grid grid-cols-1 md:grid-cols-2 gap-10 items-center',
+            slide.reverse ? 'md:grid-flow-col-dense' : ''
+          ]"
         >
 
           <!-- IMAGE -->
-          <div :class="slide.reverse ? 'order-2 md:order-1' : ''">
+          <div :class="slide.reverse ? 'order-2 md:order-1' : 'order-1'">
             <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-
               <picture>
-                <template v-for="src in slide.img.sources" :key="src.srcset">
-                  <source :type="src.type" :srcset="src.srcset" />
+                <template v-for="source in slide.img.sources" :key="source.srcset">
+                  <source :srcset="source.srcset" :type="source.type" />
                 </template>
+
                 <img
                   :src="slide.img.img.src"
                   class="reveal-img w-full h-full object-cover"
@@ -120,18 +124,19 @@
                   decoding="async"
                 />
               </picture>
-
             </div>
           </div>
 
           <!-- TEXT -->
           <div
-            :class="slide.reverse ? 'order-1 md:order-2 px-6 md:pl-20' : 'px-6 md:pr-20'"
-            class="flex items-center justify-center md:justify-start pt-6 md:pt-0"
+            :class="[
+              'flex items-center justify-center md:justify-start pt-6 md:pt-0 px-6',
+              slide.reverse ? 'order-1 md:order-2 md:pl-20' : 'order-2 md:pr-20'
+            ]"
           >
-            <div class="reveal-text translate-y-6 text-center md:text-left max-w-md mx-auto md:mx-0">
+            <div class="reveal-text translate-y-6 text-center md:text-left">
               <h3 class="text-xl text-white font-semibold mb-1">{{ slide.subtitle }}</h3>
-              <p class="text-white/70 mt-4 leading-relaxed">{{ slide.text }}</p>
+              <p class="text-white/70 mt-4">{{ slide.text }}</p>
             </div>
           </div>
 
@@ -152,7 +157,7 @@
     </div>
   </section>
 
-  <!-- NAVIGATION -->
+  <!-- PREV/NEXT -->
   <section class="bg-black py-6 md:py-8 px-6">
     <div class="max-w-2xl mx-auto flex items-center justify-between gap-6">
 
@@ -175,6 +180,7 @@
 
 </template>
 
+
 <script setup>
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
@@ -182,7 +188,7 @@ import { onMounted } from "vue"
 
 gsap.registerPlugin(ScrollTrigger)
 
-/* HERO IMAGE */
+/* HERO */
 import gibsonHero from '../../assets/gibson-cover-pagina-progetti.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
 
 /* SLIDES */
@@ -197,35 +203,35 @@ const slides = [
     title: "Concept e sviluppo dei Wireframes",
     img: p1slide1,
     subtitle: "Stile estetico",
-    text: "Sono partito analizzando le parti che costituivano questo prodotto...",
+    text: "Sono partito analizzando le parti…",
     reverse: false
   },
   {
     title: "Scelta della piattaforma",
     img: p1slide2,
     subtitle: "Controllo totale sul layout",
-    text: "Webflow è stata la scelta ideale...",
+    text: "Webflow è stata la scelta ideale…",
     reverse: true
   },
   {
     title: "3D Modeling",
     img: p1slide3,
     subtitle: "Spline — 3D leggero e integrabile",
-    text: "Ho scelto Spline per modellare...",
+    text: "Ho scelto Spline per modellare…",
     reverse: false
   },
   {
     title: "Sviluppo dell'app",
     img: p1slide4,
     subtitle: "Ho scelto il codice come alleato",
-    text: "Con Visual Studio Code ho realizzato una web-app...",
+    text: "Con Visual Studio Code ho realizzato una web-app…",
     reverse: true
   },
   {
     title: "Interfaccia",
     img: p1slide5,
-    subtitle: "Tre modalità pensate per ridurre la curva d’apprendimento",
-    text: "La struttura dell’app l’ho basata su tre modalità...",
+    subtitle: "Tre modalità per ridurre la curva d’apprendimento",
+    text: "La struttura dell’app si basa su tre modalità…",
     reverse: false
   }
 ]
