@@ -3,18 +3,17 @@
   <!-- HERO -->
 <section class="relative w-full md:h-[85vh] h-[35vh] overflow-hidden bg-transparent -mt-12 md:mt-0">
   <picture>
-    <template v-for="source in gibsonHero.sources" :key="source.src">
-      <source :type="source.type" :srcset="source.srcset" />
-    </template>
+  <source :srcset="gibsonHero.sources.webp" type="image/webp" />
+  <source :srcset="gibsonHero.sources.jpeg" type="image/jpeg" />
+  <img
+    :src="gibsonHero.img"
+    alt="Gibson cover"
+    class="reveal-img absolute inset-0 w-full h-full object-cover object-top md:object-center opacity-90"
+    fetchpriority="high"
+    decoding="async"
+  />
+</picture>
 
-    <img
-      :src="gibsonHero.img"
-      alt="Gibson cover"
-      class="reveal-img absolute inset-0 w-full h-full object-cover object-top md:object-center opacity-90"
-      fetchpriority="high"
-      decoding="async"
-    />
-  </picture>
 
   <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-transparent"></div>
 
