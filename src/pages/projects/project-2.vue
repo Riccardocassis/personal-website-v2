@@ -2,8 +2,12 @@
   <!-- HERO -->
   <section class="relative w-full md:h-[85vh] h-[35vh] overflow-hidden bg-transparent -mt-12 md:mt-0">
     <picture>
+      <template v-for="src in hero.sources" :key="src.srcset">
+        <source :type="src.type" :srcset="src.srcset" />
+      </template>
+
       <img
-        :src="hero"
+        :src="hero.img.src"
         alt="Sizexl cover"
         class="reveal-img absolute inset-0 w-full h-full object-cover object-top md:object-center opacity-90"
         fetchpriority="high"
@@ -25,7 +29,7 @@
     </div>
   </section>
 
-  <!-- MOBILE H1 -->
+  <!-- MOBILE TITLE -->
   <div class="md:hidden px-6 pt-3">
     <h1 class="text-3xl font-extrabold text-white leading-tight mb-1">
       Sizexl — Restyling del sito e ottimizzazione della presenza digitale
@@ -44,7 +48,7 @@
 
       <p class="text-white/60 text-lg leading-snug md:leading-relaxed">
         In questo progetto ho ricostruito l’intera esperienza digitale di Sizexl, riorganizzando contenuti,
-        navigazione e interfaccia visiva. L’obiettivo era rendere il sito più chiaro, credibile e coerente con la qualità dei servizi offerti.
+        navigazione e interfaccia visiva per renderla più chiara, credibile e coerente con la qualità dei servizi offerti.
       </p>
     </div>
   </section>
@@ -74,7 +78,18 @@
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div>
             <div class="aspect-[4/3] overflow-hidden">
-              <img :src="situation" class="reveal-img w-full h-full object-cover" loading="lazy" />
+              
+              <picture>
+                <template v-for="src in situation.sources" :key="src.srcset">
+                  <source :type="src.type" :srcset="src.srcset" />
+                </template>
+                <img
+                  :src="situation.img.src"
+                  class="reveal-img w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </picture>
+
             </div>
           </div>
 
@@ -82,8 +97,8 @@
             <div class="reveal-text text-center md:text-left">
               <h3 class="text-xl text-white font-semibold mb-1">Analisi del sito</h3>
               <p class="text-white/70 mt-3">
-                Ho analizzato il sito esistente per individuare criticità in struttura, UI e contenuti.
-                Scarsa leggibilità, distribuzione confusa e identità visiva debole erano i principali problemi.
+                Ho analizzato il sito esistente per individuare criticità in struttura, UI e contenuti:
+                leggibilità scarsa, distribuzione confusa e identità visiva non allineata alla professionalità dell’azienda.
               </p>
             </div>
           </div>
@@ -101,14 +116,25 @@
             <div class="reveal-text text-center md:text-left">
               <h3 class="text-xl text-white font-semibold">Nuova direzione visiva</h3>
               <p class="text-white/70 mt-4">
-                Palette aggiornata per un tono più professionale e contemporaneo.
+                Palette aggiornata per un tono più professionale, leggibile e contemporaneo.
               </p>
             </div>
           </div>
 
           <div class="order-1 md:order-2">
             <div class="aspect-[4/3] overflow-hidden">
-              <img :src="palette" class="reveal-img w-full h-full object-cover" loading="lazy" />
+
+              <picture>
+                <template v-for="src in palette.sources" :key="src.srcset">
+                  <source :type="src.type" :srcset="src.srcset" />
+                </template>
+                <img
+                  :src="palette.img.src"
+                  class="reveal-img w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </picture>
+
             </div>
           </div>
         </div>
@@ -123,7 +149,18 @@
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div>
             <div class="aspect-[4/3] overflow-hidden">
-              <img :src="font" class="reveal-img w-full h-full object-cover" loading="lazy" />
+              
+              <picture>
+                <template v-for="src in fontImg.sources" :key="src.srcset">
+                  <source :type="src.type" :srcset="src.srcset" />
+                </template>
+                <img
+                  :src="fontImg.img.src"
+                  class="reveal-img w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </picture>
+
             </div>
           </div>
 
@@ -131,7 +168,7 @@
             <div class="reveal-text text-center md:text-left">
               <h3 class="text-xl text-white font-semibold">Un font semplice ma efficace</h3>
               <p class="text-white/70 mt-4">
-                Scelta condivisa con il cliente: Inter per leggibilità, chiarezza ed equilibrio sui diversi dispositivi.
+                Scelta condivisa con il cliente: Inter, per massima leggibilità e coerenza tipografica.
               </p>
             </div>
           </div>
@@ -149,14 +186,25 @@
             <div class="reveal-text text-center md:text-left">
               <h3 class="text-xl text-white font-semibold">Struttura & UX semplificata</h3>
               <p class="text-white/70 mt-4">
-                Riorganizzazione completa dei contenuti e dei percorsi di navigazione.
+                Redistribuzione dei contenuti e percorsi più chiari per ridurre il carico cognitivo e facilitare la navigazione.
               </p>
             </div>
           </div>
 
           <div class="order-1 md:order-2">
             <div class="aspect-[4/3] overflow-hidden">
-              <img :src="architecture" class="reveal-img w-full h-full object-cover" loading="lazy" />
+
+              <picture>
+                <template v-for="src in architecture.sources" :key="src.srcset">
+                  <source :type="src.type" :srcset="src.srcset" />
+                </template>
+                <img
+                  :src="architecture.img.src"
+                  class="reveal-img w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </picture>
+
             </div>
           </div>
         </div>
@@ -167,12 +215,15 @@
 </template>
 
 <script setup>
-import { onMounted, ref, nextTick } from 'vue'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import sizexlHero from '../../assets/coversizexl.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
 import sizexlSituation from '../../assets/img2sizexl.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
 import sizexlPalette from '../../assets/colorpalettesizexl.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
 import sizexlFont from '../../assets/fontsizexl.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
 import sizexlArchitecture from '../../assets/cardsize.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
+
+const hero = sizexlHero
+const situation = sizexlSituation
+const palette = sizexlPalette
+const fontImg = sizexlFont
+const architecture = sizexlArchitecture
 </script>
