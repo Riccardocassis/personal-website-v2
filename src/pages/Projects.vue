@@ -142,20 +142,16 @@ import { useParallaxCards } from '../composables/useParallaxCards'
 gsap.registerPlugin(ScrollTrigger)
 
 // Import existing assets to avoid missing /img references
-import rebert from '../assets/rebert.webp'
+
 import piadina from '../assets/piadinaroberto.webp'
-
-
-import museodellacarta from '../assets/museodellacarta.webp'
 import fillbo from '../assets/fillbo.webp'
 import gibsonA from '../assets/gibson a.webp'
 import gibsonB from '../assets/gibson b.webp'
 import sizexlA from '../assets/sizexl logo a .webp'
 import sizexlB from '../assets/sizexl b.webp'
-import appchitarra from '../assets/appchitarra.webp'
 import hero from '../assets/hero-riccardo.webp'
-import vasi from '../assets/vasi.webp'
-import beat from '../assets/beat.webp'
+
+
 import opsifyB from '../assets/opsify-b.webp'
 import opsifyA from '../assets/opsify-a.webp'
 import fillboA from '../assets/fillbo-a.webp'
