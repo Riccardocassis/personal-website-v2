@@ -1,11 +1,17 @@
 <template>
   <!-- HERO (Apple-like, generous whitespace) -->
   <section class="relative w-full md:h-[85vh] h-[35vh] overflow-hidden bg-transparent -mt-12 md:mt-0">
-    <img
-      src="../../assets/cover-brandbibler1.webp"
-      alt="Cover"
-      class="reveal-img absolute inset-0 w-full h-full object-cover object-top md:object-center opacity-90"
-    />
+    <picture>
+      <source type="image/webp" :srcset="rbHero.webp" />
+      <source type="image/jpeg" :srcset="rbHero.jpeg" />
+      <img
+        :src="rbHero.jpeg[1280]"
+        alt="Cover"
+        class="reveal-img absolute inset-0 w-full h-full object-cover object-top md:object-center opacity-90"
+        fetchpriority="high"
+        decoding="async"
+      />
+    </picture>
 
     <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-transparent"></div>
 
@@ -71,7 +77,11 @@ Il risultato è un brand che funziona in ogni formato: dallo scaffale alla strad
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-              <img src="../../assets/rbpayoff.webp" alt="Concept" class="reveal-img w-full h-full object-cover" />
+              <picture>
+                <source type="image/webp" :srcset="rbLogo.webp" />
+                <source type="image/jpeg" :srcset="rbLogo.jpeg" />
+                <img :src="rbLogo.jpeg[1280]" alt="Concept" class="reveal-img w-full h-full object-cover" loading="lazy" decoding="async" />
+              </picture>
             </div>
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-1 md:pt-0">
@@ -95,7 +105,11 @@ Il risultato è un brand che funziona in ogni formato: dallo scaffale alla strad
           </div>
           <div class="w-full order-1 md:order-2">
             <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-              <img src="../../assets/rbcolorietipografia.webp" alt="Materials" class="reveal-img w-full h-full object-cover" />
+              <picture>
+                <source type="image/webp" :srcset="rbPalette.webp" />
+                <source type="image/jpeg" :srcset="rbPalette.jpeg" />
+                <img :src="rbPalette.jpeg[1280]" alt="Materials" class="reveal-img w-full h-full object-cover" />
+              </picture>
             </div>
           </div>
         </div>
@@ -107,7 +121,11 @@ Il risultato è un brand che funziona in ogni formato: dallo scaffale alla strad
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-              <img src="../../assets/rbft.webp" alt="3D" class="reveal-img w-full h-full object-cover" />
+              <picture>
+                <source type="image/webp" :srcset="rbPhoto.webp" />
+                <source type="image/jpeg" :srcset="rbPhoto.jpeg" />
+                <img :src="rbPhoto.jpeg[1280]" alt="3D" class="reveal-img w-full h-full object-cover" />
+              </picture>
             </div>
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
@@ -134,7 +152,11 @@ Ogni pack è un manifesto del brand, non solo un contenitore.</p>
           </div>
           <div class="w-full order-1 md:order-2">
             <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-              <img src="../../assets/rbpackaging.webp" alt="Interaction" class="reveal-img w-full h-full object-cover" />
+              <picture>
+                <source type="image/webp" :srcset="rbPackaging.webp" />
+                <source type="image/jpeg" :srcset="rbPackaging.jpeg" />
+                <img :src="rbPackaging.jpeg[1280]" alt="Interaction" class="reveal-img w-full h-full object-cover" />
+              </picture>
             </div>
           </div>
         </div>
@@ -244,6 +266,14 @@ Posso aiutarti a creare esperienze digitali su misura.</p>
 import { onMounted, ref } from 'vue'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import rbHero from '../../assets/cover-brandbibler1.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
+import rbLogo from '../../assets/rbpayoff.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
+import rbPalette from '../../assets/rbcolorietipografia.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
+import rbPhoto from '../../assets/rbft.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
+import rbPackaging from '../../assets/rbpackaging.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
+import rbCampaign from '../../assets/rbcmp.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
+import rbSocial from '../../assets/rbsc.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
+import rbWebsite from '../../assets/rbsw.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
 
 gsap.registerPlugin(ScrollTrigger)
 

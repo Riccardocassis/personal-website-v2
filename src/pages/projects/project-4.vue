@@ -2,11 +2,17 @@
 
   <!-- HERO (Apple-like, generous whitespace) -->
   <section class="relative w-full md:h-[85vh] h-[35vh] overflow-hidden bg-transparent -mt-12 md:mt-0">
-    <img
-      src="../../assets/fillbohero.webp"
-      alt="fillbohero"
-      class="reveal-img absolute inset-0 w-full h-full object-cover object-top md:object-center"
-    />
+    <picture>
+      <source type="image/webp" :srcset="fillboHero.webp" />
+      <source type="image/jpeg" :srcset="fillboHero.jpeg" />
+      <img
+        :src="fillboHero.jpeg[1280]"
+        alt="fillbohero"
+        class="reveal-img absolute inset-0 w-full h-full object-cover object-top md:object-center"
+        fetchpriority="high"
+        decoding="async"
+      />
+    </picture>
 
     <!-- overlay removed so hero image is fully visible -->
 
@@ -78,7 +84,11 @@
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-              <img src="../../assets/fillbos1.webp" alt="Concept" class="reveal-img w-full h-full object-cover" />
+              <picture>
+                <source type="image/webp" :srcset="fillboSlide1.webp" />
+                <source type="image/jpeg" :srcset="fillboSlide1.jpeg" />
+                <img :src="fillboSlide1.jpeg[1280]" alt="Concept" class="reveal-img w-full h-full object-cover" loading="lazy" decoding="async" />
+              </picture>
             </div>
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-1 md:pt-0">
@@ -110,7 +120,11 @@ La mappatura in Figma è servita per tradurre i bisogni del personale — commes
           </div>
           <div class="w-full order-1 md:order-2">
             <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-              <img src="../../assets/fillbos2.webp" alt="Materials" class="reveal-img w-full h-full object-cover" />
+              <picture>
+                <source type="image/webp" :srcset="fillboSlide2.webp" />
+                <source type="image/jpeg" :srcset="fillboSlide2.jpeg" />
+                <img :src="fillboSlide2.jpeg[1280]" alt="Materials" class="reveal-img w-full h-full object-cover" loading="lazy" decoding="async" />
+              </picture>
             </div>
           </div>
         </div>
@@ -122,7 +136,11 @@ La mappatura in Figma è servita per tradurre i bisogni del personale — commes
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-              <img src="../../assets/fillbos5.webp" alt="3D" class="reveal-img w-full h-full object-cover" />
+              <picture>
+                <source type="image/webp" :srcset="fillboSlide3.webp" />
+                <source type="image/jpeg" :srcset="fillboSlide3.jpeg" />
+                <img :src="fillboSlide3.jpeg[1280]" alt="3D" class="reveal-img w-full h-full object-cover" loading="lazy" decoding="async" />
+              </picture>
             </div>
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
@@ -147,7 +165,11 @@ La mappatura in Figma è servita per tradurre i bisogni del personale — commes
           </div>
           <div class="w-full order-1 md:order-2">
             <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-              <img src="../../assets/fillbos4.webp" alt="Interaction" class="reveal-img w-full h-full object-cover" />
+              <picture>
+                <source type="image/webp" :srcset="fillboSlide4.webp" />
+                <source type="image/jpeg" :srcset="fillboSlide4.jpeg" />
+                <img :src="fillboSlide4.jpeg[1280]" alt="Interaction" class="reveal-img w-full h-full object-cover" loading="lazy" decoding="async" />
+              </picture>
             </div>
           </div>
         </div>
@@ -159,7 +181,11 @@ La mappatura in Figma è servita per tradurre i bisogni del personale — commes
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-              <img src="../../assets/fillbos3.webp" alt="Sound" class="reveal-img w-full h-full object-cover" />
+              <picture>
+                <source type="image/webp" :srcset="fillboSlide5.webp" />
+                <source type="image/jpeg" :srcset="fillboSlide5.jpeg" />
+                <img :src="fillboSlide5.jpeg[1280]" alt="Sound" class="reveal-img w-full h-full object-cover" loading="lazy" decoding="async" />
+              </picture>
             </div>
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
@@ -167,7 +193,7 @@ La mappatura in Figma è servita per tradurre i bisogni del personale — commes
               <h3 class="text-xl text-white font-semibold">Un’interfaccia semplice per ridurre errori e tempi operativi</h3>
               <p class="text-white/70 mt-4">Ho progettato Fillbo per essere usabile anche nelle situazioni più frenetiche.
 L’interfaccia si basa su liste chiare, pulsanti grandi e percorsi brevi. Ogni prodotto viene inserito con pochi tap e assegnato automaticamente alla box corretta in base alla categoria.
-L’obiettivo è eliminare confusione, accelerare il processo e rendere più intuitiva la donazione degli alimenti.</p>
+L'obiettivo è eliminare confusione, accelerare il processo e rendere più intuitiva la donazione degli alimenti.</p>
             </div>
           </div>
         </div>
@@ -230,6 +256,12 @@ Posso aiutarti a creare esperienze digitali su misura.</p>
 import { onMounted, ref, nextTick } from 'vue'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import fillboHero from '../../assets/fillbohero.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
+import fillboSlide1 from '../../assets/fillbos1.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
+import fillboSlide2 from '../../assets/fillbos2.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
+import fillboSlide3 from '../../assets/fillbos5.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
+import fillboSlide4 from '../../assets/fillbos4.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
+import fillboSlide5 from '../../assets/fillbos3.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
 
 gsap.registerPlugin(ScrollTrigger)
 

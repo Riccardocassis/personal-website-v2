@@ -2,12 +2,17 @@
 
   <!-- HERO (Apple-like, generous whitespace) -->
   <section class="relative w-full md:h-[85vh] h-[35vh] overflow-hidden bg-transparent -mt-12 md:mt-0">
-    <img
-      src="../../assets/coversizexl.webp
-      "
-      alt="Gibson cover"
-      class="reveal-img absolute inset-0 w-full h-full object-cover object-top md:object-center opacity-90"
-    />
+    <picture>
+      <source type="image/webp" :srcset="sizexlHero.webp" />
+      <source type="image/jpeg" :srcset="sizexlHero.jpeg" />
+      <img
+        :src="sizexlHero.jpeg[1280]"
+        alt="Gibson cover"
+        class="reveal-img absolute inset-0 w-full h-full object-cover object-top md:object-center opacity-90"
+        fetchpriority="high"
+        decoding="async"
+      />
+    </picture>
 
     <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-transparent"></div>
 
@@ -28,14 +33,14 @@
   <!-- Project Intro (Apple-style clear intro) -->
   <section class="bg-black py-8 md:py-20 px-6">
     <div class="max-w-3xl mx-auto text-center md:text-left">
-      <h2 class="text-3xl md:text-4xl font-semibold text-white mb-4 md:mb-6 text-center">Lo scopo del progetto</h2>
+      <h2 class="text-3xl md:4xl font-semibold text-white mb-4 md:mb-6 text-center">Lo scopo del progetto</h2>
       <p class="text-white/60 text-lg leading-snug md:leading-relaxed">In questo progetto ho ricostruito l’intera esperienza digitale di Sizexl, riorganizzando contenuti, navigazione e interfaccia visiva. L’obiettivo era rendere il sito più chiaro, credibile e coerente con la qualità dei servizi offerti, utilizzando strumenti già in uso dall’azienda e ottimizzando ogni pagina per una comunicazione più efficace.</p>
     </div>
   </section>
 
-  <!-- Video CTA: preview + button that opens fullscreen modal -->
+  <!-- Video CTA -->
   <section class="bg-black py-8 px-6">
-    <div class="max-w-6xl mx-auto text-center">
+    <div class="max-w-6xl mx_auto text-center">
       <h3 class="text-center text-white/70 mb-6">preview della pagina</h3>
       <div class="relative w-full aspect-[16/9] max-h-[65vh] mx-auto overflow-hidden rounded-2xl shadow-2xl bg-black">
         <video controls playsinline preload="metadata" class="w-full h-full object-cover">
@@ -45,7 +50,7 @@
     </div>
   </section>
 
-  <!-- Key Features (three clean columns) moved under Video CTA -->
+  <!-- Key Features -->
   <section class="bg-black py-20 px-6">
     <div class="max-w-6xl mx-auto text-center">
       <h2 class="text-2xl md:text-3xl font-semibold text-white mb-8">Elementi chiave</h2>
@@ -61,7 +66,7 @@ L’obiettivo era migliorare la comunicazione del brand e facilitare il percorso
 Il redesign mantiene l’identità del brand ma la rende più professionale, credibile e adatta agli standard digitali attuali.</p>
         </div>
         <div class="px-6">
-          <h3 class="text-xl font-semibold text-white">Sviluppo Web & Ottimizzazioni</h3>
+          <h3 class="text-xl font-semibold text_white">Sviluppo Web & Ottimizzazioni</h3>
           <p class="text-white/60 mt-3">Mi sono occupato dell’implementazione tecnica del sito, adattandomi alle specifiche della piattaforma scelta dal cliente.
 Ho curato performance, responsive design, SEO on-page e micro-miglioramenti che aumentano chiarezza, stabilità e qualità percepita dell’esperienza.</p>
         </div>
@@ -69,20 +74,20 @@ Ho curato performance, responsive design, SEO on-page e micro-miglioramenti che 
     </div>
   </section>
 
-  <!-- Project Sections: 8 alternating 60:40 full-bleed image with text appearing on scroll -->
+  <!-- Project Sections -->
   <section class="bg-black">
-    <!-- For spacing between sections -->
     <div class="space-y-4 md:space-y-20">
-
-      <!-- Helper: each section is full-width; h2 aligned left with px -->
-
       <!-- 1 -->
       <div class="w-full mb-6 md:mb-0">
         <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-3 md:mb-6 text-center md:text-left">Situazione iniziale</h2>
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-              <img src="../../assets/img2sizexl.webp" alt="Concept" class="reveal-img w-full h-full object-cover" />
+              <picture>
+                <source type="image/webp" :srcset="sizexlSituation.webp" />
+                <source type="image/jpeg" :srcset="sizexlSituation.jpeg" />
+                <img :src="sizexlSituation.jpeg[1280]" alt="Concept" class="reveal-img w-full h-full object-cover" loading="lazy" decoding="async" />
+              </picture>
             </div>
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-1 md:pt-0">
@@ -97,7 +102,7 @@ Le principali criticità erano la scarsa leggibilità, la distribuzione poco chi
 
       <!-- 2 -->
       <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Branding & Palette Colori</h2>
+        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text_center md:text-left">Branding & Palette Colori</h2>
         <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
           <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start order-2 md:order-1">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
@@ -108,7 +113,11 @@ I colori sono stati scelti per migliorare leggibilità, contrasto e coerenza vis
           </div>
           <div class="w-full order-1 md:order-2">
             <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-              <img src="../../assets/colorpalettesizexl.webp" alt="Materials" class="reveal-img w-full h-full object-cover" />
+              <picture>
+                <source type="image/webp" :srcset="sizexlPalette.webp" />
+                <source type="image/jpeg" :srcset="sizexlPalette.jpeg" />
+                <img :src="sizexlPalette.jpeg[1280]" alt="Materials" class="reveal-img w-full h-full object-cover" loading="lazy" decoding="async" />
+              </picture>
             </div>
           </div>
         </div>
@@ -116,11 +125,15 @@ I colori sono stati scelti per migliorare leggibilità, contrasto e coerenza vis
 
       <!-- 3 -->
       <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Tipografia</h2>
+        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text_center md:text-left">Tipografia</h2>
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-              <img src="../../assets/fontsizexl.webp" alt="3D" class="reveal-img w-full h-full object-cover" />
+              <picture>
+                <source type="image/webp" :srcset="sizexlFont.webp" />
+                <source type="image/jpeg" :srcset="sizexlFont.jpeg" />
+                <img :src="sizexlFont.jpeg[1280]" alt="3D" class="reveal-img w-full h-full object-cover" loading="lazy" decoding="async" />
+              </picture>
             </div>
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
@@ -135,7 +148,7 @@ La gerarchia tipografica costruita con Inter rende i contenuti più immediati, m
 
       <!-- 4 -->
       <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Architettura del sito</h2>
+        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text_center md:text-left">Architettura del sito</h2>
         <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
           <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start order-2 md:order-1">
             <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
@@ -147,13 +160,17 @@ La nuova struttura facilita l’accesso alle informazioni principali e riduce il
           </div>
           <div class="w-full order-1 md:order-2">
             <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-              <img src="../../assets/cardsize.webp" alt="Interaction" class="reveal-img w-full h-full object-cover" />
+              <picture>
+                <source type="image/webp" :srcset="sizexlArchitecture.webp" />
+                <source type="image/jpeg" :srcset="sizexlArchitecture.jpeg" />
+                <img :src="sizexlArchitecture.jpeg[1280]" alt="Interaction" class="reveal-img w-full h-full object-cover" loading="lazy" decoding="async" />
+              </picture>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- 5 (replaced) -->
+      <!-- 5 -->
       <div class="w-full mb-12 md:mb-40">
         <div class="px-6 md:pl-20">
           <div class="max-w-3xl mx-auto text-center">
@@ -184,40 +201,34 @@ Risultato: sito più veloce, stabile e facilmente interpretabile dai crawler.
       </div>
 
       <!-- sections 6-8 removed -->
-
     </div>
   </section>
 
-  
-
-  <!-- CTA minimal -->
+  <!-- CTA -->
   <section class="bg-black py-8 px-6 text-center">
     <div class="max-w-2xl mx-auto">
       <p class="text-white/60 mb-6">Ti è piaciuto questo progetto?
 Posso aiutarti a creare esperienze digitali su misura.</p>
-      <div class="flex justify-center gap-8">
+      <div class="flex justify_center gap-8">
         <a href="/contact" class="text-blue-400 font-semibold underline">Contattami</a>
       </div>
     </div>
   </section>
 
-  <!-- Prev / Next arrows below CTA with labels (responsive) -->
+  <!-- Prev / Next -->
   <section class="bg-black py-6 md:py-8 px-6">
-    <div class="max-w-2xl mx-auto flex flex-row md:flex-row items-center md:items-stretch justify-center md:justify-between gap-6">
-      <!-- Previous -->
+    <div class="max-w-2xl mx-auto flex flex_row md:flex-row items-center md:items-stretch justify-center md:justify-between gap-6">
       <router-link to="/projects/project-1" class="flex items-center gap-0 md:gap-4 md:flex-row text-center md:text-left">
-        <span class="inline-flex items-center justify-center w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full">
+        <span class="inline-flex items-center justify_center w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full">
           <span class="text-white">←</span>
         </span>
         <span class="hidden md:inline-block text-white/70 text-sm">Progetto precedente</span>
       </router-link>
 
-      <!-- Center spacer for desktop -->
       <div class="hidden md:block flex-1"></div>
 
-      <!-- Next -->
       <router-link to="/projects/project-3" class="flex items-center gap-0 md:gap-4 md:flex-row-reverse text-center md:text-right">
-        <span class="inline-flex items-center justify-center w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full">
+        <span class="inline-flex items-center justify_center w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full">
           <span class="text-white">→</span>
         </span>
         <span class="hidden md:inline-block text-white/70 text-sm">Progetto successivo</span>
@@ -226,7 +237,7 @@ Posso aiutarti a creare esperienze digitali su misura.</p>
   </section>
 
   <!-- Fullscreen video modal -->
-  <div v-if="showVideo" class="fixed inset-0 z-50 flex items-center justify-center bg-black/90">
+  <div v-if="showVideo" class="fixed inset-0 z-50 flex items-center justify_center bg-black/90">
     <button @click="closeVideo" class="absolute top-6 right-6 text-white bg-black/40 hover:bg-black/60 px-3 py-2 rounded">Chiudi</button>
     <video ref="videoRef" controls class="w-full h-full max-w-[1400px] max-h-[90vh] rounded-lg shadow-2xl">
       <source src="https://raw.githubusercontent.com/Riccardocassis/-gibson-video/main/gb_behance.mp4" type="video/mp4" />
@@ -240,6 +251,11 @@ Posso aiutarti a creare esperienze digitali su misura.</p>
 import { onMounted, ref, nextTick } from 'vue'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import sizexlHero from '../../assets/coversizexl.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
+import sizexlSituation from '../../assets/img2sizexl.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
+import sizexlPalette from '../../assets/colorpalettesizexl.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
+import sizexlFont from '../../assets/fontsizexl.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
+import sizexlArchitecture from '../../assets/cardsize.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -275,6 +291,7 @@ onMounted(() => {
     tl.to(img, { y: 0, scale: 1, opacity: 1, ease: 'power3.out', duration: 1.1 })
       .to(text || {}, { y: 0, opacity: 1, ease: 'power2.out', duration: 0.6 }, '-=0.35')
 
+    // subtle parallax while scrolling through image (scrubbed)
     gsap.to(img, {
       yPercent: -6,
       ease: 'none',

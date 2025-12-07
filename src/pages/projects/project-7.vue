@@ -1,11 +1,17 @@
 <template>
   <!-- HERO (Apple-like, generous whitespace) -->
   <section class="relative w-full md:h-[85vh] h-[35vh] overflow-hidden bg-transparent -mt-12 md:mt-0">
-    <img
-      src="../../assets/hellerhero.webp"
-      alt="hellerhero"
-      class="reveal-img absolute inset-0 w-full h-full object-cover object-top md:object-center opacity-90"
-    />
+    <picture>
+      <source type="image/webp" :srcset="hellerHero.webp" />
+      <source type="image/jpeg" :srcset="hellerHero.jpeg" />
+      <img
+        :src="hellerHero.jpeg[1280]"
+        alt="hellerhero"
+        class="reveal-img absolute inset-0 w-full h-full object-cover object-top md:object-center opacity-90"
+        fetchpriority="high"
+        decoding="async"
+      />
+    </picture>
 
     <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-transparent"></div>
 
@@ -68,7 +74,11 @@
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-              <img src="../../assets/hgintro.webp" alt="Concept" class="reveal-img w-full h-full object-cover" />
+              <picture>
+                <source type="image/webp" :srcset="hgIntro.webp" />
+                <source type="image/jpeg" :srcset="hgIntro.jpeg" />
+                <img :src="hgIntro.jpeg[1280]" alt="Concept" class="reveal-img w-full h-full object-cover" loading="lazy" decoding="async" />
+              </picture>
             </div>
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-1 md:pt-0">
@@ -92,7 +102,11 @@
           </div>
           <div class="w-full order-1 md:order-2">
             <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-              <img src="../../assets/hglogo.webp" alt="Materials" class="reveal-img w-full h-full object-cover" />
+              <picture>
+                <source type="image/webp" :srcset="hgLogo.webp" />
+                <source type="image/jpeg" :srcset="hgLogo.jpeg" />
+                <img :src="hgLogo.jpeg[1280]" alt="Materials" class="reveal-img w-full h-full object-cover" />
+              </picture>
             </div>
           </div>
         </div>
@@ -104,7 +118,11 @@
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-              <img src="../../assets/hgfont.webp" alt="3D" class="reveal-img w-full h-full object-cover" />
+              <picture>
+                <source type="image/webp" :srcset="hgFont.webp" />
+                <source type="image/jpeg" :srcset="hgFont.jpeg" />
+                <img :src="hgFont.jpeg[1280]" alt="3D" class="reveal-img w-full h-full object-cover" />
+              </picture>
             </div>
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
@@ -131,7 +149,11 @@ Per la comunicazione ho utilizzato Work Sans: accessibile, leggibile e neutra, i
           </div>
           <div class="w-full order-1 md:order-2">
             <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-              <img src="../../assets/hellers2.webp" alt="Interaction" class="reveal-img w-full h-full object-cover" />
+              <picture>
+                <source type="image/webp" :srcset="hgPalette.webp" />
+                <source type="image/jpeg" :srcset="hgPalette.jpeg" />
+                <img :src="hgPalette.jpeg[1280]" alt="Interaction" class="reveal-img w-full h-full object-cover" />
+              </picture>
             </div>
           </div>
         </div>
@@ -143,7 +165,11 @@ Per la comunicazione ho utilizzato Work Sans: accessibile, leggibile e neutra, i
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-              <img src="../../assets/hgptg.webp" alt="Sound" class="reveal-img w-full h-full object-cover" />
+              <picture>
+                <source type="image/webp" :srcset="hgIcons.webp" />
+                <source type="image/jpeg" :srcset="hgIcons.jpeg" />
+                <img :src="hgIcons.jpeg[1280]" alt="Sound" class="reveal-img w-full h-full object-cover" />
+              </picture>
             </div>
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
@@ -169,7 +195,11 @@ Per la comunicazione ho utilizzato Work Sans: accessibile, leggibile e neutra, i
             </div>
             <div class="w-full order-1 md:order-2">
               <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-                <img src="../../assets/hgmp.webp" alt="La mappa" class="reveal-img w-full h-full object-cover" />
+                <picture>
+                  <source type="image/webp" :srcset="hgMap.webp" />
+                  <source type="image/jpeg" :srcset="hgMap.jpeg" />
+                  <img :src="hgMap.jpeg[1280]" alt="La mappa" class="reveal-img w-full h-full object-cover" />
+                </picture>
               </div>
             </div>
           </div>
@@ -181,7 +211,11 @@ Per la comunicazione ho utilizzato Work Sans: accessibile, leggibile e neutra, i
           <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
             <div class="w-full">
               <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-                <img src="../../assets/hgmerch.webp" alt="Materiali" class="reveal-img w-full h-full object-cover" />
+                <picture>
+                  <source type="image/webp" :srcset="hgMerch.webp" />
+                  <source type="image/jpeg" :srcset="hgMerch.jpeg" />
+                  <img :src="hgMerch.jpeg[1280]" alt="Materiali" class="reveal-img w-full h-full object-cover" />
+                </picture>
               </div>
             </div>
             <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
@@ -239,6 +273,14 @@ Posso aiutarti a creare esperienze digitali su misura.</p>
 import { onMounted, ref } from 'vue'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import hellerHero from '../../assets/hellerhero.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
+import hgIntro from '../../assets/hgintro.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
+import hgLogo from '../../assets/hglogo.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
+import hgFont from '../../assets/hgfont.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
+import hgPalette from '../../assets/hellers2.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
+import hgIcons from '../../assets/hgptg.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
+import hgMap from '../../assets/hgmp.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
+import hgMerch from '../../assets/hgmerch.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
 
 gsap.registerPlugin(ScrollTrigger)
 

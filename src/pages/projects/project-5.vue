@@ -2,11 +2,17 @@
 
   <!-- HERO (Apple-like, generous whitespace) -->
   <section class="relative w-full md:h-[85vh] h-[35vh] overflow-hidden bg-transparent -mt-12 md:mt-0">
-    <img
-      src="../../assets/coveropsify.webp"
-      alt="Gibson cover"
-      class="reveal-img absolute inset-0 w-full h-full object-cover object-top md:object-center opacity-90"
-    />
+    <picture>
+      <source type="image/webp" :srcset="opsifyHero.webp" />
+      <source type="image/jpeg" :srcset="opsifyHero.jpeg" />
+      <img
+        :src="opsifyHero.jpeg[1280]"
+        alt="Gibson cover"
+        class="reveal-img absolute inset-0 w-full h-full object-cover object-top md:object-center opacity-90"
+        fetchpriority="high"
+        decoding="async"
+      />
+    </picture>
 
     <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-transparent"></div>
 
@@ -78,7 +84,11 @@
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
             <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-              <img src="../../assets/opsifywirewebp.webp" alt="Concept" class="reveal-img w-full h-full object-cover" />
+              <picture>
+                <source type="image/webp" :srcset="opsifyWireframes.webp" />
+                <source type="image/jpeg" :srcset="opsifyWireframes.jpeg" />
+                <img :src="opsifyWireframes.jpeg[1280]" alt="Concept" class="reveal-img w-full h-full object-cover" loading="lazy" decoding="async" />
+              </picture>
             </div>
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-1 md:pt-0">
@@ -102,7 +112,11 @@
           </div>
           <div class="w-full order-1 md:order-2">
             <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-              <img src="../../assets/oopsyf.webp" alt="Materials" class="reveal-img w-full h-full object-cover" />
+              <picture>
+                <source type="image/webp" :srcset="opsifyVisual.webp" />
+                <source type="image/jpeg" :srcset="opsifyVisual.jpeg" />
+                <img :src="opsifyVisual.jpeg[1280]" alt="Materials" class="reveal-img w-full h-full object-cover" />
+              </picture>
             </div>
           </div>
         </div>
@@ -114,7 +128,11 @@
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
             <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-              <img src="../../assets/opsyfyproto.webp" alt="3D" class="reveal-img w-full h-full object-cover" />
+              <picture>
+                <source type="image/webp" :srcset="opsyfyproto.webp" />
+                <source type="image/jpeg" :srcset="opsyfyproto.jpeg" />
+                <img :src="opsyfyproto.jpeg[1280]" alt="3D" class="reveal-img w-full h-full object-cover" />
+              </picture>
             </div>
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
@@ -185,6 +203,10 @@ Posso aiutarti a creare esperienze digitali su misura.</p>
 import { onMounted, ref, nextTick } from 'vue'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import opsifyHero from '../../assets/coveropsify.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
+import opsifyWireframes from '../../assets/opsifywirewebp.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
+import opsifyVisual from '../../assets/oopsyf.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
+import opsifyProto from '../../assets/opsyfyproto.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
 
 gsap.registerPlugin(ScrollTrigger)
 

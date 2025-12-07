@@ -2,11 +2,17 @@
 
   <!-- HERO (Apple-like, generous whitespace) -->
   <section class="relative w-full md:h-[85vh] h-[35vh] overflow-hidden bg-transparent -mt-12 md:mt-0">
-    <img
-      src="../../assets/gibson cover pagina progetti.webp"
-      alt="Gibson cover"
-      class="reveal-img absolute inset-0 w-full h-full object-cover object-top md:object-center opacity-90"
-    />
+    <picture>
+      <source type="image/webp" :srcset="gibsonHero.webp" />
+      <source type="image/jpeg" :srcset="gibsonHero.jpeg" />
+      <img
+        :src="gibsonHero.jpeg[1280]"
+        alt="Gibson cover"
+        class="reveal-img absolute inset-0 w-full h-full object-cover object-top md:object-center opacity-90"
+        fetchpriority="high"
+        decoding="async"
+      />
+    </picture>
 
     <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-transparent"></div>
 
@@ -78,7 +84,11 @@
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
               <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-              <img src="../../assets/p1slide1.webp" alt="Concept" class="reveal-img w-full h-full object-cover" />
+              <picture>
+                <source type="image/webp" :srcset="p1slide1.webp" />
+                <source type="image/jpeg" :srcset="p1slide1.jpeg" />
+                <img :src="p1slide1.jpeg[1280]" alt="Concept" class="reveal-img w-full h-full object-cover" loading="lazy" decoding="async" />
+              </picture>
             </div>
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-1 md:pt-0">
@@ -105,7 +115,11 @@ Inoltre, il motore nativo consente un output pulito e performante, perfetto per 
           </div>
           <div class="w-full order-1 md:order-2">
               <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-              <img src="../../assets/p1slide2.webp" alt="Materials" class="reveal-img w-full h-full object-cover" />
+              <picture>
+                <source type="image/webp" :srcset="p1slide2.webp" />
+                <source type="image/jpeg" :srcset="p1slide2.jpeg" />
+                <img :src="p1slide2.jpeg[1280]" alt="Materials" class="reveal-img w-full h-full object-cover" loading="lazy" decoding="async" />
+              </picture>
             </div>
           </div>
         </div>
@@ -117,7 +131,11 @@ Inoltre, il motore nativo consente un output pulito e performante, perfetto per 
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
               <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-              <img src="../../assets/p1slide3.webp" alt="3D" class="reveal-img w-full h-full object-cover" />
+              <picture>
+                <source type="image/webp" :srcset="p1slide3.webp" />
+                <source type="image/jpeg" :srcset="p1slide3.jpeg" />
+                <img :src="p1slide3.jpeg[1280]" alt="3D" class="reveal-img w-full h-full object-cover" loading="lazy" decoding="async" />
+              </picture>
             </div>
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
@@ -145,7 +163,11 @@ L’app è stata poi caricata su GitHub Pages e integrata in Webflow.</p>
           </div>
           <div class="w-full order-1 md:order-2">
               <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-              <img src="../../assets/p1slide4.webp" alt="Interaction" class="reveal-img w-full h-full object-cover" />
+              <picture>
+                <source type="image/webp" :srcset="p1slide4.webp" />
+                <source type="image/jpeg" :srcset="p1slide4.jpeg" />
+                <img :src="p1slide4.jpeg[1280]" alt="Interaction" class="reveal-img w-full h-full object-cover" loading="lazy" decoding="async" />
+              </picture>
             </div>
           </div>
         </div>
@@ -157,7 +179,11 @@ L’app è stata poi caricata su GitHub Pages e integrata in Webflow.</p>
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
               <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-              <img src="../../assets/p1slide5.webp" alt="Sound" class="reveal-img w-full h-full object-cover" />
+              <picture>
+                <source type="image/webp" :srcset="p1slide5.webp" />
+                <source type="image/jpeg" :srcset="p1slide5.jpeg" />
+                <img :src="p1slide5.jpeg[1280]" alt="Sound" class="reveal-img w-full h-full object-cover" loading="lazy" decoding="async" />
+              </picture>
             </div>
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
@@ -234,6 +260,12 @@ Posso aiutarti a creare esperienze digitali su misura.</p>
 import { onMounted, ref, nextTick } from 'vue'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import gibsonHero from '../../assets/gibson cover pagina progetti.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
+import p1slide1 from '../../assets/p1slide1.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
+import p1slide2 from '../../assets/p1slide2.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
+import p1slide3 from '../../assets/p1slide3.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
+import p1slide4 from '../../assets/p1slide4.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
+import p1slide5 from '../../assets/p1slide5.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
 
 gsap.registerPlugin(ScrollTrigger)
 

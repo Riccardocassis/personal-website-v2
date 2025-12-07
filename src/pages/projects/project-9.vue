@@ -1,11 +1,17 @@
 <template>
   <!-- HERO (Apple-like, generous whitespace) -->
   <section class="relative w-full md:h-[85vh] h-[35vh] overflow-hidden bg-transparent -mt-12 md:mt-0">
-    <img
-      src="../../assets/fumettohero.webp"
-      alt="fumettohero"
-      class="reveal-img absolute inset-0 w-full h-full object-cover object-top md:object-center opacity-90"
-    />
+    <picture>
+      <source type="image/webp" :srcset="ctrlHero.webp" />
+      <source type="image/jpeg" :srcset="ctrlHero.jpeg" />
+      <img
+        :src="ctrlHero.jpeg[1280]"
+        alt="fumettohero"
+        class="reveal-img absolute inset-0 w-full h-full object-cover object-top md:object-center opacity-90"
+        fetchpriority="high"
+        decoding="async"
+      />
+    </picture>
 
     <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-transparent"></div>
 
@@ -68,7 +74,11 @@
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-              <img src="../../assets/ctrlaltcanc-illustrazione.webp" alt="Concept" class="reveal-img w-full h-full object-cover" />
+              <picture>
+                <source type="image/webp" :srcset="ctrlIllustration.webp" />
+                <source type="image/jpeg" :srcset="ctrlIllustration.jpeg" />
+                <img :src="ctrlIllustration.jpeg[1280]" alt="Concept" class="reveal-img w-full h-full object-cover" loading="lazy" decoding="async" />
+              </picture>
             </div>
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-1 md:pt-0">
@@ -99,7 +109,11 @@
           </div>
           <div class="w-full order-1 md:order-2">
             <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-              <img src="../../assets/ctrlaltcanc-narrazione.webp" alt="Materials" class="reveal-img w-full h-full object-cover" />
+              <picture>
+                <source type="image/webp" :srcset="ctrlNarration.webp" />
+                <source type="image/jpeg" :srcset="ctrlNarration.jpeg" />
+                <img :src="ctrlNarration.jpeg[1280]" alt="Materials" class="reveal-img w-full h-full object-cover" loading="lazy" decoding="async" />
+              </picture>
             </div>
           </div>
         </div>
@@ -111,7 +125,11 @@
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
             <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-              <img src="../../assets/crtlaltcanc-poster.webp" alt="3D" class="reveal-img w-full h-full object-cover" />
+              <picture>
+                <source type="image/webp" :srcset="ctrlPoster.webp" />
+                <source type="image/jpeg" :srcset="ctrlPoster.jpeg" />
+                <img :src="ctrlPoster.jpeg[1280]" alt="3D" class="reveal-img w-full h-full object-cover" loading="lazy" decoding="async" />
+              </picture>
             </div>
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
@@ -177,6 +195,10 @@ Posso aiutarti a creare esperienze digitali su misura.</p>
 import { onMounted, ref } from 'vue'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import ctrlHero from '../../assets/fumettohero.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
+import ctrlIllustration from '../../assets/ctrlaltcanc-illustrazione.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
+import ctrlNarration from '../../assets/ctrlaltcanc-narrazione.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
+import ctrlPoster from '../../assets/crtlaltcanc-poster.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
 
 gsap.registerPlugin(ScrollTrigger)
 

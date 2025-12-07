@@ -2,11 +2,17 @@
 
   <!-- HERO (Apple-like, generous whitespace) -->
   <section class="relative w-full md:h-[85vh] h-[35vh] overflow-hidden bg-transparent -mt-12 md:mt-0">
-    <img
-      src="../../assets/webable-imgcop.webp"
-      alt="Webable cover"
-      class="reveal-img absolute inset-0 w-full h-full object-cover object-top md:object-center opacity-90"
-    />
+    <picture>
+      <source type="image/webp" :srcset="webableHero.webp" />
+      <source type="image/jpeg" :srcset="webableHero.jpeg" />
+      <img
+        :src="webableHero.jpeg[1280]"
+        alt="Webable cover"
+        class="reveal-img absolute inset-0 w-full h-full object-cover object-top md:object-center opacity-90"
+        fetchpriority="high"
+        decoding="async"
+      />
+    </picture>
 
     <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-transparent"></div>
 
@@ -80,7 +86,11 @@
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
               <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-                <img src="../../assets/webintro.webp" alt="Concept" class="reveal-img w-full h-full object-cover" />
+                <picture>
+                  <source type="image/webp" :srcset="webableIntro.webp" />
+                  <source type="image/jpeg" :srcset="webableIntro.jpeg" />
+                  <img :src="webableIntro.jpeg[1280]" alt="Concept" class="reveal-img w-full h-full object-cover" loading="lazy" decoding="async" />
+                </picture>
               </div>
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-1 md:pt-0">
@@ -106,7 +116,11 @@ Questo step permette alla piattaforma di generare un percorso formativo su misur
           </div>
           <div class="w-full order-1 md:order-2">
               <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-                <img src="../../assets/webablelow.webp" alt="Materials" class="reveal-img w-full h-full object-cover" />
+                <picture>
+                  <source type="image/webp" :srcset="webableLow.webp" />
+                  <source type="image/jpeg" :srcset="webableLow.jpeg" />
+                  <img :src="webableLow.jpeg[1280]" alt="Materials" class="reveal-img w-full h-full object-cover" loading="lazy" decoding="async" />
+                </picture>
               </div>
           </div>
         </div>
@@ -118,7 +132,11 @@ Questo step permette alla piattaforma di generare un percorso formativo su misur
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
               <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-                <img src="../../assets/webads.webp" alt="3D" class="reveal-img w-full h-full object-cover" />
+                <picture>
+                  <source type="image/webp" :srcset="webableDs.webp" />
+                  <source type="image/jpeg" :srcset="webableDs.jpeg" />
+                  <img :src="webableDs.jpeg[1280]" alt="3D" class="reveal-img w-full h-full object-cover" loading="lazy" decoding="async" />
+                </picture>
               </div>
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
@@ -145,7 +163,11 @@ Ogni step è pensato per essere breve, chiaro e motivante.</p>
           </div>
           <div class="w-full order-1 md:order-2">
               <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-                <img src="../../assets/webapercorsi.webp" alt="Interaction" class="reveal-img w-full h-full object-cover" />
+                <picture>
+                  <source type="image/webp" :srcset="webableFlow.webp" />
+                  <source type="image/jpeg" :srcset="webableFlow.jpeg" />
+                  <img :src="webableFlow.jpeg[1280]" alt="Interaction" class="reveal-img w-full h-full object-cover" loading="lazy" decoding="async" />
+                </picture>
               </div>
           </div>
         </div>
@@ -157,7 +179,11 @@ Ogni step è pensato per essere breve, chiaro e motivante.</p>
         <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
           <div class="w-full">
               <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-                <img src="../../assets/webainterface.webp" alt="Sound" class="reveal-img w-full h-full object-cover" />
+                <picture>
+                  <source type="image/webp" :srcset="webableUi.webp" />
+                  <source type="image/jpeg" :srcset="webableUi.jpeg" />
+                  <img :src="webableUi.jpeg[1280]" alt="Sound" class="reveal-img w-full h-full object-cover" loading="lazy" decoding="async" />
+                </picture>
               </div>
           </div>
           <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
@@ -227,6 +253,12 @@ Posso aiutarti a creare esperienze digitali su misura.</p>
 import { onMounted, ref, nextTick } from 'vue'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import webableHero from '../../assets/webable-imgcop.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
+import webableIntro from '../../assets/webintro.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
+import webableLow from '../../assets/webablelow.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
+import webableDs from '../../assets/webads.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
+import webableFlow from '../../assets/webapercorsi.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
+import webableUi from '../../assets/webainterface.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
 
 gsap.registerPlugin(ScrollTrigger)
 

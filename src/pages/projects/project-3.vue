@@ -4,8 +4,17 @@
 
   <!-- HERO (Apple-like, generous whitespace) -->
   <section class="relative w-full md:h-[85vh] h-[35vh] overflow-hidden">
-    <!-- Background image placed above the page gradient; slight opacity to soften contrast -->
-    <img src="../../assets/landingsynapses.webp" alt="Landingsynapses" class="absolute inset-0 w-full h-full object-cover object-top md:object-center opacity-90" />
+    <picture>
+      <source type="image/webp" :srcset="synapsesHero.webp" />
+      <source type="image/jpeg" :srcset="synapsesHero.jpeg" />
+      <img
+        :src="synapsesHero.jpeg[1280]"
+        alt="Landingsynapses"
+        class="absolute inset-0 w-full h-full object-cover object-top md:object-center opacity-90"
+        fetchpriority="high"
+        decoding="async"
+      />
+    </picture>
 
     <!-- Dark overlay to increase contrast for white text -->
     <div class="absolute inset-0" style="background-color: rgba(0,0,0,0.55)"></div>
@@ -132,6 +141,7 @@ Posso aiutarti a creare esperienze digitali su misura.</p>
 import { onMounted, ref, nextTick } from 'vue'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import synapsesHero from '../../assets/landingsynapses.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
 
 gsap.registerPlugin(ScrollTrigger)
 
