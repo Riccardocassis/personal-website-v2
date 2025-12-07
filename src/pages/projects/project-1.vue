@@ -90,9 +90,9 @@
     </div>
   </section>
 
-  <!-- PROJECT SECTIONS -->
-<section class="bg-black">
-  <div class="space-y-20">
+<!-- PROJECT SECTIONS -->
+<section class="bg-black py-10 md:py-20">
+  <div class="space-y-32">
 
     <div
       v-for="(slide, i) in slides"
@@ -100,42 +100,50 @@
       class="w-full"
     >
 
-      <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6">
+      <!-- TITLE -->
+      <h2 class="px-6 md:px-20 text-2xl md:text-3xl font-semibold text-white mb-10 md:mb-14 text-center md:text-left">
         {{ slide.title }}
       </h2>
 
-      <div
-        :class="[
-          'grid grid-cols-1 items-center gap-10 px-6 md:px-20',
-          slide.reverse
-            ? 'md:grid-cols-[40%_60%]'
-            : 'md:grid-cols-[60%_40%]'
-        ]"
-      >
+      <!-- GRID 60/40 VERA -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-center px-6 md:px-20">
 
-        <!-- IMG -->
-        <div :class="slide.reverse ? 'order-2 md:order-1' : 'order-1'">
-          <picture>
-            <template v-for="src in slide.img.sources" :key="src.srcset">
-              <source :type="src.type" :srcset="src.srcset" />
-            </template>
-            <img
-              :src="slide.img.img.src"
-              class="reveal-img w-full h-full object-cover rounded-lg"
-              loading="lazy"
-              decoding="async"
-            />
-          </picture>
+        <!-- IMAGE -->
+        <div
+          :class="slide.reverse
+            ? 'md:col-start-7 md:col-end-13'
+            : 'md:col-start-1 md:col-end-8'"
+        >
+          <div class="aspect-[4/3] w-full overflow-hidden rounded-lg">
+            <picture>
+              <template v-for="src in slide.img.sources" :key="src.srcset">
+                <source :srcset="src.srcset" :type="src.type" />
+              </template>
+
+              <img
+                :src="slide.img.img.src"
+                class="reveal-img w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+          </div>
         </div>
 
         <!-- TEXT -->
         <div
-          :class="slide.reverse ? 'order-1 md:order-2' : 'order-2'"
-          class="flex items-center"
+          :class="slide.reverse
+            ? 'md:col-start-1 md:col-end-7'
+            : 'md:col-start-8 md:col-end-13'"
         >
-          <div class="reveal-text text-white text-left max-w-md">
-            <h3 class="text-xl font-semibold mb-3">{{ slide.subtitle }}</h3>
-            <p class="text-white/70 leading-relaxed">{{ slide.text }}</p>
+          <div class="reveal-text text-white max-w-xl">
+            <h3 class="text-xl font-semibold mb-3">
+              {{ slide.subtitle }}
+            </h3>
+
+            <p class="text-white/70 leading-relaxed">
+              {{ slide.text }}
+            </p>
           </div>
         </div>
 
@@ -145,6 +153,8 @@
 
   </div>
 </section>
+
+
 
 
   <!-- CTA -->
