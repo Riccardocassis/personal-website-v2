@@ -163,7 +163,7 @@ import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { onMounted, ref } from "vue"
 
-import gibsonHero from "../../assets/gibson cover pagina progetti.webp?w=800;1280;1920&format=webp&as=picture"
+import gibsonHero from '../../assets/gibson-cover-pagina-progetti.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
 import p1slide1 from "../../assets/p1slide1.webp?w=800;1280;1920&format=webp&as=picture"
 import p1slide2 from "../../assets/p1slide2.webp?w=800;1280;1920&format=webp&as=picture"
 import p1slide3 from "../../assets/p1slide3.webp?w=800;1280;1920&format=webp&as=picture"
