@@ -144,8 +144,8 @@ gsap.registerPlugin(ScrollTrigger)
 // Import existing assets to avoid missing /img references
 import rebert from '../assets/rebert.webp'
 import piadina from '../assets/piadinaroberto.webp'
-import ironriff from '../assets/ironriff.webp'
-import zaini from '../assets/zaini.png'
+
+
 import museodellacarta from '../assets/museodellacarta.webp'
 import fillbo from '../assets/fillbo.webp'
 import gibsonA from '../assets/gibson a.webp'
