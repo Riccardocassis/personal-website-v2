@@ -257,6 +257,7 @@ import sizexlPalette from '../../assets/colorpalettesizexl.webp?w=800;1280;1920&
 import sizexlFont from '../../assets/fontsizexl.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
 import sizexlArchitecture from '../../assets/cardsize.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
 
+
 gsap.registerPlugin(ScrollTrigger)
 
 onMounted(() => {
