@@ -91,64 +91,84 @@
   </section>
 
 <!-- PROJECT SECTIONS -->
-<section class="bg-black py-10 md:py-20">
+<section class="bg-black">
   <div class="space-y-32">
-
+    
     <div
       v-for="(slide, i) in slides"
       :key="i"
       class="w-full"
     >
 
-      <!-- TITLE -->
-      <h2 class="px-6 md:px-20 text-2xl md:text-3xl font-semibold text-white mb-10 md:mb-14 text-center md:text-left">
+      <!-- TITLES -->
+      <h2 class="px-6 md:px-20 text-2xl md:text-3xl font-semibold text-white mb-10">
         {{ slide.title }}
       </h2>
 
-      <!-- GRID 60/40 VERA -->
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-center px-6 md:px-20">
+      <!-- GRID -->
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 items-center"
+      >
 
-        <!-- IMAGE -->
+        <!-- LEFT IMAGE -->
         <div
-          :class="slide.reverse
-            ? 'md:col-start-7 md:col-end-13'
-            : 'md:col-start-1 md:col-end-8'"
+          v-if="!slide.reverse"
+          class="w-full h-full"
         >
-          <div class="aspect-[4/3] w-full overflow-hidden rounded-lg">
-            <picture>
-              <template v-for="src in slide.img.sources" :key="src.srcset">
-                <source :srcset="src.srcset" :type="src.type" />
-              </template>
+          <picture>
+            <template v-for="src in slide.img.sources" :key="src.srcset">
+              <source :type="src.type" :srcset="src.srcset" />
+            </template>
+            <img
+              :src="slide.img.img.src"
+              class="reveal-img w-full h-full object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
+        </div>
 
-              <img
-                :src="slide.img.img.src"
-                class="reveal-img w-full h-full object-cover"
-                loading="lazy"
-                decoding="async"
-              />
-            </picture>
+        <!-- LEFT TEXT -->
+        <div
+          v-if="slide.reverse"
+          class="flex items-center justify-center px-6 md:px-20 text-white"
+        >
+          <div class="reveal-text max-w-lg">
+            <h3 class="text-xl font-semibold mb-3">{{ slide.subtitle }}</h3>
+            <p class="text-white/70 leading-relaxed">{{ slide.text }}</p>
           </div>
         </div>
 
-        <!-- TEXT -->
+        <!-- RIGHT TEXT -->
         <div
-          :class="slide.reverse
-            ? 'md:col-start-1 md:col-end-7'
-            : 'md:col-start-8 md:col-end-13'"
+          v-if="!slide.reverse"
+          class="flex items-center justify-center px-6 md:px-20 text-white"
         >
-          <div class="reveal-text text-white max-w-xl">
-            <h3 class="text-xl font-semibold mb-3">
-              {{ slide.subtitle }}
-            </h3>
-
-            <p class="text-white/70 leading-relaxed">
-              {{ slide.text }}
-            </p>
+          <div class="reveal-text max-w-lg">
+            <h3 class="text-xl font-semibold mb-3">{{ slide.subtitle }}</h3>
+            <p class="text-white/70 leading-relaxed">{{ slide.text }}</p>
           </div>
+        </div>
+
+        <!-- RIGHT IMAGE -->
+        <div
+          v-if="slide.reverse"
+          class="w-full h-full"
+        >
+          <picture>
+            <template v-for="src in slide.img.sources" :key="src.srcset">
+              <source :type="src.type" :srcset="src.srcset" />
+            </template>
+            <img
+              :src="slide.img.img.src"
+              class="reveal-img w-full h-full object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
         </div>
 
       </div>
-
     </div>
 
   </div>
