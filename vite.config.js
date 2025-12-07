@@ -1,25 +1,12 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
-import imagePresets from "vite-plugin-image-presets";
+import { imagetools } from "vite-imagetools";
 import fs from "fs";
 
 export default defineConfig({
   plugins: [
     vue(),
-
-    imagePresets({
-      project: {
-        formats: {
-          webp: { quality: 70 },
-          jpeg: { quality: 80 }
-        },
-        responsive: [
-          { width: 1920 },
-          { width: 1280 },
-          { width: 800 }
-        ],
-      }
-    }),
+    imagetools(), // <-- plugin moderno per ottimizzazione immagini
 
     {
       name: "rename-redirects",
