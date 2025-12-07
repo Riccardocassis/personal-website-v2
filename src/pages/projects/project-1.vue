@@ -129,9 +129,9 @@
             :class="slide.reverse ? 'order-1 md:order-2 px-6 md:pl-20' : 'px-6 md:pr-20'"
             class="flex items-center justify-center md:justify-start pt-6 md:pt-0"
           >
-            <div class="reveal-text translate-y-6 text-center md:text-left">
+            <div class="reveal-text translate-y-6 text-center md:text-left max-w-md mx-auto md:mx-0">
               <h3 class="text-xl text-white font-semibold mb-1">{{ slide.subtitle }}</h3>
-              <p class="text-white/70 mt-4">{{ slide.text }}</p>
+              <p class="text-white/70 mt-4 leading-relaxed">{{ slide.text }}</p>
             </div>
           </div>
 
@@ -174,7 +174,6 @@
   </section>
 
 </template>
-
 
 <script setup>
 import gsap from "gsap"
@@ -271,5 +270,4 @@ onMounted(() => {
     })
   })
 })
-
 </script>
