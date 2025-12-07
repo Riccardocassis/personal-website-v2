@@ -1,12 +1,11 @@
 <template>
 
-  <!-- HERO (Apple-like, generous whitespace) -->
+  <!-- HERO -->
   <section class="relative w-full md:h-[85vh] h-[35vh] overflow-hidden bg-transparent -mt-12 md:mt-0">
     <picture>
-      <source type="image/webp" :srcset="gibsonHero.webp" />
-      <source type="image/jpeg" :srcset="gibsonHero.jpeg" />
+      <source type="image/webp" :srcset="gibsonHero.webp">
       <img
-        :src="gibsonHero.jpeg[1280]"
+        :src="gibsonHero.webp[1280]"
         alt="Gibson cover"
         class="reveal-img absolute inset-0 w-full h-full object-cover object-top md:object-center opacity-90"
         fetchpriority="high"
@@ -18,30 +17,42 @@
 
     <div class="absolute inset-0 flex items-center md:items-end justify-center md:justify-start pt-2 md:pb-20 pl-4 md:pl-20">
       <div class="max-w-3xl text-center md:text-left px-4 md:px-6">
-        <h1 class="hidden md:block text-3xl md:text-6xl font-extrabold text-white leading-tight">Gibson SG-1961</h1>
-        <p class="hidden md:block text-xs md:text-sm text-white/70 mt-3 md:mt-4 tracking-wide">Concept Experience — Il suono della SG-1961 trasformato in un’esperienza digitale interattiva</p>
+        <h1 class="hidden md:block text-3xl md:text-6xl font-extrabold text-white leading-tight">
+          Gibson SG-1961
+        </h1>
+        <p class="hidden md:block text-xs md:text-sm text-white/70 mt-3 md:mt-4 tracking-wide">
+          Concept Experience — Il suono della SG-1961 trasformato in un’esperienza digitale interattiva
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- Mobile H1: show immediately below hero on small screens -->
+  <!-- MOBILE H1 -->
   <div class="md:hidden px-6 pt-3">
     <h1 class="text-3xl font-extrabold text-white leading-tight mb-1">Gibson SG-1961</h1>
-    <p class="text-xs text-white/70 mt-2">Concept Experience — Il suono della SG-1961 trasformato in un’esperienza digitale interattiva</p>
+    <p class="text-xs text-white/70 mt-2">
+      Concept Experience — Il suono della SG-1961 trasformato in un’esperienza digitale interattiva
+    </p>
   </div>
 
-  <!-- Project Intro (Apple-style clear intro) -->
+  <!-- INTRO -->
   <section class="bg-black py-8 md:py-20 px-6">
     <div class="max-w-3xl mx-auto text-center md:text-left">
-      <h2 class="text-3xl md:text-4xl font-semibold text-white mb-4 md:mb-6 text-center">Lo scopo del progetto</h2>
-      <p class="text-white/60 text-lg leading-snug md:leading-relaxed">In questo progetto ho voluto ricreare un concept di landing page dedicata a uno strumento iconico come la Gibson SG-1961, capace di comunicare la sua anima rock in ogni parte dell’esperienza. L’obiettivo era trasmettere l’essenza dello strumento attraverso tutta la navigazione, aumentando awareness e coinvolgimento, e restituendo il giusto valore a un prodotto che ha segnato la storia della musica.</p>
+      <h2 class="text-3xl md:text-4xl font-semibold text-white mb-4 md:mb-6 text-center">
+        Lo scopo del progetto
+      </h2>
+
+      <p class="text-white/60 text-lg leading-snug md:leading-relaxed">
+        In questo progetto ho voluto ricreare un concept di landing page dedicata
+        a uno strumento iconico come la Gibson SG-1961…
+      </p>
     </div>
   </section>
 
-  <!-- Video CTA: preview + button that opens fullscreen modal -->
+  <!-- VIDEO -->
   <section class="bg-black py-8 px-6">
     <div class="max-w-6xl mx-auto text-center">
-      <h3 class="text-center text-white/70 mb-6">preview della pagina</h3>
+      <h3 class="text-white/70 mb-6">Preview della pagina</h3>
       <div class="relative w-full aspect-[16/9] max-h-[65vh] mx-auto overflow-hidden rounded-2xl shadow-2xl bg-black">
         <video controls playsinline preload="metadata" class="w-full h-full object-cover">
           <source src="https://raw.githubusercontent.com/Riccardocassis/-gibson-video/main/gb_behance.mp4" type="video/mp4" />
@@ -50,296 +61,192 @@
     </div>
   </section>
 
-  <!-- Key Features (three clean columns) moved under Video CTA -->
+  <!-- ELEMENTI CHIAVE -->
   <section class="bg-black py-20 px-6">
     <div class="max-w-6xl mx-auto text-center">
       <h2 class="text-2xl md:text-3xl font-semibold text-white mb-8">Elementi chiave</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-start text-center">
+        
         <div class="px-6">
-          <h3 class="text-xl font-semibold text-white"> Direzione Creativa & Concept</h3>
-          <p class="text-white/60 mt-3">Ho definito il concept visivo e il tono dell’esperienza partendo dall’identità della SG-1961: rock, materica e iconica. Ogni scelta:colori, tipografia, ritmo visivo, è calibrata per trasmettere la personalità dello strumento in un ambiente digitale.</p>
+          <h3 class="text-xl font-semibold text-white">Direzione Creativa & Concept</h3>
+          <p class="text-white/60 mt-3">Ho definito il concept visivo…</p>
         </div>
+
         <div class="px-6">
           <h3 class="text-xl font-semibold text-white">3D e interazioni</h3>
-          <p class="text-white/60 mt-3">Ho realizzato modelli 3D e micro-interazioni che rispondono al suono e all’input dell’utente, trasformando la chitarra in un elemento interattivo. Il 3D non è decorazione, ma parte del linguaggio narrativo: rende la SG “suonabile” anche sul web.</p>
+          <p class="text-white/60 mt-3">Ho realizzato modelli 3D…</p>
         </div>
+
         <div class="px-6">
           <h3 class="text-xl font-semibold text-white">Sviluppo Web & Integrazione</h3>
-          <p class="text-white/60 mt-3">Ho sviluppato le funzionalità interattive tramite codice e le ho integrate in Webflow grazie a GitHub Pages e componenti custom. L’obiettivo era mantenere fluidità, performance e totale coerenza visiva tra design, interazioni e contenuti.</p>
+          <p class="text-white/60 mt-3">Ho sviluppato le funzionalità interattive…</p>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Project Sections: 8 alternating 60:40 full-bleed image with text appearing on scroll -->
+  <!-- SEZIONI DI PROGETTO -->
   <section class="bg-black">
-    <!-- For spacing between sections -->
     <div class="space-y-4 md:space-y-20">
 
-      <!-- Helper: each section is full-width; h2 aligned left with px -->
+      <!-- TEMPLATE DI SEZIONE GENERALE -->
+      <div v-for="(slide, i) in slides" :key="i" class="w-full">
 
-      <!-- 1 -->
-      <div class="w-full mb-6 md:mb-0">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-3 md:mb-6 text-center md:text-left">Concept e sviluppo dei Wireframes</h2>
-        <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
-          <div class="w-full">
-              <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
+        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">
+          {{ slide.title }}
+        </h2>
+
+        <div :class="slide.reverse ? 'grid grid-cols-1 md:grid-cols-[40%_60%]' : 'grid grid-cols-1 md:grid-cols-[60%_40%]'">
+
+          <!-- IMMAGINE -->
+          <div :class="slide.reverse ? 'order-2 md:order-1' : ''">
+            <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
               <picture>
-                <source type="image/webp" :srcset="p1slide1.webp" />
-                <source type="image/jpeg" :srcset="p1slide1.jpeg" />
-                <img :src="p1slide1.jpeg[1280]" alt="Concept" class="reveal-img w-full h-full object-cover" loading="lazy" decoding="async" />
+                <source type="image/webp" :srcset="slide.img.webp" />
+                <img :src="slide.img.webp[1280]" class="reveal-img w-full h-full object-cover" loading="lazy" decoding="async" />
               </picture>
             </div>
           </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-1 md:pt-0">
-            <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold mb-1">Stile estetico</h3>
-              <p class="text-white/70 mt-1 md:mt-4">Sono partito analizzando le parti che costituivano questo prodotto come materiali e finiture e il sentiment che ha suscitato nella cultura Rock e negli appassionati. Successivamente ho ripreso questi elementi e li ho reinterpretati a modo mio per creare il giusto mix tra passato presente e futuro costruendo un'esperienza immersiva mirata.</p>
+
+          <!-- TESTO -->
+          <div :class="slide.reverse ? 'order-1 md:order-2 px-6 md:pl-20' : 'px-6 md:pr-20'" class="flex items-center justify-center md:justify-start pt-6 md:pt-0">
+            <div class="reveal-text translate-y-6 text-center md:text-left">
+              <h3 class="text-xl text-white font-semibold mb-1">{{ slide.subtitle }}</h3>
+              <p class="text-white/70 mt-4">{{ slide.text }}</p>
             </div>
           </div>
+
         </div>
       </div>
-
-      <!-- 2 -->
-      <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Scelta della piattaforma</h2>
-        <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
-          <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start order-2 md:order-1">
-            <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Controllo totale sul layout, performance solide, zero compromessi sull’esperienza</h3>
-              <p class="text-white/70 mt-4">Webflow è stata la scelta ideale per un concept che vive di dettaglio visivo e micro–interazioni.
-Mi ha permesso di tradurre le scelte di design con precisione millimetrica, mantenendo il pieno controllo su griglie, transizioni e responsive senza dipendere da plugin esterni.
-
-Inoltre, il motore nativo consente un output pulito e performante, perfetto per dare al progetto il ritmo visivo che meritava: fluido, leggero e fedele al design originale.</p>
-            </div>
-          </div>
-          <div class="w-full order-1 md:order-2">
-              <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-              <picture>
-                <source type="image/webp" :srcset="p1slide2.webp" />
-                <source type="image/jpeg" :srcset="p1slide2.jpeg" />
-                <img :src="p1slide2.jpeg[1280]" alt="Materials" class="reveal-img w-full h-full object-cover" loading="lazy" decoding="async" />
-              </picture>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 3 -->
-      <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">3D Modeling</h2>
-        <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
-          <div class="w-full">
-              <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-              <picture>
-                <source type="image/webp" :srcset="p1slide3.webp" />
-                <source type="image/jpeg" :srcset="p1slide3.jpeg" />
-                <img :src="p1slide3.jpeg[1280]" alt="3D" class="reveal-img w-full h-full object-cover" loading="lazy" decoding="async" />
-              </picture>
-            </div>
-          </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
-            <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Spline — 3D leggero, interattivo e integrabile nel web</h3>
-              <p class="text-white/70 mt-4">Ho scelto Spline per modellare la SG-1961 perché permette un 3D credibile e facilmente integrabile nel web.
-Grazie all’embed nativo, il modello si inserisce in Webflow senza codice complesso, garantendo performance e la possibilità di aggiornare materiali e dettagli in modo immediato.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 4 -->
-      <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Sviluppo dell'app</h2>
-        <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
-          <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start order-2 md:order-1">
-            <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Ho scelto il codice come alleato e lo Sviluppo di una app interattiva per aumentare l'immersività e migliorare l'esperienza utente</h3>
-
-              <p class="text-white/70 mt-4">Con Visual Studio Code ho realizzato una web-app che permette di suonare la SG-1961 direttamente dal browser.
-Input, animazioni e suoni lavorano insieme per creare un’interazione musicale semplice e immersiva.
-L’app è stata poi caricata su GitHub Pages e integrata in Webflow.</p>
-            </div>
-          </div>
-          <div class="w-full order-1 md:order-2">
-              <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-              <picture>
-                <source type="image/webp" :srcset="p1slide4.webp" />
-                <source type="image/jpeg" :srcset="p1slide4.jpeg" />
-                <img :src="p1slide4.jpeg[1280]" alt="Interaction" class="reveal-img w-full h-full object-cover" loading="lazy" decoding="async" />
-              </picture>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 5 -->
-      <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Interfaccia </h2>
-        <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
-          <div class="w-full">
-              <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-              <picture>
-                <source type="image/webp" :srcset="p1slide5.webp" />
-                <source type="image/jpeg" :srcset="p1slide5.jpeg" />
-                <img :src="p1slide5.jpeg[1280]" alt="Sound" class="reveal-img w-full h-full object-cover" loading="lazy" decoding="async" />
-              </picture>
-            </div>
-          </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
-            <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Ho pensato a tre modalità pensate per ridurre la curva d’apprendimento</h3>
-              <p class="text-white/70 mt-4">La struttura dell’app l’ho basata su tre modalità di gioco, ognuna pensata per rendere l’esperienza musicale intuitiva fin dal primo tap.
-Ogni modalità offre un livello di complessità crescente, ma ho mantenuto un’interfaccia chiara e reattiva per permettere all’utente di sperimentare senza sentirsi sopraffatto.
-Ho combinato suoni, micro-animazioni e feedback visivi per trasformare la SG-1961 in un’esperienza interattiva accessibile anche a chi non ha mai suonato una chitarra.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- sections 6-8 removed -->
 
     </div>
   </section>
 
-  
-
-  <!-- Prototype Video removed -->
-
-  <!-- Horizontal carousel removed -->
-
-  <!-- CTA minimal -->
+  <!-- CTA -->
   <section class="bg-black py-8 px-6 text-center">
     <div class="max-w-2xl mx-auto">
-      <p class="text-white/60 mb-6">Ti è piaciuto questo progetto?
-Posso aiutarti a creare esperienze digitali su misura.</p>
+      <p class="text-white/60 mb-6">
+        Ti è piaciuto questo progetto? Posso aiutarti a creare esperienze digitali su misura.
+      </p>
       <div class="flex justify-center gap-8">
         <a href="/contact" class="text-blue-400 font-semibold underline">Contattami</a>
       </div>
     </div>
   </section>
 
-  <!-- Prev / Next arrows below CTA with labels (responsive) -->
+  <!-- PREV/NEXT -->
   <section class="bg-black py-6 md:py-8 px-6">
-    <div class="max-w-2xl mx-auto flex flex-row md:flex-row items-center md:items-stretch justify-center md:justify-between gap-6">
-      <!-- Previous -->
-      <router-link to="/projects/project-9" class="flex items-center gap-0 md:gap-4 md:flex-row text-center md:text-left">
+    <div class="max-w-2xl mx-auto flex items-center justify-between gap-6">
+
+      <router-link to="/projects/project-9" class="flex items-center gap-4">
         <span class="inline-flex items-center justify-center w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full">
           <span class="text-white">←</span>
         </span>
-        <span class="hidden md:inline-block text-white/70 text-sm">Progetto precedente</span>
+        <span class="hidden md:block text-white/70 text-sm">Progetto precedente</span>
       </router-link>
 
-      <!-- Center spacer for desktop -->
-      <div class="hidden md:block flex-1"></div>
-
-      <!-- Next -->
-      <router-link to="/projects/project-2" class="flex items-center gap-0 md:gap-4 md:flex-row-reverse text-center md:text-right">
+      <router-link to="/projects/project-2" class="flex items-center gap-4 flex-row-reverse">
         <span class="inline-flex items-center justify-center w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full">
           <span class="text-white">→</span>
         </span>
-        <span class="hidden md:inline-block text-white/70 text-sm">Progetto successivo</span>
+        <span class="hidden md:block text-white/70 text-sm">Progetto successivo</span>
       </router-link>
+
     </div>
   </section>
-
-  <!-- Prev/Next arrows removed -->
-
-  <!-- Fullscreen video modal -->
-  <div v-if="showVideo" class="fixed inset-0 z-50 flex items-center justify-center bg-black/90">
-    <button @click="closeVideo" class="absolute top-6 right-6 text-white bg-black/40 hover:bg-black/60 px-3 py-2 rounded">Chiudi</button>
-    <video ref="videoRef" controls class="w-full h-full max-w-[1400px] max-h-[90vh] rounded-lg shadow-2xl">
-      <source src="https://raw.githubusercontent.com/Riccardocassis/-gibson-video/main/gb_behance.mp4" type="video/mp4" />
-    </video>
-  </div>
-
 
 </template>
 
 <script setup>
-import { onMounted, ref, nextTick } from 'vue'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import gibsonHero from '../../assets/gibson cover pagina progetti.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
-import p1slide1 from '../../assets/p1slide1.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
-import p1slide2 from '../../assets/p1slide2.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
-import p1slide3 from '../../assets/p1slide3.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
-import p1slide4 from '../../assets/p1slide4.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
-import p1slide5 from '../../assets/p1slide5.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
+import gsap from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { onMounted, ref } from "vue"
+
+import gibsonHero from "../../assets/gibson cover pagina progetti.webp?w=800;1280;1920&format=webp&as=picture"
+import p1slide1 from "../../assets/p1slide1.webp?w=800;1280;1920&format=webp&as=picture"
+import p1slide2 from "../../assets/p1slide2.webp?w=800;1280;1920&format=webp&as=picture"
+import p1slide3 from "../../assets/p1slide3.webp?w=800;1280;1920&format=webp&as=picture"
+import p1slide4 from "../../assets/p1slide4.webp?w=800;1280;1920&format=webp&as=picture"
+import p1slide5 from "../../assets/p1slide5.webp?w=800;1280;1920&format=webp&as=picture"
 
 gsap.registerPlugin(ScrollTrigger)
 
+const slides = [
+  {
+    title: "Concept e sviluppo dei Wireframes",
+    img: p1slide1,
+    subtitle: "Stile estetico",
+    text: "Sono partito analizzando le parti…",
+    reverse: false
+  },
+  {
+    title: "Scelta della piattaforma",
+    img: p1slide2,
+    subtitle: "Controllo totale sul layout",
+    text: "Webflow è stata la scelta ideale…",
+    reverse: true
+  },
+  {
+    title: "3D Modeling",
+    img: p1slide3,
+    subtitle: "Spline — 3D leggero e integrabile",
+    text: "Ho scelto Spline per modellare…",
+    reverse: false
+  },
+  {
+    title: "Sviluppo dell'app",
+    img: p1slide4,
+    subtitle: "Ho scelto il codice come alleato",
+    text: "Con Visual Studio Code ho realizzato…",
+    reverse: true
+  },
+  {
+    title: "Interfaccia",
+    img: p1slide5,
+    subtitle: "Tre modalità per ridurre la curva d’apprendimento",
+    text: "La struttura dell’app si basa su tre modalità…",
+    reverse: false
+  }
+]
+
 onMounted(() => {
-  // GSAP-controlled reveal: animate image first, then text; keep subtle parallax
-  const isMobile = typeof window !== 'undefined' && window.matchMedia('(max-width: 767px)').matches
-  const images = gsap.utils.toArray('.reveal-img')
+  const isMobile = window.matchMedia("(max-width: 767px)").matches
+  const images = gsap.utils.toArray(".reveal-img")
 
   images.forEach((img) => {
-    // find the nearest grid container and its text block
-    const grid = img.closest('.grid')
-    const text = grid ? grid.querySelector('.reveal-text') : null
+    const grid = img.closest(".grid")
+    const text = grid ? grid.querySelector(".reveal-text") : null
 
     if (isMobile) {
-      // On small screens, show everything immediately (no scroll-based reveal)
-      gsap.set(img, { y: 0, scale: 1, opacity: 1, clearProps: 'all' })
-      if (text) gsap.set(text, { y: 0, opacity: 1, clearProps: 'all' })
+      gsap.set([img, text], { y: 0, opacity: 1 })
       return
     }
 
-    // initial states for desktop
-    gsap.set(img, { y: 40, scale: 1.06, opacity: 0, transformOrigin: 'center center' })
+    gsap.set(img, { y: 40, scale: 1.06, opacity: 0 })
     if (text) gsap.set(text, { y: 24, opacity: 0 })
 
-    // timeline: reveal image then text
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: img,
-        start: 'top 85%',
-        toggleActions: 'play none none reverse'
+        start: "top 85%",
+        toggleActions: "play none none reverse"
       }
     })
 
-    tl.to(img, { y: 0, scale: 1, opacity: 1, ease: 'power3.out', duration: 1.1 })
-      .to(text || {}, { y: 0, opacity: 1, ease: 'power2.out', duration: 0.6 }, '-=0.35')
+    tl.to(img, { y: 0, scale: 1, opacity: 1, duration: 1.1, ease: "power3.out" })
+      .to(text, { y: 0, opacity: 1, duration: 0.6, ease: "power2.out" }, "-=0.35")
 
-    // subtle parallax while scrolling through image (scrubbed)
     gsap.to(img, {
       yPercent: -6,
-      ease: 'none',
+      ease: "none",
       scrollTrigger: {
         trigger: img,
-        start: 'top bottom',
-        end: 'bottom top',
+        start: "top bottom",
+        end: "bottom top",
         scrub: 0.8
       }
     })
   })
-
-  // final video has been removed from the template
-
-  // Horizontal carousel logic removed
 })
-
-// Video modal state & controls
-const showVideo = ref(false)
-const videoRef = ref(null)
-
-function openVideo() {
-  showVideo.value = true
-  nextTick(() => {
-    if (videoRef.value) {
-      // try to play; some browsers block autoplay without user gesture but click opened it
-      videoRef.value.currentTime = 0
-      videoRef.value.play().catch(() => {})
-    }
-  })
-}
-
-function closeVideo() {
-  if (videoRef.value) {
-    videoRef.value.pause()
-    videoRef.value.currentTime = 0
-  }
-  showVideo.value = false
-}
 </script>
