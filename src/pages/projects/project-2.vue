@@ -3,15 +3,14 @@ import { onMounted, ref, nextTick } from 'vue'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-// --- IMPORT IMMAGINI ---
+// IMPORT IMMAGINI
 import sizexlHero from '../../assets/coversizexl.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
 import sizexlSituation from '../../assets/img2sizexl.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
 import sizexlPalette from '../../assets/colorpalettesizexl.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
 import sizexlFont from '../../assets/fontsizexl.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
 import sizexlArchitecture from '../../assets/cardsize.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
 
-
-// --- DEBUG: CONTROLLIAMO SE GLI IMPORT FUNZIONANO ---
+// DEBUG
 console.log("HERO:", sizexlHero)
 console.log("SITUATION:", sizexlSituation)
 console.log("PALETTE:", sizexlPalette)
@@ -21,7 +20,10 @@ console.log("ARCHITECTURE:", sizexlArchitecture)
 gsap.registerPlugin(ScrollTrigger)
 
 onMounted(() => {
-  const isMobile = typeof window !== 'undefined' && window.matchMedia('(max-width: 767px)').matches
+  const isMobile =
+    typeof window !== 'undefined' &&
+    window.matchMedia('(max-width: 767px)').matches
+
   const images = gsap.utils.toArray('.reveal-img')
 
   images.forEach((img) => {
@@ -34,7 +36,7 @@ onMounted(() => {
       return
     }
 
-    gsap.set(img, { y: 40, scale: 1.06, opacity: 0, transformOrigin: 'center center' })
+    gsap.set(img, { y: 40, scale: 1.06, opacity: 0 })
     if (text) gsap.set(text, { y: 24, opacity: 0 })
 
     const tl = gsap.timeline({
@@ -45,8 +47,8 @@ onMounted(() => {
       }
     })
 
-    tl.to(img, { y: 0, scale: 1, opacity: 1, ease: 'power3.out', duration: 1.1 })
-      .to(text || {}, { y: 0, opacity: 1, ease: 'power2.out', duration: 0.6 }, '-=0.35')
+    tl.to(img, { y: 0, scale: 1, opacity: 1, duration: 1.1 })
+      .to(text || {}, { y: 0, opacity: 1, duration: 0.6 }, '-=0.35')
 
     gsap.to(img, {
       yPercent: -6,
@@ -61,6 +63,7 @@ onMounted(() => {
   })
 })
 
+// VIDEO
 const showVideo = ref(false)
 const videoRef = ref(null)
 
