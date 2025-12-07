@@ -1,31 +1,35 @@
 <template>
 
   <!-- HERO -->
-  <section class="relative w-full md:h-[85vh] h-[35vh] overflow-hidden bg-transparent -mt-12 md:mt-0">
-    <picture>
-      <source type="image/webp" :srcset="gibsonHero.webp">
-      <img
-        :src="gibsonHero.webp[1280]"
-        alt="Gibson cover"
-        class="reveal-img absolute inset-0 w-full h-full object-cover object-top md:object-center opacity-90"
-        fetchpriority="high"
-        decoding="async"
-      />
-    </picture>
+<section class="relative w-full md:h-[85vh] h-[35vh] overflow-hidden bg-transparent -mt-12 md:mt-0">
+  <picture>
+    <template v-for="source in gibsonHero.sources" :key="source.src">
+      <source :type="source.type" :srcset="source.srcset" />
+    </template>
 
-    <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-transparent"></div>
+    <img
+      :src="gibsonHero.img"
+      alt="Gibson cover"
+      class="reveal-img absolute inset-0 w-full h-full object-cover object-top md:object-center opacity-90"
+      fetchpriority="high"
+      decoding="async"
+    />
+  </picture>
 
-    <div class="absolute inset-0 flex items-center md:items-end justify-center md:justify-start pt-2 md:pb-20 pl-4 md:pl-20">
-      <div class="max-w-3xl text-center md:text-left px-4 md:px-6">
-        <h1 class="hidden md:block text-3xl md:text-6xl font-extrabold text-white leading-tight">
-          Gibson SG-1961
-        </h1>
-        <p class="hidden md:block text-xs md:text-sm text-white/70 mt-3 md:mt-4 tracking-wide">
-          Concept Experience — Il suono della SG-1961 trasformato in un’esperienza digitale interattiva
-        </p>
-      </div>
+  <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-transparent"></div>
+
+  <div class="absolute inset-0 flex items-center md:items-end justify-center md:justify-start pt-2 md:pb-20 pl-4 md:pl-20">
+    <div class="max-w-3xl text-center md:text-left px-4 md:px-6">
+      <h1 class="hidden md:block text-3xl md:text-6xl font-extrabold text-white leading-tight">
+        Gibson SG-1961
+      </h1>
+      <p class="hidden md:block text-xs md:text-sm text-white/70 mt-3 md:mt-4 tracking-wide">
+        Concept Experience — Il suono della SG-1961 trasformato in un’esperienza digitale interattiva
+      </p>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- MOBILE H1 -->
   <div class="md:hidden px-6 pt-3">
