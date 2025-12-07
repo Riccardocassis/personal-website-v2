@@ -1,36 +1,37 @@
 <template>
 
   <!-- HERO -->
-<section class="relative w-full md:h-[85vh] h-[35vh] overflow-hidden bg-transparent -mt-12 md:mt-0">
-  <picture>
-  <source :srcset="gibsonHero.sources.webp" type="image/webp" />
-  <source :srcset="gibsonHero.sources.jpeg" type="image/jpeg" />
-  <img
-    :src="gibsonHero.img"
-    alt="Gibson cover"
-    class="reveal-img absolute inset-0 w-full h-full object-cover object-top md:object-center opacity-90"
-    fetchpriority="high"
-    decoding="async"
-  />
-</picture>
+  <section class="relative w-full md:h-[85vh] h-[35vh] overflow-hidden bg-transparent -mt-12 md:mt-0">
 
+    <picture>
+      <template v-for="src in gibsonHero.sources" :key="src.srcset">
+        <source :type="src.type" :srcset="src.srcset" />
+      </template>
 
-  <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-transparent"></div>
+      <img
+        :src="gibsonHero.img.src"
+        alt="Gibson cover"
+        class="reveal-img absolute inset-0 w-full h-full object-cover object-top md:object-center opacity-90"
+        fetchpriority="high"
+        decoding="async"
+      />
+    </picture>
 
-  <div class="absolute inset-0 flex items-center md:items-end justify-center md:justify-start pt-2 md:pb-20 pl-4 md:pl-20">
-    <div class="max-w-3xl text-center md:text-left px-4 md:px-6">
-      <h1 class="hidden md:block text-3xl md:text-6xl font-extrabold text-white leading-tight">
-        Gibson SG-1961
-      </h1>
-      <p class="hidden md:block text-xs md:text-sm text-white/70 mt-3 md:mt-4 tracking-wide">
-        Concept Experience — Il suono della SG-1961 trasformato in un’esperienza digitale interattiva
-      </p>
+    <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-transparent"></div>
+
+    <div class="absolute inset-0 flex items-center md:items-end justify-center md:justify-start pt-2 md:pb-20 pl-4 md:pl-20">
+      <div class="max-w-3xl text-center md:text-left px-4 md:px-6">
+        <h1 class="hidden md:block text-3xl md:text-6xl font-extrabold text-white leading-tight">
+          Gibson SG-1961
+        </h1>
+        <p class="hidden md:block text-xs md:text-sm text-white/70 mt-3 md:mt-4 tracking-wide">
+          Concept Experience — Il suono della SG-1961 trasformato in un’esperienza digitale interattiva
+        </p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
-  <!-- MOBILE H1 -->
+  <!-- MOBILE TITLE -->
   <div class="md:hidden px-6 pt-3">
     <h1 class="text-3xl font-extrabold text-white leading-tight mb-1">Gibson SG-1961</h1>
     <p class="text-xs text-white/70 mt-2">
@@ -47,7 +48,7 @@
 
       <p class="text-white/60 text-lg leading-snug md:leading-relaxed">
         In questo progetto ho voluto ricreare un concept di landing page dedicata
-        a uno strumento iconico come la Gibson SG-1961…
+        a uno strumento iconico come la Gibson SG-1961, capace di comunicare la sua anima rock...
       </p>
     </div>
   </section>
@@ -68,8 +69,9 @@
   <section class="bg-black py-20 px-6">
     <div class="max-w-6xl mx-auto text-center">
       <h2 class="text-2xl md:text-3xl font-semibold text-white mb-8">Elementi chiave</h2>
+
       <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-start text-center">
-        
+
         <div class="px-6">
           <h3 class="text-xl font-semibold text-white">Direzione Creativa & Concept</h3>
           <p class="text-white/60 mt-3">Ho definito il concept visivo…</p>
@@ -89,31 +91,44 @@
     </div>
   </section>
 
-  <!-- SEZIONI DI PROGETTO -->
+  <!-- PROJECT SECTIONS -->
   <section class="bg-black">
     <div class="space-y-4 md:space-y-20">
 
-      <!-- TEMPLATE DI SEZIONE GENERALE -->
       <div v-for="(slide, i) in slides" :key="i" class="w-full">
 
         <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">
           {{ slide.title }}
         </h2>
 
-        <div :class="slide.reverse ? 'grid grid-cols-1 md:grid-cols-[40%_60%]' : 'grid grid-cols-1 md:grid-cols-[60%_40%]'">
+        <div
+          :class="slide.reverse ? 'grid grid-cols-1 md:grid-cols-[40%_60%]' : 'grid grid-cols-1 md:grid-cols-[60%_40%]'"
+        >
 
-          <!-- IMMAGINE -->
+          <!-- IMAGE -->
           <div :class="slide.reverse ? 'order-2 md:order-1' : ''">
             <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
+
               <picture>
-                <source type="image/webp" :srcset="slide.img.webp" />
-                <img :src="slide.img.webp[1280]" class="reveal-img w-full h-full object-cover" loading="lazy" decoding="async" />
+                <template v-for="src in slide.img.sources" :key="src.srcset">
+                  <source :type="src.type" :srcset="src.srcset" />
+                </template>
+                <img
+                  :src="slide.img.img.src"
+                  class="reveal-img w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
               </picture>
+
             </div>
           </div>
 
-          <!-- TESTO -->
-          <div :class="slide.reverse ? 'order-1 md:order-2 px-6 md:pl-20' : 'px-6 md:pr-20'" class="flex items-center justify-center md:justify-start pt-6 md:pt-0">
+          <!-- TEXT -->
+          <div
+            :class="slide.reverse ? 'order-1 md:order-2 px-6 md:pl-20' : 'px-6 md:pr-20'"
+            class="flex items-center justify-center md:justify-start pt-6 md:pt-0"
+          >
             <div class="reveal-text translate-y-6 text-center md:text-left">
               <h3 class="text-xl text-white font-semibold mb-1">{{ slide.subtitle }}</h3>
               <p class="text-white/70 mt-4">{{ slide.text }}</p>
@@ -132,13 +147,12 @@
       <p class="text-white/60 mb-6">
         Ti è piaciuto questo progetto? Posso aiutarti a creare esperienze digitali su misura.
       </p>
-      <div class="flex justify-center gap-8">
-        <a href="/contact" class="text-blue-400 font-semibold underline">Contattami</a>
-      </div>
+
+      <a href="/contact" class="text-blue-400 font-semibold underline">Contattami</a>
     </div>
   </section>
 
-  <!-- PREV/NEXT -->
+  <!-- NAVIGATION -->
   <section class="bg-black py-6 md:py-8 px-6">
     <div class="max-w-2xl mx-auto flex items-center justify-between gap-6">
 
@@ -161,58 +175,63 @@
 
 </template>
 
+
 <script setup>
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { onMounted, ref } from "vue"
-
-import gibsonHero from '../../assets/gibson-cover-pagina-progetti.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
-import p1slide1 from "../../assets/p1slide1.webp?w=800;1280;1920&format=webp&as=picture"
-import p1slide2 from "../../assets/p1slide2.webp?w=800;1280;1920&format=webp&as=picture"
-import p1slide3 from "../../assets/p1slide3.webp?w=800;1280;1920&format=webp&as=picture"
-import p1slide4 from "../../assets/p1slide4.webp?w=800;1280;1920&format=webp&as=picture"
-import p1slide5 from "../../assets/p1slide5.webp?w=800;1280;1920&format=webp&as=picture"
+import { onMounted } from "vue"
 
 gsap.registerPlugin(ScrollTrigger)
+
+/* HERO IMAGE */
+import gibsonHero from '../../assets/gibson-cover-pagina-progetti.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
+
+/* SLIDES */
+import p1slide1 from "../../assets/p1slide1.webp?w=800;1280;1920&format=webp;jpeg&as=picture"
+import p1slide2 from "../../assets/p1slide2.webp?w=800;1280;1920&format=webp;jpeg&as=picture"
+import p1slide3 from "../../assets/p1slide3.webp?w=800;1280;1920&format=webp;jpeg&as=picture"
+import p1slide4 from "../../assets/p1slide4.webp?w=800;1280;1920&format=webp;jpeg&as=picture"
+import p1slide5 from "../../assets/p1slide5.webp?w=800;1280;1920&format=webp;jpeg&as=picture"
 
 const slides = [
   {
     title: "Concept e sviluppo dei Wireframes",
     img: p1slide1,
     subtitle: "Stile estetico",
-    text: "Sono partito analizzando le parti…",
+    text: "Sono partito analizzando le parti che costituivano questo prodotto...",
     reverse: false
   },
   {
     title: "Scelta della piattaforma",
     img: p1slide2,
     subtitle: "Controllo totale sul layout",
-    text: "Webflow è stata la scelta ideale…",
+    text: "Webflow è stata la scelta ideale...",
     reverse: true
   },
   {
     title: "3D Modeling",
     img: p1slide3,
     subtitle: "Spline — 3D leggero e integrabile",
-    text: "Ho scelto Spline per modellare…",
+    text: "Ho scelto Spline per modellare...",
     reverse: false
   },
   {
     title: "Sviluppo dell'app",
     img: p1slide4,
     subtitle: "Ho scelto il codice come alleato",
-    text: "Con Visual Studio Code ho realizzato…",
+    text: "Con Visual Studio Code ho realizzato una web-app...",
     reverse: true
   },
   {
     title: "Interfaccia",
     img: p1slide5,
-    subtitle: "Tre modalità per ridurre la curva d’apprendimento",
-    text: "La struttura dell’app si basa su tre modalità…",
+    subtitle: "Tre modalità pensate per ridurre la curva d’apprendimento",
+    text: "La struttura dell’app l’ho basata su tre modalità...",
     reverse: false
   }
 ]
 
+/* GSAP ANIMATIONS */
 onMounted(() => {
   const isMobile = window.matchMedia("(max-width: 767px)").matches
   const images = gsap.utils.toArray(".reveal-img")
@@ -252,4 +271,5 @@ onMounted(() => {
     })
   })
 })
+
 </script>
