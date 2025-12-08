@@ -1,51 +1,46 @@
 <template>
-  <section class="w-full py-16 bg-black overflow-hidden">
+  <section class="reveal bg-black w-full py-12 md:py-20 overflow-hidden">
 
+    <!-- MOBILE: titolo sopra immagine -->
+    <div class="md:hidden px-6 mb-4">
+      <h3 class="text-xl font-semibold text-white">{{ data.title }}</h3>
+      <p class="text-white/60 text-sm mt-1">{{ data.subtitle }}</p>
+    </div>
+
+    <!-- WRAPPER -->
     <div
-      class="w-full flex flex-col md:flex-row relative items-center"
-      :class="reverse ? 'md:flex-row-reverse' : ''"
+      class="w-full flex flex-col md:flex-row items-center relative"
+      :class="index % 2 === 1 ? 'md:flex-row-reverse' : ''"
     >
 
-      <!-- IMAGE FULL BLEED -->
-<div
-  class="relative w-full 
-         h-auto 
-         md:w-[50vw] 
-         md:h-auto 
-         overflow-hidden"
->
-  <picture>
-    <source
-      v-for="s in img.sources"
-      :key="s.srcset"
-      :srcset="s.srcset"
-      :type="s.type"
-    />
-    <img
-  :src="img.img.src"
-  alt=""
-  class="w-full h-auto max-h-[60vh] object-contain md:object-cover"
-  loading="lazy"
-  decoding="async"
-/>
-  </picture>
-</div>
+      <!-- IMAGE (picture compatibile con ?as=picture) -->
+      <div class="w-full md:w-1/2">
+        <picture>
+          <template v-for="source in data.img.sources" :key="source.srcset">
+            <source :srcset="source.srcset" :type="source.type" />
+          </template>
 
-      <!-- TEXT BLOCK -->
-      <div
-        class="w-full md:w-1/2 flex flex-col justify-center gap-4 
-               px-8 md:px-16 text-white text-center"
-      >
-        <h2 class="text-2xl md:text-3xl font-semibold">
-          {{ title }}
-        </h2>
+          <img
+            :src="data.img.img.src"
+            alt=""
+            class="w-full h-full object-cover"
+          />
+        </picture>
+      </div>
 
-        <h3 class="text-white/70 text-base md:text-lg">
-          {{ subtitle }}
+      <!-- TEXT -->
+     <div class="reveal w-full md:w-1/2 px-6 md:px-12 mt-6 md:mt-0">
+
+        <h3 class="hidden md:block text-3xl font-semibold text-white">
+          {{ data.title }}
         </h3>
 
-        <p class="text-white/60 leading-relaxed max-w-xl mx-auto">
-          {{ text }}
+        <p class="hidden md:block text-white/60 mt-2">
+          {{ data.subtitle }}
+        </p>
+
+        <p class="text-white/60 mt-3 max-w-md">
+          {{ data.text }}
         </p>
       </div>
 
@@ -56,14 +51,7 @@
 
 <script setup>
 defineProps({
-  title: String,
-  subtitle: String,
-  text: String,
-  img: Object,
-  reverse: Boolean
+  data: { type: Object, required: true },
+  index: Number
 })
 </script>
-
-<style scoped>
-/* Full-bleed già corretto tramite utility Tailwind */
-</style>
