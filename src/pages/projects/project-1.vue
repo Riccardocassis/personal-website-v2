@@ -1,6 +1,7 @@
 <template>
 
   <!-- HERO -->
+
   <section class="relative w-full md:h-[85vh] h-[35vh] overflow-hidden bg-transparent -mt-12 md:mt-0">
     <picture>
       <template v-for="source in gibsonHero.sources" :key="source.srcset">
@@ -91,87 +92,17 @@
   </section>
 
 <!-- PROJECT SECTIONS -->
-<section class="bg-black">
-  <div class="space-y-32">
-    
-    <div
-      v-for="(slide, i) in slides"
-      :key="i"
-      class="w-full"
-    >
 
-      <!-- TITLES -->
-      <h2 class="px-6 md:px-20 text-2xl md:text-3xl font-semibold text-white mb-10">
-        {{ slide.title }}
-      </h2>
-
-      <!-- GRID -->
-      <div
-        class="grid grid-cols-1 md:grid-cols-2 items-center"
-      >
-
-        <!-- LEFT IMAGE -->
-        <div
-          v-if="!slide.reverse"
-          class="w-full h-full"
-        >
-          <picture>
-            <template v-for="src in slide.img.sources" :key="src.srcset">
-              <source :type="src.type" :srcset="src.srcset" />
-            </template>
-            <img
-              :src="slide.img.img.src"
-              class="reveal-img w-full h-full object-cover"
-              loading="lazy"
-              decoding="async"
-            />
-          </picture>
-        </div>
-
-        <!-- LEFT TEXT -->
-        <div
-          v-if="slide.reverse"
-          class="flex items-center justify-center px-6 md:px-20 text-white"
-        >
-          <div class="reveal-text max-w-lg">
-            <h3 class="text-xl font-semibold mb-3">{{ slide.subtitle }}</h3>
-            <p class="text-white/70 leading-relaxed">{{ slide.text }}</p>
-          </div>
-        </div>
-
-        <!-- RIGHT TEXT -->
-        <div
-          v-if="!slide.reverse"
-          class="flex items-center justify-center px-6 md:px-20 text-white"
-        >
-          <div class="reveal-text max-w-lg">
-            <h3 class="text-xl font-semibold mb-3">{{ slide.subtitle }}</h3>
-            <p class="text-white/70 leading-relaxed">{{ slide.text }}</p>
-          </div>
-        </div>
-
-        <!-- RIGHT IMAGE -->
-        <div
-          v-if="slide.reverse"
-          class="w-full h-full"
-        >
-          <picture>
-            <template v-for="src in slide.img.sources" :key="src.srcset">
-              <source :type="src.type" :srcset="src.srcset" />
-            </template>
-            <img
-              :src="slide.img.img.src"
-              class="reveal-img w-full h-full object-cover"
-              loading="lazy"
-              decoding="async"
-            />
-          </picture>
-        </div>
-
-      </div>
-    </div>
-
-  </div>
+<section class="bg-black py-20 px-6 md:px-20 space-y-32">
+  <ProjectSlide
+    v-for="(slide, i) in slides"
+    :key="i"
+    :title="slide.title"
+    :subtitle="slide.subtitle"
+    :text="slide.text"
+    :img="slide.img"
+    :reverse="slide.reverse"
+  />
 </section>
 
 
@@ -213,6 +144,7 @@
 
 
 <script setup>
+     import ProjectSlide from '@/components/ProjectSlide.vue'
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { onMounted } from "vue"
