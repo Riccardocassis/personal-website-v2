@@ -6,8 +6,7 @@ import fs from "fs";
 export default defineConfig({
   plugins: [
     vue(),
-    imagetools(), // <-- plugin moderno per ottimizzazione immagini
-
+    imagetools(), // deve stare QUI e deve essere caricato
     {
       name: "rename-redirects",
       closeBundle() {
@@ -18,8 +17,18 @@ export default defineConfig({
     },
   ],
 
-  build: {
-    outDir: "dist",
-    emptyOutDir: true,
+  resolve: {
+    alias: {
+      "@": "/src",
+    },
   },
+
+  assetsInclude: [
+    "**/*.webp",
+    "**/*.png",
+    "**/*.jpg",
+    "**/*.jpeg",
+    "**/*.gif",
+    "**/*.svg",
+  ],
 });
