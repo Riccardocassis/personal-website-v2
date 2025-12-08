@@ -93,17 +93,20 @@
 
 <!-- PROJECT SECTIONS -->
 
-<section class="bg-black py-20 px-6 md:px-20 space-y-32">
-  <ProjectSlide
-    v-for="(slide, i) in slides"
-    :key="i"
-    :title="slide.title"
-    :subtitle="slide.subtitle"
-    :text="slide.text"
-    :img="slide.img"
-    :reverse="slide.reverse"
-  />
+<section class="bg-black">
+<ProjectSlide
+  v-for="(slide, i) in slides"
+  :key="i"
+  :title="slide.title"
+  :subtitle="slide.subtitle"
+  :text="slide.text"
+  :img="slide.img"
+  :reverse="i % 2 === 1"
+/>
 </section>
+
+
+
 
 
 
@@ -144,22 +147,25 @@
 
 
 <script setup>
-     import ProjectSlide from '../../components/ProjectSlide.vue'
-import gsap from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { onMounted } from "vue"
+import ProjectSlide from "../../components/ProjectSlide.vue";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { onMounted } from "vue";
 
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger);
 
 /* HERO */
-import gibsonHero from '../../assets/gibson-cover-pagina-progetti.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
+import gibsonHero from "@/assets/gibson-cover-pagina-progetti.webp?w=800;1280;1920&format=webp;jpeg&as=picture";
 
 /* SLIDES */
-import p1slide1 from "../../assets/p1slide1.webp?w=800;1280;1920&format=webp;jpeg&as=picture"
-import p1slide2 from "../../assets/p1slide2.webp?w=800;1280;1920&format=webp;jpeg&as=picture"
-import p1slide3 from "../../assets/p1slide3.webp?w=800;1280;1920&format=webp;jpeg&as=picture"
-import p1slide4 from "../../assets/p1slide4.webp?w=800;1280;1920&format=webp;jpeg&as=picture"
-import p1slide5 from "../../assets/p1slide5.webp?w=800;1280;1920&format=webp;jpeg&as=picture"
+import p1slide1 from "@/assets/p1slide1.webp?w=800;1280;1920&format=webp;jpeg&as=picture";
+import p1slide2 from "@/assets/p1slide2.webp?w=800;1280;1920&format=webp;jpeg&as=picture";
+import p1slide3 from "@/assets/p1slide3.webp?w=800;1280;1920&format=webp;jpeg&as=picture";
+import p1slide4 from "@/assets/p1slide4.webp?w=800;1280;1920&format=webp;jpeg&as=picture";
+import p1slide5 from "@/assets/p1slide5.webp?w=800;1280;1920&format=webp;jpeg&as=picture";
+
+
+
 
 const slides = [
   {
@@ -197,7 +203,7 @@ const slides = [
     text: "La struttura dell’app si basa su tre modalità…",
     reverse: false
   }
-]
+];
 
 /* GSAP ANIMATIONS */
 onMounted(() => {

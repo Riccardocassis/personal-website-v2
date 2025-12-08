@@ -1,35 +1,53 @@
 <template>
-  <section class="w-full bg-black py-20">
+  <section class="w-full py-12 bg-black overflow-hidden">
+
     <div
-      :class="[
-        'grid grid-cols-1 md:grid-cols-2 gap-10 items-center',
-        reverse ? 'md:[direction:rtl]' : 'md:[direction:ltr]'
-      ]"
-      class="px-6 md:px-20"
+      class="w-full flex flex-col md:flex-row relative"
+      :class="reverse ? 'md:flex-row-reverse' : ''"
     >
 
-      <!-- IMAGE -->
-      <div class="overflow-hidden rounded-lg">
+      <!-- IMAGE FULL BLEED -->
+      <div
+        class="relative w-full md:w-[50vw] h-[50vh] md:h-auto overflow-hidden"
+        :class="reverse ? 'md:right-0' : 'md:left-0'"
+      >
         <picture>
-          <template v-for="src in img.sources" :key="src.srcset">
-            <source :srcset="src.srcset" :type="src.type" />
-          </template>
+          <source
+            v-for="s in img.sources"
+            :key="s.srcset"
+            :srcset="s.srcset"
+            :type="s.type"
+          />
           <img
             :src="img.img.src"
-            class="w-full h-full object-cover rounded-lg"
+            alt=""
+            class="w-full h-full object-cover"
             loading="lazy"
             decoding="async"
           />
         </picture>
       </div>
 
-      <!-- TEXT -->
-      <div class="max-w-xl text-white" :class="reverse ? 'md:text-right' : 'md:text-left'">
-        <h3 class="text-xl font-semibold mb-4">{{ title }}</h3>
-        <p class="text-white/70 leading-relaxed">{{ text }}</p>
+      <!-- TEXT BLOCK -->
+      <div
+        class="w-full md:w-1/2 flex flex-col justify-center gap-4 px-6 md:px-12 text-white"
+        :class="reverse ? 'md:items-start md:text-left' : 'md:items-end md:text-right'"
+      >
+        <h2 class="text-2xl md:text-3xl font-semibold">
+          {{ title }}
+        </h2>
+
+        <h3 class="text-white/70 text-base md:text-lg">
+          {{ subtitle }}
+        </h3>
+
+        <p class="text-white/60 leading-relaxed">
+          {{ text }}
+        </p>
       </div>
 
     </div>
+
   </section>
 </template>
 
@@ -38,17 +56,11 @@ defineProps({
   title: String,
   subtitle: String,
   text: String,
-  img: Object,
+  img: Object,      // vite-imagetools picture object
   reverse: Boolean
-});
+})
 </script>
 
 <style scoped>
-/* Fix per inversione direzione senza effetti collaterali */
-[direction="rtl"] {
-  direction: rtl;
-}
-[direction="ltr"] {
-  direction: ltr;
-}
+/* Nessuno spacing orizzontale: serve full-bleed reale */
 </style>
