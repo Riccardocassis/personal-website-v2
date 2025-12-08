@@ -1,57 +1,69 @@
 <template>
 
-  <!-- HERO -->
+<!-- HERO -->
+<section
+  class="relative w-full 
+         h-[50vh] md:h-[85vh] 
+         overflow-hidden bg-transparent 
+         mt-[56px] md:mt-0">
 
-  <section class="relative w-full md:h-[85vh] h-[35vh] overflow-hidden bg-transparent -mt-12 md:mt-0">
-    <picture>
-      <template v-for="source in gibsonHero.sources" :key="source.srcset">
-        <source :srcset="source.srcset" :type="source.type" />
-      </template>
+  <!-- IMAGE -->
+  <picture class="block w-full h-full">
+    <template v-for="source in gibsonHero.sources" :key="source.srcset">
+      <source :srcset="source.srcset" :type="source.type" />
+    </template>
 
-      <img
-        :src="gibsonHero.img.src"
-        alt="Gibson SG-1961 cover"
-        class="reveal-img absolute inset-0 w-full h-full object-cover object-top md:object-center opacity-90"
-        fetchpriority="high"
-        decoding="async"
-      />
-    </picture>
+    <img
+      :src="gibsonHero.img.src"
+      alt="Gibson SG-1961 cover"
+      class="absolute inset-0 w-full h-full object-cover 
+             object-top md:object-center opacity-90"
+      fetchpriority="high"
+      decoding="async"
+    />
+  </picture>
 
-    <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-transparent"></div>
+  <!-- GRADIENT -->
+  <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-transparent"></div>
 
-    <div class="absolute inset-0 flex items-center md:items-end justify-center md:justify-start pt-2 md:pb-20 pl-4 md:pl-20">
-      <div class="max-w-3xl text-center md:text-left px-4 md:px-6">
-        <h1 class="hidden md:block text-3xl md:text-6xl font-extrabold text-white leading-tight">
-          Gibson SG-1961
-        </h1>
-        <p class="hidden md:block text-xs md:text-sm text-white/70 mt-3 md:mt-4 tracking-wide">
-          Concept Experience — Il suono della SG-1961 trasformato in un’esperienza digitale interattiva
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- MOBILE TITLE -->
-  <div class="md:hidden px-6 pt-3">
-    <h1 class="text-3xl font-extrabold text-white leading-tight mb-1">Gibson SG-1961</h1>
-    <p class="text-xs text-white/70 mt-2">
-      Concept Experience — Il suono della SG-1961 trasformato in un’esperienza digitale interattiva
-    </p>
-  </div>
-
-  <!-- INTRO -->
-  <section class="bg-black py-8 md:py-20 px-6">
-    <div class="max-w-3xl mx-auto text-center md:text-left">
-      <h2 class="text-3xl md:text-4xl font-semibold text-white mb-4 md:mb-6 text-center">
-        Lo scopo del progetto
-      </h2>
-
-      <p class="text-white/60 text-lg leading-snug md:leading-relaxed">
-        In questo progetto ho voluto ricreare un concept di landing page dedicata
-        a uno strumento iconico come la Gibson SG-1961…
+  <!-- DESKTOP TEXT -->
+  <div class="hidden md:flex absolute inset-0 items-end justify-start pb-20 pl-20">
+    <div class="max-w-3xl text-left">
+      <h1 class="text-6xl font-extrabold text-white leading-tight">
+        Gibson SG-1961
+      </h1>
+      <p class="text-sm text-white/70 mt-4 tracking-wide">
+        Concept Experience — Il suono della SG-1961 trasformato in un’esperienza digitale interattiva
       </p>
     </div>
-  </section>
+  </div>
+
+</section>
+
+<!-- MOBILE TITLE -->
+<div class="md:hidden px-6 -mt-4">
+  <h1 class="text-3xl font-extrabold text-white leading-tight">Gibson SG-1961</h1>
+  <p class="text-xs text-white/70 mt-1">
+    Concept Experience — Il suono della SG-1961 trasformato in un’esperienza digitale interattiva
+  </p>
+</div>
+
+
+
+
+  <!-- INTRO -->
+<section class="bg-black py-2 md:py-20 px-6">
+  <div class="max-w-3xl mx-auto text-center md:text-left">
+    <h2 class="text-2xl md:text-4xl font-semibold text-white mb-2 md:mb-6 text-center">
+      Lo scopo del progetto
+    </h2>
+
+    <p class="text-white/60 text-base md:text-lg leading-snug md:leading-relaxed">
+      In questo progetto ho voluto ricreare un concept di landing page dedicata
+      a uno strumento iconico come la Gibson SG-1961…
+    </p>
+  </div>
+</section>
 
   <!-- VIDEO -->
   <section class="bg-black py-8 px-6">
