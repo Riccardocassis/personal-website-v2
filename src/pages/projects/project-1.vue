@@ -155,14 +155,14 @@ import { onMounted } from "vue";
 gsap.registerPlugin(ScrollTrigger);
 
 /* HERO */
-import gibsonHero from "@/assets/gibson-cover-pagina-progetti.webp?w=800;1280;1920&format=webp;jpeg&as=picture";
+import gibsonHero from "@/assets/gibson-cover-pagina-progetti.webp?width=800,1280,1920&format=webp&as=picture";
 
 /* SLIDES */
-import p1slide1 from "@/assets/p1slide1.webp?w=800;1280;1920&format=webp;jpeg&as=picture";
-import p1slide2 from "@/assets/p1slide2.webp?w=800;1280;1920&format=webp;jpeg&as=picture";
-import p1slide3 from "@/assets/p1slide3.webp?w=800;1280;1920&format=webp;jpeg&as=picture";
-import p1slide4 from "@/assets/p1slide4.webp?w=800;1280;1920&format=webp;jpeg&as=picture";
-import p1slide5 from "@/assets/p1slide5.webp?w=800;1280;1920&format=webp;jpeg&as=picture";
+import p1slide1 from "@/assets/p1slide1.webp?width=800,1280,1920&format=webp&as=picture";
+import p1slide2 from "@/assets/p1slide2.webp?width=800,1280,1920&format=webp&as=picture";
+import p1slide3 from "@/assets/p1slide3.webp?width=800,1280,1920&format=webp&as=picture";
+import p1slide4 from "@/assets/p1slide4.webp?width=800,1280,1920&format=webp&as=picture";
+import p1slide5 from "@/assets/p1slide5.webp?width=800,1280,1920&format=webp&as=picture";
 
 
 
