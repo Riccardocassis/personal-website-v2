@@ -144,7 +144,7 @@
 
 
 <script setup>
-     import ProjectSlide from '@/components/ProjectSlide.vue'
+     import ProjectSlide from '../../components/ProjectSlide.vue'
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { onMounted } from "vue"
