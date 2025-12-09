@@ -79,10 +79,10 @@ const hero = {
 
 /* SLIDES DATA */
 const slides = [
-  { title: "Situazione iniziale", subtitle: "Analisi del sito", text: "Ho analizzato il sito esistente per individuare criticità in struttura, UI e contenuti: leggibilità scarsa, distribuzione confusa e identità visiva non allineata alla professionalità dell’azienda.", img: img2sizexl },
-  { title: "Branding & Palette Colori", subtitle: "Nuova direzione visiva", text: "Ho creato una palette colori stabile da utilizzare sul sito web partendo dai colori del Logo ufficiale in maniera coerente e stabile.", img: colorpalettesizexl },
-  { title: "Tipografia", subtitle: "Un Font semplice ma efficace", text: "Insieme al cliente sono state fatte delle proposte tipografiche ed è stato scelto l'inter per massima leggibilità e coerenza tipografica.", img: fontsizexl },
-  { title: "Architettura del sito", subtitle: "Struttura & UX semplificata", text: "Ho effettuato una redistribuzione dei contenuti e reso i percorsi più chiari per ridurre il carico cognitivo evitare il tasso di abbandono facilitando la navigazione verso gli elementi desiderati.", img: cardsize },
+  { title: "Situazione iniziale", subtitle: "Analisi del sito.", text: "Ho analizzato il sito esistente per individuare criticità in struttura, UI e contenuti: leggibilità scarsa, distribuzione confusa e identità visiva non allineata alla professionalità dell’azienda.", img: img2sizexl },
+  { title: "Branding & Palette Colori", subtitle: "Nuova direzione visiva.", text: "Ho creato una palette colori stabile da utilizzare sul sito web partendo dai colori del Logo ufficiale in maniera coerente e stabile.", img: colorpalettesizexl },
+  { title: "Tipografia", subtitle: "Un Font semplice ma efficace.", text: "Insieme al cliente sono state fatte delle proposte tipografiche ed è stato scelto l'inter per massima leggibilità e coerenza tipografica.", img: fontsizexl },
+  { title: "Architettura del sito", subtitle: "Struttura & UX semplificata.", text: "Ho effettuato una redistribuzione dei contenuti e reso i percorsi più chiari per ridurre il carico cognitivo evitare il tasso di abbandono facilitando la navigazione verso gli elementi desiderati.", img: cardsize },
  
 ];
 </script>

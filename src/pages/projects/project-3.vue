@@ -68,7 +68,7 @@ import landingsynapses from "@/assets/landingsynapses.webp?width=800,1280,1920&f
 /* HERO DATA */
 const hero = {
   title: "Synapses landing Page",
-  subtitle: "Sviluppo della landing page informativa per l'evento Synapses della Libera Accademia delle Belle Arti di Brescia (LABA)",
+  subtitle: "Sviluppo della landing page informativa.",
   img: landingsynapses
 };
 

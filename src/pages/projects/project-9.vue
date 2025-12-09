@@ -75,7 +75,7 @@ const hero = {
 const slides = [
   { title: "Disegno & stile", subtitle: "L'imperfezione del fatto a manno riflette l'imperfezione in ciascuno di noi.", text: "Tutte le illustrazioni sono state disegnate a mano sull'Ipad, adottando uno stile volutamente “grezzo”, perché l’overthinking non è pulito, ordinato o patinato. È caotico, scomodo, rumoroso.", img: ctrlaltcancillustrazione },
   { title: "Costruzione narrativa", subtitle: "Una tematica seria affrontata in modo informale.", text: "Ho strutturato la fanzine in step, come un manuale per soldati:riconosci il problema, entra nella tua mente prendendo consapevolezza dei tuoi pensieri,identifica i mostri, affrontali, ed infine vedrai che affrontandoli nella maodalità corretta se ne andranno da soli. Ovviamente questo non è un manuale e serve come primo approccio ma a mio avviso specialmente quando si pensa troppo è utile seguire un piano senza divagare, il tutto scritto con un tono sarcastico e leggero.", img: ctrlaltcancnarrazione },
-  { title: "Poster", subtitle: "Un messaggio visivo chiaro", text: "Il poster riassume il messaggio della fanzine. Ho voluto fare un parallelismo tra la mente e un computer", img: crtlaltcancposter },
+  { title: "Poster", subtitle: "Un messaggio visivo chiaro.", text: "Il poster riassume il messaggio della fanzine. Ho voluto fare un parallelismo tra la mente e un computer", img: crtlaltcancposter },
   ];
 </script>
 

@@ -71,7 +71,7 @@ import opsyfyproto from "@/assets/opsyfyproto.webp?width=800,1280,1920&format=we
 /* HERO DATA */
 const hero = {
   title: "Opsify concept App",
-  subtitle: " un’app mobile dedicata alla creazione e condivisione di scuse personalizzate.",
+  subtitle: " Un’App mobile dedicata alla creazione e condivisione di scuse personalizzate.",
   img: coveropsify
 };
 
