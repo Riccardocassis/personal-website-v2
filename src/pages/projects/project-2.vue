@@ -72,8 +72,8 @@ import cardsize from "@/assets/cardsize.webp?width=800,1280,1920&format=webp&as=
 
 /* HERO DATA */
 const hero = {
-  title: "Restyling del sito e ottimizzazione SEO",
-  subtitle: "Un progetto di UX, UI e ottimizzazione dei contenuti per migliorare chiarezza, credibilità e navigazione.",
+  title: "Sviluppo del sito web",
+  subtitle: "Restyling del sito e ottimizzazione SEO.",
   img: coversizexl
 };
 

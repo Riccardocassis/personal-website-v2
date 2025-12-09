@@ -70,8 +70,8 @@ import rbsw from "@/assets/rbsw.webp?width=800,1280,1920&format=webp&as=picture"
 
 /* HERO DATA */
 const hero = {
-  title: "Roberto piadine",
-  subtitle: "Art direction proposal, un brand di piadine con un’identità nuova, coraggiosa e irriverente.",
+  title: "Roberto Rebranding",
+  subtitle: "Art direction proposal, un concept distruptive per un brand di piadine.",
   img: coverbrandbibler1
 };
 

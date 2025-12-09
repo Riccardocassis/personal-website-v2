@@ -74,7 +74,7 @@ import p1slide5 from "@/assets/p1slide5.webp?width=800,1280,1920&format=webp&as=
 /* HERO DATA */
 const hero = {
   title: "Gibson SG-1961",
-  subtitle: "Concept Experience — Il suono della SG-1961 trasformato in un’esperienza digitale interattiva",
+  subtitle: "Il suono della SG-1961 trasformato in un’esperienza digitale interattiva",
   img: gibsonHero
 };
 

@@ -70,7 +70,7 @@ import hgmp from "@/assets/hgmp.webp?width=800,1280,1920&format=webp&as=picture"
 /* HERO DATA */
 const hero = {
   title: "Heller garden",
-  subtitle: "Art direction proposal",
+  subtitle: "Art direction proposal rebranding del giardino botanico.",
   img: hellerhero
 };
 

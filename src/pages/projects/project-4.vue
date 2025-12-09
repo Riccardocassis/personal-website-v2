@@ -73,7 +73,7 @@ import fillbos5 from "@/assets/fillbos5.webp?width=800,1280,1920&format=webp&as=
 /* HERO DATA */
 const hero = {
   title: "Fillbo concept app",
-  subtitle: "Un prototipo mobile progettato per ridurre gli sprechi alimentari.",
+  subtitle: "Un gestionale progettato per ridurre gli sprechi alimentari.",
   img: fillbohero
 };
 

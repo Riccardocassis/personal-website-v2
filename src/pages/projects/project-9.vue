@@ -67,7 +67,7 @@ import crtlaltcancposter from "@/assets/crtlaltcancposter.webp?width=800,1280,19
 /* HERO DATA */
 const hero = {
   title: "Control alt canc",
-  subtitle: "Una fanzine illustrata dedicata alla Giornata Mondiale della Salute Mentale",
+  subtitle: "Un fumetto illustrato dedicato alla Giornata Mondiale della Salute Mentale",
   img: fumettohero
 };
 
