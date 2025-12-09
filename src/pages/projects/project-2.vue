@@ -7,7 +7,7 @@
   <ProjectIntro
     :data="{
       title: 'Scopo del progetto',
-      text: 'In questo progetto ho ricostruito l’intera esperienza digitale di Sizexl, riorganizzando contenuti, navigazione e interfaccia visiva per renderla più chiara, credibile e coerente con la qualità dei servizi offerti.'
+      text: 'In questo progetto ho ristrutturato il sito ufficialedi Sizexl, riorganizzando contenuti, navigazione e interfaccia visiva per renderla più chiara, credibile e coerente con la qualità dei servizi offerti.'
     }"
   />
 
@@ -21,9 +21,9 @@
   <!-- ELEMENTI CHIAVE -->
   <ProjectKeyPoints
     :items="[
-      { title: 'Direzione Creativa & Concept', text: 'Ho definito il concept visivo…' },
-      { title: '3D e interazioni', text: 'Ho realizzato modelli 3D…' },
-      { title: 'Ottimizzazione SEO', text: 'In questo progetto ho migliorato la visibilità del sito sui motori di ricerca attraverso tecniche di ottimizzazione on-page e off-page. In particolare ho lavorato sulla seo tecnica' }
+      { title: 'Direzione Creativa & Concept', text: 'Insieme al cliente sono partito sviluppando delle possibili reference che definissero la nuova direzione visiva da seguire e successivamente, una volta optato per uno stile formale e corporate ho sviluppato i wireframes e poi il sito web.' },
+      { title: 'Obiettivi di progetto', text: 'Aumentare la brand awareness e migliorare l’esperienza utente attraverso una navigazione più intuitiva e contenuti più chiari.' },
+      { title: 'Ottimizzazione SEO', text: 'In questo progetto ho migliorato la visibilità del sito sui motori di ricerca attraverso tecniche di ottimizzazione on-page e off-page e SEO tecnica,' }
     ]"
   />
 
@@ -80,9 +80,9 @@ const hero = {
 /* SLIDES DATA */
 const slides = [
   { title: "Situazione iniziale", subtitle: "Analisi del sito", text: "Ho analizzato il sito esistente per individuare criticità in struttura, UI e contenuti: leggibilità scarsa, distribuzione confusa e identità visiva non allineata alla professionalità dell’azienda.", img: img2sizexl },
-  { title: "Branding & Palette Colori", subtitle: "Nuova direzione visiva", text: "Palette aggiornata per un tono più professionale, leggibile e contemporaneo.", img: colorpalettesizexl },
-  { title: "Tipografia", subtitle: "Un Font semplice ma efficace", text: " Scelta condivisa con il cliente: Inter, per massima leggibilità e coerenza tipografica.", img: fontsizexl },
-  { title: "Architettura del sito", subtitle: "Struttura & UX semplificata", text: "Redistribuzione dei contenuti e percorsi più chiari per ridurre il carico cognitivo e facilitare la navigazione.", img: cardsize },
+  { title: "Branding & Palette Colori", subtitle: "Nuova direzione visiva", text: "Ho creato una palette colori stabile da utilizzare sul sito web partendo dai colori del Logo ufficiale in maniera coerente e stabile.", img: colorpalettesizexl },
+  { title: "Tipografia", subtitle: "Un Font semplice ma efficace", text: "Insieme al cliente sono state fatte delle proposte tipografiche ed è stato scelto l'inter per massima leggibilità e coerenza tipografica.", img: fontsizexl },
+  { title: "Architettura del sito", subtitle: "Struttura & UX semplificata", text: "Ho effettuato una redistribuzione dei contenuti e reso i percorsi più chiari per ridurre il carico cognitivo evitare il tasso di abbandono facilitando la navigazione verso gli elementi desiderati.", img: cardsize },
  
 ];
 </script>
