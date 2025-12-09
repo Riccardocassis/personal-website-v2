@@ -1,323 +1,90 @@
 <template>
-  <!-- HERO (Apple-like, generous whitespace) -->
-  <section class="relative w-full md:h-[85vh] h-[35vh] overflow-hidden bg-transparent -mt-12 md:mt-0">
-    <picture>
-      <source type="image/webp" :srcset="rbHero.webp" />
-      <source type="image/jpeg" :srcset="rbHero.jpeg" />
-      <img
-        :src="rbHero.jpeg[1280]"
-        alt="Cover"
-        class="reveal-img absolute inset-0 w-full h-full object-cover object-top md:object-center opacity-90"
-        fetchpriority="high"
-        decoding="async"
-      />
-    </picture>
 
-    <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-transparent"></div>
+  <!-- HERO -->
+  <ProjectHero :data="hero" />
 
-    <div class="absolute inset-0 flex items-center md:items-end justify-center md:justify-start pt-2 md:pb-20 pl-4 md:pl-20">
-      <div class="max-w-3xl text-center md:text-left px-4 md:px-6">
-        <h1 class="hidden md:block text-3xl md:text-6xl font-extrabold text-white leading-tight">Roberto piadine</h1>
-        <p class="hidden md:block text-xs md:text-sm text-white/70 mt-3 md:mt-4 tracking-wide">Art direction proposal | un brand di piadine con un’identità nuova, coraggiosa e irriverente.</p>
-      </div>
-    </div>
-  </section>
+  <!-- INTRO -->
+  <ProjectIntro
+    :data="{
+      title: 'Scopo del progetto',
+      text: 'In questo concept ho deciso di prendere un classico brand di piadine qualsiasi, ristrutturarlo conferendogli un’identità nuova: coraggiosa, irriverente e impossibile da ignorare. Attorno ad esso ho costruito un immaginario visivo prendendo come riferimento il mondo hippy. Ho scelto di creare un ponte tra passato e presente con i ribelli di un tempo, in modo tale da conferire ad un prodotto semplice un aura mistica e accattivante.'
+    }"
+  />
 
-  <!-- Mobile H1: show immediately below hero on small screens -->
-  <div class="md:hidden px-6 pt-3">
-    <h1 class="text-3xl font-extrabold text-white leading-tight mb-1">Roberto piadine</h1>
-    <p class="text-xs text-white/70 mt-2">Art direction proposal | un brand di piadine con un’identità nuova, coraggiosa e irriverente.</p>
-  </div>
+ 
 
-  <!-- Project Intro (Apple-style clear intro) -->
-  <section class="bg-black py-8 md:py-20 px-6">
-    <div class="max-w-3xl mx-auto text-center md:text-left">
-      <h2 class="text-3xl md:text-4xl font-semibold text-white mb-4 md:mb-6 text-center">Lo scopo del progetto</h2>
-      <p class="text-white/60 text-lg leading-snug md:leading-relaxed">In questo concept ho deciso di prendere un classico brand di piadine e conferirgli un’identità nuova: coraggiosa, irriverente e impossibile da ignorare. Attorno ad esso ho costruito un immaginario visivo ribelle prendendo come riferimento il "ribelli per eccezione" ovvero gli hippy, ribelli ironici, colorati e iconici. Ho scelto di creare un ponte tra passato e presente con i ribelli di un tempo e un attitude che è ancora presente in ciascuno di noi. Ho optato per un linguaggio diretto e volutamente sopra le righe per emergere in un mercato saturo e indistinguibile, conferendo ad un prodotto semplice un aura mistica e accattivante.</p>
-    </div>
-  </section>
 
-  <!-- Video CTA: preview + button that opens fullscreen modal -->
-  <!-- Video section removed as requested -->
+  <!-- ELEMENTI CHIAVE -->
+  <ProjectKeyPoints
+    :items="[
+      { title: 'Direzione Creativa & Concept', text: 'Ho definito un’identità visiva che rompe gli schemi del food tradizionale e parla a un pubblico che vuole distinguersi. Palette psichedeliche, tono provocatorio e immaginario hippy diventano gli strumenti narrativi del brand.' },
+      { title: 'Sistema visivo & Art direction', text: 'Ho costruito un linguaggio visivo fatto di tipografie espressive, pattern audaci e una fotografia diretta, spontanea e “viva”. Ogni elemento è pensato per creare un’identità che vibra: posters, composizioni pop, contrasti saturi e un mood energico che supporta il payoff: Don’t ask, act.' },
+      { title: 'Branding & Applicazioni', text: 'Ho ridisegnato il logo, sviluppato il packaging, creato gli OOH e i contenuti social. L’obiettivo era uno: costruire un sistema coerente, riconoscibile e scalabile. Il risultato è un brand che funziona in ogni formato: dallo scaffale alla strada, fino ai social.' }
+    ]"
+  />
 
-  <!-- Key Features (three clean columns) moved under Video CTA -->
-  <section class="bg-black py-20 px-6">
-    <div class="max-w-6xl mx-auto text-center">
-      <h2 class="text-2xl md:text-3xl font-semibold text-white mb-8">Elementi chiave</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-start text-center">
-        <div class="px-6">
-          <h3 class="text-xl font-semibold text-white"> Direzione Creativa & Concept</h3>
-          <p class="text-white/60 mt-3">Ho definito un’identità visiva che rompe gli schemi del food tradizionale e parla a un pubblico che vuole distinguersi. Palette psichedeliche, tono provocatorio e immaginario hippy diventano gli strumenti narrativi del brand.</p>
-        </div>
-        <div class="px-6">
-          <h3 class="text-xl font-semibold text-white">Sistema visivo & Art direction</h3>
-          <p class="text-white/60 mt-3">Ho costruito un linguaggio visivo fatto di tipografie espressive, pattern audaci e una fotografia diretta, spontanea e “viva”.
-Ogni elemento è pensato per creare un’identità che vibra: posters, composizioni pop, contrasti saturi e un mood energico che supporta il payoff “Don’t ask, act.”</p>
-        </div>
-        <div class="px-6">
-          <h3 class="text-xl font-semibold text-white">Branding & Applicazioni</h3>
-          <p class="text-white/60 mt-3">Ho ridisegnato il logo, sviluppato il packaging, creato gli OOH e i contenuti social.
-L’obiettivo era uno: costruire un sistema coerente, riconoscibile e scalabile.
-Il risultato è un brand che funziona in ogni formato: dallo scaffale alla strada, fino ai social.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Project Sections: 8 alternating 60:40 full-bleed image with text appearing on scroll -->
+  <!-- SLIDES -->
   <section class="bg-black">
-    <!-- For spacing between sections -->
-    <div class="space-y-4 md:space-y-20">
-
-      <!-- Helper: each section is full-width; h2 aligned left with px -->
-
-      <!-- 1 -->
-      <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-3 md:mb-6 text-center md:text-left">Logo e Identità</h2>
-        <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
-          <div class="w-full">
-            <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-              <picture>
-                <source type="image/webp" :srcset="rbLogo.webp" />
-                <source type="image/jpeg" :srcset="rbLogo.jpeg" />
-                <img :src="rbLogo.jpeg[1280]" alt="Concept" class="reveal-img w-full h-full object-cover" loading="lazy" decoding="async" />
-              </picture>
-            </div>
-          </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-1 md:pt-0">
-            <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold mb-1">Ribelli dalle fondamenta</h3>
-              <p class="text-white/70 mt-1 md:mt-4">Ho scelto di partire in questo concept rivisitando il logo, mi sono avvalso del font Losta Bonita per richiamare il tema musicale e lo stile degli anni sessanta e settanta tipico delle cover dei vinili.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 2 -->
-      <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Palette e Tipografia</h2>
-        <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
-          <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start order-2 md:order-1">
-            <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Colori psichedelici, tipografia libera.</h3>
-              <p class="text-white/70 mt-4">La scelta della palette cromatica si ispira ai colori vivaci e saturi tipici dell’epoca psichedelica, coniugati comunque in chiave food e quindi senza una iperbole stilistica per non cadere nella banalità. Ho scelto inoltre di far dialogare un font energico come Losta Bonita con uno più pettinato e chiaro come l'Inter crendo il giusto mix volto a garantire la leggibilità</p>
-            </div>
-          </div>
-          <div class="w-full order-1 md:order-2">
-            <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-              <picture>
-                <source type="image/webp" :srcset="rbPalette.webp" />
-                <source type="image/jpeg" :srcset="rbPalette.jpeg" />
-                <img :src="rbPalette.jpeg[1280]" alt="Materials" class="reveal-img w-full h-full object-cover" />
-              </picture>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 3 -->
-      <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Photography Direction</h2>
-        <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
-          <div class="w-full">
-            <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-              <picture>
-                <source type="image/webp" :srcset="rbPhoto.webp" />
-                <source type="image/jpeg" :srcset="rbPhoto.jpeg" />
-                <img :src="rbPhoto.jpeg[1280]" alt="3D" class="reveal-img w-full h-full object-cover" />
-              </picture>
-            </div>
-          </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
-            <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Fotografia spontanea e imperfetta (nel modo giusto)</h3>
-              <p class="text-white/70 mt-4">Ho scelto una fotografia che valorizza corpi reali, situazioni quotidiane e un’estetica volutamente “raw”.
-Cibo e persone convivono nella stessa atmosfera: colori intensi, complicità e uno stile diretto che rompe con la classica food photography patinata.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 4 -->
-      <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Packaging</h2>
-        <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
-          <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start order-2 md:order-1">
-            <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Un Packaging che si vede anche da lontano, ti chiama senza guardarti in grado di comunicarel’essenza del brand</h3>
-
-              <p class="text-white/70 mt-4">Le confezioni sono pensate per emergere dallo scaffale: colori shock che variano in base al prodotto, pattern dichiarati e messaggi diretti.
-Ogni pack è un manifesto del brand, non solo un contenitore.</p>
-            </div>
-          </div>
-          <div class="w-full order-1 md:order-2">
-            <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-              <picture>
-                <source type="image/webp" :srcset="rbPackaging.webp" />
-                <source type="image/jpeg" :srcset="rbPackaging.jpeg" />
-                <img :src="rbPackaging.jpeg[1280]" alt="Interaction" class="reveal-img w-full h-full object-cover" />
-              </picture>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 5 -->
-      <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Campagne</h2>
-        <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
-          <div class="w-full">
-            <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-              <img src="../../assets/rbcmp.webp" alt="Sound" class="reveal-img w-full h-full object-cover" />
-            </div>
-          </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
-            <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Uno stile comunicativo senza filtri</h3>
-              <p class="text-white/70 mt-4">Poster irriverenti, contrasti saturi e messaggi brevi.
-Ho progettato una serie di OOH che incarnano l’archetipo ribelle: provocatori, pop, immediati e divertenti.
-Sono pensati per catturare l’attenzione prima ancora che il pubblico capisca di cosa si tratta.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 6: Eventi e attivazioni -->
-      <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Contenuti social</h2>
-        <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
-          <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start order-2 md:order-1">
-            <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Un tono di voce che colpisce e diverte</h3>
-              <p class="text-white/70 mt-4">Ho sviluppato i contenuti social amplificandol’identità del brand caratterizzandoli conironia, spontaneità e un linguaggio grafico che non ha paura di esagerare (superando forse i confini del politicamente corretto).
-L’obiettivo cardine è stato quello di puntare alla creazione di una community attiva e che si rispecchia nel brand, non un semplice numero di follower.</p>
-            </div>
-          </div>
-          <div class="w-full order-1 md:order-2">
-            <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-              <img src="../../assets/rbsc.webp" alt="Eventi" class="reveal-img w-full h-full object-cover" />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 7: Store & Retail -->
-      <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Sito web e touchpoint digitali</h2>
-        <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
-          <div class="w-full">
-            <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-              <img src="../../assets/rbsw.webp" alt="Sito web" class="reveal-img w-full h-full object-cover" />
-            </div>
-          </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
-            <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Un’esperienza digitale coerente</h3>
-              <p class="text-white/70 mt-4">L’interfaccia segue la stessa direzione ribelle del brand: colori forti, tipografia espressiva e una navigazione veloce.
-La UI accoglie l’utente con la stessa energia degli OOH e del packaging.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
+    <ProjectSlide
+      v-for="(slide, i) in slides"
+      :key="i"
+      :data="slide"
+      :index="i"
+    />
   </section>
 
-  <!-- CTA minimal -->
-  <section class="bg-black py-8 px-6 text-center">
-    <div class="max-w-2xl mx-auto">
-      <p class="text-white/60 mb-6">Ti è piaciuto questo progetto?
-Posso aiutarti a creare esperienze digitali su misura.</p>
-      <div class="flex justify-center gap-8">
-        <a href="/contact" class="text-blue-400 font-semibold underline">Contattami</a>
-      </div>
-    </div>
-  </section>
+  <!-- CTA -->
+  <ProjectCTA />
 
-  <!-- Prev / Next arrows below CTA with labels (responsive) -->
-  <section class="bg-black py-6 md:py-8 px-6">
-    <div class="max-w-2xl mx-auto flex flex-row md:flex-row items-center md:items-stretch justify-center md:justify-between gap-6">
-      <!-- Previous -->
-      <router-link to="/projects/project-7" class="flex items-center gap-0 md:gap-4 md:flex-row text-center md:text-left">
-        <span class="inline-flex items-center justify-center w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full">
-          <span class="text-white">←</span>
-        </span>
-        <span class="hidden md:inline-block text-white/70 text-sm">Progetto precedente</span>
-      </router-link>
-
-      <!-- Center spacer for desktop -->
-      <div class="hidden md:block flex-1"></div>
-
-      <!-- Next -->
-      <router-link to="/projects/project-9" class="flex items-center gap-0 md:gap-4 md:flex-row-reverse text-center md:text-right">
-        <span class="inline-flex items-center justify-center w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full">
-          <span class="text-white">→</span>
-        </span>
-        <span class="hidden md:inline-block text-white/70 text-sm">Progetto successivo</span>
-      </router-link>
-    </div>
-  </section>
-
-  <!-- Video modal removed -->
+  <!-- PREV/NEXT -->
+  <ProjectPrevNext
+    prev="/projects/project-7"
+    next="/projects/project-9"
+  />
 
 </template>
 
+
 <script setup>
-import { onMounted, ref } from 'vue'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import rbHero from '../../assets/cover-brandbibler1.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
-import rbLogo from '../../assets/rbpayoff.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
-import rbPalette from '../../assets/rbcolorietipografia.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
-import rbPhoto from '../../assets/rbft.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
-import rbPackaging from '../../assets/rbpackaging.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
-import rbCampaign from '../../assets/rbcmp.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
-import rbSocial from '../../assets/rbsc.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
-import rbWebsite from '../../assets/rbsw.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
+import ProjectHero from "@/components/ProjectHero.vue";
+import ProjectIntro from "@/components/ProjectIntro.vue";
+import ProjectKeyPoints from "@/components/ProjectKeyPoints.vue";
+import ProjectSlide from "@/components/ProjectSlide.vue";
+import ProjectCTA from "@/components/ProjectCTA.vue";
+import ProjectPrevNext from "@/components/ProjectPrevNext.vue";
 
-gsap.registerPlugin(ScrollTrigger)
+import { useReveal } from "@/composables/useReveal.js"; // ⭐ AGGIUNTA
+useReveal(); // ⭐ ATTIVA ANIMAZIONI SU QUESTA PAGINA
 
-onMounted(() => {
-  const isMobile = typeof window !== 'undefined' && window.matchMedia('(max-width: 767px)').matches
-  const images = gsap.utils.toArray('.reveal-img')
+/* HERO IMAGE */
+import coverbrandbibler1 from "@/assets/coverbrandbibler1.webp?width=800,1280,1920&format=webp&as=picture";
 
-  images.forEach((img) => {
-    const grid = img.closest('.grid')
-    const text = grid ? grid.querySelector('.reveal-text') : null
+/* SLIDES IMAGES */
+import rbpayoff from "@/assets/rbpayoff.webp?width=800,1280,1920&format=webp&as=picture";
+import rbcolorietipografia from "@/assets/rbcolorietipografia.webp?width=800,1280,1920&format=webp&as=picture";
+import rbft from "@/assets/rbft.webp?width=800,1280,1920&format=webp&as=picture";
+import rbpackaging from "@/assets/rbpackaging.webp?width=800,1280,1920&format=webp&as=picture";
+import rbcmp from "@/assets/rbcmp.webp?width=800,1280,1920&format=webp&as=picture";
+import rbsc from "@/assets/rbsc.webp?width=800,1280,1920&format=webp&as=picture";
+import rbsw from "@/assets/rbsw.webp?width=800,1280,1920&format=webp&as=picture";
 
-    if (isMobile) {
-      gsap.set(img, { y: 0, scale: 1, opacity: 1, clearProps: 'all' })
-      if (text) gsap.set(text, { y: 0, opacity: 1, clearProps: 'all' })
-      return
-    }
+/* HERO DATA */
+const hero = {
+  title: "Roberto piadine",
+  subtitle: "Art direction proposal, un brand di piadine con un’identità nuova, coraggiosa e irriverente.",
+  img: coverbrandbibler1
+};
 
-    gsap.set(img, { y: 40, scale: 1.06, opacity: 0, transformOrigin: 'center center' })
-    if (text) gsap.set(text, { y: 24, opacity: 0 })
+/* SLIDES DATA */
+const slides = [
+  { title: "Identità", subtitle: "Un brand ribelle dalle fondamenta.", text: "Ho introdotto questo payoff proprio per distaccarmi dal mondo che caratterizza questa tipologia di cibi in maniera distruptive. La piadina passa in secondo piano e fa da tramite nella vendita di un invito ad un comportamento da mettere in atto, rimanendo impresso nei consumatori.", img: rbpayoff },
+  { title: "Palette e Tipografia", subtitle: "Colori vivaci con un approccio tipografico ispirato agli anni '60 e '70.", text: "La scelta della nuova palette del brand trae le fondamenta tra il mondo hippy e il mondo food, ho scelto di utilizzare dei colori pastello per l'effetto che producono in noi legato all'appetito. Questi colori si mischiano con il Font Losta Bonita, il quale conferisce al brand una estetica inconfondibile e si adatta coerentemente sia sul prodotto che nella comunicazione.", img: rbcolorietipografia },
+  { title: "Photography Direction", subtitle: "Fotografia spontanea e imperfetta (nel modo giusto).", text: "Ho scelto una fotografia che valorizza corpi reali, situazioni quotidiane e un’estetica volutamente “raw”. Cibo e persone convivono nella stessa atmosfera: colori intensi, complicità e uno stile diretto che rompe con la classica food photography patinata.", img: rbft },
+  { title: "Packaging", subtitle: "Un Packaging in grado di comunicarel’essenza del brand.", text: "Le confezioni sono pensate per emergere dallo scaffale: colori shock che variano in base al prodotto, pattern dichiarati e messaggi diretti. Ogni pack è un manifesto del brand, non solo un contenitore.", img: rbpackaging },
+  { title: "Comunicazione e campagne", subtitle: "Uno stile comunicativo senza filtri.", text: "Poster irriverenti, contrasti saturi e messaggi brevi. Ho progettato una serie di OOH che incarnano l’archetipo ribelle: provocatori, pop, immediati e divertenti. Sono pensati per catturare l’attenzione prima ancora che il pubblico capisca di cosa si tratta.", img: rbcmp},
+  {title: "Contenuti social", subtitle: "Un Tov che colpisce e diverte.", text: "Ho sviluppato i contenuti social amplificandol’identità del brand caratterizzandoli conironia, spontaneità e un linguaggio grafico che non ha paura di esagerare (superando forse i confini del politicamente corretto).L’obiettivo cardine è stato quello di puntare alla creazione di una community attiva e che si rispecchia nel brand, non un semplice numero di follower.", img: rbsc},
+{ title: "Sito web e touchpoint digitali", subtitle: "Un’esperienza digitale coerente", text: "L’interfaccia segue la stessa direzione ribelle del brand: colori forti, tipografia espressiva e una navigazione veloce. La UI accoglie l’utente con la stessa energia degli OOH e del packaging.", img: rbsw},
+];
 
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: img,
-        start: 'top 85%',
-        toggleActions: 'play none none reverse'
-      }
-    })
-
-    tl.to(img, { y: 0, scale: 1, opacity: 1, ease: 'power3.out', duration: 1.1 })
-      .to(text || {}, { y: 0, opacity: 1, ease: 'power2.out', duration: 0.6 }, '-=0.35')
-
-    gsap.to(img, {
-      yPercent: -6,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: img,
-        start: 'top bottom',
-        end: 'bottom top',
-        scrub: 0.8
-      }
-    })
-  })
-})
-
-// Video functionality removed
 </script>
 

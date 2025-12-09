@@ -1,288 +1,86 @@
 <template>
 
-  <!-- HERO (Apple-like, generous whitespace) -->
-  <section class="relative w-full md:h-[85vh] h-[35vh] overflow-hidden bg-transparent -mt-12 md:mt-0">
-    <picture>
-      <source type="image/webp" :srcset="opsifyHero.webp" />
-      <source type="image/jpeg" :srcset="opsifyHero.jpeg" />
-      <img
-        :src="opsifyHero.jpeg[1280]"
-        alt="Gibson cover"
-        class="reveal-img absolute inset-0 w-full h-full object-cover object-top md:object-center opacity-90"
-        fetchpriority="high"
-        decoding="async"
-      />
-    </picture>
+  <!-- HERO -->
+  <ProjectHero :data="hero" />
 
-    <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-transparent"></div>
+  <!-- INTRO -->
+  <ProjectIntro
+    :data="{
+      title: 'Scopo del progetto',
+      text: 'Questo progetto riguarda lo sviluppo in figma e la prototipazione su protopie di una applicazione mobile, volta alla creazione e alla condivisione di scuse amichevoli tra gli utenti. Ho scelto di dargli il nome Opsify, perché: opsi è uno termine amichevole che si usa per chiedere scusa in modo informale, l’aggiunta “-fy” richiama il significato di trasformare qualcosa, quindi “Opsify” vuol dire rendere più semplice e naturale il modo di chiedere scusa. Ho scelto di utilizzare dunque un Tov amichevole ed informale nella applicazione e anche i colori che ho scelto abbinati ai font e in generale a tutta la struttura dell’interfaccia, sono volti a creare armonia all’utente.'
+    }"
+  />
 
-    <div class="absolute inset-0 flex items-center md:items-end justify-center md:justify-start pt-2 md:pb-20 pl-4 md:pl-20">
-      <div class="max-w-3xl text-center md:text-left px-4 md:px-6">
-        <h1 class="hidden md:block text-3xl md:text-6xl font-extrabold text-blue leading-tight">Opsify App</h1>
-        <p class="hidden md:block text-xs md:text-sm text-white/70 mt-3 md:mt-4 tracking-wide">Progettazione UX/UI, prototipazione avanzata in Protopie e sviluppo del design system per un’app mobile dedicata alla creazione e condivisione di scuse personalizzate.</p>
-      </div>
-    </div>
-  </section>
+  <!-- VIDEO -->
+  <ProjectVideo
+  src="/videos/opsify.mp4"
+  title="Preview della pagina"
+/>
 
-  <!-- Mobile H1: show immediately below hero on small screens -->
-  <div class="md:hidden px-6 pt-3">
-    <h1 class="text-3xl font-extrabold text-blue leading-tight mb-1">Opsify App</h1>
-    <p class="text-xs text-white/70 mt-2">Progettazione UX/UI, prototipazione avanzata in Protopie e sviluppo del design system per un’app mobile dedicata alla creazione e condivisione di scuse personalizzate.</p>
-  </div>
 
-  <!-- Project Intro (Apple-style clear intro) -->
-  <section class="bg-black py-8 md:py-20 px-6">
-    <div class="max-w-3xl mx-auto text-center md:text-left">
-      <h2 class="text-3xl md:text-4xl font-semibold text-white mb-4 md:mb-6 text-center">Lo scopo del progetto</h2>
-      <p class="text-white/60 text-lg leading-snug md:leading-relaxed">Questo progetto riguarda lo sviluppo in figma e la prototipazione su protopie di una applicazione mobile, volta alla creazione e alla condivisione di scuse amichevoli tra gli utenti. Ho scelto di dargli il nome Opsify, perché: opsi è uno termine amichevole che si usa per chiedere scusa in modo informale, l’aggiunta “-fy” richiama il significato di trasformare qualcosa, quindi “Opsify” vuol dire rendere più semplice e naturale il modo di chiedere scusa. Ho scelto di utilizzare dunque un Tov amichevole ed informale nella applicazione e anche i colori che ho scelto abbinati ai font e in generale a tutta la struttura dell’interfaccia, sono volti a creare armonia all’utente.</p>
-    </div>
-  </section>
+  <!-- ELEMENTI CHIAVE -->
+  <ProjectKeyPoints
+    :items="[
+      { title: 'Concept & Naming', text: 'Ho definito il tono dell’app partendo da un insight semplice: chiedere scusa è un momento scomodo. Ho scelto un linguaggio leggero e un naming che riflette questa idea: “Opsify” unisce l’espressione informale “opsi” al suffisso “-fy”, trasformando l’atto di scusarsi in qualcosa di semplice e naturale.' },
+      { title: 'UX Research & Flussi', text: 'Ho analizzato casi d’uso comuni e contesti ricorrenti (ritardi, imprevisti, appuntamenti mancati) per progettare flussi rapidi e categorizzati. L’obiettivo: permettere all’utente di generare una scusa coerente in pochi secondi, senza frizioni.' },
+      { title: 'UI Design & Micro-interazioni', text: 'L’interfaccia è pensata per abbassare le difese e mettere l’utente a suo agio:colori pastello, tipografia rotonda e micro-animazioni espressive contribuiscono a creare un ambiente morbido, empatico e coinvolgente. Il design guida l’utente in modo intuitivo, rendendo l’esperienza positiva, immediata e leggera.' }
+    ]"
+  />
 
-  <!-- Video CTA: preview + button that opens fullscreen modal -->
-  <section class="bg-black py-8 px-6">
-    <div class="max-w-6xl mx-auto text-center">
-      <h3 class="text-center text-white/70 mb-6">preview della pagina</h3>
-      <div class="relative w-full max-w-4xl mx-auto aspect-square overflow-hidden rounded-2xl shadow-2xl bg-black">
-        <video controls playsinline preload="metadata" class="w-full h-full object-contain">
-          <source src="https://github.com/Riccardocassis/opsify/raw/refs/heads/main/Video_app_scuse.mp4" type="video/mp4" />
-        </video>
-      </div>
-    </div>
-  </section>
-
-  <!-- Key Features (three clean columns) moved under Video CTA -->
-  <section class="bg-black py-20 px-6">
-    <div class="max-w-6xl mx-auto text-center">
-      <h2 class="text-2xl md:text-3xl font-semibold text-white mb-8">Elementi chiave</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-start text-center">
-        <div class="px-6">
-          <h3 class="text-xl font-semibold text-white"> Concept & Naming</h3>
-          <p class="text-white/60 mt-3">Ho definito il tono dell’app partendo da un insight semplice: chiedere scusa è un momento scomodo. Ho scelto un linguaggio leggero e un naming che riflette questa idea: “Opsify” unisce l’espressione informale “opsi” al suffisso “-fy”, trasformando l’atto di scusarsi in qualcosa di semplice e naturale.</p>
-        </div>
-        <div class="px-6">
-          <h3 class="text-xl font-semibold text-white">UX Research & Flussi</h3>
-          <p class="text-white/60 mt-3">Ho analizzato casi d’uso comuni e contesti ricorrenti (ritardi, imprevisti, appuntamenti mancati) per progettare flussi rapidi e categorizzati. L’obiettivo: permettere all’utente di generare una scusa coerente in pochi secondi, senza frizioni.</p>
-        </div>
-        <div class="px-6">
-          <h3 class="text-xl font-semibold text-white">UI Design & Micro-interazioni</h3>
-          <p class="text-white/60 mt-3">Ho sviluppato un’interfaccia accogliente basata su colori pastello, tipografia rotonda e animazioni micro-espressive. L’obiettivo è ridurre l’imbarazzo, guidare l’utente e rendere l’esperienza immediata e positiva.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Project Sections: 8 alternating 60:40 full-bleed image with text appearing on scroll -->
+  <!-- SLIDES -->
   <section class="bg-black">
-    <!-- For spacing between sections -->
-    <div class="space-y-4 md:space-y-20">
-
-      <!-- Helper: each section is full-width; h2 aligned left with px -->
-
-      <!-- 1 -->
-      <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-3 md:mb-6 text-center md:text-left"> Wireframes</h2>
-        <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
-            <div class="w-full">
-            <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-              <picture>
-                <source type="image/webp" :srcset="opsifyWireframes.webp" />
-                <source type="image/jpeg" :srcset="opsifyWireframes.jpeg" />
-                <img :src="opsifyWireframes.jpeg[1280]" alt="Concept" class="reveal-img w-full h-full object-cover" loading="lazy" decoding="async" />
-              </picture>
-            </div>
-          </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-1 md:pt-0">
-            <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold mb-1">Dai primi wireframe alla struttura dell’app</h3>
-              <p class="text-white/70 mt-1 md:mt-4">Ho sviluppato una prima struttura low-fi per testare navigazione, categorie e priorità dei contenuti prima di passare alla fase visual.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 2 -->
-      <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Visual Design / UI</h2>
-        <div class="grid grid-cols-1 md:grid-cols-[40%_60%]">
-          <div class="px-6 md:pl-20 flex items-center justify-center md:justify-start order-2 md:order-1">
-            <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Un’interfaccia leggera e amichevole</h3>
-              <p class="text-white/70 mt-4">Ho costruito l’identità visiva scegliendo colori chiari, contrasti morbidi e una tipografia rotonda per creare un ambiente accogliente e allegro. Ogni scelta contribuisce a rendere l’esperienza immediata e piacevole.</p>
-            </div>
-          </div>
-          <div class="w-full order-1 md:order-2">
-            <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-              <picture>
-                <source type="image/webp" :srcset="opsifyVisual.webp" />
-                <source type="image/jpeg" :srcset="opsifyVisual.jpeg" />
-                <img :src="opsifyVisual.jpeg[1280]" alt="Materials" class="reveal-img w-full h-full object-cover" />
-              </picture>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 3 -->
-      <div class="w-full">
-        <h2 class="px-6 md:pl-20 text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left">Prototipazione con Protopie</h2>
-        <div class="grid grid-cols-1 md:grid-cols-[60%_40%]">
-            <div class="w-full">
-            <div class="w-full aspect-[4/3] overflow-hidden project-img-wrap">
-              <picture>
-                <source type="image/webp" :srcset="opsyfyproto.webp" />
-                <source type="image/jpeg" :srcset="opsyfyproto.jpeg" />
-                <img :src="opsyfyproto.jpeg[1280]" alt="3D" class="reveal-img w-full h-full object-cover" />
-              </picture>
-            </div>
-          </div>
-          <div class="px-6 md:pr-20 flex items-center justify-center md:justify-start pt-6 md:pt-0">
-            <div class="reveal-text translate-y-6 will-change-transform text-center md:text-left" data-animate>
-              <h3 class="text-xl text-white font-semibold">Il tocco finale che migliora l'esperienza</h3>
-              <p class="text-white/70 mt-4">Ho prototipato micro-interazioni e transizioni con Protopie per validare la fluidità dell’esperienza e simulare il comportamento reale dell’app.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- sections 4-5 removed per request -->
-
-      <!-- sections 6-8 removed -->
-
-    </div>
+    <ProjectSlide
+      v-for="(slide, i) in slides"
+      :key="i"
+      :data="slide"
+      :index="i"
+    />
   </section>
 
-  
+  <!-- CTA -->
+  <ProjectCTA />
 
-  <!-- CTA minimal -->
-  <section class="bg-black py-8 px-6 text-center">
-    <div class="max-w-2xl mx-auto">
-      <p class="text-white/60 mb-6">Ti è piaciuto questo progetto?
-Posso aiutarti a creare esperienze digitali su misura.</p>
-      <div class="flex justify-center gap-8">
-        <a href="/contact" class="text-blue-400 font-semibold underline">Contattami</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Prev / Next arrows below CTA with labels (responsive) -->
-  <section class="bg-black py-6 md:py-8 px-6">
-    <div class="max-w-2xl mx-auto flex flex-row md:flex-row items-center md:items-stretch justify-center md:justify-between gap-6">
-      <!-- Previous -->
-      <router-link to="/projects/project-4" class="flex items-center gap-0 md:gap-4 md:flex-row text-center md:text-left">
-        <span class="inline-flex items-center justify-center w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full">
-          <span class="text-white">←</span>
-        </span>
-        <span class="hidden md:inline-block text-white/70 text-sm">Progetto precedente</span>
-      </router-link>
-
-      <!-- Center spacer for desktop -->
-      <div class="hidden md:block flex-1"></div>
-
-      <!-- Next -->
-      <router-link to="/projects/project-6" class="flex items-center gap-0 md:gap-4 md:flex-row-reverse text-center md:text-right">
-        <span class="inline-flex items-center justify-center w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full">
-          <span class="text-white">→</span>
-        </span>
-        <span class="hidden md:inline-block text-white/70 text-sm">Progetto successivo</span>
-      </router-link>
-    </div>
-  </section>
-
-  <!-- Fullscreen video modal -->
-  <div v-if="showVideo" class="fixed inset-0 z-50 flex items-center justify-center bg-black/90">
-    <button @click="closeVideo" class="absolute top-6 right-6 text-white bg-black/40 hover:bg-black/60 px-3 py-2 rounded">Chiudi</button>
-    <video ref="videoRef" controls class="w-full h-full max-w-[1200px] max-h-[90vh] rounded-lg shadow-2xl object-contain">
-      <source src="https://github.com/Riccardocassis/opsify/raw/refs/heads/main/Video_app_scuse.mp4" type="video/mp4" />
-    </video>
-  </div>
-
+  <!-- PREV/NEXT -->
+  <ProjectPrevNext
+    prev="/projects/project-4"
+    next="/projects/project-6"
+  />
 
 </template>
 
+
 <script setup>
-import { onMounted, ref, nextTick } from 'vue'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import opsifyHero from '../../assets/coveropsify.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
-import opsifyWireframes from '../../assets/opsifywirewebp.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
-import opsifyVisual from '../../assets/oopsyf.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
-import opsifyProto from '../../assets/opsyfyproto.webp?w=800;1280;1920&format=webp;jpeg&as=picture'
+import ProjectHero from "@/components/ProjectHero.vue";
+import ProjectIntro from "@/components/ProjectIntro.vue";
+import ProjectVideo from "@/components/ProjectVideo.vue";
+import ProjectKeyPoints from "@/components/ProjectKeyPoints.vue";
+import ProjectSlide from "@/components/ProjectSlide.vue";
+import ProjectCTA from "@/components/ProjectCTA.vue";
+import ProjectPrevNext from "@/components/ProjectPrevNext.vue";
 
-gsap.registerPlugin(ScrollTrigger)
+import { useReveal } from "@/composables/useReveal.js"; // ⭐ AGGIUNTA
+useReveal(); // ⭐ ATTIVA ANIMAZIONI SU QUESTA PAGINA
 
-onMounted(() => {
-  // GSAP-controlled reveal: animate image first, then text; keep subtle parallax
-  const isMobile = typeof window !== 'undefined' && window.matchMedia('(max-width: 767px)').matches
-  const images = gsap.utils.toArray('.reveal-img')
+/* HERO IMAGE */
+import coveropsify from "@/assets/coveropsify.webp?width=800,1280,1920&format=webp&as=picture";
 
-  images.forEach((img) => {
-    // find the nearest grid container and its text block
-    const grid = img.closest('.grid')
-    const text = grid ? grid.querySelector('.reveal-text') : null
+/* SLIDES IMAGES */
+import opsifywirewebp from "@/assets/opsifywirewebp.webp?width=800,1280,1920&format=webp&as=picture";
+import oopsyf from "@/assets/oopsyf.webp?width=800,1280,1920&format=webp&as=picture";
+import opsyfyproto from "@/assets/opsyfyproto.webp?width=800,1280,1920&format=webp&as=picture";
+/* HERO DATA */
+const hero = {
+  title: "Opsify concept App",
+  subtitle: " un’app mobile dedicata alla creazione e condivisione di scuse personalizzate.",
+  img: coveropsify
+};
 
-    if (isMobile) {
-      gsap.set(img, { y: 0, scale: 1, opacity: 1, clearProps: 'all' })
-      if (text) gsap.set(text, { y: 0, opacity: 1, clearProps: 'all' })
-      return
-    }
-
-    // initial states for desktop
-    gsap.set(img, { y: 40, scale: 1.06, opacity: 0, transformOrigin: 'center center' })
-    if (text) gsap.set(text, { y: 24, opacity: 0 })
-
-    // timeline: reveal image then text
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: img,
-        start: 'top 85%',
-        toggleActions: 'play none none reverse'
-      }
-    })
-
-    tl.to(img, { y: 0, scale: 1, opacity: 1, ease: 'power3.out', duration: 1.1 })
-      .to(text || {}, { y: 0, opacity: 1, ease: 'power2.out', duration: 0.6 }, '-=0.35')
-
-    // subtle parallax while scrolling through image (scrubbed)
-    gsap.to(img, {
-      yPercent: -6,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: img,
-        start: 'top bottom',
-        end: 'bottom top',
-        scrub: 0.8
-      }
-    })
-  })
-
-  
-  
-  // final video has been removed from the template
-
-  // Horizontal carousel logic removed
-})
-
-// Video modal state & controls
-const showVideo = ref(false)
-const videoRef = ref(null)
-
-function openVideo() {
-  showVideo.value = true
-  nextTick(() => {
-    if (videoRef.value) {
-      // try to play; some browsers block autoplay without user gesture but click opened it
-      videoRef.value.currentTime = 0
-      videoRef.value.play().catch(() => {})
-    }
-  })
-}
-
-function closeVideo() {
-  if (videoRef.value) {
-    videoRef.value.pause()
-    videoRef.value.currentTime = 0
-  }
-  showVideo.value = false
-}
+/* SLIDES DATA */
+const slides = [
+  { title: "Wireframes", subtitle: "Dai primi wireframe alla struttura dell’app.", text: "Ho sviluppato una prima struttura low-fi per testare navigazione, categorie e priorità dei contenuti prima di passare alla fase visual.", img: opsifywirewebp },
+  { title: "Visual Design / UI", subtitle: "Un’interfaccia leggera e amichevole.", text: "Ho costruito l’identità visiva scegliendo colori chiari, contrasti morbidi e una tipografia rotonda per creare un ambiente accogliente e allegro. Ogni scelta contribuisce a rendere l’esperienza immediata e piacevole.", img: oopsyf },
+  { title: "Prototipazione con Protopie", subtitle: "Il tocco finale che migliora l'esperienza.", text: "Ho prototipato micro-interazioni e transizioni con Protopie per validare la fluidità dell’esperienza e simulare il comportamento reale dell’app.", img: opsyfyproto },
+ 
+];
 </script>
 

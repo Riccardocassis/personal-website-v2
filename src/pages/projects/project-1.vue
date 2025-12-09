@@ -6,8 +6,8 @@
   <!-- INTRO -->
   <ProjectIntro
     :data="{
-      title: 'Lo scopo del progetto',
-      text: 'In questo progetto ho voluto ricreare un concept di landing page dedicata a uno strumento iconico come la Gibson SG-1961…'
+      title: 'Scopo del progetto',
+      text: 'Questo concept nasce da una domanda semplice:come può una chitarra iconica come la Gibson SG-1961 raccontarsi online con la stessa forza che ha dal vivo? Ho progettato una landing page capace di restituire il carattere della SG-1961 in ogni dettaglio dell’esperienza. L’obiettivo era creare un ponte tra il passato e il presente, trasmettendo l’anima rock dello strumento e aumentando awareness e coinvolgimento intorno a un prodotto che ha segnato la storia della musica.'
     }"
   />
 
@@ -21,9 +21,9 @@
   <!-- ELEMENTI CHIAVE -->
   <ProjectKeyPoints
     :items="[
-      { title: 'Direzione Creativa & Concept', text: 'Ho definito il concept visivo…' },
-      { title: '3D e interazioni', text: 'Ho realizzato modelli 3D…' },
-      { title: 'Sviluppo Web & Integrazione', text: 'Ho sviluppato le funzionalità interattive…' }
+      { title: 'Creare un ponte tra il passato e il presente', text: 'Ho definito il concept visivo e il tono dell’esperienza partendo dall’identità della SG-1961. Colori, tipografia e ritmo visivo sono stati calibrati per riflettere la personalità dello strumento in un ambiente digitale coerente.' },
+      { title: '3D e interazioni', text: 'Ho realizzato modelli 3D e micro-interazioni reattive al suono e all’input dell’utente. La chitarra non è più solo un’immagine: è interattiva, esplorabile, “suonabile” anche sul web. Il 3D non è decorazione, ma strumento narrativo per aumentare immersività e coinvolgimento.' },
+      { title: 'Creazione di un applicazione esterna per migliorare la UX dell’ utente', text: 'Con Visual Studio Code ho realizzato una web-app che permette di suonare la SG-1961 direttamente dal browser. Input, animazioni e suoni lavorano insieme per creare un’interazione musicale semplice e immersiva. L’app è stata poi caricata su GitHub Pages e integrata in Webflow.' }
     ]"
   />
 
@@ -80,11 +80,11 @@ const hero = {
 
 /* SLIDES DATA */
 const slides = [
-  { title: "Concept e sviluppo dei Wireframes", subtitle: "Stile estetico", text: "Sono partito analizzando le parti…", img: p1slide1 },
-  { title: "Scelta della piattaforma", subtitle: "Controllo totale sul layout", text: "Webflow è stata la scelta ideale…", img: p1slide2 },
-  { title: "3D Modeling", subtitle: "Spline — 3D leggero e integrabile", text: "Ho scelto Spline per modellare…", img: p1slide3 },
-  { title: "Sviluppo dell'app", subtitle: "Ho scelto il codice come alleato", text: "Con Visual Studio Code ho realizzato una web-app…", img: p1slide4 },
-  { title: "Interfaccia", subtitle: "Tre modalità per ridurre la curva d’apprendimento", text: "La struttura dell’app si basa su tre modalità…", img: p1slide5 }
+  { title: "Concept e sviluppo dei Wireframes", subtitle: "Apprendere dal mondo fisico e portare gli elementi nel digitale.", text: "In questo progetto sono partito analizzando ed esplorando tutte le componenti e l'aura legata a questo prodotto, sia a livello estetico che percettivo, dato che si trattava di uno strumento che è stato protagonista dello sviluppo della storia del Rock ed è ancora un caposaldo. Successivamente dopo questa analisi mi sono messo a prototipare i Wireframes.", img: p1slide1 },
+  { title: "Scelta della piattaforma", subtitle: "Controllo totale sul layout", text: "Webflow è stata la scelta ideale come next-step,dato che prevedevo l'implementazione di vari elementi da embeddare mantenendo allo stesso tempo la pagina leggera. Avevo dunque bisogno di uno strumento che mi permettesse di avere un controllo totale su più aspetti.", img: p1slide2 },
+  { title: "3D Modeling", subtitle: "Spline un tool 3D leggero e integrabile", text: "Ho scelto Spline per modellare in 3d la chitarra e creare delle interazioni e scene di essa poichè l'ho trovato lo strumento più congeniale per interfacciarmi con WebFlow.", img: p1slide3 },
+  { title: "Sviluppo dell'app", subtitle: "Ho scelto il codice come alleato", text: "Con Visual Studio Code ho realizzato una applicazione che permette all'utente di suonare la SG-1961 direttamente dal browser. Input, animazioni e suoni lavorano insieme per creare un’interazione musicale semplice e immersiva. L’app è stata poi caricata su GitHub Pages e integrata in Webflow.", img: p1slide4 },
+  { title: "Interfaccia", subtitle: "Tre modalità per ridurre la curva d’apprendimento", text: "La struttura dell’app si basa su due modalità principali di utilizzo: suono libero delle corde vuote e il suono di due brani che hanno fatto la storia del Rock. Ho volutamente reso l'app molto semplice sia a livello di interfaccia che di utilizzo in primis per renderla accessibile a tutti e in secondo luogo per renderla un elemento secondario a supporto della landing page.", img: p1slide5 }
 ];
 </script>
 
