@@ -1,11 +1,9 @@
 <template>
-  <main class="h-screen flex flex-col">
-    <!-- La tua Home attuale con hero -->
+  <main class="w-full min-h-screen bg-black">
     <Hero />
   </main>
 </template>
+
 <script setup>
-import Footer from '../components/Footer.vue'
-import Hero from '../components/hero.vue'
-import SocialIcons from '../components/socialIcons.vue'
+import Hero from '@/components/hero.vue'
 </script>
