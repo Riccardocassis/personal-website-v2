@@ -36,7 +36,7 @@
               
               <h1 ref="titleRef" id="hero-title" class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
                 <span class="whitespace-nowrap">Riccardo Cassis</span>
-                <span class="block md:inline mt-2 md:mt-0">UI/UX &amp; Web Designer</span>
+                <span class="block mt-2 md:mt-2">UI/UX &amp; Web Designer</span>
               </h1>
 
               <p ref="subtitleRef"
