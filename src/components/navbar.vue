@@ -105,7 +105,7 @@ function handleContactClick(event, options = {}){
     ]"
     style="height:70px;"
   >
-    <div class="flex items-center justify-between max-w-7xl mx-auto w-full px-6 md:px-16 h-full">
+    <div class="relative z-50 flex items-center justify-between max-w-7xl mx-auto w-full px-6 md:px-16 h-full">
 
       <div class="flex items-center h-full">
         <RouterLink to="/" class="flex items-center justify-center" style="width:70px;height:70px;padding:7px;">
@@ -141,7 +141,7 @@ function handleContactClick(event, options = {}){
       <button
         class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg hover:bg-white/10 focus:outline-none text-white"
         @click="mobileOpen = !mobileOpen"
-        :aria-label="$t('nav.openMenu')"
+        :aria-label="mobileOpen ? $t('nav.closeMenu') : $t('nav.openMenu')"
         :aria-expanded="mobileOpen"
       >
         <svg v-if="!mobileOpen" class="w-6 h-6" fill="none" stroke="currentColor">
@@ -153,22 +153,20 @@ function handleContactClick(event, options = {}){
       </button>
 
     </div>
+  </nav>
 
-    <!-- Mobile Menu -->
+  <!-- Mobile Menu — teleported to <body> so it isn't confined by the
+       navbar's own backdrop-blur, which otherwise turns "fixed" here into
+       "fixed relative to the 70px navbar box" instead of the viewport. -->
+  <Teleport to="body">
     <div class="md:hidden">
       <nav
-        :class="['fixed inset-0 z-50 transform transition-transform duration-300 ease-out', mobileOpen ? 'translate-x-0' : '-translate-x-full']"
+        :class="['fixed inset-0 z-40 transform transition-transform duration-300 ease-out', mobileOpen ? 'translate-x-0' : '-translate-x-full']"
         style="padding-top:70px;"
       >
-        <div class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
+        <div class="absolute inset-0 bg-[#05060a]"></div>
 
         <div class="relative h-full flex items-center justify-center px-6">
-          <button class="absolute top-6 right-6 text-white/80 hover:text-white" :aria-label="$t('nav.closeMenu')" @click="mobileOpen = false">
-            <svg class="w-7 h-7" fill="none" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-            </svg>
-          </button>
-
           <div class="relative z-10 w-full max-w-xs" style="max-height:calc(100vh - 140px); overflow-y:auto;">
             <div class="space-y-6 text-center py-6">
 
@@ -193,8 +191,7 @@ function handleContactClick(event, options = {}){
 
       </nav>
     </div>
-
-  </nav>
+  </Teleport>
 </template>
 
 <style scoped>

@@ -31,8 +31,8 @@
 
   <!-- PREV/NEXT -->
   <ProjectPrevNext
-    prev="/projects/project-2"
-    next="/projects/project-4"
+    prev="/projects/sizexl-website"
+    next="/projects/fillbo-app"
   />
 
 </template>
@@ -52,10 +52,13 @@ import ProjectPrevNext from "@/components/ProjectPrevNext.vue";
 import { useReveal } from "@/composables/useReveal.js"; // ⭐ AGGIUNTA
 useReveal(); // ⭐ ATTIVA ANIMAZIONI SU QUESTA PAGINA
 
-const { t, tm } = useI18n();
+import { usePageSeo } from "@/composables/usePageSeo";
+
+const { t, tm, locale } = useI18n();
 
 /* HERO IMAGE */
 import landingsynapses from "@/assets/landingsynapses.webp?width=800,1280,1920&format=webp&as=picture";
+import synapsesOg from "@/assets/landingsynapses.webp?w=1200&format=webp&as=src";
 
 /* HERO DATA */
 const hero = computed(() => ({
@@ -69,5 +72,28 @@ const keyPoints = computed(() => tm('projects.project3.keyPoints'));
 
 /* SLIDES DATA — this project has no image slides */
 const slides = computed(() => []);
+
+/* SEO / GEO / AIO */
+const ogImage = `https://riccardocassis.com${synapsesOg}`
+const pageUrl = 'https://riccardocassis.com/projects/synapses-laba'
+
+usePageSeo(() => ({
+  title: t('projects.project3.seo.title'),
+  description: t('projects.project3.seo.description'),
+  image: ogImage,
+  jsonLd: {
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    name: t('projects.project3.hero.title'),
+    headline: t('projects.project3.hero.title'),
+    description: t('projects.project3.seo.description'),
+    image: ogImage,
+    url: pageUrl,
+    inLanguage: locale.value,
+    keywords: 'web design, landing page, LABA, evento',
+    creator: { '@type': 'Person', name: 'Riccardo Cassis', url: 'https://riccardocassis.com/' },
+    author: { '@type': 'Person', name: 'Riccardo Cassis', url: 'https://riccardocassis.com/' }
+  }
+}))
 </script>
 

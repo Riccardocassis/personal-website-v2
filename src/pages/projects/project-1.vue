@@ -31,8 +31,8 @@
 
   <!-- PREV/NEXT -->
   <ProjectPrevNext
-    prev="/projects/project-9"
-    next="/projects/project-2"
+    prev="/projects/control-alt-canc-fanzine"
+    next="/projects/sizexl-website"
   />
 
 </template>
@@ -52,10 +52,13 @@ import ProjectPrevNext from "@/components/ProjectPrevNext.vue";
 import { useReveal } from "@/composables/useReveal.js"; // ⭐ AGGIUNTA
 useReveal(); // ⭐ ATTIVA ANIMAZIONI SU QUESTA PAGINA
 
-const { t, tm } = useI18n();
+import { usePageSeo } from "@/composables/usePageSeo";
+
+const { t, tm, locale } = useI18n();
 
 /* HERO IMAGE */
 import gibsonHero from "@/assets/gibson-cover-pagina-progetti.webp?width=800,1280,1920&format=webp&as=picture";
+import gibsonOg from "@/assets/gibson-cover-pagina-progetti.webp?w=1200&format=webp&as=src";
 
 /* SLIDES IMAGES */
 import p1slide1 from "@/assets/p1slide1.webp?width=800,1280,1920&format=webp&as=picture";
@@ -80,5 +83,28 @@ const keyPoints = computed(() => tm('projects.project1.keyPoints'));
 const slides = computed(() =>
   tm('projects.project1.slides').map((s, i) => ({ ...s, img: slideImages[i] }))
 );
+
+/* SEO / GEO / AIO */
+const ogImage = `https://riccardocassis.com${gibsonOg}`
+const pageUrl = 'https://riccardocassis.com/projects/gibson-sg-1961'
+
+usePageSeo(() => ({
+  title: t('projects.project1.seo.title'),
+  description: t('projects.project1.seo.description'),
+  image: ogImage,
+  jsonLd: {
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    name: t('projects.project1.hero.title'),
+    headline: t('projects.project1.hero.title'),
+    description: t('projects.project1.seo.description'),
+    image: ogImage,
+    url: pageUrl,
+    inLanguage: locale.value,
+    keywords: 'web design, UI/UX, 3D, landing page',
+    creator: { '@type': 'Person', name: 'Riccardo Cassis', url: 'https://riccardocassis.com/' },
+    author: { '@type': 'Person', name: 'Riccardo Cassis', url: 'https://riccardocassis.com/' }
+  }
+}))
 </script>
 

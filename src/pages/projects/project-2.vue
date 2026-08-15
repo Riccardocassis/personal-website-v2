@@ -31,8 +31,8 @@
 
   <!-- PREV/NEXT -->
   <ProjectPrevNext
-    prev="/projects/project-1"
-    next="/projects/project-3"
+    prev="/projects/gibson-sg-1961"
+    next="/projects/synapses-laba"
   />
 
 </template>
@@ -52,10 +52,13 @@ import ProjectPrevNext from "@/components/ProjectPrevNext.vue";
 import { useReveal } from "@/composables/useReveal.js"; // ⭐ AGGIUNTA
 useReveal(); // ⭐ ATTIVA ANIMAZIONI SU QUESTA PAGINA
 
-const { t, tm } = useI18n();
+import { usePageSeo } from "@/composables/usePageSeo";
+
+const { t, tm, locale } = useI18n();
 
 /* HERO IMAGE */
 import coversizexl from "@/assets/coversizexl.webp?width=800,1280,1920&format=webp&as=picture";
+import sizexlOg from "@/assets/coversizexl.webp?w=1200&format=webp&as=src";
 
 /* SLIDES IMAGES */
 import img2sizexl from "@/assets/img2sizexl.webp?width=800,1280,1920&format=webp&as=picture";
@@ -79,5 +82,28 @@ const keyPoints = computed(() => tm('projects.project2.keyPoints'));
 const slides = computed(() =>
   tm('projects.project2.slides').map((s, i) => ({ ...s, img: slideImages[i] }))
 );
+
+/* SEO / GEO / AIO */
+const ogImage = `https://riccardocassis.com${sizexlOg}`
+const pageUrl = 'https://riccardocassis.com/projects/sizexl-website'
+
+usePageSeo(() => ({
+  title: t('projects.project2.seo.title'),
+  description: t('projects.project2.seo.description'),
+  image: ogImage,
+  jsonLd: {
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    name: t('projects.project2.hero.title'),
+    headline: t('projects.project2.hero.title'),
+    description: t('projects.project2.seo.description'),
+    image: ogImage,
+    url: pageUrl,
+    inLanguage: locale.value,
+    keywords: 'web design, restyling, SEO',
+    creator: { '@type': 'Person', name: 'Riccardo Cassis', url: 'https://riccardocassis.com/' },
+    author: { '@type': 'Person', name: 'Riccardo Cassis', url: 'https://riccardocassis.com/' }
+  }
+}))
 </script>
 

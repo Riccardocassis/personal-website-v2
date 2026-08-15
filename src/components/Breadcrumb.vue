@@ -28,7 +28,7 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
+import { computed, watch, onBeforeUnmount } from 'vue'
 import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 
@@ -50,4 +50,53 @@ const crumbs = computed(() => {
 
   return [first]
 })
+
+/* JSON-LD BreadcrumbList — gives search engines / AI answer engines an
+   explicit, machine-readable version of the trail rendered above. */
+const SITE_URL = 'https://riccardocassis.com'
+const JSONLD_ID = 'breadcrumb-jsonld'
+
+function setBreadcrumbJsonLd(items) {
+  let script = document.getElementById(JSONLD_ID)
+  if (!items || !items.length) {
+    if (script) script.remove()
+    return
+  }
+  const data = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((item, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: item.name,
+      item: item.url
+    }))
+  }
+  if (!script) {
+    script = document.createElement('script')
+    script.type = 'application/ld+json'
+    script.id = JSONLD_ID
+    document.head.appendChild(script)
+  }
+  script.textContent = JSON.stringify(data)
+}
+
+watch(
+  crumbs,
+  (val) => {
+    if (!val.length) {
+      setBreadcrumbJsonLd(null)
+      return
+    }
+    const items = [{ name: 'Riccardo Cassis', url: SITE_URL }]
+    items.push({ name: val[0].label, url: `${SITE_URL}${val[0].to || route.path}` })
+    if (val[1]) {
+      items.push({ name: val[1].label, url: `${SITE_URL}${route.path}` })
+    }
+    setBreadcrumbJsonLd(items)
+  },
+  { immediate: true }
+)
+
+onBeforeUnmount(() => setBreadcrumbJsonLd(null))
 </script>

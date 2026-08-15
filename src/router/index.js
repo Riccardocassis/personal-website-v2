@@ -18,16 +18,27 @@ const routes = [
 
   { path: '/projects',      name: 'projects',          component: Projects, meta: { breadcrumb: 'nav.lavori' } },
 
-  // Project detail placeholders
-  { path: '/projects/project-1',  name: 'project-1',  component: () => import('../pages/projects/project-1.vue'), meta: { breadcrumb: 'nav.lavori', breadcrumbParent: '/projects', projectKey: 'project1' } },
-  { path: '/projects/project-2',  name: 'project-2',  component: () => import('../pages/projects/project-2.vue'), meta: { breadcrumb: 'nav.lavori', breadcrumbParent: '/projects', projectKey: 'project2' } },
-  { path: '/projects/project-3',  name: 'project-3',  component: () => import('../pages/projects/project-3.vue'), meta: { breadcrumb: 'nav.lavori', breadcrumbParent: '/projects', projectKey: 'project3' } },
-  { path: '/projects/project-4',  name: 'project-4',  component: () => import('../pages/projects/project-4.vue'), meta: { breadcrumb: 'nav.lavori', breadcrumbParent: '/projects', projectKey: 'project4' } },
-  { path: '/projects/project-5',  name: 'project-5',  component: () => import('../pages/projects/project-5.vue'), meta: { breadcrumb: 'nav.lavori', breadcrumbParent: '/projects', projectKey: 'project5' } },
-  { path: '/projects/project-6',  name: 'project-6',  component: () => import('../pages/projects/project-6.vue'), meta: { breadcrumb: 'nav.lavori', breadcrumbParent: '/projects', projectKey: 'project6' } },
-  { path: '/projects/project-7',  name: 'project-7',  component: () => import('../pages/projects/project-7.vue'), meta: { breadcrumb: 'nav.lavori', breadcrumbParent: '/projects', projectKey: 'project7' } },
-  { path: '/projects/project-8',  name: 'project-8',  component: () => import('../pages/projects/project-8.vue'), meta: { breadcrumb: 'nav.lavori', breadcrumbParent: '/projects', projectKey: 'project8' } },
-  { path: '/projects/project-9',  name: 'project-9',  component: () => import('../pages/projects/project-9.vue'), meta: { breadcrumb: 'nav.lavori', breadcrumbParent: '/projects', projectKey: 'project9' } },
+  // Project detail pages — descriptive, keyword-rich slugs (SEO/GEO/AIO)
+  { path: '/projects/gibson-sg-1961',         name: 'gibson-sg-1961',         component: () => import('../pages/projects/project-1.vue'), meta: { breadcrumb: 'nav.lavori', breadcrumbParent: '/projects', projectKey: 'project1' } },
+  { path: '/projects/sizexl-website',         name: 'sizexl-website',         component: () => import('../pages/projects/project-2.vue'), meta: { breadcrumb: 'nav.lavori', breadcrumbParent: '/projects', projectKey: 'project2' } },
+  { path: '/projects/synapses-laba',          name: 'synapses-laba',          component: () => import('../pages/projects/project-3.vue'), meta: { breadcrumb: 'nav.lavori', breadcrumbParent: '/projects', projectKey: 'project3' } },
+  { path: '/projects/fillbo-app',             name: 'fillbo-app',             component: () => import('../pages/projects/project-4.vue'), meta: { breadcrumb: 'nav.lavori', breadcrumbParent: '/projects', projectKey: 'project4' } },
+  { path: '/projects/opsify-app',             name: 'opsify-app',             component: () => import('../pages/projects/project-5.vue'), meta: { breadcrumb: 'nav.lavori', breadcrumbParent: '/projects', projectKey: 'project5' } },
+  { path: '/projects/webable-accessibility',  name: 'webable-accessibility',  component: () => import('../pages/projects/project-6.vue'), meta: { breadcrumb: 'nav.lavori', breadcrumbParent: '/projects', projectKey: 'project6' } },
+  { path: '/projects/heller-garden',          name: 'heller-garden',          component: () => import('../pages/projects/project-7.vue'), meta: { breadcrumb: 'nav.lavori', breadcrumbParent: '/projects', projectKey: 'project7' } },
+  { path: '/projects/roberto-rebranding',     name: 'roberto-rebranding',     component: () => import('../pages/projects/project-8.vue'), meta: { breadcrumb: 'nav.lavori', breadcrumbParent: '/projects', projectKey: 'project8' } },
+  { path: '/projects/control-alt-canc-fanzine', name: 'control-alt-canc-fanzine', component: () => import('../pages/projects/project-9.vue'), meta: { breadcrumb: 'nav.lavori', breadcrumbParent: '/projects', projectKey: 'project9' } },
+
+  // Old generic slugs — 301-style client redirects so existing links/bookmarks keep working
+  { path: '/projects/project-1', redirect: '/projects/gibson-sg-1961' },
+  { path: '/projects/project-2', redirect: '/projects/sizexl-website' },
+  { path: '/projects/project-3', redirect: '/projects/synapses-laba' },
+  { path: '/projects/project-4', redirect: '/projects/fillbo-app' },
+  { path: '/projects/project-5', redirect: '/projects/opsify-app' },
+  { path: '/projects/project-6', redirect: '/projects/webable-accessibility' },
+  { path: '/projects/project-7', redirect: '/projects/heller-garden' },
+  { path: '/projects/project-8', redirect: '/projects/roberto-rebranding' },
+  { path: '/projects/project-9', redirect: '/projects/control-alt-canc-fanzine' },
 
   { path: '/services',       name: 'services',        component: () => import('../pages/Services.vue'), meta: { breadcrumb: 'nav.servizi' } },
   { path: '/social',         name: 'social',          component: () => import('../pages/Social.vue'), meta: { breadcrumb: 'social.title' } },

@@ -95,15 +95,15 @@ import opsifyB from '../assets/opsify-b.webp?w=800&format=webp&as=src'
 
 /* PROJECT DATA — single source of truth, order = default "Tutti" layout */
 const allProjects = [
-  { key: 'project1', to: '/projects/project-1', img: gibsonA,      imgHover: gibsonB,      category: 'webDesign',     offset: '2' },
-  { key: 'project2', to: '/projects/project-2', img: sizexlA,      imgHover: sizexlB,      category: 'webDesign',     offset: '1' },
-  { key: 'project3', to: '/projects/project-3', img: synapsesA,    imgHover: synapsesB,    category: 'webDesign',     offset: '3' },
-  { key: 'project4', to: '/projects/project-4', img: fillboA,      imgHover: fillboB,      category: 'app',           offset: '3' },
-  { key: 'project5', to: '/projects/project-5', img: opsifyA,      imgHover: opsifyB,      category: 'app',           offset: '2' },
-  { key: 'project6', to: '/projects/project-6', img: webableA,     imgHover: webableB,     category: 'app',           offset: '2' },
-  { key: 'project7', to: '/projects/project-7', img: hellerA,      imgHover: hellerB,      category: 'brandIdentity', offset: '1' },
-  { key: 'project8', to: '/projects/project-8', img: robertoA,     imgHover: robertoB,     category: 'brandIdentity', offset: null },
-  { key: 'project9', to: '/projects/project-9', img: controlAltA,  imgHover: controlAltB,  category: 'editorial',     offset: '3' }
+  { key: 'project1', to: '/projects/gibson-sg-1961',           img: gibsonA,      imgHover: gibsonB,      category: 'webDesign',     offset: '2' },
+  { key: 'project2', to: '/projects/sizexl-website',           img: sizexlA,      imgHover: sizexlB,      category: 'webDesign',     offset: '1' },
+  { key: 'project3', to: '/projects/synapses-laba',            img: synapsesA,    imgHover: synapsesB,    category: 'webDesign',     offset: '3' },
+  { key: 'project4', to: '/projects/fillbo-app',                img: fillboA,      imgHover: fillboB,      category: 'app',           offset: '3' },
+  { key: 'project5', to: '/projects/opsify-app',                img: opsifyA,      imgHover: opsifyB,      category: 'app',           offset: '2' },
+  { key: 'project6', to: '/projects/webable-accessibility',    img: webableA,     imgHover: webableB,     category: 'app',           offset: '2' },
+  { key: 'project7', to: '/projects/heller-garden',             img: hellerA,      imgHover: hellerB,      category: 'brandIdentity', offset: '1' },
+  { key: 'project8', to: '/projects/roberto-rebranding',        img: robertoA,     imgHover: robertoB,     category: 'brandIdentity', offset: null },
+  { key: 'project9', to: '/projects/control-alt-canc-fanzine',  img: controlAltA,  imgHover: controlAltB,  category: 'editorial',     offset: '3' }
 ]
 
 /* FILTERS */

@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from "vue"
+import { ref, onMounted, onBeforeUnmount, watch } from "vue"
 import { useRoute } from "vue-router"
 
 import Navbar from "./components/navbar.vue"
@@ -19,6 +19,33 @@ const scrollProgress = ref(0)
 let rafId = null
 
 const route = useRoute()
+
+// Keep <link rel="canonical"> and og:url pointed at the actual current page.
+// Every page previously inherited the static homepage URL from index.html,
+// which tells search engines every page is a duplicate of the homepage.
+const SITE_URL = 'https://riccardocassis.com'
+
+function updateCanonical(path) {
+  const url = `${SITE_URL}${path === '/' ? '' : path}`
+
+  let canonical = document.querySelector('link[rel="canonical"]')
+  if (!canonical) {
+    canonical = document.createElement('link')
+    canonical.setAttribute('rel', 'canonical')
+    document.head.appendChild(canonical)
+  }
+  canonical.setAttribute('href', url)
+
+  let ogUrl = document.querySelector('meta[property="og:url"]')
+  if (!ogUrl) {
+    ogUrl = document.createElement('meta')
+    ogUrl.setAttribute('property', 'og:url')
+    document.head.appendChild(ogUrl)
+  }
+  ogUrl.setAttribute('content', url)
+}
+
+watch(() => route.path, updateCanonical, { immediate: true })
 
 function updateProgress() {
   const doc = document.documentElement

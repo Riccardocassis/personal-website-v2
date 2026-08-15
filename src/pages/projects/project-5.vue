@@ -31,8 +31,8 @@
 
   <!-- PREV/NEXT -->
   <ProjectPrevNext
-    prev="/projects/project-4"
-    next="/projects/project-6"
+    prev="/projects/fillbo-app"
+    next="/projects/webable-accessibility"
   />
 
 </template>
@@ -52,10 +52,13 @@ import ProjectPrevNext from "@/components/ProjectPrevNext.vue";
 import { useReveal } from "@/composables/useReveal.js"; // ⭐ AGGIUNTA
 useReveal(); // ⭐ ATTIVA ANIMAZIONI SU QUESTA PAGINA
 
-const { t, tm } = useI18n();
+import { usePageSeo } from "@/composables/usePageSeo";
+
+const { t, tm, locale } = useI18n();
 
 /* HERO IMAGE */
 import coveropsify from "@/assets/coveropsify.webp?width=800,1280,1920&format=webp&as=picture";
+import opsifyOg from "@/assets/coveropsify.webp?w=1200&format=webp&as=src";
 
 /* SLIDES IMAGES */
 import opsifywirewebp from "@/assets/opsifywirewebp.webp?width=800,1280,1920&format=webp&as=picture";
@@ -78,5 +81,28 @@ const keyPoints = computed(() => tm('projects.project5.keyPoints'));
 const slides = computed(() =>
   tm('projects.project5.slides').map((s, i) => ({ ...s, img: slideImages[i] }))
 );
+
+/* SEO / GEO / AIO */
+const ogImage = `https://riccardocassis.com${opsifyOg}`
+const pageUrl = 'https://riccardocassis.com/projects/opsify-app'
+
+usePageSeo(() => ({
+  title: t('projects.project5.seo.title'),
+  description: t('projects.project5.seo.description'),
+  image: ogImage,
+  jsonLd: {
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    name: t('projects.project5.hero.title'),
+    headline: t('projects.project5.hero.title'),
+    description: t('projects.project5.seo.description'),
+    image: ogImage,
+    url: pageUrl,
+    inLanguage: locale.value,
+    keywords: 'UI/UX design, app design, prototyping',
+    creator: { '@type': 'Person', name: 'Riccardo Cassis', url: 'https://riccardocassis.com/' },
+    author: { '@type': 'Person', name: 'Riccardo Cassis', url: 'https://riccardocassis.com/' }
+  }
+}))
 </script>
 

@@ -1,2 +1,14 @@
 /success   /index.html   200
+
+# Old generic project slugs -> descriptive SEO slugs
+/projects/project-1  /projects/gibson-sg-1961            301
+/projects/project-2  /projects/sizexl-website             301
+/projects/project-3  /projects/synapses-laba              301
+/projects/project-4  /projects/fillbo-app                 301
+/projects/project-5  /projects/opsify-app                 301
+/projects/project-6  /projects/webable-accessibility      301
+/projects/project-7  /projects/heller-garden              301
+/projects/project-8  /projects/roberto-rebranding         301
+/projects/project-9  /projects/control-alt-canc-fanzine   301
+
 /*         /index.html   200

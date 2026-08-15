@@ -24,8 +24,8 @@
 
   <!-- PREV/NEXT -->
   <ProjectPrevNext
-    prev="/projects/project-8"
-    next="/projects/project-1"
+    prev="/projects/roberto-rebranding"
+    next="/projects/gibson-sg-1961"
   />
 
 </template>
@@ -44,10 +44,13 @@ import ProjectPrevNext from "@/components/ProjectPrevNext.vue";
 import { useReveal } from "@/composables/useReveal.js"; // ⭐ AGGIUNTA
 useReveal(); // ⭐ ATTIVA ANIMAZIONI SU QUESTA PAGINA
 
-const { t, tm } = useI18n();
+import { usePageSeo } from "@/composables/usePageSeo";
+
+const { t, tm, locale } = useI18n();
 
 /* HERO IMAGE */
 import fumettohero from "@/assets/fumettohero.webp?width=800,1280,1920&format=webp&as=picture";
+import controlAltCancOg from "@/assets/fumettohero.webp?w=1200&format=webp&as=src";
 
 /* SLIDES IMAGES */
 import ctrlaltcancillustrazione from "@/assets/ctrlaltcancillustrazione.webp?width=800,1280,1920&format=webp&as=picture";
@@ -70,4 +73,27 @@ const keyPoints = computed(() => tm('projects.project9.keyPoints'));
 const slides = computed(() =>
   tm('projects.project9.slides').map((s, i) => ({ ...s, img: slideImages[i] }))
 );
+
+/* SEO / GEO / AIO */
+const ogImage = `https://riccardocassis.com${controlAltCancOg}`
+const pageUrl = 'https://riccardocassis.com/projects/control-alt-canc-fanzine'
+
+usePageSeo(() => ({
+  title: t('projects.project9.seo.title'),
+  description: t('projects.project9.seo.description'),
+  image: ogImage,
+  jsonLd: {
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    name: t('projects.project9.hero.title'),
+    headline: t('projects.project9.hero.title'),
+    description: t('projects.project9.seo.description'),
+    image: ogImage,
+    url: pageUrl,
+    inLanguage: locale.value,
+    keywords: 'editorial design, illustration, fanzine, mental health',
+    creator: { '@type': 'Person', name: 'Riccardo Cassis', url: 'https://riccardocassis.com/' },
+    author: { '@type': 'Person', name: 'Riccardo Cassis', url: 'https://riccardocassis.com/' }
+  }
+}))
 </script>

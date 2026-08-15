@@ -251,6 +251,7 @@ export default {
 
   projects: {
     project1: {
+      seo: { title: 'Gibson SG-1961 — Landing page interattiva con 3D | Riccardo Cassis', description: 'Concept di landing page per la chitarra Gibson SG-1961: modelli 3D, micro-interazioni e una web-app per suonarla dal browser.' },
       hero: { title: 'Gibson SG-1961', subtitle: 'Il suono della SG-1961 trasformato in un’esperienza digitale interattiva' },
       intro: { title: 'Scopo del progetto', text: 'Questo concept nasce da una domanda semplice: come può una chitarra iconica come la Gibson SG-1961 raccontarsi online con la stessa forza che ha dal vivo? Ho progettato una landing page capace di restituire il carattere della SG-1961 in ogni dettaglio dell’esperienza. L’obiettivo era creare un ponte tra il passato e il presente, trasmettendo l’anima rock dello strumento e aumentando awareness e coinvolgimento intorno a un prodotto che ha segnato la storia della musica.' },
       keyPoints: [
@@ -268,6 +269,7 @@ export default {
     },
 
     project2: {
+      seo: { title: 'SizeXL — Restyling sito web e SEO | Riccardo Cassis', description: "Restyling del sito web di SizeXL: nuova identità visiva, architettura dei contenuti e ottimizzazione SEO per un'organizzazione no-profit." },
       hero: { title: 'Sviluppo del sito web', subtitle: 'Restyling del sito e ottimizzazione SEO.' },
       intro: { title: 'Scopo del progetto', text: 'In questo progetto ho ristrutturato il sito ufficiale di Sizexl, riorganizzando contenuti, navigazione e interfaccia visiva per renderla più chiara, credibile e coerente con la qualità dei servizi offerti.' },
       keyPoints: [
@@ -284,6 +286,7 @@ export default {
     },
 
     project3: {
+      seo: { title: 'Synapses — Landing page evento LABA | Riccardo Cassis', description: "Sviluppo della landing page per Synapses, evento della Libera Accademia di Belle Arti di Brescia (LABA), con calendario e informazioni interattive." },
       hero: { title: 'Synapses landing page', subtitle: 'Sviluppo della landing page informativa.' },
       intro: { title: 'Scopo del progetto', text: "In questo progetto Web mi sono occupato della realizzazione della landing page inerente a Synapses, un evento organizzato dalla Libera Accademia delle Belle Arti di Brescia (LABA). I visual mi sono stati forniti dal team creativo dell'accademia, mentre il mio compito è stato quello di sviluppare una pagina web funzionale e informativa per l'evento. Gli obiettivi principali erano evidenziare la data e il luogo dell'evento, oltre a fornire agli utenti un calendario dettagliato con gli orari delle varie attività previste durante la giornata." },
       keyPoints: [
@@ -295,6 +298,7 @@ export default {
     },
 
     project4: {
+      seo: { title: 'Fillbo — App concept per ridurre gli sprechi alimentari | Riccardo Cassis', description: "Concept UX/UI di un'app mobile che aiuta supermercati e realtà no-profit a tracciare i prodotti in scadenza e ridurre gli sprechi alimentari." },
       hero: { title: 'Fillbo concept app', subtitle: 'Un gestionale progettato per ridurre gli sprechi alimentari.' },
       intro: { title: 'Scopo del progetto', text: 'Fillbo è un prototipo di un’app mobile pensata per ridurre gli sprechi alimentari migliorando il flusso tra supermercati e CAUTO. Ho analizzato il processo reale con cui i commessi identificano i prodotti in scadenza e l’ho trasformato in un sistema digitale più rapido, chiaro e tracciabile. Il risultato è un prototipo che semplifica il lavoro quotidiano, riduce errori e accelera la donazione degli alimenti.' },
       keyPoints: [
@@ -312,6 +316,7 @@ export default {
     },
 
     project5: {
+      seo: { title: 'Opsify — App concept per scuse personalizzate | Riccardo Cassis', description: "Design UX/UI di Opsify, un'app mobile per creare e condividere scuse amichevoli, con un tone of voice informale e un'interfaccia empatica." },
       hero: { title: 'Opsify concept App', subtitle: 'Un’App mobile dedicata alla creazione e condivisione di scuse personalizzate.' },
       intro: { title: 'Scopo del progetto', text: 'Questo progetto riguarda lo sviluppo in Figma e la prototipazione su Protopie di un’applicazione mobile, volta alla creazione e alla condivisione di scuse amichevoli tra gli utenti. Ho scelto di dargli il nome Opsify, perché: "opsi" è un termine amichevole che si usa per chiedere scusa in modo informale, mentre l’aggiunta "-fy" richiama il significato di trasformare qualcosa, quindi "Opsify" vuol dire rendere più semplice e naturale il modo di chiedere scusa. Ho scelto di utilizzare dunque un tone of voice amichevole ed informale nell’applicazione, e anche i colori che ho scelto, abbinati ai font e in generale a tutta la struttura dell’interfaccia, sono volti a creare armonia nell’utente.' },
       keyPoints: [
@@ -327,6 +332,7 @@ export default {
     },
 
     project6: {
+      seo: { title: "Webable — Piattaforma di microlearning sull'accessibilità | Riccardo Cassis", description: "Concept UX/UI di Webable, una web app che insegna l'accessibilità digitale con percorsi personalizzati e micro-esercizi pratici." },
       hero: { title: 'Webable', subtitle: 'La piattaforma di microlearning dedicata all’accessibilità web.' },
       intro: { title: 'Scopo del progetto', text: 'Il Decreto Europeo sull’Accessibilità (EAA) impone a prodotti e servizi digitali di essere accessibili a tutti. La formazione in questo ambito purtroppo presenta delle lacune ed è molto teorica. WebAble nasce per cambiare approccio. È una web app che propone micro-esercizi pratici e percorsi su misura, pensati per chi lavora nel digitale: designer, developer, content creator. Obiettivo: rendere la formazione sull’accessibilità semplice, concreta e immediata.' },
       keyPoints: [
@@ -344,6 +350,7 @@ export default {
     },
 
     project7: {
+      seo: { title: 'Heller Garden — Rebranding del giardino botanico | Riccardo Cassis', description: 'Proposta di art direction e rebranding per Heller Garden: identità visiva, logo, palette stagionale e segnaletica per il giardino botanico di Gardone Riviera.' },
       hero: { title: 'Heller Garden', subtitle: 'Art direction proposal, rebranding del giardino botanico.' },
       intro: { title: 'Scopo del progetto', text: 'In questo progetto ho voluto ridefinire l’identità visiva di Heller Garden, creando una direzione creativa coerente al luogo e un linguaggio visivo capace di raccontare l’essenza del giardino: un luogo in cui arte, botanica e movimento si intrecciano. Con il nuovo brand system ho voluto provare a riorganizzare la comunicazione, semplificando l’esperienza del visitatore e dando vita a un’identità riconoscibile, fluida e contemporanea.' },
       keyPoints: [
@@ -362,6 +369,7 @@ export default {
     },
 
     project8: {
+      seo: { title: 'Roberto — Rebranding di un brand di piadine | Riccardo Cassis', description: 'Concept di rebranding irriverente per un brand di piadine, ispirato all’immaginario hippy: identità visiva, packaging e comunicazione.' },
       hero: { title: 'Roberto Rebranding', subtitle: 'Art direction proposal, un concept distruptive per un brand di piadine.' },
       intro: { title: 'Scopo del progetto', text: 'In questo concept ho deciso di prendere un classico brand di piadine qualsiasi e ristrutturarlo conferendogli un’identità nuova: coraggiosa, irriverente e impossibile da ignorare. Attorno ad esso ho costruito un immaginario visivo prendendo come riferimento il mondo hippy. Ho scelto di creare un ponte tra passato e presente con i ribelli di un tempo, in modo tale da conferire a un prodotto semplice un’aura mistica e accattivante.' },
       keyPoints: [
@@ -381,6 +389,7 @@ export default {
     },
 
     project9: {
+      seo: { title: 'Control-Alt-Canc — Fanzine sulla salute mentale | Riccardo Cassis', description: 'Fanzine illustrata per la Giornata Mondiale della Salute Mentale: un racconto visivo sull’overthinking, in bianco e nero, tra ironia e consapevolezza.' },
       hero: { title: 'Control-Alt-Canc', subtitle: 'Un fumetto illustrato dedicato alla Giornata Mondiale della Salute Mentale.' },
       intro: { title: 'Scopo del progetto', text: 'In questo progetto ho voluto tradurre l’overthinking in una narrazione visiva semplice da capire ma difficile da ignorare. Ho scelto un’estetica in bianco e nero per togliere il superfluo e concentrare l’attenzione su ciò che conta: il rumore mentale, il peso dei pensieri, la lotta quotidiana che molti vivono in silenzio. La fanzine è stata realizzata per la Giornata Mondiale della Salute Mentale (10 ottobre) e successivamente condivisa con psicologi e professionisti del settore, come strumento divulgativo e conversazionale.' },
       keyPoints: [

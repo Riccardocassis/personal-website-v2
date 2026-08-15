@@ -24,8 +24,8 @@
 
   <!-- PREV/NEXT -->
   <ProjectPrevNext
-    prev="/projects/project-6"
-    next="/projects/project-8"
+    prev="/projects/webable-accessibility"
+    next="/projects/roberto-rebranding"
   />
 
 </template>
@@ -44,10 +44,13 @@ import ProjectPrevNext from "@/components/ProjectPrevNext.vue";
 import { useReveal } from "@/composables/useReveal.js"; // ⭐ AGGIUNTA
 useReveal(); // ⭐ ATTIVA ANIMAZIONI SU QUESTA PAGINA
 
-const { t, tm } = useI18n();
+import { usePageSeo } from "@/composables/usePageSeo";
+
+const { t, tm, locale } = useI18n();
 
 /* HERO IMAGE */
 import hellerhero from "@/assets/hellerhero.webp?width=800,1280,1920&format=webp&as=picture";
+import hellerOg from "@/assets/hellerhero.webp?w=1200&format=webp&as=src";
 
 /* SLIDES IMAGES */
 import hgintro from "@/assets/hgintro.webp?width=800,1280,1920&format=webp&as=picture";
@@ -73,4 +76,27 @@ const keyPoints = computed(() => tm('projects.project7.keyPoints'));
 const slides = computed(() =>
   tm('projects.project7.slides').map((s, i) => ({ ...s, img: slideImages[i] }))
 );
+
+/* SEO / GEO / AIO */
+const ogImage = `https://riccardocassis.com${hellerOg}`
+const pageUrl = 'https://riccardocassis.com/projects/heller-garden'
+
+usePageSeo(() => ({
+  title: t('projects.project7.seo.title'),
+  description: t('projects.project7.seo.description'),
+  image: ogImage,
+  jsonLd: {
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    name: t('projects.project7.hero.title'),
+    headline: t('projects.project7.hero.title'),
+    description: t('projects.project7.seo.description'),
+    image: ogImage,
+    url: pageUrl,
+    inLanguage: locale.value,
+    keywords: 'brand identity, art direction, rebranding',
+    creator: { '@type': 'Person', name: 'Riccardo Cassis', url: 'https://riccardocassis.com/' },
+    author: { '@type': 'Person', name: 'Riccardo Cassis', url: 'https://riccardocassis.com/' }
+  }
+}))
 </script>
