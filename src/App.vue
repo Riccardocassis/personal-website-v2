@@ -4,6 +4,7 @@ import { useRoute } from "vue-router"
 
 import Navbar from "./components/navbar.vue"
 import Footer from "./components/Footer.vue"
+import Breadcrumb from "./components/Breadcrumb.vue"
 
 import gsap from "gsap"
 import ScrollTrigger from "gsap/ScrollTrigger"
@@ -69,6 +70,7 @@ onBeforeUnmount(() => {
 <template>
   <div class="relative bg-black text-white min-h-screen overflow-x-hidden">
     <Navbar />
+    <Breadcrumb />
 
     <!-- Qui vengono caricati i tuoi pages -->
     <main>

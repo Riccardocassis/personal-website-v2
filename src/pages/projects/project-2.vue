@@ -4,28 +4,17 @@
   <ProjectHero :data="hero" />
 
   <!-- INTRO -->
-  <ProjectIntro
-    :data="{
-      title: 'Scopo del progetto',
-      text: 'In questo progetto ho ristrutturato il sito ufficialedi Sizexl, riorganizzando contenuti, navigazione e interfaccia visiva per renderla più chiara, credibile e coerente con la qualità dei servizi offerti.'
-    }"
-  />
+  <ProjectIntro :data="intro" />
 
   <!-- VIDEO -->
   <ProjectVideo
   src="/videos/videosizexl.mp4"
-  title="Preview della pagina"
+  :title="$t('projectShared.videoDefaultTitle')"
 />
 
 
   <!-- ELEMENTI CHIAVE -->
-  <ProjectKeyPoints
-    :items="[
-      { title: 'Direzione Creativa & Concept', text: 'Insieme al cliente sono partito sviluppando delle possibili reference che definissero la nuova direzione visiva da seguire e successivamente, una volta optato per uno stile formale e corporate ho sviluppato i wireframes e poi il sito web.' },
-      { title: 'Obiettivi di progetto', text: 'Aumentare la brand awareness e migliorare l’esperienza utente attraverso una navigazione più intuitiva e contenuti più chiari.' },
-      { title: 'Ottimizzazione SEO', text: 'In questo progetto ho migliorato la visibilità del sito sui motori di ricerca attraverso tecniche di ottimizzazione on-page e off-page e SEO tecnica,' }
-    ]"
-  />
+  <ProjectKeyPoints :items="keyPoints" />
 
   <!-- SLIDES -->
   <section class="bg-black">
@@ -50,6 +39,8 @@
 
 
 <script setup>
+import { computed } from "vue";
+import { useI18n } from "vue-i18n";
 import ProjectHero from "@/components/ProjectHero.vue";
 import ProjectIntro from "@/components/ProjectIntro.vue";
 import ProjectVideo from "@/components/ProjectVideo.vue";
@@ -61,6 +52,8 @@ import ProjectPrevNext from "@/components/ProjectPrevNext.vue";
 import { useReveal } from "@/composables/useReveal.js"; // ⭐ AGGIUNTA
 useReveal(); // ⭐ ATTIVA ANIMAZIONI SU QUESTA PAGINA
 
+const { t, tm } = useI18n();
+
 /* HERO IMAGE */
 import coversizexl from "@/assets/coversizexl.webp?width=800,1280,1920&format=webp&as=picture";
 
@@ -70,20 +63,21 @@ import colorpalettesizexl from "@/assets/colorpalettesizexl.webp?width=800,1280,
 import fontsizexl from "@/assets/fontsizexl.webp?width=800,1280,1920&format=webp&as=picture";
 import cardsize from "@/assets/cardsize.webp?width=800,1280,1920&format=webp&as=picture";
 
+const slideImages = [img2sizexl, colorpalettesizexl, fontsizexl, cardsize];
+
 /* HERO DATA */
-const hero = {
-  title: "Sviluppo del sito web",
-  subtitle: "Restyling del sito e ottimizzazione SEO.",
+const hero = computed(() => ({
+  title: t('projects.project2.hero.title'),
+  subtitle: t('projects.project2.hero.subtitle'),
   img: coversizexl
-};
+}));
+
+const intro = computed(() => tm('projects.project2.intro'));
+const keyPoints = computed(() => tm('projects.project2.keyPoints'));
 
 /* SLIDES DATA */
-const slides = [
-  { title: "Situazione iniziale", subtitle: "Analisi del sito.", text: "Ho analizzato il sito esistente per individuare criticità in struttura, UI e contenuti: leggibilità scarsa, distribuzione confusa e identità visiva non allineata alla professionalità dell’azienda.", img: img2sizexl },
-  { title: "Branding & Palette Colori", subtitle: "Nuova direzione visiva.", text: "Ho creato una palette colori stabile da utilizzare sul sito web partendo dai colori del Logo ufficiale in maniera coerente e stabile.", img: colorpalettesizexl },
-  { title: "Tipografia", subtitle: "Un Font semplice ma efficace.", text: "Insieme al cliente sono state fatte delle proposte tipografiche ed è stato scelto l'inter per massima leggibilità e coerenza tipografica.", img: fontsizexl },
-  { title: "Architettura del sito", subtitle: "Struttura & UX semplificata.", text: "Ho effettuato una redistribuzione dei contenuti e reso i percorsi più chiari per ridurre il carico cognitivo evitare il tasso di abbandono facilitando la navigazione verso gli elementi desiderati.", img: cardsize },
- 
-];
+const slides = computed(() =>
+  tm('projects.project2.slides').map((s, i) => ({ ...s, img: slideImages[i] }))
+);
 </script>
 

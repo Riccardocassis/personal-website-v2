@@ -1,13 +1,31 @@
 <template>
-  <section class="grid-root pt-20 pb-32 px-10 lg:px-20 bg-black text-white">
+  <section class="grid-root pt-6 pb-32 px-10 lg:px-20 bg-black text-white">
     <div class="max-w-7xl mx-auto relative z-10">
 
       <!-- HEADER -->
-      <div class="text-center mb-12">
-        <h1 class="text-4xl md:text-5xl font-extrabold">Progetti</h1>
-        <p class="text-lg text-white/80 mt-3">
-          Una selezione dei miei lavori tra identità visive, UI/UX e web design.
+      <div class="mb-14 md:mb-20">
+        <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight leading-none">{{ $t('projectsPage.title') }}</h1>
+        <p class="text-base md:text-lg text-white/60 mt-6 max-w-xl">
+          {{ $t('projectsPage.subtitle') }}
         </p>
+
+        <!-- FILTERS -->
+        <div class="flex flex-wrap gap-2 mt-10">
+          <button
+            v-for="cat in categories"
+            :key="cat"
+            type="button"
+            @click="setFilter(cat)"
+            :class="[
+              'px-4 py-1.5 rounded-full border text-xs md:text-sm uppercase tracking-wide transition-colors duration-200',
+              selectedCategory === cat
+                ? 'border-cyan-400 text-cyan-400 shadow-[0_0_12px_rgba(34,211,238,0.35)]'
+                : 'border-white/15 text-white/50 hover:border-white/30 hover:text-white/80'
+            ]"
+          >
+            {{ $t('projectsPage.filters.' + cat) }}
+          </button>
+        </div>
       </div>
 
       <!-- GRID -->
@@ -22,26 +40,29 @@
         <div class="parallax-column flex flex-col space-y-12">
 
           <ProjectCard
+            v-show="isVisible('webDesign')"
             to="/projects/project-1"
             :img="gibsonA"
             :imgHover="gibsonB"
-            title="New Gibson website concept"
+            :title="$t('projectsPage.cards.project1')"
             offset="2"
           />
 
           <ProjectCard
+            v-show="isVisible('app')"
             to="/projects/project-4"
             :img="fillboA"
             :imgHover="fillboB"
-            title="Fillbo App"
+            :title="$t('projectsPage.cards.project4')"
             offset="3"
           />
 
           <ProjectCard
+            v-show="isVisible('brandIdentity')"
             to="/projects/project-7"
             :img="hellerA"
             :imgHover="hellerB"
-            title="Heller Garden Art direction proposal"
+            :title="$t('projectsPage.cards.project7')"
             offset="1"
           />
 
@@ -53,26 +74,29 @@
         <div class="parallax-column flex flex-col space-y-12">
 
           <ProjectCard
+            v-show="isVisible('webDesign')"
             to="/projects/project-2"
             :img="sizexlA"
             :imgHover="sizexlB"
-            title="SizeXL website"
+            :title="$t('projectsPage.cards.project2')"
             offset="1"
           />
 
           <ProjectCard
+            v-show="isVisible('app')"
             to="/projects/project-5"
             :img="opsifyA"
             :imgHover="opsifyB"
-            title="Opsify App"
+            :title="$t('projectsPage.cards.project5')"
             offset="2"
           />
 
           <ProjectCard
+            v-show="isVisible('brandIdentity')"
             to="/projects/project-8"
             :img="robertoA"
             :imgHover="robertoB"
-            title="Piadine Roberto Art direction proposal"
+            :title="$t('projectsPage.cards.project8')"
           />
 
         </div>
@@ -83,26 +107,29 @@
         <div class="parallax-column flex flex-col space-y-12">
 
           <ProjectCard
+            v-show="isVisible('webDesign')"
             to="/projects/project-3"
             :img="synapsesA"
             :imgHover="synapsesB"
-            title="Synapses landing page"
+            :title="$t('projectsPage.cards.project3')"
             offset="3"
           />
 
           <ProjectCard
+            v-show="isVisible('app')"
             to="/projects/project-6"
             :img="webableA"
             :imgHover="webableB"
-            title="WebAble App"
+            :title="$t('projectsPage.cards.project6')"
             offset="2"
           />
 
           <ProjectCard
+            v-show="isVisible('editorial')"
             to="/projects/project-9"
             :img="controlAltA"
             :imgHover="controlAltB"
-            title="Control-Alt-Canc fanzine"
+            :title="$t('projectsPage.cards.project9')"
             offset="3"
           />
 
@@ -114,7 +141,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { ref, nextTick, onMounted, onBeforeUnmount } from 'vue'
 import { gsap } from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import { useParallaxCards } from '../composables/useParallaxCards'
@@ -124,6 +151,19 @@ import ProjectCard from '@/components/ProjectCard.vue'
 gsap.registerPlugin(ScrollTrigger)
 
 const gridRef = ref(null)
+
+/* FILTERS */
+const categories = ['all', 'webDesign', 'app', 'brandIdentity', 'editorial']
+const selectedCategory = ref('all')
+
+function isVisible(cat) {
+  return selectedCategory.value === 'all' || selectedCategory.value === cat
+}
+
+function setFilter(cat) {
+  selectedCategory.value = cat
+  nextTick(() => ScrollTrigger.refresh())
+}
 
 /* IMAGES — YOUR RENAMED FILES */
 import controlAltA from '../assets/controlaltcanc-a.webp?w=800&format=webp&as=src'

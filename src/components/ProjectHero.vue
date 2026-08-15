@@ -4,7 +4,7 @@
   >
     <!-- safety guard -->
     <div v-if="!data" class="w-full h-full bg-black flex items-center justify-center">
-      <p class="text-white/60">Missing hero data</p>
+      <p class="text-white/60">{{ $t('projectShared.heroMissing') }}</p>
     </div>
 
     <div v-else>

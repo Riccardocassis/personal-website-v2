@@ -1,10 +1,10 @@
 <template>
-  <section class="relative max-w-6xl mx-auto px-4 py-20 text-white bg-black">
+  <section class="relative max-w-6xl mx-auto px-4 pt-6 pb-20 text-white bg-black">
     <!-- blue radial gradient removed; page uses solid background -->
     <div class="relative z-10">
     <header class="mb-4 px-2 text-center">
-      <h1 class="text-5xl font-extrabold mb-2 text-white">Servizi</h1>
-      <p class="text-lg text-white/80 mt-3">Di seguito puoi trovare i servizi che erogo.</p>
+      <h1 class="text-5xl font-extrabold mb-2 text-white">{{ $t('services.title') }}</h1>
+      <p class="text-lg text-white/80 mt-3">{{ $t('services.subtitle') }}</p>
     </header>
 
     <!-- Symmetric 2x2 icon block -->
@@ -20,55 +20,40 @@
     <div class="services-grid grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-10 lg:gap-12 px-2 items-stretch auto-rows-fr -mt-6 md:mt-0">
       <!-- Card 1 -->
       <article class="service-card bg-transparent border p-8 rounded-2xl flex flex-col justify-between h-full w-full" tabindex="0">
-        <h2 class="text-xl font-semibold text-white mb-3">Web Design & Development</h2>
-        <p class="text-white/70 leading-relaxed text-[15px]">Realizzo siti su misura,con attenzione alla struttura, al design, e all'indicizzazione.
-          In modo da ottenere una presenza online efficace e performante.
-        </p>
+        <h2 class="text-xl font-semibold text-white mb-3">{{ $t('services.card1.title') }}</h2>
+        <p class="text-white/70 leading-relaxed text-[15px]">{{ $t('services.card1.text') }}</p>
         <ul class="mt-4 space-y-1 text-white/60 text-sm">
-          <li>Design responsive</li>
-          <li>Gerarchie pulite</li>
-          <li>Sviluppo Webflow/custom</li>
-          <li>Performance</li>
+          <li v-for="item in $tm('services.card1.list')" :key="item">{{ item }}</li>
         </ul>
       </article>
 
       <!-- Card 2 -->
       <article class="service-card bg-transparent border p-8 rounded-2xl flex flex-col justify-between h-full w-full" tabindex="0">
-        <h2 class="text-xl font-semibold text-white mb-3">UI/UX Design</h2>
-        <p class="text-white/70 leading-relaxed text-[15px]">Progetto interfacce semplici da usare, riducendo attriti e complessità nei processi operativi.</p>
+        <h2 class="text-xl font-semibold text-white mb-3">{{ $t('services.card2.title') }}</h2>
+        <p class="text-white/70 leading-relaxed text-[15px]">{{ $t('services.card2.text') }}</p>
         <ul class="mt-4 space-y-1 text-white/60 text-sm">
-          <li>Flussi UX</li>
-          <li>Wireframe</li>
-          <li>Prototipi</li>
-          <li>Design system</li>
+          <li v-for="item in $tm('services.card2.list')" :key="item">{{ item }}</li>
         </ul>
       </article>
 
       <!-- Card 3 -->
       <article class="service-card bg-transparent border p-8 rounded-2xl flex flex-col justify-between h-full w-full" tabindex="0">
-        <h2 class="text-xl font-semibold text-white mb-3">Brand Identity & Art Direction</h2>
-        <p class="text-white/70 leading-relaxed text-[15px]">Definisco identità visive funzionali in base alla richiesta, mirando a fare emergere i punti di forza di un brand e rendendolo unico e distinguibile dai competitors.</p>
+        <h2 class="text-xl font-semibold text-white mb-3">{{ $t('services.card3.title') }}</h2>
+        <p class="text-white/70 leading-relaxed text-[15px]">{{ $t('services.card3.text') }}</p>
         <ul class="mt-4 space-y-1 text-white/60 text-sm">
-          <li>Logo</li>
-          <li>Palette</li>
-          <li>Tipografia</li>
-          <li>Materiali grafici</li>
+          <li v-for="item in $tm('services.card3.list')" :key="item">{{ item }}</li>
         </ul>
       </article>
 
       <!-- Card 4 -->
       <article class="service-card bg-transparent border p-8 rounded-2xl flex flex-col justify-between h-full w-full" tabindex="0">
-        <h2 class="text-xl font-semibold text-white mb-3">SEO & Web Optimization</h2>
-        <p class="text-white/70 leading-relaxed text-[15px]">Ottimizzo la struttura del tuo sito rendendolo più performante e facilmente trovabile dai motori di ricerca.</p>
+        <h2 class="text-xl font-semibold text-white mb-3">{{ $t('services.card4.title') }}</h2>
+        <p class="text-white/70 leading-relaxed text-[15px]">{{ $t('services.card4.text') }}</p>
         <ul class="mt-4 space-y-1 text-white/60 text-sm">
-          <li>SEO tecnica</li>
-          <li>On-page</li>
-          <li>Performance</li>
-          <li>Accessibilità</li>
+          <li v-for="item in $tm('services.card4.list')" :key="item">{{ item }}</li>
         </ul>
       </article>
 
-      
     </div>
     </div>
   </section>

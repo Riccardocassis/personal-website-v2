@@ -4,7 +4,7 @@
 
       <!-- TITLE -->
       <h2 class="reveal text-2xl md:text-3xl font-semibold text-white mb-10">
-        Elementi chiave
+        {{ $t('projectShared.keyPointsTitle') }}
       </h2>
 
       <!-- GRID -->

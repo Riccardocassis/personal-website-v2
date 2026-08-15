@@ -20,7 +20,7 @@
           class="hidden md:block text-white/70 text-sm transition-opacity duration-300
                  group-hover:text-white/90"
         >
-          Progetto precedente
+          {{ $t('projectShared.prevProject') }}
         </span>
       </router-link>
 
@@ -42,7 +42,7 @@
           class="hidden md:block text-white/70 text-sm transition-opacity duration-300
                  group-hover:text-white/90"
         >
-          Progetto successivo
+          {{ $t('projectShared.nextProject') }}
         </span>
       </router-link>
 

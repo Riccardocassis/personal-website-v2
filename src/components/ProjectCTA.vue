@@ -4,7 +4,7 @@
 
       <!-- TEXT -->
       <p class="reveal text-white/60 mb-6">
-        Ti è piaciuto questo progetto? Posso aiutarti a creare esperienze digitali su misura.
+        {{ $t('projectShared.ctaText') }}
       </p>
 
       <!-- CTA BUTTON -->
@@ -13,7 +13,7 @@
         class="reveal inline-block text-blue-400 font-semibold underline"
         style="transition-delay: 120ms"
       >
-        Contattami
+        {{ $t('projectShared.ctaButton') }}
       </a>
 
     </div>

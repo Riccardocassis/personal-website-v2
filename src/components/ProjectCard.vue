@@ -24,7 +24,7 @@
       <div
         class="absolute inset-0 bg-black/40 opacity-0 flex items-center justify-center text-white text-lg font-medium transition-opacity duration-300 group-hover:opacity-100"
       >
-        Visualizza →
+        {{ $t('projectCard.view') }}
       </div>
 
     </div>

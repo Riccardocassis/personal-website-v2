@@ -10,24 +10,24 @@
           <RouterLink to="/" class="inline-block mb-0 md:mb-4">
             <img src="../assets/logo-rc.webp" alt="RC logo" class="hidden md:block w-6 h-6 md:w-10 md:h-10 object-contain" />
           </RouterLink>
-          <div class="text-[0.75rem] md:text-sm font-semibold leading-tight">Riccardo Cassis – UI/UX &amp; Web Designer</div>
-          <div class="text-[0.7rem] text-white/60 mt-0.5 md:mt-2">Bergamo / Brescia</div>
+          <div class="text-[0.75rem] md:text-sm font-semibold leading-tight">{{ $t('footer.tagline') }}</div>
+          <div class="text-[0.7rem] text-white/60 mt-0.5 md:mt-2">{{ $t('footer.location') }}</div>
         </div>
 
         <!-- Column 2: Quick Links -->
         <div>
-          <h4 class="text-[0.75rem] md:text-sm font-semibold text-white/90 mb-2 text-center md:text-left">Quick Links</h4>
+          <h4 class="text-[0.75rem] md:text-sm font-semibold text-white/90 mb-2 text-center md:text-left">{{ $t('footer.quickLinks') }}</h4>
           <nav class="flex flex-col items-center md:items-start gap-2 leading-tight">
-            <RouterLink to="/projects" class="text-[0.75rem] md:text-sm text-white/70 hover:text-white transition">Projects</RouterLink>
-            <RouterLink to="/services" class="text-[0.75rem] md:text-sm text-white/70 hover:text-white transition">Services</RouterLink>
-            <RouterLink to="/about" class="text-[0.75rem] md:text-sm text-white/70 hover:text-white transition">About me</RouterLink>
-            <RouterLink to="/contact" class="text-[0.75rem] md:text-sm text-white/70 hover:text-white transition">Contact</RouterLink>
+            <RouterLink to="/projects" class="text-[0.75rem] md:text-sm text-white/70 hover:text-white transition">{{ $t('footer.lavori') }}</RouterLink>
+            <RouterLink to="/services" class="text-[0.75rem] md:text-sm text-white/70 hover:text-white transition">{{ $t('footer.servizi') }}</RouterLink>
+            <RouterLink to="/about" class="text-[0.75rem] md:text-sm text-white/70 hover:text-white transition">{{ $t('footer.chiSono') }}</RouterLink>
+            <RouterLink to="/contact" class="text-[0.75rem] md:text-sm text-white/70 hover:text-white transition">{{ $t('footer.contatti') }}</RouterLink>
           </nav>
         </div>
 
         <!-- Column 3: Follow me -->
         <div>
-          <h4 class="text-[0.75rem] md:text-sm font-semibold text-white/90 mb-2 text-center md:text-left">Follow me</h4>
+          <h4 class="text-[0.75rem] md:text-sm font-semibold text-white/90 mb-2 text-center md:text-left">{{ $t('footer.followMe') }}</h4>
           <div class="flex items-center justify-center md:justify-start gap-2 md:gap-3">
             <a href="https://www.linkedin.com/in/riccardo-cassis/" target="_blank" rel="noopener" aria-label="LinkedIn" class="inline-flex items-center justify-center w-4 h-4 md:w-8 md:h-8 text-white/70 hover:text-white hover:scale-[1.05] transition-all duration-200">
               <svg class="w-3 h-3 md:w-5 md:h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
@@ -41,10 +41,8 @@
                 <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.78-.25.78-.55 0-.27-.01-1.17-.01-2.12-3.2.7-3.88-1.35-3.88-1.35-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.75.4-1.25.72-1.54-2.56-.29-5.26-1.28-5.26-5.71 0-1.26.45-2.29 1.18-3.1-.12-.29-.52-1.45.11-3.02 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.21-1.5 3.18-1.18 3.18-1.18.63 1.57.23 2.73.11 3.02.73.81 1.18 1.84 1.18 3.1 0 4.44-2.7 5.41-5.28 5.7.41.36.77 1.08.77 2.18 0 1.58-.01 2.85-.01 3.24 0 .3.2.66.79.55C20.71 21.39 24 17.08 24 12 24 5.65 18.35.5 12 .5z"/>
               </svg>
             </a>
-              <a href="https://www.behance.net/riccardocassis" target="_blank" rel="noopener" aria-label="Behance" class="inline-flex items-center justify-center w-6 h-6 md:w-8 md:h-8 text-white/70 hover:text-white hover:scale-[1.05] transition-all duration-200">
-                <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-white/5 text-white/70 group-hover:bg-white/10 transition-colors duration-200">
-                      <img src="../assets/icon-behance.webp" alt="Behance" class="w-3 h-3 sm:w-6 sm:h-6 object-contain" />
-                    </span>
+              <a href="https://www.behance.net/riccardocassis" target="_blank" rel="noopener" aria-label="Behance" class="inline-flex items-center justify-center w-4 h-4 md:w-8 md:h-8 text-white/70 hover:text-white hover:scale-[1.05] transition-all duration-200">
+                <img src="../assets/icon-behance.webp" alt="Behance" class="w-3 h-3 md:w-5 md:h-5 object-contain" />
               </a>
           </div>
         </div>
@@ -52,15 +50,15 @@
         <!-- Column 4: Policies (moved to right) -->
         <div class="md:text-right">
           <nav class="flex flex-col items-center md:items-end gap-2 md:gap-2 leading-tight">
-            <RouterLink to="/privacy" class="text-[0.75rem] md:text-sm text-white/70 hover:text-white transition">Privacy Policy</RouterLink>
-            <RouterLink to="/cookie-policy" class="text-[0.75rem] md:text-sm text-white/70 hover:text-white transition">Cookie Policy</RouterLink>
+            <RouterLink to="/privacy" class="text-[0.75rem] md:text-sm text-white/70 hover:text-white transition">{{ $t('footer.privacyPolicy') }}</RouterLink>
+            <RouterLink to="/cookie-policy" class="text-[0.75rem] md:text-sm text-white/70 hover:text-white transition">{{ $t('footer.cookiePolicy') }}</RouterLink>
           </nav>
         </div>
       </div>
 
       <!-- Copyright -->
       <div class="w-full text-center">
-        <div class="text-[0.7rem] text-white/40 mt-2 md:mt-8">© 2025 Riccardo Cassis. All rights reserved.</div>
+        <div class="text-[0.7rem] text-white/40 mt-2 md:mt-8">{{ $t('footer.copyright') }}</div>
       </div>
     </div>
   </footer>

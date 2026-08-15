@@ -33,12 +33,12 @@
               <h1 ref="titleRef" id="hero-title"
                   class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
                 <span class="whitespace-nowrap">Riccardo Cassis</span>
-                <span class="block mt-2">UI/UX &amp; Web Designer</span>
+                <span class="block mt-2">{{ $t('hero.role') }}</span>
               </h1>
 
               <p ref="subtitleRef"
                  class="mt-6 md:mt-8 text-sm sm:text-base md:text-lg text-white/90 max-w-md md:max-w-xl leading-relaxed mx-auto md:mx-0">
-                Trasformo le tue idee in soluzioni digitali.
+                {{ $t('hero.payoff') }}
               </p>
 
               <!-- SOCIAL ICONS -->
@@ -72,8 +72,8 @@
                 <!-- Behance -->
                 <a href="https://www.behance.net/riccardocassis"
                    target="_blank"
-                   class="inline-flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 text-white/70 hover:text-white hover:scale-105 transition-all">
-                  <img src="../assets/icon-behance.webp" class="w-5 h-5 sm:w-7 sm:h-7" />
+                   class="inline-flex items-center justify-center w-8 h-8 text-white/70 hover:text-white hover:scale-105 transition-all">
+                  <img src="../assets/icon-behance.webp" alt="Behance" class="w-6 h-6 object-contain" />
                 </a>
 
               </div>

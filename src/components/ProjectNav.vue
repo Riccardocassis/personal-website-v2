@@ -13,7 +13,7 @@
         >
           ←
         </span>
-        <span class="hidden md:block text-sm">Progetto precedente</span>
+        <span class="hidden md:block text-sm">{{ $t('projectShared.prevProject') }}</span>
       </router-link>
 
       <!-- NEXT -->
@@ -27,7 +27,7 @@
         >
           →
         </span>
-        <span class="hidden md:block text-sm">Progetto successivo</span>
+        <span class="hidden md:block text-sm">{{ $t('projectShared.nextProject') }}</span>
       </router-link>
 
     </div>

@@ -24,7 +24,7 @@
 
         <!-- FALLBACK -->
         <div v-else class="text-white/40 py-10">
-          Nessun video disponibile
+          {{ $t('projectShared.videoNoVideo') }}
         </div>
 
       </div>

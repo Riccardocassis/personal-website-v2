@@ -4,25 +4,10 @@
   <ProjectHero :data="hero" />
 
   <!-- INTRO -->
-  <ProjectIntro
-    :data="{
-      title: 'Scopo del progetto',
-      text: 'In questo progetto ho voluto ridefinire l’identità visiva di Heller Garden, creando una direzione creativa coerente al luogo e un linguaggio visivo capace di raccontare l’essenza del giardino: un luogo in cui arte, botanica e movimento si intrecciano. Con il nuovo brand system ho voluto provare a riorganizza la comunicazione, semplificando l’esperienza del visitatore e dando vita a un’identità riconoscibile, fluida e contemporanea.'
-    }"
-  />
-
-  
-
-
+  <ProjectIntro :data="intro" />
 
   <!-- ELEMENTI CHIAVE -->
-  <ProjectKeyPoints
-    :items="[
-      { title: 'Direzione Creativa & Concept', text: 'Ho definito un concept visivo basato sulle stagioni, sulla ciclicità naturale e sulla fusione tra arte e botanica. Ogni scelta dai colori alla  tipografia scelta ai visual ed infine al tone of voice è calibrata per restituire ed enfatizzare l’identità viva e in continua trasformazione del giardino.' },
-      { title: 'Identità Visiva & Logo System', text: 'Ho progettato un marchio modulare ispirato al percorso del visitatore, alla crescita naturale e all’estetica organica del parco. Tipografie e palette stagionali creano un sistema unico e tempoaneo e immediatamente riconoscibile.' },
-      { title: 'Wayfinding, Mappe & Materiali', text: 'Basandomi sulla situazione di partenza, ho ridisegnato mappa e segnaletica per rendere la visita intuitiva e immersiva. I Totem, i pittogrammi e i visual stagionali accompagnano il pubblico attraverso un linguaggio morbido e accessibile ad ogni fascia d\'età.' }
-    ]"
-  />
+  <ProjectKeyPoints :items="keyPoints" />
 
   <!-- SLIDES -->
   <section class="bg-black">
@@ -47,6 +32,8 @@
 
 
 <script setup>
+import { computed } from "vue";
+import { useI18n } from "vue-i18n";
 import ProjectHero from "@/components/ProjectHero.vue";
 import ProjectIntro from "@/components/ProjectIntro.vue";
 import ProjectKeyPoints from "@/components/ProjectKeyPoints.vue";
@@ -56,6 +43,8 @@ import ProjectPrevNext from "@/components/ProjectPrevNext.vue";
 
 import { useReveal } from "@/composables/useReveal.js"; // ⭐ AGGIUNTA
 useReveal(); // ⭐ ATTIVA ANIMAZIONI SU QUESTA PAGINA
+
+const { t, tm } = useI18n();
 
 /* HERO IMAGE */
 import hellerhero from "@/assets/hellerhero.webp?width=800,1280,1920&format=webp&as=picture";
@@ -67,22 +56,21 @@ import hgfont from "@/assets/hgfont.webp?width=800,1280,1920&format=webp&as=pict
 import hellers2 from "@/assets/hellers2.webp?width=800,1280,1920&format=webp&as=picture";
 import hgptg from "@/assets/hgptg.webp?width=800,1280,1920&format=webp&as=picture";
 import hgmp from "@/assets/hgmp.webp?width=800,1280,1920&format=webp&as=picture";
+
+const slideImages = [hgintro, hglogo, hgfont, hellers2, hgptg, hgmp];
+
 /* HERO DATA */
-const hero = {
-  title: "Heller garden",
-  subtitle: "Art direction proposal rebranding del giardino botanico.",
+const hero = computed(() => ({
+  title: t('projects.project7.hero.title'),
+  subtitle: t('projects.project7.hero.subtitle'),
   img: hellerhero
-};
+}));
+
+const intro = computed(() => tm('projects.project7.intro'));
+const keyPoints = computed(() => tm('projects.project7.keyPoints'));
 
 /* SLIDES DATA */
-const slides = [
-  { title: "Concept del Rebranding", subtitle: " Un ecosistema naturale e artificiale in grado di respirare e cambiare sguardo in base al periodo.", text: "Il concept nasce dall’idea di un organismo vivo: un giardino che cambia con le stagioni, si trasforma con lo sguardo dei visitatori e racconta narrazioni diverse a seconda del percorso. La direzione creativa costruisce un linguaggio fluido, naturale e contemporaneo che unisce leggerezza, movimento e scoperta.", img: hgintro },
-  { title: "Logo", subtitle: "La consapevolezza al centro di tutto.", text: "Il marchio combina una foglia stilizzata, un percorso circolare e la lettera “H”, creando un simbolo che rappresenta crescita, scoperta e ciclicità.", img: hglogo },
-  { title: "Font", subtitle: "Il passato scolpito nel presente e nel futuro.", text: "Ho scelto Skia come carattere espressivo per titoli e logotipo: organico, variabile, scolpito. Per la comunicazione ho utilizzato Work Sans: accessibile, leggibile e neutra, ideale per testi editoriali e materiali divulgativi.", img: hgfont },
-  { title: "Palette stagionale", subtitle: "I colori cambiano seguendo le stagioni.", text: "Ho deciso di sviluppare un sistema cromatico che segue il ciclo naturale del giardino (primavera, estate, autunno, inverno). Ogni stagione definisce l'identità per le campagne, il merchandising e la segnaletica. A mio avviso la scelta plurima di inserire un sistema visuale variabile crea nel visitatore la voglia di tornare più volte per scoprire le diverse sfumature del luogo.", img: hellers2 },
-  { title: "Iconografia e segnaletica", subtitle: "Pittogrammi morbidi caratterizzati da forme organiche", text: "Ho scelto di disegnare i pittogrammi che andranno ad integrarsi all'interno del giardino botanico in maniera coerente al concept con forme morbide che richiamano l'organicità della natura e dell'arte che caratterizza il luogo. Ho scelto inoltre questo stile per garantire la massima facilità di comprensione all'utente dato che il targhet coinvolge tre differenti fasce d'età che vanno dall'infanzia alla terza età.", img: hgptg },
-  { title: "La mappa", subtitle: "Tre macro aree suddivise in tasselli che compongono un puzzle organico da visitare.", text: "La nuova mappa suddivide il giardino in tre macro-zone e integra percorsi e i punti d’interesse artistici e botanici. Ho deciso inoltre di renderla un mini libretto all'interno del quale vengono spiegate meglio tutte le zone e anche in questo caso i colori della mappa seguiranno le stagioni alternandosi come il resto degli elementi.", img: hgmp }
-
-];
+const slides = computed(() =>
+  tm('projects.project7.slides').map((s, i) => ({ ...s, img: slideImages[i] }))
+);
 </script>
-

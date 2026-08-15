@@ -2,16 +2,12 @@
   <div class="min-h-screen relative flex flex-col bg-black">
     <!-- gradient removed; background kept to page CSS or default -->
     <section class="flex-1 relative z-20 flex flex-col justify-center items-center px-8">
-      <h1 class="text-6xl font-extrabold mb-8 tracking-tight text-white text-center animate-fade-in">Chi sono</h1>
-      <div class="max-w-2xl text-white/90 text-lg leading-relaxed mb-8 text-center animate-fade-in delay-200">
-        Ho sempre avuto una grande passione per i computer e per tutto ciò che riguarda la creatività. Mi piace mettermi in gioco, lavorare insieme agli altri e imparare da ogni nuova esperienza.<br>
-        Per me il design non è solo una professione, ma un modo di pensare che si può applicare in tanti ambiti diversi.<br>
-        Quando progetto lo vivo come una sfida strategica: mescolo creatività e analisi per trasformare un problema in una soluzione.
-      </div>
+      <h1 class="text-6xl font-extrabold mb-8 tracking-tight text-white text-center animate-fade-in">{{ $t('about.title') }}</h1>
+      <div class="max-w-2xl text-white/90 text-lg leading-relaxed mb-8 text-center animate-fade-in delay-200 whitespace-pre-line">{{ $t('about.bio') }}</div>
       <h2 class="text-4xl font-bold text-cyan-400 text-center animate-fade-in delay-400">
         <template v-if="showCounter">
-          <span class="glow-hover cursor-pointer">{{ artistaCount }}% Artista</span><br>
-          <span class="glow-hover cursor-pointer">{{ nerdCount }}% Nerd</span>
+          <span class="glow-hover cursor-pointer">{{ artistaCount }}% {{ $t('about.artista') }}</span><br>
+          <span class="glow-hover cursor-pointer">{{ nerdCount }}% {{ $t('about.nerd') }}</span>
         </template>
       </h2>
     </section>

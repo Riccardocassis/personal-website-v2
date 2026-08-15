@@ -2,6 +2,7 @@
 import { ref, onMounted, onBeforeUnmount, watch } from 'vue'
 import { useRouter, RouterLink } from 'vue-router'
 import logo from '../assets/logo-rc.webp'
+import LanguageSwitcher from './LanguageSwitcher.vue'
 function closeMobileMenu() {
   mobileOpen.value = false
 }
@@ -97,7 +98,13 @@ function handleContactClick(event, options = {}){
 </script>
 
 <template>
-  <nav :class="['fixed top-0 left-0 right-0 z-50 transition-all duration-300', scrolled ? 'bg-black/30 backdrop-blur-sm shadow-sm border-b border-white/6' : 'bg-transparent']" style="height:70px;">
+  <nav
+    :class="[
+      'fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-xl backdrop-saturate-150 border-b',
+      scrolled ? 'bg-white/8 border-white/15 shadow-lg shadow-black/20' : 'bg-white/[0.04] border-white/10'
+    ]"
+    style="height:70px;"
+  >
     <div class="flex items-center justify-between max-w-7xl mx-auto w-full px-6 md:px-16 h-full">
 
       <div class="flex items-center h-full">
@@ -110,16 +117,20 @@ function handleContactClick(event, options = {}){
       <div class="hidden md:flex items-center h-full w-full max-w-3xl ml-auto">
         <ul class="flex items-center gap-8 text-lg w-full justify-end">
 
-          <li><RouterLink to="/projects" class="nav-link">Progetti</RouterLink></li>
-          <li><RouterLink to="/services" class="nav-link">Servizi</RouterLink></li>
-          <li><RouterLink to="/about" class="nav-link">Chi sono</RouterLink></li>
+          <li><RouterLink to="/projects" class="nav-link">{{ $t('nav.lavori') }}</RouterLink></li>
+          <li><RouterLink to="/services" class="nav-link">{{ $t('nav.servizi') }}</RouterLink></li>
+          <li><RouterLink to="/about" class="nav-link">{{ $t('nav.chiSono') }}</RouterLink></li>
+
+          <li class="flex items-center">
+            <LanguageSwitcher />
+          </li>
 
           <li class="flex items-center">
             <button
               class="text-white bg-blue-600 px-4 py-2 rounded-lg"
               @click="handleContactClick"
             >
-              Contattami
+              {{ $t('nav.contattami') }}
             </button>
           </li>
 
@@ -130,7 +141,7 @@ function handleContactClick(event, options = {}){
       <button
         class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg hover:bg-white/10 focus:outline-none text-white"
         @click="mobileOpen = !mobileOpen"
-        aria-label="Open menu"
+        :aria-label="$t('nav.openMenu')"
         :aria-expanded="mobileOpen"
       >
         <svg v-if="!mobileOpen" class="w-6 h-6" fill="none" stroke="currentColor">
@@ -152,7 +163,7 @@ function handleContactClick(event, options = {}){
         <div class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
 
         <div class="relative h-full flex items-center justify-center px-6">
-          <button class="absolute top-6 right-6 text-white/80 hover:text-white" @click="mobileOpen = false">
+          <button class="absolute top-6 right-6 text-white/80 hover:text-white" :aria-label="$t('nav.closeMenu')" @click="mobileOpen = false">
             <svg class="w-7 h-7" fill="none" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
             </svg>
@@ -161,17 +172,19 @@ function handleContactClick(event, options = {}){
           <div class="relative z-10 w-full max-w-xs" style="max-height:calc(100vh - 140px); overflow-y:auto;">
             <div class="space-y-6 text-center py-6">
 
-              <RouterLink to="/projects" class="block text-2xl font-semibold text-white/90 hover:text-white" @click="mobileOpen=false">Progetti</RouterLink>
-              <RouterLink to="/services" class="block text-2xl font-semibold text-white/90 hover:text-white" @click="mobileOpen=false">Servizi</RouterLink>
-              <RouterLink to="/about" class="block text-2xl font-semibold text-white/90 hover:text-white" @click="mobileOpen=false">Chi sono</RouterLink>
+              <RouterLink to="/projects" class="block text-2xl font-semibold text-white/90 hover:text-white" @click="mobileOpen=false">{{ $t('nav.lavori') }}</RouterLink>
+              <RouterLink to="/services" class="block text-2xl font-semibold text-white/90 hover:text-white" @click="mobileOpen=false">{{ $t('nav.servizi') }}</RouterLink>
+              <RouterLink to="/about" class="block text-2xl font-semibold text-white/90 hover:text-white" @click="mobileOpen=false">{{ $t('nav.chiSono') }}</RouterLink>
 
-              <!-- 🔥 FIX MOBILE BUTTON QUI -->
-              
+              <div class="flex justify-center pt-2">
+                <LanguageSwitcher mobile />
+              </div>
+
               <button
   class="block text-white bg-blue-600 px-4 py-2 rounded-lg mx-auto"
   @click="(e) => handleContactClick(e, { closeMobile: closeMobileMenu })"
 >
-  Contattami
+  {{ $t('nav.contattami') }}
 </button>
 
             </div>

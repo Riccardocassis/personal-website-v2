@@ -1,24 +1,24 @@
 <template>
   <div class="min-h-screen bg-black text-white flex items-center justify-center px-6">
     <section class="w-full max-w-3xl bg-white/6 backdrop-blur-md rounded-2xl p-8 md:p-12 border border-white/8">
-      <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Contattami</h1>
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-4">{{ $t('contactFallback.title') }}</h1>
 
-      <p class="text-lg text-white/80 mb-6">Sembra che la tua app email non sia configurata.</p>
+      <p class="text-lg text-white/80 mb-6">{{ $t('contactFallback.subtitle') }}</p>
 
       <div class="mb-6">
-        <p class="text-sm text-white/70">Email</p>
+        <p class="text-sm text-white/70">{{ $t('contactFallback.emailLabel') }}</p>
         <div class="mt-2 flex items-center gap-4">
           <code class="bg-white/8 px-4 py-2 rounded-md text-lg font-medium">riccardocassis.rc@gmail.com</code>
-          <button @click="copyEmail" class="ml-2 inline-block bg-blue-600 text-white px-4 py-2 rounded-md font-medium hover:bg-blue-700">Copia email</button>
+          <button @click="copyEmail" class="ml-2 inline-block bg-blue-600 text-white px-4 py-2 rounded-md font-medium hover:bg-blue-700">{{ $t('contactFallback.copyButton') }}</button>
         </div>
       </div>
 
       <div class="flex gap-4">
-        <a :href="gmailUrl" target="_blank" rel="noopener" class="inline-block bg-transparent border border-white/12 text-white px-4 py-2 rounded-md hover:bg-white/6">Apri con Gmail</a>
-        <button @click="goBack" class="inline-block bg-white/8 text-white px-4 py-2 rounded-md hover:bg-white/12">Torna indietro</button>
+        <a :href="gmailUrl" target="_blank" rel="noopener" class="inline-block bg-transparent border border-white/12 text-white px-4 py-2 rounded-md hover:bg-white/6">{{ $t('contactFallback.openGmail') }}</a>
+        <button @click="goBack" class="inline-block bg-white/8 text-white px-4 py-2 rounded-md hover:bg-white/12">{{ $t('contactFallback.goBack') }}</button>
       </div>
 
-      <p v-if="copied" class="mt-4 text-sm text-emerald-400">Email copiata negli appunti.</p>
+      <p v-if="copied" class="mt-4 text-sm text-emerald-400">{{ $t('contactFallback.copied') }}</p>
     </section>
   </div>
 </template>

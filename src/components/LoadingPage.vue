@@ -7,7 +7,7 @@
       <div class="loader-bar">
         <div class="loader-progress"></div>
       </div>
-      <span class="loading-text">Caricamento in corso...</span>
+      <span class="loading-text">{{ $t('loading.text') }}</span>
     </div>
   </div>
 </template>
