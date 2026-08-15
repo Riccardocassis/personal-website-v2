@@ -1,37 +1,39 @@
 <template>
-  <RouterLink
-    :to="to"
-    class="project-card group relative overflow-hidden rounded-2xl parallax-card"
-    :class="offsetClass"
-  >
-    <div class="parallax-content">
+  <div>
+    <RouterLink
+      :to="to"
+      class="project-card group relative overflow-hidden rounded-2xl parallax-card"
+      :class="offsetClass"
+    >
+      <div class="parallax-content">
 
-      <!-- Base image -->
-      <img
-        :src="img"
-        alt=""
-        class="absolute inset-0 w-full h-full object-cover transition-all duration-300 group-hover:opacity-0"
-      />
+        <!-- Base image -->
+        <img
+          :src="img"
+          alt=""
+          class="absolute inset-0 w-full h-full object-cover transition-all duration-300 group-hover:opacity-0"
+        />
 
-      <!-- Hover image -->
-      <img
-        :src="imgHover"
-        alt=""
-        class="absolute inset-0 w-full h-full object-cover opacity-0 scale-105 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105"
-      />
+        <!-- Hover image -->
+        <img
+          :src="imgHover"
+          alt=""
+          class="absolute inset-0 w-full h-full object-cover opacity-0 scale-105 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105"
+        />
 
-      <!-- Overlay -->
-      <div
-        class="absolute inset-0 bg-black/40 opacity-0 flex items-center justify-center text-white text-lg font-medium transition-opacity duration-300 group-hover:opacity-100"
-      >
-        {{ $t('projectCard.view') }}
+        <!-- Overlay -->
+        <div
+          class="absolute inset-0 bg-black/40 opacity-0 flex items-center justify-center text-white text-lg font-medium transition-opacity duration-300 group-hover:opacity-100"
+        >
+          {{ $t('projectCard.view') }}
+        </div>
+
       </div>
+    </RouterLink>
 
-    </div>
-  </RouterLink>
-
-  <!-- Title under each card -->
-  <h3 class="text-lg font-medium mt-3">{{ title }}</h3>
+    <!-- Title under each card -->
+    <h3 class="text-lg font-medium mt-3">{{ title }}</h3>
+  </div>
 </template>
 
 <script setup>
@@ -53,6 +55,7 @@ const offsetClass = computed(() =>
 
 <style scoped>
 .project-card {
+  display: block;
   width: 100%;
   height: 420px;
 }

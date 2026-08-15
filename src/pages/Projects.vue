@@ -33,115 +33,28 @@
         ref="gridRef"
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-20 gap-y-16"
       >
-
-        <!-- ======================= -->
-        <!-- COLUMN 1 -->
-        <!-- ======================= -->
-        <div class="parallax-column flex flex-col space-y-12">
-
+        <div
+          v-for="(col, colIdx) in columns"
+          :key="colIdx"
+          class="parallax-column flex flex-col space-y-12"
+        >
           <ProjectCard
-            v-show="isVisible('webDesign')"
-            to="/projects/project-1"
-            :img="gibsonA"
-            :imgHover="gibsonB"
-            :title="$t('projectsPage.cards.project1')"
-            offset="2"
+            v-for="p in col"
+            :key="p.key"
+            :to="p.to"
+            :img="p.img"
+            :imgHover="p.imgHover"
+            :title="$t('projectsPage.cards.' + p.key)"
+            :offset="p.offset"
           />
-
-          <ProjectCard
-            v-show="isVisible('app')"
-            to="/projects/project-4"
-            :img="fillboA"
-            :imgHover="fillboB"
-            :title="$t('projectsPage.cards.project4')"
-            offset="3"
-          />
-
-          <ProjectCard
-            v-show="isVisible('brandIdentity')"
-            to="/projects/project-7"
-            :img="hellerA"
-            :imgHover="hellerB"
-            :title="$t('projectsPage.cards.project7')"
-            offset="1"
-          />
-
         </div>
-
-        <!-- ======================= -->
-        <!-- COLUMN 2 -->
-        <!-- ======================= -->
-        <div class="parallax-column flex flex-col space-y-12">
-
-          <ProjectCard
-            v-show="isVisible('webDesign')"
-            to="/projects/project-2"
-            :img="sizexlA"
-            :imgHover="sizexlB"
-            :title="$t('projectsPage.cards.project2')"
-            offset="1"
-          />
-
-          <ProjectCard
-            v-show="isVisible('app')"
-            to="/projects/project-5"
-            :img="opsifyA"
-            :imgHover="opsifyB"
-            :title="$t('projectsPage.cards.project5')"
-            offset="2"
-          />
-
-          <ProjectCard
-            v-show="isVisible('brandIdentity')"
-            to="/projects/project-8"
-            :img="robertoA"
-            :imgHover="robertoB"
-            :title="$t('projectsPage.cards.project8')"
-          />
-
-        </div>
-
-        <!-- ======================= -->
-        <!-- COLUMN 3 -->
-        <!-- ======================= -->
-        <div class="parallax-column flex flex-col space-y-12">
-
-          <ProjectCard
-            v-show="isVisible('webDesign')"
-            to="/projects/project-3"
-            :img="synapsesA"
-            :imgHover="synapsesB"
-            :title="$t('projectsPage.cards.project3')"
-            offset="3"
-          />
-
-          <ProjectCard
-            v-show="isVisible('app')"
-            to="/projects/project-6"
-            :img="webableA"
-            :imgHover="webableB"
-            :title="$t('projectsPage.cards.project6')"
-            offset="2"
-          />
-
-          <ProjectCard
-            v-show="isVisible('editorial')"
-            to="/projects/project-9"
-            :img="controlAltA"
-            :imgHover="controlAltB"
-            :title="$t('projectsPage.cards.project9')"
-            offset="3"
-          />
-
-        </div>
-
       </div>
     </div>
   </section>
 </template>
 
 <script setup>
-import { ref, nextTick, onMounted, onBeforeUnmount } from 'vue'
+import { ref, computed, nextTick, onMounted, onBeforeUnmount } from 'vue'
 import { gsap } from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import { useParallaxCards } from '../composables/useParallaxCards'
@@ -151,19 +64,6 @@ import ProjectCard from '@/components/ProjectCard.vue'
 gsap.registerPlugin(ScrollTrigger)
 
 const gridRef = ref(null)
-
-/* FILTERS */
-const categories = ['all', 'webDesign', 'app', 'brandIdentity', 'editorial']
-const selectedCategory = ref('all')
-
-function isVisible(cat) {
-  return selectedCategory.value === 'all' || selectedCategory.value === cat
-}
-
-function setFilter(cat) {
-  selectedCategory.value = cat
-  nextTick(() => ScrollTrigger.refresh())
-}
 
 /* IMAGES — YOUR RENAMED FILES */
 import controlAltA from '../assets/controlaltcanc-a.webp?w=800&format=webp&as=src'
@@ -193,18 +93,61 @@ import webableB from '../assets/webable-b.webp?w=800&format=webp&as=src'
 import opsifyA from '../assets/opsify-a.webp?w=800&format=webp&as=src'
 import opsifyB from '../assets/opsify-b.webp?w=800&format=webp&as=src'
 
+/* PROJECT DATA — single source of truth, order = default "Tutti" layout */
+const allProjects = [
+  { key: 'project1', to: '/projects/project-1', img: gibsonA,      imgHover: gibsonB,      category: 'webDesign',     offset: '2' },
+  { key: 'project2', to: '/projects/project-2', img: sizexlA,      imgHover: sizexlB,      category: 'webDesign',     offset: '1' },
+  { key: 'project3', to: '/projects/project-3', img: synapsesA,    imgHover: synapsesB,    category: 'webDesign',     offset: '3' },
+  { key: 'project4', to: '/projects/project-4', img: fillboA,      imgHover: fillboB,      category: 'app',           offset: '3' },
+  { key: 'project5', to: '/projects/project-5', img: opsifyA,      imgHover: opsifyB,      category: 'app',           offset: '2' },
+  { key: 'project6', to: '/projects/project-6', img: webableA,     imgHover: webableB,     category: 'app',           offset: '2' },
+  { key: 'project7', to: '/projects/project-7', img: hellerA,      imgHover: hellerB,      category: 'brandIdentity', offset: '1' },
+  { key: 'project8', to: '/projects/project-8', img: robertoA,     imgHover: robertoB,     category: 'brandIdentity', offset: null },
+  { key: 'project9', to: '/projects/project-9', img: controlAltA,  imgHover: controlAltB,  category: 'editorial',     offset: '3' }
+]
+
+/* FILTERS */
+const categories = ['all', 'webDesign', 'app', 'brandIdentity', 'editorial']
+const selectedCategory = ref('all')
+
+const filteredProjects = computed(() =>
+  selectedCategory.value === 'all'
+    ? allProjects
+    : allProjects.filter(p => p.category === selectedCategory.value)
+)
+
+/* Re-distribute the filtered projects into 3 columns, always starting from
+   the first slot, so the grid reflows instead of leaving empty columns. */
+const columns = computed(() => {
+  const cols = [[], [], []]
+  filteredProjects.value.forEach((p, i) => cols[i % 3].push(p))
+  return cols
+})
+
 const { init, kill } = useParallaxCards(gridRef)
 
-onMounted(() => {
+function animateIn() {
   const cards = gridRef.value?.querySelectorAll('.project-card') || []
   if (cards.length) {
     gsap.fromTo(
       cards,
       { autoAlpha: 0, y: 25, scale: 0.96 },
-      { autoAlpha: 1, y: 0, scale: 1, duration: 0.9, ease: 'power3.out', stagger: 0.08 }
+      { autoAlpha: 1, y: 0, scale: 1, duration: 0.7, ease: 'power3.out', stagger: 0.06 }
     )
   }
+}
 
+function setFilter(cat) {
+  selectedCategory.value = cat
+  nextTick(() => {
+    kill()
+    init()
+    animateIn()
+  })
+}
+
+onMounted(() => {
+  animateIn()
   init()
 })
 
@@ -213,6 +156,7 @@ onBeforeUnmount(() => kill())
 
 <style scoped>
 .project-card {
+  display: block;
   width: 100%;
   height: 420px;
 }
