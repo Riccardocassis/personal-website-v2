@@ -168,18 +168,20 @@ function handleContactClick(event, options = {}){
 
         <div class="relative h-full flex items-center justify-center px-6">
           <div class="relative z-10 w-full max-w-xs" style="max-height:calc(100vh - 140px); overflow-y:auto;">
-            <div class="space-y-6 text-center py-6">
+            <div class="text-center py-6">
 
-              <RouterLink to="/projects" class="block text-2xl font-semibold text-white/90 hover:text-white" @click="mobileOpen=false">{{ $t('nav.lavori') }}</RouterLink>
-              <RouterLink to="/services" class="block text-2xl font-semibold text-white/90 hover:text-white" @click="mobileOpen=false">{{ $t('nav.servizi') }}</RouterLink>
-              <RouterLink to="/about" class="block text-2xl font-semibold text-white/90 hover:text-white" @click="mobileOpen=false">{{ $t('nav.chiSono') }}</RouterLink>
-
-              <div class="flex justify-center pt-2">
+              <div class="flex justify-center pb-6 mb-6 border-b border-white/10">
                 <LanguageSwitcher mobile />
               </div>
 
+              <div class="space-y-6">
+                <RouterLink to="/projects" class="block text-2xl font-semibold text-white/90 hover:text-white" @click="mobileOpen=false">{{ $t('nav.lavori') }}</RouterLink>
+                <RouterLink to="/services" class="block text-2xl font-semibold text-white/90 hover:text-white" @click="mobileOpen=false">{{ $t('nav.servizi') }}</RouterLink>
+                <RouterLink to="/about" class="block text-2xl font-semibold text-white/90 hover:text-white" @click="mobileOpen=false">{{ $t('nav.chiSono') }}</RouterLink>
+              </div>
+
               <button
-  class="block text-white bg-blue-600 px-4 py-2 rounded-lg mx-auto"
+  class="block text-white bg-blue-600 px-4 py-2 rounded-lg mx-auto mt-6"
   @click="(e) => handleContactClick(e, { closeMobile: closeMobileMenu })"
 >
   {{ $t('nav.contattami') }}
