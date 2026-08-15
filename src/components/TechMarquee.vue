@@ -17,34 +17,45 @@
             :key="group + '-' + i"
             class="flex items-center shrink-0"
           >
-            <div
-              class="flex items-center justify-center w-9 h-9 md:w-11 md:h-11 mx-4 md:mx-6"
-              role="img"
-              :aria-label="tool.name"
-            >
-              <svg
-                v-if="tool.type === 'svg'"
-                viewBox="0 0 24 24"
-                class="w-full h-full"
-                :fill="tool.forceWhite ? '#ffffff' : '#' + tool.hex"
-              >
-                <path :d="tool.path" />
-              </svg>
-
+            <div class="flex flex-col items-center gap-2 mx-4 md:mx-6 w-16 md:w-20">
               <div
-                v-else-if="tool.type === 'badge'"
-                class="w-full h-full rounded-lg flex items-center justify-center font-bold text-xs md:text-sm"
-                :style="{ background: tool.bg, color: tool.fg }"
+                class="icon-slot flex items-center justify-center w-9 h-9 md:w-11 md:h-11"
+                role="img"
+                :aria-label="tool.name"
               >
-                {{ tool.label }}
+                <svg
+                  v-if="tool.type === 'svg'"
+                  viewBox="0 0 24 24"
+                  class="w-full h-full"
+                  :fill="tool.forceWhite ? '#ffffff' : '#' + tool.hex"
+                >
+                  <path :d="tool.path" />
+                </svg>
+
+                <div
+                  v-else-if="tool.type === 'badge'"
+                  class="w-full h-full rounded-lg flex items-center justify-center font-bold text-xs md:text-sm"
+                  :style="{ background: tool.bg, color: tool.fg }"
+                >
+                  {{ tool.label }}
+                </div>
+
+                <div v-else-if="tool.type === 'raw'" class="w-full h-full" v-html="tool.raw"></div>
+
+                <div
+                  v-else
+                  class="px-3 h-full rounded-full border border-white/15 flex items-center justify-center text-white/60 text-[11px] md:text-xs uppercase tracking-wide whitespace-nowrap"
+                >
+                  {{ tool.name }}
+                </div>
               </div>
 
-              <div
-                v-else
-                class="px-3 h-full rounded-full border border-white/15 flex items-center justify-center text-white/60 text-[11px] md:text-xs uppercase tracking-wide whitespace-nowrap"
+              <span
+                v-if="tool.type !== 'text'"
+                class="text-[10px] md:text-[11px] text-white/40 text-center leading-tight whitespace-nowrap"
               >
                 {{ tool.name }}
-              </div>
+              </span>
             </div>
 
             <span class="w-1 h-1 rounded-full bg-white/15 shrink-0" aria-hidden="true"></span>
@@ -77,8 +88,11 @@ import {
   siGithub,
   siNetlify,
   siGoogleanalytics,
-  siGooglesearchconsole
+  siGooglesearchconsole,
+  siShopify
 } from 'simple-icons'
+
+import vscodeRaw from 'devicon/icons/vscode/vscode-original.svg?raw'
 
 function svgTool(icon, forceWhite = false) {
   return { type: 'svg', name: icon.title, path: icon.path, hex: icon.hex, forceWhite }
@@ -91,14 +105,14 @@ const tools = [
   { type: 'badge', name: 'Adobe After Effects', label: 'Ae', bg: '#00005B', fg: '#9999FF' },
   { type: 'badge', name: 'Adobe InDesign', label: 'Id', bg: '#FF3366', fg: '#1a1a1a' },
   svgTool(siWebflow),
-  { type: 'badge', name: 'Visual Studio Code', label: 'VS', bg: '#007ACC', fg: '#ffffff' },
+  { type: 'raw', name: 'Visual Studio Code', raw: vscodeRaw },
   svgTool(siBlender),
   svgTool(siVuedotjs),
   { type: 'text', name: 'Spline' },
   svgTool(siWordpress),
   svgTool(siElementor),
   svgTool(siReact),
-  { type: 'text', name: 'Crocoblock' },
+  { type: 'text', name: 'JetEngine' },
   svgTool(siTypescript),
   { type: 'text', name: 'Protopie' },
   svgTool(siNuxt),
@@ -110,23 +124,28 @@ const tools = [
   svgTool(siPython),
   svgTool(siNetlify),
   svgTool(siOdoo),
+  svgTool(siShopify),
   svgTool(siBrevo),
   svgTool(siMailchimp),
   svgTool(siGoogleanalytics),
   svgTool(siGooglesearchconsole),
-  { type: 'text', name: 'Canva' },
-  { type: 'text', name: 'MailUp' }
+  { type: 'text', name: 'Canva' }
 ]
 </script>
 
 <style scoped>
 .marquee-track {
-  animation: marquee-scroll 38s linear infinite;
+  animation: marquee-scroll 46s linear infinite;
 }
 
 .marquee-outer:hover .marquee-track,
 .marquee-outer:focus-within .marquee-track {
   animation-play-state: paused;
+}
+
+.icon-slot :deep(svg) {
+  width: 100%;
+  height: 100%;
 }
 
 @keyframes marquee-scroll {
@@ -140,7 +159,7 @@ const tools = [
 
 @media (max-width: 768px) {
   .marquee-track {
-    animation-duration: 22s;
+    animation-duration: 28s;
   }
 }
 
