@@ -24,11 +24,14 @@ export default {
 
   hero: {
     role: 'UI/UX & Web Designer',
-    payoff: 'Ich gestalte Websites und digitale Produkte, die klar, schnell und darauf ausgelegt sind, gefunden zu werden — von Menschen und von künstlicher Intelligenz.'
+    payoff: 'Design, das aus Analyse entsteht, nicht aus Bauchgefühl. Ich gestalte Websites, Marken und digitale Erlebnisse zwischen Bergamo und Brescia.'
   },
 
   home: {
-    toolsTitle: 'Tools & Technologien, die ich nutze'
+    toolsTitle: 'Tools & Technologien, die ich nutze',
+    featuredEyebrow: '/ Ausgewählte Arbeiten',
+    featuredTitle: 'Ausgewählte Projekte',
+    viewAll: 'Alle Projekte ansehen'
   },
 
   about: {

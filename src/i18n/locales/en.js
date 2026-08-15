@@ -24,11 +24,14 @@ export default {
 
   hero: {
     role: 'UI/UX & Web Designer',
-    payoff: 'I design websites and digital products that are clear, fast and built to be found — by people and by artificial intelligence.'
+    payoff: 'Design born from analysis, not instinct. I build websites, brands and digital experiences between Bergamo and Brescia.'
   },
 
   home: {
-    toolsTitle: 'Tools & technologies I use'
+    toolsTitle: 'Tools & technologies I use',
+    featuredEyebrow: '/ Selected work',
+    featuredTitle: 'Featured projects',
+    viewAll: 'View all projects'
   },
 
   about: {

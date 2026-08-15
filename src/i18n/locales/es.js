@@ -24,11 +24,14 @@ export default {
 
   hero: {
     role: 'UI/UX & Web Designer',
-    payoff: 'Diseño sitios web y productos digitales claros, rápidos y pensados para ser encontrados — por personas y por inteligencia artificial.'
+    payoff: 'Diseño que nace del análisis, no del instinto. Diseño sitios web, marcas y experiencias digitales entre Bérgamo y Brescia.'
   },
 
   home: {
-    toolsTitle: 'Herramientas y tecnologías que uso'
+    toolsTitle: 'Herramientas y tecnologías que uso',
+    featuredEyebrow: '/ Trabajos seleccionados',
+    featuredTitle: 'Proyectos destacados',
+    viewAll: 'Ver todos los proyectos'
   },
 
   about: {

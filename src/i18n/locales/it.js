@@ -24,11 +24,14 @@ export default {
 
   hero: {
     role: 'UI/UX & Web Designer',
-    payoff: 'Progetto siti e prodotti digitali chiari, veloci e pensati per farsi trovare — da persone e intelligenza artificiale.'
+    payoff: 'Design che nasce dall’analisi, non dall’istinto. Progetto siti, brand ed esperienze digitali tra Bergamo e Brescia.'
   },
 
   home: {
-    toolsTitle: 'Strumenti e tecnologie che uso'
+    toolsTitle: 'Strumenti e tecnologie che uso',
+    featuredEyebrow: '/ Lavori selezionati',
+    featuredTitle: 'Progetti in evidenza',
+    viewAll: 'Vedi tutti i progetti'
   },
 
   about: {
