@@ -27,6 +27,10 @@ export default {
     payoff: 'Diseño sitios web y productos digitales claros, rápidos y pensados para ser encontrados — por personas y por inteligencia artificial.'
   },
 
+  home: {
+    toolsTitle: 'Herramientas y tecnologías que uso'
+  },
+
   about: {
     title: 'Sobre mí',
     bio: 'Siempre he sentido una gran pasión por los ordenadores y por todo lo relacionado con la creatividad. Me gusta ponerme a prueba, trabajar junto a otras personas y aprender de cada nueva experiencia.\nPara mí el diseño no es solo una profesión, sino una forma de pensar que se puede aplicar a muchos ámbitos distintos.\nCuando diseño lo vivo como un desafío estratégico: combino creatividad y análisis para transformar un problema en una solución.',

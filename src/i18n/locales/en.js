@@ -27,6 +27,10 @@ export default {
     payoff: 'I design websites and digital products that are clear, fast and built to be found — by people and by artificial intelligence.'
   },
 
+  home: {
+    toolsTitle: 'Tools & technologies I use'
+  },
+
   about: {
     title: 'About me',
     bio: "I've always had a deep passion for computers and everything related to creativity. I like putting myself out there, working with others and learning from every new experience.\nTo me, design isn't just a profession — it's a way of thinking that applies to many different fields.\nWhen I design, I treat it as a strategic challenge: I blend creativity and analysis to turn a problem into a solution.",

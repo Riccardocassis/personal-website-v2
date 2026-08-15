@@ -27,6 +27,10 @@ export default {
     payoff: 'Progetto siti e prodotti digitali chiari, veloci e pensati per farsi trovare — da persone e intelligenza artificiale.'
   },
 
+  home: {
+    toolsTitle: 'Strumenti e tecnologie che uso'
+  },
+
   about: {
     title: 'Chi sono',
     bio: 'Ho sempre avuto una grande passione per i computer e per tutto ciò che riguarda la creatività. Mi piace mettermi in gioco, lavorare insieme agli altri e imparare da ogni nuova esperienza.\nPer me il design non è solo una professione, ma un modo di pensare che si può applicare in tanti ambiti diversi.\nQuando progetto lo vivo come una sfida strategica: mescolo creatività e analisi per trasformare un problema in una soluzione.',

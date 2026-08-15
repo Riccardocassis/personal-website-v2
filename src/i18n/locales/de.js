@@ -27,6 +27,10 @@ export default {
     payoff: 'Ich gestalte Websites und digitale Produkte, die klar, schnell und darauf ausgelegt sind, gefunden zu werden — von Menschen und von künstlicher Intelligenz.'
   },
 
+  home: {
+    toolsTitle: 'Tools & Technologien, die ich nutze'
+  },
+
   about: {
     title: 'Über mich',
     bio: 'Ich hatte schon immer eine große Leidenschaft für Computer und alles, was mit Kreativität zu tun hat. Ich probiere mich gerne aus, arbeite gerne mit anderen zusammen und lerne aus jeder neuen Erfahrung.\nFür mich ist Design nicht nur ein Beruf, sondern eine Denkweise, die sich auf viele verschiedene Bereiche anwenden lässt.\nWenn ich gestalte, verstehe ich das als strategische Herausforderung: Ich verbinde Kreativität und Analyse, um aus einem Problem eine Lösung zu machen.',
