@@ -40,20 +40,10 @@
                   {{ tool.label }}
                 </div>
 
-                <div v-else-if="tool.type === 'raw'" class="w-full h-full" v-html="tool.raw"></div>
-
-                <div
-                  v-else
-                  class="px-3 h-full rounded-full border border-white/15 flex items-center justify-center text-white/60 text-[11px] md:text-xs uppercase tracking-wide whitespace-nowrap"
-                >
-                  {{ tool.name }}
-                </div>
+                <div v-else class="w-full h-full" v-html="tool.raw"></div>
               </div>
 
-              <span
-                v-if="tool.type !== 'text'"
-                class="text-[10px] md:text-[11px] text-white/40 text-center leading-tight whitespace-nowrap"
-              >
+              <span class="text-[10px] md:text-[11px] text-white/40 text-center leading-tight whitespace-nowrap">
                 {{ tool.name }}
               </span>
             </div>
@@ -98,6 +88,10 @@ function svgTool(icon, forceWhite = false) {
   return { type: 'svg', name: icon.title, path: icon.path, hex: icon.hex, forceWhite }
 }
 
+/* Only tools with a verified icon (official brand SVG, or Adobe/VS Code's
+   own monogram-badge style) are listed here — no text-only placeholders,
+   so every entry in the marquee looks the same. Spline, JetEngine/Crocoblock,
+   Protopie, MailUp and Canva were dropped: no verified icon asset found. */
 const tools = [
   svgTool(siFigma),
   { type: 'badge', name: 'Adobe Illustrator', label: 'Ai', bg: '#FF9A00', fg: '#1a1a1a' },
@@ -108,13 +102,10 @@ const tools = [
   { type: 'raw', name: 'Visual Studio Code', raw: vscodeRaw },
   svgTool(siBlender),
   svgTool(siVuedotjs),
-  { type: 'text', name: 'Spline' },
   svgTool(siWordpress),
   svgTool(siElementor),
   svgTool(siReact),
-  { type: 'text', name: 'JetEngine' },
   svgTool(siTypescript),
-  { type: 'text', name: 'Protopie' },
   svgTool(siNuxt),
   svgTool(siGit),
   svgTool(siGithub, true),
@@ -128,14 +119,13 @@ const tools = [
   svgTool(siBrevo),
   svgTool(siMailchimp),
   svgTool(siGoogleanalytics),
-  svgTool(siGooglesearchconsole),
-  { type: 'text', name: 'Canva' }
+  svgTool(siGooglesearchconsole)
 ]
 </script>
 
 <style scoped>
 .marquee-track {
-  animation: marquee-scroll 46s linear infinite;
+  animation: marquee-scroll 42s linear infinite;
 }
 
 .marquee-outer:hover .marquee-track,
@@ -159,7 +149,7 @@ const tools = [
 
 @media (max-width: 768px) {
   .marquee-track {
-    animation-duration: 28s;
+    animation-duration: 26s;
   }
 }
 
