@@ -30,16 +30,39 @@
           <div class="w-full text-white pr-6 md:pr-20 pl-0 md:pl-12 lg:pl-20 mt-8 md:mt-0">
             <div class="max-w-xl md:text-left text-center">
 
+              <p class="text-xs md:text-sm uppercase tracking-[0.2em] text-white/50 font-semibold mb-4 md:mb-5">
+                {{ $t('hero.eyebrow') }}
+              </p>
+
               <h1 ref="titleRef" id="hero-title"
-                  class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
-                <span class="whitespace-nowrap">Riccardo Cassis</span>
-                <span class="block mt-2">{{ $t('hero.role') }}</span>
+                  class="text-3xl sm:text-4xl md:text-2xl lg:text-[32px] font-extrabold leading-tight">
+                <template v-for="(line, i) in $tm('hero.titleLines')" :key="i">{{ line }} <br v-if="i < 2" class="hidden lg:block" /></template>
               </h1>
 
               <p ref="subtitleRef"
                  class="mt-6 md:mt-8 text-sm sm:text-base md:text-lg text-white/90 max-w-md md:max-w-xl leading-relaxed mx-auto md:mx-0">
-                {{ $t('hero.payoff') }}
+                {{ $t('hero.description') }}
               </p>
+
+              <p class="mt-3 text-xs sm:text-sm text-white/50 max-w-md md:max-w-xl mx-auto md:mx-0">
+                {{ $t('hero.location') }}
+              </p>
+
+              <!-- CTAs -->
+              <div class="mt-8 flex flex-wrap items-center md:items-start justify-center md:justify-start gap-3 sm:gap-4">
+                <RouterLink
+                  to="/projects"
+                  class="inline-flex items-center justify-center whitespace-nowrap w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg shadow-md transition-colors"
+                >
+                  {{ $t('hero.ctaPrimary') }}
+                </RouterLink>
+                <RouterLink
+                  to="/contact"
+                  class="inline-flex items-center justify-center whitespace-nowrap w-full sm:w-auto border border-white/25 hover:border-white/40 hover:bg-white/5 text-white font-medium px-6 py-3 rounded-lg transition-colors"
+                >
+                  {{ $t('hero.ctaSecondary') }}
+                </RouterLink>
+              </div>
 
               <!-- SOCIAL ICONS -->
               <div class="mt-6 md:mt-8 flex justify-center md:justify-start gap-4 md:gap-6">

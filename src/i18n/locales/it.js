@@ -23,8 +23,12 @@ export default {
   },
 
   hero: {
-    role: 'UI/UX & Web Designer',
-    payoff: 'Design che nasce dall’analisi, non dall’istinto. Progetto siti, brand ed esperienze digitali tra Bergamo e Brescia.'
+    eyebrow: 'RICCARDO CASSIS — UI/UX & WEB DESIGNER',
+    titleLines: ['Progetto esperienze digitali', 'chiare, riconoscibili e', 'costruite per funzionare.'],
+    description: 'Trasformo obiettivi, contenuti e identità in siti web capaci di guidare le persone e valorizzare il brand.',
+    location: 'Tra Bergamo, Brescia e ovunque serva una buona idea.',
+    ctaPrimary: 'Esplora i progetti',
+    ctaSecondary: 'Contattami'
   },
 
   home: {

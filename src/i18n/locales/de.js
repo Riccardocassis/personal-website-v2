@@ -23,8 +23,12 @@ export default {
   },
 
   hero: {
-    role: 'UI/UX & Web Designer',
-    payoff: 'Design, das aus Analyse entsteht, nicht aus Bauchgefühl. Ich gestalte Websites, Marken und digitale Erlebnisse zwischen Bergamo und Brescia.'
+    eyebrow: 'RICCARDO CASSIS — UI/UX & WEB DESIGNER',
+    titleLines: ['Ich gestalte digitale Erlebnisse,', 'die klar, wiedererkennbar', 'und funktional sind.'],
+    description: 'Ich verwandle Ziele, Inhalte und Identität in Websites, die Menschen leiten und die Marke stärken.',
+    location: 'Zwischen Bergamo, Brescia und überall dort, wo eine gute Idee gebraucht wird.',
+    ctaPrimary: 'Projekte entdecken',
+    ctaSecondary: 'Kontakt'
   },
 
   home: {

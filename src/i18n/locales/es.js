@@ -23,8 +23,12 @@ export default {
   },
 
   hero: {
-    role: 'UI/UX & Web Designer',
-    payoff: 'Diseño que nace del análisis, no del instinto. Diseño sitios web, marcas y experiencias digitales entre Bérgamo y Brescia.'
+    eyebrow: 'RICCARDO CASSIS — UI/UX & WEB DESIGNER',
+    titleLines: ['Diseño experiencias digitales', 'claras, reconocibles y', 'construidas para funcionar.'],
+    description: 'Transformo objetivos, contenidos e identidad en sitios web capaces de guiar a las personas y potenciar la marca.',
+    location: 'Entre Bérgamo, Brescia y donde haga falta una buena idea.',
+    ctaPrimary: 'Explora mis proyectos',
+    ctaSecondary: 'Contáctame'
   },
 
   home: {

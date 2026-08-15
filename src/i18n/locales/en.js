@@ -23,8 +23,12 @@ export default {
   },
 
   hero: {
-    role: 'UI/UX & Web Designer',
-    payoff: 'Design born from analysis, not instinct. I build websites, brands and digital experiences between Bergamo and Brescia.'
+    eyebrow: 'RICCARDO CASSIS — UI/UX & WEB DESIGNER',
+    titleLines: ['I design digital experiences', 'that are clear, recognizable', 'and built to work.'],
+    description: 'I turn goals, content and identity into websites that guide people and elevate the brand.',
+    location: 'Between Bergamo, Brescia, and wherever a good idea is needed.',
+    ctaPrimary: 'Explore my work',
+    ctaSecondary: 'Contact me'
   },
 
   home: {
