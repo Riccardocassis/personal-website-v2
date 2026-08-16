@@ -29,8 +29,7 @@ export default {
     location: 'Between Bergamo, Brescia, and wherever a good idea is needed.',
     ctaPrimary: 'Explore my work',
     ctaSecondary: 'Request a consultation',
-    scrollCue: 'Scroll',
-    cursorView: 'View'
+    scrollCue: 'Scroll'
   },
 
   home: {

@@ -29,8 +29,7 @@ export default {
     location: 'Zwischen Bergamo, Brescia und überall dort, wo eine gute Idee gebraucht wird.',
     ctaPrimary: 'Projekte entdecken',
     ctaSecondary: 'Beratung anfordern',
-    scrollCue: 'Scrollen',
-    cursorView: 'Ansehen'
+    scrollCue: 'Scrollen'
   },
 
   home: {

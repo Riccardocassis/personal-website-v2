@@ -6,9 +6,7 @@
       class="custom-cursor"
       :class="{ 'custom-cursor--art': mode === 'art' }"
       aria-hidden="true"
-    >
-      <span v-if="mode === 'art'" class="custom-cursor__label">{{ $t('hero.cursorView') }}</span>
-    </div>
+    ></div>
   </Teleport>
 </template>
 
@@ -69,21 +67,8 @@ onBeforeUnmount(() => {
 }
 
 .custom-cursor--art {
-  width: 60px;
-  height: 60px;
-  border-radius: 9999px;
-  border-color: rgba(255, 154, 158, 0.75);
-  background: linear-gradient(135deg, rgba(255, 154, 158, 0.35), rgba(250, 177, 120, 0.25));
-  backdrop-filter: blur(4px);
-}
-
-.custom-cursor__label {
-  font-size: 11px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #fff;
-  white-space: nowrap;
+  width: 44px;
+  height: 44px;
 }
 
 @media (prefers-reduced-motion: reduce) {

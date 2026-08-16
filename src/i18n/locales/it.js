@@ -29,8 +29,7 @@ export default {
     location: 'Tra Bergamo, Brescia e ovunque serva una buona idea.',
     ctaPrimary: 'Esplora i progetti',
     ctaSecondary: 'Richiedi una consulenza',
-    scrollCue: 'Scorri',
-    cursorView: 'Guarda'
+    scrollCue: 'Scorri'
   },
 
   home: {
