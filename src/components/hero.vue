@@ -111,14 +111,16 @@
     <!-- SCROLL CUE -->
     <button
       type="button"
-      class="scroll-cue hidden md:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-white/40 hover:text-white/80 transition-colors duration-200"
+      class="scroll-cue hidden md:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-3 text-white/70 hover:text-white transition-colors duration-200 group"
       :aria-label="$t('hero.scrollCue')"
       @click="scrollToNext"
     >
-      <span class="text-[11px] uppercase tracking-[0.2em]">{{ $t('hero.scrollCue') }}</span>
-      <svg class="scroll-cue-arrow w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v14M6 13l6 6 6-6" />
-      </svg>
+      <span class="text-xs font-semibold uppercase tracking-[0.25em]">{{ $t('hero.scrollCue') }}</span>
+      <span class="scroll-cue-ring flex items-center justify-center w-10 h-10 rounded-full border border-white/30 group-hover:border-cyan-400/70 transition-colors duration-200">
+        <svg class="scroll-cue-arrow w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" d="M12 5v14M6 13l6 6 6-6" />
+        </svg>
+      </span>
     </button>
 
   </section>
@@ -168,17 +170,27 @@ onBeforeUnmount(() => {
   }
 }
 
+.scroll-cue-ring {
+  animation: scroll-cue-glow 2.2s ease-in-out infinite;
+}
+
 .scroll-cue-arrow {
   animation: scroll-cue-bounce 1.8s ease-in-out infinite;
 }
 
 @keyframes scroll-cue-bounce {
-  0%, 100% { transform: translateY(0); opacity: 0.6; }
-  50% { transform: translateY(6px); opacity: 1; }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(3px); }
+}
+
+@keyframes scroll-cue-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(34, 211, 238, 0); }
+  50% { box-shadow: 0 0 12px 2px rgba(34, 211, 238, 0.35); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .scroll-cue-arrow {
+  .scroll-cue-arrow,
+  .scroll-cue-ring {
     animation: none;
   }
 }
