@@ -7,7 +7,7 @@
         <!-- HERO IMAGE -->
         <div class="order-1 md:col-span-6 flex items-center justify-start">
           <div class="relative w-full flex justify-start -mx-6 md:mx-0">
-            <div ref="heroImageRef" data-cursor="art" class="w-[80%] sm:w-[70%] md:w-[45%]">
+            <div ref="heroImageRef" class="w-[80%] sm:w-[70%] md:w-[45%]">
 
               <picture class="block relative z-10">
                 <source srcset="/src/assets/hero-riccardo.webp" type="image/webp" />
