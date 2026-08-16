@@ -28,7 +28,8 @@ export default {
     description: 'Transformo objetivos, contenidos e identidad en sitios web capaces de guiar a las personas y potenciar la marca.',
     location: 'Entre Bérgamo, Brescia y donde haga falta una buena idea.',
     ctaPrimary: 'Explora mis proyectos',
-    ctaSecondary: 'Contáctame'
+    ctaSecondary: 'Contáctame',
+    scrollCue: 'Desplázate'
   },
 
   home: {

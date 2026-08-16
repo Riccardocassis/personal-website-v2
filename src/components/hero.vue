@@ -1,5 +1,5 @@
 <template>
-  <section aria-labelledby="hero-title" class="relative w-full bg-black">
+  <section ref="heroRef" aria-labelledby="hero-title" class="relative w-full bg-black">
 
     <div class="max-w-screen-xl mx-auto px-6 pt-0 md:pt-36 pb-12 md:pb-24">
       <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center md:min-h-[72vh]">
@@ -108,6 +108,19 @@
       </div>
     </div>
 
+    <!-- SCROLL CUE -->
+    <button
+      type="button"
+      class="scroll-cue hidden md:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-white/40 hover:text-white/80 transition-colors duration-200"
+      :aria-label="$t('hero.scrollCue')"
+      @click="scrollToNext"
+    >
+      <span class="text-[11px] uppercase tracking-[0.2em]">{{ $t('hero.scrollCue') }}</span>
+      <svg class="scroll-cue-arrow w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v14M6 13l6 6 6-6" />
+      </svg>
+    </button>
+
   </section>
 </template>
 
@@ -117,9 +130,19 @@ import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
+const heroRef = ref(null)
 const titleRef = ref(null)
 const subtitleRef = ref(null)
 let tl = null
+
+function scrollToNext() {
+  const next = heroRef.value?.nextElementSibling
+  if (next) {
+    next.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  } else {
+    window.scrollBy({ top: window.innerHeight * 0.8, behavior: 'smooth' })
+  }
+}
 
 onMounted(() => {
   tl = gsap.timeline({ defaults: { duration: 0.6, ease: 'power3.out' } })
@@ -142,6 +165,21 @@ onBeforeUnmount(() => {
   .hero-mask {
     -webkit-mask-image: radial-gradient(circle at 68% 50%, rgba(0,0,0,0.95) 45%, rgba(0,0,0,0.6) 65%, transparent 100%);
     mask-image: radial-gradient(circle at 68% 50%, rgba(0,0,0,0.95) 45%, rgba(0,0,0,0.6) 65%, transparent 100%);
+  }
+}
+
+.scroll-cue-arrow {
+  animation: scroll-cue-bounce 1.8s ease-in-out infinite;
+}
+
+@keyframes scroll-cue-bounce {
+  0%, 100% { transform: translateY(0); opacity: 0.6; }
+  50% { transform: translateY(6px); opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-cue-arrow {
+    animation: none;
   }
 }
 </style>

@@ -28,7 +28,8 @@ export default {
     description: 'Ich verwandle Ziele, Inhalte und Identität in Websites, die Menschen leiten und die Marke stärken.',
     location: 'Zwischen Bergamo, Brescia und überall dort, wo eine gute Idee gebraucht wird.',
     ctaPrimary: 'Projekte entdecken',
-    ctaSecondary: 'Kontakt'
+    ctaSecondary: 'Kontakt',
+    scrollCue: 'Scrollen'
   },
 
   home: {

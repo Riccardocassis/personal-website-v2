@@ -28,7 +28,8 @@ export default {
     description: 'Trasformo obiettivi, contenuti e identità in siti web capaci di guidare le persone e valorizzare il brand.',
     location: 'Tra Bergamo, Brescia e ovunque serva una buona idea.',
     ctaPrimary: 'Esplora i progetti',
-    ctaSecondary: 'Contattami'
+    ctaSecondary: 'Contattami',
+    scrollCue: 'Scorri'
   },
 
   home: {
