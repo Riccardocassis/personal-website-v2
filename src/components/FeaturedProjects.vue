@@ -1,11 +1,11 @@
 <template>
-  <section class="relative w-full bg-[#050608] py-20 md:py-28 px-6 md:px-16 overflow-hidden">
+  <section class="relative w-full bg-[#050608] py-20 md:py-28 overflow-hidden">
     <div
       class="pointer-events-none absolute inset-x-0 top-0 h-[420px] bg-[radial-gradient(ellipse_at_top,rgba(34,211,238,0.06),transparent_65%)]"
       aria-hidden="true"
     ></div>
 
-    <div class="relative max-w-7xl mx-auto">
+    <div class="relative max-w-7xl mx-auto px-6 md:px-16">
       <div class="flex items-end justify-between gap-6 mb-10 md:mb-14">
         <div>
           <p class="text-xs md:text-sm uppercase tracking-[0.25em] text-white/40 mb-3">

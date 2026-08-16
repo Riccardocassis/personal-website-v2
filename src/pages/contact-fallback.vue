@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen bg-black text-white flex items-center justify-center px-6">
     <section class="w-full max-w-3xl bg-white/6 backdrop-blur-md rounded-2xl p-8 md:p-12 border border-white/8">
-      <h1 class="text-4xl md:text-5xl font-extrabold mb-4">{{ $t('contactFallback.title') }}</h1>
+      <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight mb-4">{{ $t('contactFallback.title') }}</h1>
 
       <p class="text-lg text-white/80 mb-6">{{ $t('contactFallback.subtitle') }}</p>
 

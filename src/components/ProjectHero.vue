@@ -35,7 +35,7 @@
       <!-- TEXT -->
       <div class="absolute inset-0 flex items-end justify-start p-8">
         <div>
-          <h1 class="text-4xl md:text-6xl font-extrabold text-white">
+          <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight text-white">
             {{ data.title }}
           </h1>
           <p class="text-white/70 mt-2">{{ data.subtitle }}</p>

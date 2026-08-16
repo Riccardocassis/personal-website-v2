@@ -2,7 +2,7 @@
   <div class="min-h-screen relative flex flex-col bg-black">
     <!-- gradient removed; background kept to page CSS or default -->
     <section class="flex-1 relative z-20 flex flex-col justify-center items-center px-8">
-      <h1 class="text-6xl font-extrabold mb-8 tracking-tight text-white text-center animate-fade-in">{{ $t('about.title') }}</h1>
+      <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight mb-8 text-white text-center animate-fade-in">{{ $t('about.title') }}</h1>
       <div class="max-w-2xl text-white/90 text-lg leading-relaxed mb-8 text-center animate-fade-in delay-200 whitespace-pre-line">{{ $t('about.bio') }}</div>
       <h2 class="text-4xl font-bold text-cyan-400 text-center animate-fade-in delay-400">
         <template v-if="showCounter">

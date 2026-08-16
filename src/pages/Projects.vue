@@ -1,10 +1,10 @@
 <template>
-  <section class="grid-root pt-6 pb-32 px-10 lg:px-20 bg-black text-white">
-    <div class="max-w-7xl mx-auto relative z-10">
+  <section class="grid-root pt-6 pb-32 bg-black text-white">
+    <div class="max-w-7xl mx-auto relative z-10 px-6 md:px-16">
 
       <!-- HEADER -->
       <div class="mb-14 md:mb-20">
-        <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight leading-none">{{ $t('projectsPage.title') }}</h1>
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">{{ $t('projectsPage.title') }}</h1>
         <p class="text-base md:text-lg text-white/60 mt-6 max-w-xl">
           {{ $t('projectsPage.subtitle') }}
         </p>

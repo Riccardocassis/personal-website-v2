@@ -108,7 +108,7 @@ function handleContactClick(event, options = {}){
     <div class="relative z-50 flex items-center justify-between max-w-7xl mx-auto w-full px-6 md:px-16 h-full">
 
       <div class="flex items-center h-full">
-        <RouterLink to="/" class="flex items-center justify-center" style="width:70px;height:70px;padding:7px;">
+        <RouterLink to="/" class="flex items-center justify-center" style="width:70px;height:70px;padding:7px 7px 7px 0;">
           <img :src="logo" alt="Logo RC" class="max-h-full max-w-full object-contain self-center" />
         </RouterLink>
       </div>

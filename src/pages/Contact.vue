@@ -2,7 +2,7 @@
   <div class="contact-viewport flex flex-col min-h-screen bg-black">
     <section class="relative z-10 flex-1 flex flex-col justify-center items-center pt-6 md:pt-10 pb-8 px-4">
 
-      <h1 class="text-5xl md:text-6xl font-extrabold mb-6 text-white text-center">
+      <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight mb-6 text-white text-center">
         {{ $t('contact.title') }}
       </h1>
 

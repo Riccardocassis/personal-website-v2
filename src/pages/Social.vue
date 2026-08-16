@@ -1,11 +1,11 @@
 <template>
-  <main class="page-bg text-white min-h-screen pt-6 pb-20 px-6 md:px-12">
-    <header class="max-w-4xl mx-auto text-center mb-12">
-      <h1 class="text-3xl md:text-4xl font-extrabold mb-4">{{ $t('social.title') }}</h1>
-      <p class="text-gray-300 max-w-2xl mx-auto">{{ $t('social.subtitle') }}</p>
+  <main class="page-bg text-white min-h-screen pt-6 pb-20 max-w-7xl mx-auto px-6 md:px-16">
+    <header class="max-w-4xl mb-12">
+      <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight mb-4">{{ $t('social.title') }}</h1>
+      <p class="text-gray-300 max-w-2xl">{{ $t('social.subtitle') }}</p>
     </header>
 
-    <section class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
       <article class="bg-[#0b0b0b] p-8 rounded-2xl shadow-md">
         <h2 class="text-xl font-semibold text-white mb-3">{{ $t('social.includeTitle') }}</h2>
         <ul class="list-disc list-inside text-white/80 space-y-2">
