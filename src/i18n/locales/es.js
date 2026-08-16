@@ -29,7 +29,8 @@ export default {
     location: 'Entre Bérgamo, Brescia y donde haga falta una buena idea.',
     ctaPrimary: 'Explora mis proyectos',
     ctaSecondary: 'Contáctame',
-    scrollCue: 'Desplázate'
+    scrollCue: 'Desplázate',
+    cursorView: 'Ver'
   },
 
   home: {

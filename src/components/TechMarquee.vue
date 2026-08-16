@@ -1,9 +1,10 @@
 <template>
   <section
+    data-cursor="nerd"
     class="relative w-full bg-black border-t border-white/5 py-10 md:py-14 overflow-hidden"
     :aria-label="$t('home.toolsTitle')"
   >
-    <p class="text-center text-xs md:text-sm uppercase tracking-[0.25em] text-white/40 mb-8 md:mb-10 px-6">
+    <p ref="eyebrowRef" class="text-center text-xs md:text-sm uppercase tracking-[0.25em] text-white/40 mb-8 md:mb-10 px-6">
       {{ $t('home.toolsTitle') }}
     </p>
 
@@ -57,6 +58,11 @@
 </template>
 
 <script setup>
+import { ref, onMounted } from 'vue'
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
+gsap.registerPlugin(ScrollTrigger)
+
 import {
   siWordpress,
   siElementor,
@@ -121,6 +127,23 @@ const tools = [
   svgTool(siGoogleanalytics),
   svgTool(siGooglesearchconsole)
 ]
+
+const eyebrowRef = ref(null)
+
+onMounted(() => {
+  if (!eyebrowRef.value) return
+  gsap.fromTo(
+    eyebrowRef.value,
+    { autoAlpha: 0, y: 14 },
+    {
+      autoAlpha: 1,
+      y: 0,
+      duration: 0.7,
+      ease: 'power3.out',
+      scrollTrigger: { trigger: eyebrowRef.value, start: 'top 90%', toggleActions: 'play none none reverse' }
+    }
+  )
+})
 </script>
 
 <style scoped>

@@ -7,7 +7,7 @@
         <!-- HERO IMAGE -->
         <div class="order-1 md:col-span-6 flex items-center justify-start">
           <div class="relative w-full flex justify-start -mx-6 md:mx-0">
-            <div class="w-[80%] sm:w-[70%] md:w-[45%]">
+            <div ref="heroImageRef" data-cursor="art" class="w-[80%] sm:w-[70%] md:w-[45%]">
 
               <picture class="block relative z-10">
                 <source srcset="/src/assets/hero-riccardo.webp" type="image/webp" />
@@ -133,6 +133,7 @@ import ScrollTrigger from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
 const heroRef = ref(null)
+const heroImageRef = ref(null)
 const titleRef = ref(null)
 const subtitleRef = ref(null)
 let tl = null
@@ -150,6 +151,19 @@ onMounted(() => {
   tl = gsap.timeline({ defaults: { duration: 0.6, ease: 'power3.out' } })
   tl.from(titleRef.value, { y: 20, opacity: 0 })
     .from(subtitleRef.value, { y: 16, opacity: 0 }, '-=0.35')
+
+  if (heroImageRef.value) {
+    gsap.to(heroImageRef.value, {
+      yPercent: 8,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: heroRef.value,
+        start: 'top top',
+        end: 'bottom top',
+        scrub: true
+      }
+    })
+  }
 })
 
 onBeforeUnmount(() => {
