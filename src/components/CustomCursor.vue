@@ -4,14 +4,10 @@
       v-if="enabled"
       ref="dotRef"
       class="custom-cursor"
-      :class="{
-        'custom-cursor--nerd': mode === 'nerd',
-        'custom-cursor--art': mode === 'art'
-      }"
+      :class="{ 'custom-cursor--art': mode === 'art' }"
       aria-hidden="true"
     >
-      <span v-if="mode === 'nerd'" class="custom-cursor__glyph">{ }</span>
-      <span v-else-if="mode === 'art'" class="custom-cursor__label">{{ $t('hero.cursorView') }}</span>
+      <span v-if="mode === 'art'" class="custom-cursor__label">{{ $t('hero.cursorView') }}</span>
     </div>
   </Teleport>
 </template>
@@ -70,22 +66,6 @@ onBeforeUnmount(() => {
   justify-content: center;
   transition: width 0.25s ease, height 0.25s ease, border-radius 0.25s ease,
     background 0.25s ease, border-color 0.25s ease;
-}
-
-.custom-cursor--nerd {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  border-color: rgba(34, 211, 238, 0.9);
-  background: rgba(5, 8, 12, 0.55);
-  backdrop-filter: blur(4px);
-}
-
-.custom-cursor__glyph {
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size: 13px;
-  font-weight: 600;
-  color: #22d3ee;
 }
 
 .custom-cursor--art {

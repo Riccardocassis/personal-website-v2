@@ -1,6 +1,5 @@
 <template>
   <section
-    data-cursor="nerd"
     class="relative w-full bg-black border-t border-white/5 py-10 md:py-14 overflow-hidden"
     :aria-label="$t('home.toolsTitle')"
   >

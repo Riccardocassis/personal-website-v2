@@ -2,7 +2,7 @@
   <section ref="heroRef" aria-labelledby="hero-title" class="relative w-full bg-black">
 
     <div class="max-w-screen-xl mx-auto px-6 pt-0 md:pt-36 pb-12 md:pb-24">
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center md:min-h-[72vh]">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center md:min-h-[58vh]">
 
         <!-- HERO IMAGE -->
         <div class="order-1 md:col-span-6 flex items-center justify-start">
@@ -184,17 +184,17 @@ onBeforeUnmount(() => {
   }
 }
 
+.scroll-cue {
+  animation: scroll-cue-bounce 1.8s ease-in-out infinite;
+}
+
 .scroll-cue-ring {
   animation: scroll-cue-glow 2.2s ease-in-out infinite;
 }
 
-.scroll-cue-arrow {
-  animation: scroll-cue-bounce 1.8s ease-in-out infinite;
-}
-
 @keyframes scroll-cue-bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(3px); }
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(6px); }
 }
 
 @keyframes scroll-cue-glow {
@@ -203,7 +203,7 @@ onBeforeUnmount(() => {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .scroll-cue-arrow,
+  .scroll-cue,
   .scroll-cue-ring {
     animation: none;
   }

@@ -5,7 +5,7 @@
       class="project-card group relative overflow-hidden rounded-2xl parallax-card"
       :class="offsetClass"
     >
-      <div class="parallax-content">
+      <div class="parallax-content" data-cursor="art">
 
         <!-- Base image -->
         <img

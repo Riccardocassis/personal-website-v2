@@ -3,7 +3,6 @@
     <Hero />
     <TechMarquee />
     <FeaturedProjects />
-    <CustomCursor />
   </main>
 </template>
 
@@ -11,5 +10,4 @@
 import Hero from '@/components/hero.vue'
 import TechMarquee from '@/components/TechMarquee.vue'
 import FeaturedProjects from '@/components/FeaturedProjects.vue'
-import CustomCursor from '@/components/CustomCursor.vue'
 </script>
