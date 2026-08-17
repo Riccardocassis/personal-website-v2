@@ -57,12 +57,7 @@ const offsetClass = computed(() =>
 .project-card {
   display: block;
   width: 100%;
-  height: 420px;
-}
-@media (min-width: 1024px) {
-  .project-card {
-    height: 520px;
-  }
+  aspect-ratio: 746 / 1040;
 }
 
 /* Remove vertical offsets on desktop */

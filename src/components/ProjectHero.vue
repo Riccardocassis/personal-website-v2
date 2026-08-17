@@ -1,6 +1,6 @@
 <template>
   <section
-    class="relative w-full h-[50vh] md:h-[85vh] overflow-hidden bg-transparent"
+    class="relative w-full aspect-video overflow-hidden bg-transparent"
   >
     <!-- safety guard -->
     <div v-if="!data" class="w-full h-full bg-black flex items-center justify-center">
@@ -26,10 +26,11 @@
         class="absolute inset-0 w-full h-full object-cover"
       />
 
-      <!-- OVERLAY GRADIENT -->
+      <!-- OVERLAY GRADIENT: anchored at the bottom, behind the title, so the
+           text stays readable no matter the source image's own colors -->
       <div
-        class="absolute inset-0 bg-gradient-to-b
-               from-black/50 via-black/30 to-transparent"
+        class="absolute inset-0 bg-gradient-to-t
+               from-black/90 via-black/45 to-transparent"
       ></div>
 
       <!-- TEXT -->

@@ -32,7 +32,7 @@
           class="featured-card group block"
         >
           <div
-            class="featured-card-inner relative aspect-[4/5] rounded-2xl overflow-hidden border border-white/10"
+            class="featured-card-inner relative aspect-[746/1040] rounded-2xl overflow-hidden border border-white/10"
             data-cursor="art"
           >
             <img

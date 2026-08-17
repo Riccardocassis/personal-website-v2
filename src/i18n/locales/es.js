@@ -41,9 +41,21 @@ export default {
 
   about: {
     title: 'Sobre mí',
+    lead: 'Una mezcla de creatividad y lógica, aplicada a cada proyecto que realizo.',
     bio: 'Siempre he sentido una gran pasión por los ordenadores y por todo lo relacionado con la creatividad. Me gusta ponerme a prueba, trabajar junto a otras personas y aprender de cada nueva experiencia.\nPara mí el diseño no es solo una profesión, sino una forma de pensar que se puede aplicar a muchos ámbitos distintos.\nCuando diseño lo vivo como un desafío estratégico: combino creatividad y análisis para transformar un problema en una solución.',
     artista: 'Artista',
-    nerd: 'Nerd'
+    nerd: 'Nerd',
+    identityCaption: 'Las dos mitades que se equilibran en cada proyecto.',
+    ctaButton: 'Trabajemos juntos',
+    seo: {
+      title: 'Sobre mí — Riccardo Cassis · Diseñador UI/UX y Web',
+      description: 'Riccardo Cassis, diseñador UI/UX y web entre Bérgamo y Brescia. Mitad artista, mitad nerd: descubre mi trayectoria y mi enfoque del diseño.'
+    },
+    finalCta: {
+      title: '¿Quieres ver este enfoque en acción?',
+      text: 'Echa un vistazo a los proyectos que he realizado, entre diseño web, UI/UX e identidad de marca.',
+      button: 'Ver mis proyectos'
+    }
   },
 
   services: {
@@ -264,7 +276,13 @@ export default {
 
   projectShared: {
     heroMissing: 'Faltan los datos del hero',
-    keyPointsTitle: 'Elementos clave',
+    overviewEyebrow: 'Panorama general',
+    keyPointsTitle: 'Puntos clave',
+    metaClient: 'Cliente',
+    metaRole: 'Rol',
+    metaCategory: 'Categoría',
+    metaStack: 'Stack técnico',
+    scrollCta: 'Descubre el proyecto',
     videoDefaultTitle: 'Vista previa de la página',
     videoNoVideo: 'No hay ningún vídeo disponible',
     ctaText: '¿Te ha gustado este proyecto? Puedo ayudarte a crear experiencias digitales a medida.',
@@ -277,6 +295,12 @@ export default {
     project1: {
       seo: { title: 'Gibson SG-1961 — Landing page interactiva en 3D · Riccardo Cassis', description: 'Concepto de landing page para la guitarra Gibson SG-1961: modelos 3D, microinteracciones y una web app que se puede tocar desde el navegador.' },
       hero: { title: 'Gibson SG-1961', subtitle: 'El sonido de la SG-1961 convertido en una experiencia digital interactiva' },
+      meta: {
+        client: 'Proyecto personal',
+        role: ['3D Artist', 'Web Designer'],
+        category: ['3D', 'Web Design', 'Landing Page'],
+        stack: ['Figma', 'Spline', 'Webflow', 'Visual Studio Code', 'GitHub']
+      },
       intro: { title: 'Objetivo del proyecto', text: 'Este concepto nace de una pregunta sencilla: ¿cómo puede una guitarra icónica como la Gibson SG-1961 contarse online con la misma fuerza que tiene en directo? Diseñé una landing page capaz de transmitir el carácter de la SG-1961 en cada detalle de la experiencia. El objetivo era crear un puente entre el pasado y el presente, transmitiendo el alma rock del instrumento y aumentando el reconocimiento y la implicación en torno a un producto que marcó la historia de la música.' },
       keyPoints: [
         { title: 'Crear un puente entre el pasado y el presente', text: 'Definí el concepto visual y el tono de la experiencia partiendo de la identidad de la SG-1961. Colores, tipografía y ritmo visual se calibraron para reflejar la personalidad del instrumento en un entorno digital coherente.' },
@@ -295,6 +319,12 @@ export default {
     project2: {
       seo: { title: 'SizeXL — Restyling de sitio web y SEO · Riccardo Cassis', description: 'Restyling del sitio web de SizeXL: nueva identidad visual, arquitectura de contenidos y optimización SEO para una organización sin ánimo de lucro.' },
       hero: { title: 'Desarrollo del sitio web', subtitle: 'Restyling del sitio y optimización SEO.' },
+      meta: {
+        client: 'SizeXL (organización sin ánimo de lucro)',
+        role: ['Web Designer', 'SEO Specialist'],
+        category: ['Web Design', 'SEO', 'Rediseño'],
+        stack: ['Figma', 'Webflow']
+      },
       intro: { title: 'Objetivo del proyecto', text: 'En este proyecto reestructuré el sitio oficial de Sizexl, reorganizando contenidos, navegación e interfaz visual para hacerla más clara, creíble y coherente con la calidad de los servicios ofrecidos.' },
       keyPoints: [
         { title: 'Dirección Creativa & Concepto', text: 'Junto con el cliente, empecé desarrollando posibles referencias que definieran la nueva dirección visual a seguir; después, una vez elegido un estilo formal y corporativo, desarrollé los wireframes y luego el sitio web.' },
@@ -312,6 +342,12 @@ export default {
     project3: {
       seo: { title: 'Synapses — Landing page de un evento de LABA · Riccardo Cassis', description: 'Landing page para Synapses, un evento de la Libera Accademia delle Belle Arti di Brescia (LABA), con calendario interactivo y detalles del evento.' },
       hero: { title: 'Synapses landing page', subtitle: 'Desarrollo de la landing page informativa.' },
+      meta: {
+        client: 'Libera Accademia di Belle Arti di Brescia (LABA)',
+        role: ['Web Designer', 'Front-end Developer'],
+        category: ['Web Design', 'Landing Page', 'Eventos'],
+        stack: ['Visual Studio Code', 'HTML5', 'CSS', 'JavaScript']
+      },
       intro: { title: 'Objetivo del proyecto', text: 'En este proyecto web me encargué de la realización de la landing page de Synapses, un evento organizado por la Libera Accademia delle Belle Arti di Brescia (LABA). Los visuales me los proporcionó el equipo creativo de la academia, mientras que mi tarea fue desarrollar una página web funcional e informativa para el evento. Los objetivos principales eran destacar la fecha y el lugar del evento, además de ofrecer a los usuarios un calendario detallado con los horarios de las distintas actividades previstas durante la jornada.' },
       keyPoints: [
         { title: 'Dirección Creativa & Concepto', text: 'La dirección creativa general, así como los assets que me proporcionaron, fueron preparados por compañeros de curso y por la LABA. En esta fase me ocupé de hacer utilizables los contenidos y de desarrollar el código para publicar la landing page y ponerla en funcionamiento.' },
@@ -324,6 +360,12 @@ export default {
     project4: {
       seo: { title: 'Fillbo — App concept contra el desperdicio alimentario · Riccardo Cassis', description: 'Concepto UX/UI de una app móvil que ayuda a supermercados y entidades sin ánimo de lucro a controlar productos próximos a caducar y reducir el desperdicio.' },
       hero: { title: 'Fillbo concept app', subtitle: 'Una herramienta de gestión diseñada para reducir el desperdicio alimentario.' },
+      meta: {
+        client: 'Proyecto personal',
+        role: ['UX/UI Designer'],
+        category: ['App', 'UX/UI'],
+        stack: ['Figma']
+      },
       intro: { title: 'Objetivo del proyecto', text: 'Fillbo es un prototipo de app móvil pensada para reducir el desperdicio alimentario mejorando el flujo entre supermercados y CAUTO. Analicé el proceso real con el que el personal identifica los productos próximos a caducar y lo transformé en un sistema digital más rápido, claro y trazable. El resultado es un prototipo que simplifica el trabajo diario, reduce errores y acelera la donación de alimentos.' },
       keyPoints: [
         { title: 'Investigación & Concepto', text: 'Construí el concepto de Fillbo partiendo de las necesidades reales del personal: rapidez, claridad y reducción de errores operativos. El tono de la interfaz es deliberadamente amigable para reducir el estrés en un contexto ya operativo e intenso.' },
@@ -342,6 +384,12 @@ export default {
     project5: {
       seo: { title: 'Opsify — App concept de disculpas personalizadas · Riccardo Cassis', description: 'Diseño UX/UI de Opsify, una app móvil para crear y compartir disculpas amigables, con un tono informal y una interfaz empática.' },
       hero: { title: 'Opsify concept app', subtitle: 'Una app móvil dedicada a crear y compartir disculpas personalizadas.' },
+      meta: {
+        client: 'Proyecto personal',
+        role: ['UX/UI Designer'],
+        category: ['App', 'UX/UI'],
+        stack: ['Figma', 'Protopie']
+      },
       intro: { title: 'Objetivo del proyecto', text: 'Este proyecto consistió en el diseño en Figma y el prototipado en Protopie de una aplicación móvil orientada a crear y compartir disculpas amigables entre usuarios. Elegí llamarla Opsify porque: "opsi" es un término amigable que se usa para pedir disculpas de forma informal, y el sufijo "-fy" evoca la idea de transformar algo, por lo que "Opsify" significa hacer más simple y natural la forma de pedir disculpas. Elegí, por tanto, un tono de voz amigable e informal para la aplicación, y también los colores elegidos, combinados con las tipografías y con toda la estructura de la interfaz, buscan crear armonía en el usuario.' },
       keyPoints: [
         { title: 'Concepto & Naming', text: 'Definí el tono de la app partiendo de una idea sencilla: pedir disculpas es un momento incómodo. Elegí un lenguaje ligero y un nombre que refleja esta idea: "Opsify" une la expresión informal "opsi" con el sufijo "-fy", convirtiendo el acto de disculparse en algo simple y natural.' },
@@ -358,6 +406,12 @@ export default {
     project6: {
       seo: { title: 'Webable — Plataforma de microlearning sobre accesibilidad · Riccardo Cassis', description: 'Concepto UX/UI de Webable, una web app que enseña accesibilidad digital mediante itinerarios personalizados y microejercicios prácticos.' },
       hero: { title: 'Webable', subtitle: 'La plataforma de microlearning dedicada a la accesibilidad web.' },
+      meta: {
+        client: 'Proyecto personal',
+        role: ['UX/UI Designer'],
+        category: ['App', 'UX/UI'],
+        stack: ['Figma']
+      },
       intro: { title: 'Objetivo del proyecto', text: 'La Ley Europea de Accesibilidad (EAA) exige que los productos y servicios digitales sean accesibles para todos. Lamentablemente, la formación en este ámbito presenta carencias y es muy teórica. WebAble nace para cambiar este enfoque. Es una web app que propone microejercicios prácticos e itinerarios a medida, pensados para quienes trabajan en el ámbito digital: diseñadores, desarrolladores, creadores de contenido. Objetivo: hacer que la formación en accesibilidad sea simple, concreta e inmediata.' },
       keyPoints: [
         { title: 'Personalización mediante IA', text: 'Webable genera itinerarios personalizados según el rol del usuario, sus competencias y el tiempo del que dispone. El objetivo es proponer solo contenidos útiles y aplicables de inmediato.' },
@@ -376,6 +430,12 @@ export default {
     project7: {
       seo: { title: 'Heller Garden — Rebranding de un jardín botánico · Riccardo Cassis', description: 'Propuesta de dirección artística y rebranding para Heller Garden: identidad visual, logotipo, paleta estacional y señalización para el jardín botánico de Gardone Riviera.' },
       hero: { title: 'Heller Garden', subtitle: 'Propuesta de dirección artística, rebranding del jardín botánico.' },
+      meta: {
+        client: 'Proyecto personal',
+        role: ['Art Director', 'Brand Designer'],
+        category: ['Brand Identity', 'Art Direction'],
+        stack: ['Illustrator', 'Photoshop', 'InDesign']
+      },
       intro: { title: 'Objetivo del proyecto', text: 'En este proyecto quise redefinir la identidad visual de Heller Garden, creando una dirección creativa coherente con el lugar y un lenguaje visual capaz de narrar la esencia del jardín: un lugar donde arte, botánica y movimiento se entrelazan. Con el nuevo sistema de marca quise reorganizar la comunicación, simplificando la experiencia del visitante y dando vida a una identidad reconocible, fluida y contemporánea.' },
       keyPoints: [
         { title: 'Dirección Creativa & Concepto', text: 'Definí un concepto visual basado en las estaciones, la ciclicidad natural y la fusión entre arte y botánica. Cada elección, desde los colores hasta la tipografía, pasando por los visuales y el tono de voz, está calibrada para transmitir y enfatizar la identidad viva y en constante transformación del jardín.' },
@@ -395,6 +455,12 @@ export default {
     project8: {
       seo: { title: 'Roberto — Rebranding de una marca de piadinas · Riccardo Cassis', description: 'Concepto de rebranding irreverente para una marca de piadinas, inspirado en el imaginario hippy: identidad visual, packaging y comunicación.' },
       hero: { title: 'Roberto Rebranding', subtitle: 'Propuesta de dirección artística, un concepto disruptivo para una marca de piadinas.' },
+      meta: {
+        client: 'Proyecto personal',
+        role: ['Art Director', 'Brand Designer'],
+        category: ['Brand Identity', 'Art Direction'],
+        stack: ['Illustrator', 'Photoshop']
+      },
       intro: { title: 'Objetivo del proyecto', text: 'En este concepto decidí tomar una marca clásica y genérica de piadinas y reestructurarla dándole una identidad nueva: valiente, irreverente e imposible de ignorar. A su alrededor construí un imaginario visual tomando como referencia el mundo hippy. Elegí crear un puente entre pasado y presente con los rebeldes de antaño, para conferir a un producto sencillo un aura mística y cautivadora.' },
       keyPoints: [
         { title: 'Dirección Creativa & Concepto', text: 'Definí una identidad visual que rompe los esquemas del sector food tradicional y habla a un público que quiere distinguirse. Paletas psicodélicas, un tono provocador y un imaginario hippy se convierten en las herramientas narrativas de la marca.' },
@@ -415,6 +481,12 @@ export default {
     project9: {
       seo: { title: 'Control-Alt-Canc — Fanzine sobre salud mental · Riccardo Cassis', description: 'Fanzine ilustrada para el Día Mundial de la Salud Mental: una narración visual en blanco y negro sobre el overthinking, entre ironía y consciencia.' },
       hero: { title: 'Control-Alt-Canc', subtitle: 'Un cómic ilustrado dedicado al Día Mundial de la Salud Mental.' },
+      meta: {
+        client: 'Proyecto personal',
+        role: ['Ilustrador', 'Visual Storyteller'],
+        category: ['Editorial', 'Ilustración'],
+        stack: ['iPad']
+      },
       intro: { title: 'Objetivo del proyecto', text: 'En este proyecto quise traducir el overthinking en una narración visual fácil de entender pero difícil de ignorar. Elegí una estética en blanco y negro para eliminar lo superfluo y concentrar la atención en lo que importa: el ruido mental, el peso de los pensamientos, la lucha diaria que muchas personas viven en silencio. La fanzine se creó para el Día Mundial de la Salud Mental (10 de octubre) y posteriormente se compartió con psicólogos y profesionales del sector como herramienta divulgativa y de conversación.' },
       keyPoints: [
         { title: 'Lenguaje visual esencial', text: 'Elegí un trazo deliberadamente sencillo, casi infantil, para hablar de temas complejos sin hacerlos parecer "pesados". La falta de matices y la elección del blanco y negro amplifican el contraste emocional.' },

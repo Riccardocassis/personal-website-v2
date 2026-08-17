@@ -3,8 +3,12 @@
   <!-- HERO -->
   <ProjectHero :data="hero" />
 
-  <!-- INTRO -->
-  <ProjectIntro :data="intro" />
+  <!-- OVERVIEW -->
+  <ProjectOverview
+    :overview-text="intro.text"
+    :meta="meta"
+    :key-points="keyPointTitles"
+  />
 
   <!-- VIDEO -->
   <ProjectVideo
@@ -13,11 +17,8 @@
 />
 
 
-  <!-- ELEMENTI CHIAVE -->
-  <ProjectKeyPoints :items="keyPoints" />
-
   <!-- SLIDES -->
-  <section class="bg-black">
+  <section id="project-details" class="bg-black">
     <ProjectSlide
       v-for="(slide, i) in slides"
       :key="i"
@@ -42,9 +43,8 @@
 import { computed } from "vue";
 import { useI18n } from "vue-i18n";
 import ProjectHero from "@/components/ProjectHero.vue";
-import ProjectIntro from "@/components/ProjectIntro.vue";
+import ProjectOverview from "@/components/ProjectOverview.vue";
 import ProjectVideo from "@/components/ProjectVideo.vue";
-import ProjectKeyPoints from "@/components/ProjectKeyPoints.vue";
 import ProjectSlide from "@/components/ProjectSlide.vue";
 import ProjectCTA from "@/components/ProjectCTA.vue";
 import ProjectPrevNext from "@/components/ProjectPrevNext.vue";
@@ -78,6 +78,8 @@ const hero = computed(() => ({
 
 const intro = computed(() => tm('projects.project1.intro'));
 const keyPoints = computed(() => tm('projects.project1.keyPoints'));
+const keyPointTitles = computed(() => keyPoints.value.map(k => k.title));
+const meta = computed(() => tm('projects.project1.meta'));
 
 /* SLIDES DATA */
 const slides = computed(() =>
@@ -101,8 +103,8 @@ usePageSeo(() => ({
     image: ogImage,
     url: pageUrl,
     inLanguage: locale.value,
-    keywords: 'web design, UI/UX, 3D, landing page',
-    creator: { '@type': 'Person', name: 'Riccardo Cassis', url: 'https://riccardocassis.com/' },
+    keywords: [...meta.value.category, ...meta.value.stack].join(', '),
+    creator: { '@type': 'Person', name: 'Riccardo Cassis', url: 'https://riccardocassis.com/', jobTitle: meta.value.role.join(', ') },
     author: { '@type': 'Person', name: 'Riccardo Cassis', url: 'https://riccardocassis.com/' }
   }
 }))
