@@ -107,7 +107,7 @@ function handleContactClick(event, options = {}){
   >
     <div class="relative z-50 flex items-center justify-between max-w-7xl mx-auto w-full px-6 md:px-16 h-full">
 
-      <div class="flex items-center h-full">
+      <div class="flex items-center h-full" :class="mobileOpen ? 'invisible md:visible' : ''">
         <RouterLink to="/" class="flex items-center justify-center" style="width:70px;height:70px;padding:7px 7px 7px 0;">
           <img :src="logo" alt="Logo RC" class="max-h-full max-w-full object-contain self-center" />
         </RouterLink>
@@ -137,20 +137,24 @@ function handleContactClick(event, options = {}){
         </ul>
       </div>
 
-      <!-- Burger -->
-      <button
-        class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg hover:bg-white/10 focus:outline-none text-white"
-        @click="mobileOpen = !mobileOpen"
-        :aria-label="mobileOpen ? $t('nav.closeMenu') : $t('nav.openMenu')"
-        :aria-expanded="mobileOpen"
-      >
-        <svg v-if="!mobileOpen" class="w-6 h-6" fill="none" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-        <svg v-else class="w-6 h-6" fill="none" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-        </svg>
-      </button>
+      <!-- Mobile-only controls: language switcher (always visible, closed state) + burger -->
+      <div class="md:hidden flex items-center gap-2">
+        <LanguageSwitcher v-if="!mobileOpen" />
+
+        <button
+          class="inline-flex items-center justify-center w-10 h-10 rounded-lg hover:bg-white/10 focus:outline-none text-white"
+          @click="mobileOpen = !mobileOpen"
+          :aria-label="mobileOpen ? $t('nav.closeMenu') : $t('nav.openMenu')"
+          :aria-expanded="mobileOpen"
+        >
+          <svg v-if="!mobileOpen" class="w-6 h-6" fill="none" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+          <svg v-else class="w-6 h-6" fill="none" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
 
     </div>
   </nav>
@@ -166,9 +170,13 @@ function handleContactClick(event, options = {}){
       >
         <div class="absolute inset-0 bg-[#05060a]"></div>
 
-        <div class="relative h-full flex items-center justify-center px-6">
-          <div class="relative z-10 w-full max-w-xs" style="max-height:calc(100vh - 140px); overflow-y:auto;">
-            <div class="text-center py-6">
+        <div class="relative h-full overflow-y-auto px-6">
+          <div class="relative z-10 w-full max-w-xs mx-auto">
+            <div class="text-center pt-10 pb-6">
+
+              <RouterLink to="/" class="inline-block mb-8" @click="mobileOpen = false">
+                <img :src="logo" alt="Logo RC" class="h-9 w-auto mx-auto object-contain" />
+              </RouterLink>
 
               <div class="flex justify-center pb-6 mb-6 border-b border-white/10">
                 <LanguageSwitcher mobile />
