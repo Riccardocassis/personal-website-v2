@@ -27,7 +27,7 @@
 
         <!-- TEXT -->
         <div class="order-2 md:col-span-6 flex items-center">
-          <div class="w-full text-white pr-6 md:pr-20 pl-0 md:pl-12 lg:pl-20 mt-8 md:mt-0">
+          <div class="w-full text-white md:pr-20 md:pl-12 lg:pl-20 mt-8 md:mt-0">
             <div class="max-w-xl md:text-left text-center">
 
               <p class="text-xs md:text-sm uppercase tracking-[0.2em] text-white/50 font-semibold mb-4 md:mb-5">
