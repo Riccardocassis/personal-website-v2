@@ -106,7 +106,7 @@ onBeforeUnmount(() => {
       <router-view />
     </main>
 
-    <Footer :class="route.path === '/' ? 'hidden' : ''" />
+    <Footer />
 
     <!-- Scroll indicator -->
     <div
