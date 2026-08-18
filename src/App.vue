@@ -6,6 +6,7 @@ import Navbar from "./components/navbar.vue"
 import Footer from "./components/Footer.vue"
 import Breadcrumb from "./components/Breadcrumb.vue"
 import CustomCursor from "./components/CustomCursor.vue"
+import LoadingPage from "./components/LoadingPage.vue"
 
 import gsap from "gsap"
 import ScrollTrigger from "gsap/ScrollTrigger"
@@ -18,6 +19,10 @@ useReveal()
 // Barra di progresso scroll
 const scrollProgress = ref(0)
 let rafId = null
+
+// Loading page: mostrata per una durata minima percepibile all'avvio,
+// cosi' non e' solo un flash instantaneo.
+const showLoader = ref(true)
 
 const route = useRoute()
 
@@ -62,6 +67,8 @@ function onScroll() {
 }
 
 onMounted(() => {
+  setTimeout(() => { showLoader.value = false }, 1100)
+
   updateProgress()
   window.addEventListener("scroll", onScroll, { passive: true })
   window.addEventListener("resize", onScroll)
@@ -97,6 +104,10 @@ onBeforeUnmount(() => {
 
 <template>
   <div class="relative bg-black text-white min-h-screen overflow-x-hidden">
+    <Transition name="loader-fade">
+      <LoadingPage v-if="showLoader" />
+    </Transition>
+
     <Navbar />
     <Breadcrumb />
     <CustomCursor />
@@ -131,5 +142,15 @@ onBeforeUnmount(() => {
 .scroll-indicator-fill {
   transform-origin: bottom;
   transition: transform 200ms linear;
+}
+
+.loader-fade-enter-active {
+  transition: none;
+}
+.loader-fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+.loader-fade-leave-to {
+  opacity: 0;
 }
 </style>

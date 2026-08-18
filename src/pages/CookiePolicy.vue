@@ -12,7 +12,7 @@
 
       <p class="text-base text-neutral-300 mb-4">{{ $t('cookiePolicy.noConsent') }}</p>
 
-      <p class="text-base text-neutral-300">{{ $t('cookiePolicy.moreInfo') }}<a href="/privacy" class="text-indigo-400 underline">{{ $t('cookiePolicy.moreInfoLink') }}</a>.</p>
+      <p class="text-base text-neutral-300">{{ $t('cookiePolicy.moreInfo') }}<a href="/privacy" class="text-indigo-400 underline hover:text-indigo-300 transition-colors duration-200">{{ $t('cookiePolicy.moreInfoLink') }}</a>.</p>
     </div>
   </section>
 </template>

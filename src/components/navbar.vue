@@ -108,7 +108,7 @@ function handleContactClick(event, options = {}){
     <div class="relative z-50 flex items-center justify-between max-w-7xl mx-auto w-full px-6 md:px-16 h-full">
 
       <div class="flex items-center h-full" :class="mobileOpen ? 'invisible md:visible' : ''">
-        <RouterLink to="/" class="flex items-center justify-center" style="width:70px;height:70px;padding:7px 7px 7px 0;">
+        <RouterLink to="/" class="flex items-center justify-center transition-opacity duration-200 hover:opacity-75" style="width:70px;height:70px;padding:7px 7px 7px 0;">
           <img :src="logo" alt="Logo RC" class="max-h-full max-w-full object-contain self-center" />
         </RouterLink>
       </div>
@@ -127,7 +127,7 @@ function handleContactClick(event, options = {}){
 
           <li class="flex items-center">
             <button
-              class="text-white bg-blue-600 px-4 py-2 rounded-lg"
+              class="text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-colors duration-200"
               @click="handleContactClick"
             >
               {{ $t('nav.contattami') }}
@@ -174,7 +174,7 @@ function handleContactClick(event, options = {}){
           <div class="relative z-10 w-full max-w-xs mx-auto">
             <div class="text-center pt-10 pb-6">
 
-              <RouterLink to="/" class="inline-block mb-8" @click="mobileOpen = false">
+              <RouterLink to="/" class="inline-block mb-8 transition-opacity duration-200 hover:opacity-75" @click="mobileOpen = false">
                 <img :src="logo" alt="Logo RC" class="h-9 w-auto mx-auto object-contain" />
               </RouterLink>
 
@@ -189,7 +189,7 @@ function handleContactClick(event, options = {}){
               </div>
 
               <button
-  class="block text-white bg-blue-600 px-4 py-2 rounded-lg mx-auto mt-6"
+  class="block text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg mx-auto mt-6 transition-colors duration-200"
   @click="(e) => handleContactClick(e, { closeMobile: closeMobileMenu })"
 >
   {{ $t('nav.contattami') }}

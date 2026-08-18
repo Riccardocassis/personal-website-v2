@@ -7,7 +7,7 @@
 
         <!-- Column 1: Branding -->
         <div class="flex flex-col items-center md:items-start text-center md:text-left">
-          <RouterLink to="/" class="inline-block mb-0 md:mb-4">
+          <RouterLink to="/" class="inline-block mb-0 md:mb-4 transition-opacity duration-200 hover:opacity-75">
             <img src="../assets/logo-rc.webp" alt="RC logo" class="hidden md:block w-6 h-6 md:w-10 md:h-10 object-contain" />
           </RouterLink>
           <div class="text-[0.75rem] md:text-sm font-semibold leading-tight">{{ $t('footer.tagline') }}</div>

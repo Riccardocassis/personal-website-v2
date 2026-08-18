@@ -1,66 +1,73 @@
 <template>
-  <div class="loading-bg flex items-center justify-center min-h-screen">
-    <div class="loading-content flex flex-col items-center gap-6">
-      <div class="logo-wrapper animate-logo">
-        <img src="../assets/logo-rc.webp" alt="Logo RC" class="w-24 h-24" />
+  <div class="loading-screen flex items-center justify-center">
+    <div class="flex flex-col items-center gap-6">
+      <div class="loading-logo-wrap">
+        <img src="../assets/logo-rc.webp" alt="RC" class="w-16 h-16 md:w-20 md:h-20 object-contain" />
       </div>
+
       <div class="loader-bar">
         <div class="loader-progress"></div>
       </div>
+
       <span class="loading-text">{{ $t('loading.text') }}</span>
     </div>
   </div>
 </template>
 
 <script setup>
-// Loading page professionale
 </script>
 
 <style scoped>
-.loading-bg {
-  background: linear-gradient(120deg, #0f172a 0%, #22d3ee 100%);
-  min-height: 100vh;
-  width: 100vw;
+.loading-screen {
   position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9999;
+  inset: 0;
+  z-index: 10000;
+  background: #000;
 }
-.logo-wrapper {
-  filter: drop-shadow(0 0 18px #22d3ee88);
+
+.loading-logo-wrap {
+  animation: logo-pulse 2.2s ease-in-out infinite;
+  filter: drop-shadow(0 0 16px rgba(34, 211, 238, 0.45));
 }
-.animate-logo {
-  animation: logo-bounce 1.2s infinite alternate cubic-bezier(.4,0,.2,1);
+
+@keyframes logo-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.9; }
+  50% { transform: scale(1.08); opacity: 1; }
 }
-@keyframes logo-bounce {
-  0% { transform: scale(1) translateY(0); }
-  100% { transform: scale(1.08) translateY(-12px); }
-}
+
 .loader-bar {
-  width: 180px;
-  height: 10px;
-  background: #164e63;
-  border-radius: 8px;
+  width: 140px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
   overflow: hidden;
-  box-shadow: 0 2px 16px 0 #22d3ee44;
 }
+
 .loader-progress {
   height: 100%;
-  width: 0%;
-  background: linear-gradient(90deg,#22d3ee 0%,#38bdf8 100%);
-  border-radius: 8px;
-  animation: loading-bar 2.2s infinite;
+  width: 40%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(34, 211, 238, 0) 0%, rgba(34, 211, 238, 1) 50%, rgba(34, 211, 238, 0) 100%);
+  animation: loader-sweep 1.3s ease-in-out infinite;
 }
-@keyframes loading-bar {
-  0% { width: 0%; }
-  50% { width: 100%; }
-  100% { width: 0%; }
+
+@keyframes loader-sweep {
+  0% { transform: translateX(-120%); }
+  100% { transform: translateX(320%); }
 }
+
 .loading-text {
-  color: #22d3ee;
-  font-size: 1.1rem;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  text-shadow: 0 0 8px #22d3ee44;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loading-logo-wrap,
+  .loader-progress {
+    animation: none;
+  }
 }
 </style>

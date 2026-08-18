@@ -35,7 +35,7 @@
       <p class="text-base text-neutral-300 mb-4">{{ $t('privacy.modifiche.text') }}</p>
 
       <h2 class="text-xl font-semibold mt-6 mb-2">{{ $t('privacy.contatti.heading') }}</h2>
-      <p class="text-base text-neutral-300">{{ $t('privacy.contatti.text') }} <br /><a href="mailto:Riccardocassis.rc@gmail.com" class="text-indigo-400">Riccardocassis.rc@gmail.com</a></p>
+      <p class="text-base text-neutral-300">{{ $t('privacy.contatti.text') }} <br /><a href="mailto:Riccardocassis.rc@gmail.com" class="text-indigo-400 underline hover:text-indigo-300 transition-colors duration-200">Riccardocassis.rc@gmail.com</a></p>
     </div>
   </section>
 </template>

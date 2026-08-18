@@ -6,7 +6,9 @@
       class="custom-cursor"
       :class="{ 'custom-cursor--art': mode === 'art' }"
       aria-hidden="true"
-    ></div>
+    >
+      <span class="custom-cursor__core"></span>
+    </div>
   </Teleport>
 </template>
 
@@ -52,8 +54,8 @@ onBeforeUnmount(() => {
   position: fixed;
   top: 0;
   left: 0;
-  width: 10px;
-  height: 10px;
+  width: 16px;
+  height: 16px;
   border-radius: 9999px;
   border: 1.5px solid rgba(34, 211, 238, 0.8);
   background: rgba(34, 211, 238, 0.15);
@@ -71,9 +73,34 @@ onBeforeUnmount(() => {
   height: 44px;
 }
 
+/* Pulse lives on a child, never on the dot itself: GSAP drives the dot's
+   position via transform, so animating transform there too would fight it. */
+.custom-cursor__core {
+  position: absolute;
+  inset: -35%;
+  border-radius: 9999px;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.6) 0%, rgba(34, 211, 238, 0) 72%);
+  animation: cursor-pulse 2.2s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes cursor-pulse {
+  0%, 100% {
+    transform: scale(0.8);
+    opacity: 0.45;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 1;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .custom-cursor {
     transition: none;
+  }
+  .custom-cursor__core {
+    animation: none;
   }
 }
 </style>

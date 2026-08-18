@@ -13,6 +13,15 @@
   }
 }
 
+/* Hide the native pointer wherever the custom cursor takes over (same
+   condition CustomCursor.vue uses to enable itself) so only the cyan
+   dot is visible, never the OS arrow underneath it. */
+@media (hover: hover) and (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
+}
+
 @layer components {
   .project-img-wrap {
     @apply mt-6 mb-8 md:mt-0 md:mb-0;
