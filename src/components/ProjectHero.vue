@@ -14,6 +14,7 @@
           </template>
           <img
             :src="data.img.img.src"
+            :alt="data.imgAlt || ''"
             class="absolute inset-0 w-full h-full object-cover"
           />
         </picture>
@@ -22,6 +23,7 @@
         <img
           v-else
           :src="data.img?.src || data.img"
+          :alt="data.imgAlt || ''"
           class="absolute inset-0 w-full h-full object-cover"
         />
 

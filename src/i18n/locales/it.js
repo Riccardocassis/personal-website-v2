@@ -258,6 +258,7 @@ export default {
       editorial: 'Editorial'
     },
     cards: {
+      project10: 'Medeghini',
       project1: 'New Gibson website concept',
       project2: 'SizeXL website',
       project3: 'Synapses landing page',
@@ -283,6 +284,7 @@ export default {
     metaCategory: 'Categoria',
     metaStack: 'Stack tecnico',
     scrollCta: 'Scopri il progetto',
+    collaborationLabel: 'In collaborazione con',
     videoDefaultTitle: 'Preview della pagina',
     videoNoVideo: 'Nessun video disponibile',
     ctaText: 'Ti è piaciuto questo progetto? Posso aiutarti a creare esperienze digitali su misura.',
@@ -497,6 +499,72 @@ export default {
         { title: 'Disegno & stile', subtitle: "L'imperfezione del fatto a mano riflette l'imperfezione in ciascuno di noi.", text: 'Tutte le illustrazioni sono state disegnate a mano sull’iPad, adottando uno stile volutamente "grezzo", perché l’overthinking non è pulito, ordinato o patinato. È caotico, scomodo, rumoroso.' },
         { title: 'Costruzione narrativa', subtitle: 'Una tematica seria affrontata in modo informale.', text: 'Ho strutturato la fanzine in step, come un manuale per soldati: riconosci il problema, entra nella tua mente prendendo consapevolezza dei tuoi pensieri, identifica i mostri, affrontali, e infine vedrai che affrontandoli nella modalità corretta se ne andranno da soli. Ovviamente questo non è un manuale e serve come primo approccio, ma a mio avviso, specialmente quando si pensa troppo, è utile seguire un piano senza divagare — il tutto scritto con un tono sarcastico e leggero.' },
         { title: 'Poster', subtitle: 'Un messaggio visivo chiaro.', text: 'Il poster riassume il messaggio della fanzine. Ho voluto fare un parallelismo tra la mente e un computer.' }
+      ]
+    },
+
+    project10: {
+      seo: { title: 'Medeghini — UX/UI e Web Design · Riccardo Cassis', description: 'Case study del sito Medeghini: UX/UI design, architettura dei contenuti, catalogo prodotti e sviluppo WordPress per il canale Ho.Re.Ca.' },
+      hero: {
+        title: 'Medeghini',
+        subtitle: 'Tradizione e qualità trasformate in un’esperienza digitale contemporanea.',
+        imgAlt: 'Homepage del sito Medeghini dedicato a caffè al ginseng e orzo'
+      },
+      meta: {
+        client: 'Medeghini',
+        role: ['Web Designer', 'UX/UI Designer', 'Copywriter', 'WordPress Developer'],
+        category: ['Corporate Website', 'Web Design', 'UX/UI', 'Digital Catalogue'],
+        stack: ['Figma', 'WordPress', 'Elementor Pro', 'Forminator', 'Iubenda', 'CSS personalizzato']
+      },
+      collaboration: { name: 'Rosario Lore', url: 'https://www.instagram.com/_rosariolore_/' },
+      intro: { title: 'Scopo del progetto', text: 'Medeghini è un’azienda italiana specializzata in caffè al ginseng, orzo e soluzioni per bar, caffetterie e locali. L’obiettivo era trasformare un’identità con oltre quarant’anni di storia in un sito chiaro, riconoscibile e orientato al contatto.' },
+      credits: {
+        title: 'Un’identità storica, ripensata per il digitale',
+        text: 'Il progetto nasce dall’esigenza di costruire una presenza digitale capace di raccontare Medeghini con maggiore chiarezza, valorizzando il catalogo e accompagnando bar, caffetterie e locali dalla scoperta dei prodotti fino al contatto commerciale.',
+        creditsBefore: 'Progetto nato in collaborazione con',
+        creditsAfter: ', che ha fornito il logo Medeghini, la palette cromatica, il font e i loghi dei prodotti. Copy del sito, architettura delle pagine, organizzazione delle categorie, UX/UI e sviluppo dell’esperienza digitale sono stati realizzati da Riccardo Cassis.'
+      },
+      keyPoints: [
+        { title: 'Dall’identità al sistema digitale', text: 'Tradurre gli elementi del brand in un linguaggio web coerente, riconoscibile e utilizzabile su dispositivi differenti.' },
+        { title: 'Architettura e catalogo prodotti', text: 'Organizzare 34 prodotti, sei categorie e relative schede tecniche in una struttura chiara e facilmente consultabile.' },
+        { title: 'Esperienza B2B e sviluppo', text: 'Costruire un sito capace di guidare bar, caffetterie e attività Ho.Re.Ca. verso prodotti, servizi e contatto.' }
+      ],
+      slides: [
+        {
+          title: 'Un’identità coerente, componente dopo componente.',
+          subtitle: 'Design system',
+          text: 'Logo, palette, tipografia, pulsanti, card, stati interattivi e token di interfaccia sono stati organizzati in un sistema riutilizzabile. Playfair Display costruisce il tono editoriale dei titoli, mentre Plus Jakarta Sans garantisce leggibilità nei contenuti e nella navigazione. La stessa logica governa spaziature, bordi, raggi e comportamento responsive.',
+          imgAlt: 'Design system digitale Medeghini con palette, tipografia e componenti UI'
+        },
+        {
+          title: 'Dal brand all’esperienza digitale',
+          subtitle: 'Identità digitale',
+          text: 'La homepage traduce l’identità Medeghini in un’esperienza calda e riconoscibile. Il contrasto tra fotografia, tipografia editoriale e tonalità oro permette di comunicare tradizione e qualità senza rinunciare a una struttura contemporanea e orientata all’azione.',
+          imgAlt: 'Homepage Medeghini inserita nella presentazione del case study'
+        },
+        {
+          title: 'Un catalogo semplice da esplorare',
+          subtitle: 'Architettura dei contenuti',
+          text: 'Le quattro referenze principali sono organizzate con una gerarchia costante: immagine, categoria, nome, descrizione e collegamento al prodotto. La struttura riduce la dispersione delle informazioni e rende più immediato il confronto tra le diverse proposte.',
+          imgAlt: 'Catalogo digitale Medeghini con quattro schede prodotto'
+        },
+        {
+          title: 'Quattro prodotti, una famiglia visiva.',
+          subtitle: 'Product visual system',
+          text: 'King Root, Orzo Gold, Power Root e Velvet Root mantengono una struttura comune, ma vengono riconosciuti attraverso colori e illustrazioni differenti. Il risultato è una gamma coerente, in cui ogni prodotto conserva una propria identità senza uscire dal sistema Medeghini.',
+          imgAlt: 'Visual coordinati di King Root, Orzo Gold, Power Root e Velvet Root'
+        },
+        {
+          title: 'Il servizio raccontato in quattro passaggi',
+          subtitle: 'Customer journey',
+          text: 'Il metodo commerciale è stato sintetizzato in quattro passaggi: ascolto, proposta, personalizzazione e fornitura. La sequenza rende comprensibile il valore consulenziale dell’azienda e mostra che Medeghini non offre soltanto prodotti, ma un percorso costruito sulle esigenze del locale.',
+          imgAlt: 'Customer journey Medeghini organizzato in quattro passaggi'
+        },
+        {
+          title: 'Contatto e geolocalizzazione',
+          subtitle: 'Lead generation',
+          text: 'Modulo, informazioni di contatto e mappa sono riuniti in un’unica area orientata alla conversione. L’utente può inviare una richiesta completa, individuare immediatamente la sede oppure calcolare il percorso senza passaggi intermedi.',
+          imgAlt: 'Pagina contatti Medeghini con modulo e mappa della sede'
+        }
       ]
     }
   }

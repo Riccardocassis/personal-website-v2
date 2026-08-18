@@ -32,7 +32,7 @@
 
   <!-- PREV/NEXT -->
   <ProjectPrevNext
-    prev="/projects/control-alt-canc-fanzine"
+    prev="/projects/medeghini"
     next="/projects/sizexl-website"
   />
 

@@ -66,6 +66,12 @@ gsap.registerPlugin(ScrollTrigger)
 const gridRef = ref(null)
 
 /* IMAGES — YOUR RENAMED FILES */
+/* Medeghini: la cover è un 16:9 orizzontale pensato per la hero. Per la card
+   (slot verticale) uso un ritaglio verticale della stessa foto reale, così
+   non compare tagliata in modo illeggibile — nessuna variante hover dedicata
+   per ora. */
+import medeghiniCard from '../assets/medeghini-cover-card.webp?w=800&format=webp&as=src'
+
 import controlAltA from '../assets/controlaltcanc-a.webp?w=800&format=webp&as=src'
 import controlAltB from '../assets/controlaltcanc-b.webp?w=800&format=webp&as=src'
 
@@ -95,6 +101,7 @@ import opsifyB from '../assets/opsify-b.webp?w=800&format=webp&as=src'
 
 /* PROJECT DATA — single source of truth, order = default "Tutti" layout */
 const allProjects = [
+  { key: 'project10', to: '/projects/medeghini',                img: medeghiniCard, imgHover: medeghiniCard, category: 'webDesign',    offset: '1' },
   { key: 'project1', to: '/projects/gibson-sg-1961',           img: gibsonA,      imgHover: gibsonB,      category: 'webDesign',     offset: '2' },
   { key: 'project2', to: '/projects/sizexl-website',           img: sizexlA,      imgHover: sizexlB,      category: 'webDesign',     offset: '1' },
   { key: 'project3', to: '/projects/synapses-laba',            img: synapsesA,    imgHover: synapsesB,    category: 'webDesign',     offset: '3' },

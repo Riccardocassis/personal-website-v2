@@ -19,6 +19,7 @@ const routes = [
   { path: '/projects',      name: 'projects',          component: Projects, meta: { breadcrumb: 'nav.lavori' } },
 
   // Project detail pages — descriptive, keyword-rich slugs (SEO/GEO/AIO)
+  { path: '/projects/medeghini',              name: 'medeghini',              component: () => import('../pages/projects/project-10.vue'), meta: { breadcrumb: 'nav.lavori', breadcrumbParent: '/projects', projectKey: 'project10' } },
   { path: '/projects/gibson-sg-1961',         name: 'gibson-sg-1961',         component: () => import('../pages/projects/project-1.vue'), meta: { breadcrumb: 'nav.lavori', breadcrumbParent: '/projects', projectKey: 'project1' } },
   { path: '/projects/sizexl-website',         name: 'sizexl-website',         component: () => import('../pages/projects/project-2.vue'), meta: { breadcrumb: 'nav.lavori', breadcrumbParent: '/projects', projectKey: 'project2' } },
   { path: '/projects/synapses-laba',          name: 'synapses-laba',          component: () => import('../pages/projects/project-3.vue'), meta: { breadcrumb: 'nav.lavori', breadcrumbParent: '/projects', projectKey: 'project3' } },

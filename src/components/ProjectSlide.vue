@@ -22,7 +22,7 @@
 
           <img
             :src="data.img.img.src"
-            alt=""
+            :alt="data.imgAlt || ''"
             class="w-full h-full object-cover"
           />
         </picture>

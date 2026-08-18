@@ -26,7 +26,7 @@
   <!-- PREV/NEXT -->
   <ProjectPrevNext
     prev="/projects/roberto-rebranding"
-    next="/projects/gibson-sg-1961"
+    next="/projects/medeghini"
   />
 
 </template>

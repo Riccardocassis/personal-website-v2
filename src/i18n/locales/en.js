@@ -258,6 +258,7 @@ export default {
       editorial: 'Editorial'
     },
     cards: {
+      project10: 'Medeghini',
       project1: 'New Gibson website concept',
       project2: 'SizeXL website',
       project3: 'Synapses landing page',
@@ -283,6 +284,7 @@ export default {
     metaCategory: 'Category',
     metaStack: 'Tech stack',
     scrollCta: 'Explore the project',
+    collaborationLabel: 'In collaboration with',
     videoDefaultTitle: 'Page preview',
     videoNoVideo: 'No video available',
     ctaText: 'Liked this project? I can help you create tailor-made digital experiences.',
@@ -497,6 +499,72 @@ export default {
         { title: 'Drawing & style', subtitle: 'The imperfection of handmade work reflects the imperfection in each of us.', text: 'All illustrations were hand-drawn on iPad, adopting a deliberately "raw" style, because overthinking isn’t clean, orderly or polished. It’s chaotic, uncomfortable, noisy.' },
         { title: 'Narrative structure', subtitle: 'A serious topic tackled in an informal way.', text: 'I structured the fanzine in steps, like a manual for soldiers: recognize the problem, enter your mind and become aware of your thoughts, identify the monsters, face them, and finally you’ll see that facing them the right way makes them go away on their own. Of course this isn’t a real manual and only serves as a first approach, but in my view, especially when you overthink, it helps to follow a plan without wandering off — all written in a sarcastic, light tone.' },
         { title: 'Poster', subtitle: 'A clear visual message.', text: 'The poster summarizes the fanzine’s message. I wanted to draw a parallel between the mind and a computer.' }
+      ]
+    },
+
+    project10: {
+      seo: { title: 'Medeghini — UX/UI & Web Design · Riccardo Cassis', description: 'Medeghini website case study: UX/UI design, content architecture, product catalogue and WordPress development for the Ho.Re.Ca. industry.' },
+      hero: {
+        title: 'Medeghini',
+        subtitle: 'Tradition and quality shaped into a contemporary digital experience.',
+        imgAlt: 'Homepage of the Medeghini website for ginseng coffee and barley products'
+      },
+      meta: {
+        client: 'Medeghini',
+        role: ['Web Designer', 'UX/UI Designer', 'Copywriter', 'WordPress Developer'],
+        category: ['Corporate Website', 'Web Design', 'UX/UI', 'Digital Catalogue'],
+        stack: ['Figma', 'WordPress', 'Elementor Pro', 'Forminator', 'Iubenda', 'Custom CSS']
+      },
+      collaboration: { name: 'Rosario Lore', url: 'https://www.instagram.com/_rosariolore_/' },
+      intro: { title: 'Project goal', text: 'Medeghini is an Italian company specializing in ginseng coffee, roasted barley and solutions for bars, cafés and venues. The goal was to turn an identity with over forty years of history into a clear, recognizable site built around getting in touch.' },
+      credits: {
+        title: 'A historic identity, reimagined for digital',
+        text: 'The project was born from the need to build a digital presence able to tell Medeghini’s story more clearly, showcasing the catalogue and guiding bars, cafés and venues from product discovery all the way to business contact.',
+        creditsBefore: 'The project was created in collaboration with',
+        creditsAfter: ', who provided the Medeghini logo, colour palette, typeface and product logos. Site copy, page architecture, category organization, UX/UI and the development of the digital experience were handled by Riccardo Cassis.'
+      },
+      keyPoints: [
+        { title: 'From identity to digital system', text: 'Translating the brand’s elements into a coherent web language, recognizable and usable across different devices.' },
+        { title: 'Architecture and product catalogue', text: 'Organizing 34 products, six categories and their technical sheets into a clear, easy-to-browse structure.' },
+        { title: 'B2B experience and development', text: 'Building a site able to guide bars, cafés and Ho.Re.Ca. businesses toward products, services and contact.' }
+      ],
+      slides: [
+        {
+          title: 'An identity system, built component by component.',
+          subtitle: 'Design system',
+          text: 'Logo, palette, typography, buttons, cards, interactive states and interface tokens were organized into a reusable system. Playfair Display sets the editorial tone for headings, while Plus Jakarta Sans keeps content and navigation highly legible. The same logic governs spacing, borders, radii and responsive behaviour.',
+          imgAlt: 'Medeghini digital design system with palette, typography and UI components'
+        },
+        {
+          title: 'From brand to digital experience',
+          subtitle: 'Digital identity',
+          text: 'The homepage translates the Medeghini identity into a warm, recognizable experience. The interplay of photography, editorial typography and gold tones communicates tradition and quality without giving up a contemporary, action-oriented structure.',
+          imgAlt: 'Medeghini homepage shown within the case study presentation'
+        },
+        {
+          title: 'A catalogue that’s easy to explore',
+          subtitle: 'Content architecture',
+          text: 'The four main products are organized with a consistent hierarchy: image, category, name, description and link to the product. The structure reduces information scatter and makes it easier to compare the different offerings.',
+          imgAlt: 'Medeghini digital catalogue with four product sheets'
+        },
+        {
+          title: 'Four products, one visual family.',
+          subtitle: 'Product visual system',
+          text: 'King Root, Orzo Gold, Power Root and Velvet Root share a common structure, while being told apart through distinct colours and illustrations. The result is a coherent range, where every product keeps its own identity without stepping outside the Medeghini system.',
+          imgAlt: 'Coordinated visuals of King Root, Orzo Gold, Power Root and Velvet Root'
+        },
+        {
+          title: 'The service told in four steps',
+          subtitle: 'Customer journey',
+          text: 'The sales method was distilled into four steps: listening, proposal, customization and delivery. The sequence makes the company’s consultative value easy to grasp, showing that Medeghini offers more than products — it offers a path built around the venue’s needs.',
+          imgAlt: 'Medeghini customer journey organized into four steps'
+        },
+        {
+          title: 'Contact and geolocation',
+          subtitle: 'Lead generation',
+          text: 'Form, contact information and map are brought together in a single, conversion-focused area. Users can send a complete request, instantly locate the address, or calculate directions without any extra steps.',
+          imgAlt: 'Medeghini contact page with form and location map'
+        }
       ]
     }
   }
